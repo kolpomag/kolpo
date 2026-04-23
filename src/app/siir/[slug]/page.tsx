@@ -1,0 +1,1078 @@
+import SiteHeader from "@/components/SiteHeader";
+
+type PoemBodyBlock =
+  | { kind: "stanza"; text: string; italic?: boolean }
+  | { kind: "special-24101990" };
+
+type Poem = {
+  title: string;
+  label?: string;
+  titleHref?: string;
+  authors: { name: string; href: string }[];
+  body: PoemBodyBlock[];
+  more: { title: string; href: string }[];
+};
+
+export default async function SiirPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const accent = "#c32721";
+
+  const linkStyle = {
+    color: "#111111",
+    textDecoration: "none",
+    transition: "color 0.18s ease",
+  };
+
+  const poems: Record<string, Poem> = {
+    "haziranin-kesfi": {
+      title: "haziran’ın keşfi",
+      label: "şiir",
+      authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
+      body: [
+        {
+          kind: "stanza",
+          text:
+            "ellerimi kullanarak veya kullanmayarak\n" +
+            "sağdan sola koyduğum\n" +
+            "denkleştirdiğim tüm olmazlar,\n" +
+            "aşkımın aksak tınısı\n" +
+            "beni affedin.\n" +
+            "gün döndüğünde elbet\n" +
+            "tütsülerim yine seni yanar.",
+        },
+        {
+          kind: "stanza",
+          text:
+            "kesme yakuttan\n" +
+            "yahut mürver çiçeklerinden yapılma\n" +
+            "o akşamüstlerinden birinde\n" +
+            "bir tavşan,\n" +
+            "alacalı bir tilkiye rast gelir.",
+        },
+        {
+          kind: "stanza",
+          text:
+            "beden, geçmişi şimdi zanneder\n" +
+            "kendi sağlamasına durur\n" +
+            "nesnenin sürekliliğini zorlar.\n" +
+            "orada mı diye üç kez yokladığım\n" +
+            "ancak bir yumru kadar olan kalbi\n" +
+            "eğer ki durursa, diye düşünür tilki\n" +
+            "pek bir şey değişmez ancak\n" +
+            "kendi kendine patlayan \n" +
+            "bir sivilce gibi.",
+        },
+        {
+          kind: "stanza",
+          text:
+            "şükür ki biraz gece ve sonrası\n" +
+            "devrimim yine diskoya çalar\n" +
+            "hiç unutmamalı.\n" +
+            "aşık ve kanlı,\n" +
+            "kekremsi kırmızı yemişler gibi,\n" +
+            "çatlayan genç bir sesle \n" +
+            "boşalmaya benzer.",
+        },
+        {
+          kind: "stanza",
+          text:
+            "tavşan kaç\n" +
+            "burada duramazsın\n" +
+            "hayalleri ve ayrık dişleri\n" +
+            "alacalı tilkinin \n" +
+            "gözlerine bakıyorsun\n" +
+            "sonunda yalnızsın.",
+        },
+      ],
+      more: [
+        { title: "ezbere şaman", href: "/siir/ezbere-saman" },
+        { title: "göçmüş kediler bahçesi", href: "/siir/gocmus-kediler-bahcesi" },
+        { title: "oyunlarımız var", href: "/siir/oyunlarimiz-var" },
+      ],
+    },
+
+    "ya-siyah-ya-beyaz": {
+      title: "ya siyah ya beyaz",
+      label: "şiir",
+      authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
+      body: [
+        {
+          kind: "stanza",
+          text:
+            "kulakların yetmiyor soruyorsun anlamadığında\n" +
+            "cevaplara ulaşacaksın, kapıları aralayacaksın \n" +
+            "hep alelacele hep koştur — bulamayacaksın\n" +
+            "kapını kapatıp pencerenden maviye yeşile,\n" +
+            "güneşi sana ulaştıran boş küreye,\n" +
+            "yolunu öğrenmemiş nehirlere \n" +
+            "bala dönüşmüş",
+        },
+        {
+          kind: "stanza",
+          text:
+            "her bir çiçeğin kimliksizliğini \n" +
+            "patikanın aşağısındaki çeşmeye koşarak giden çocuğun \n" +
+            "iradeyle hiç işinin olmadığını \n" +
+            "sıfırla birin sana ihtiyacım yok dediğine kulak vereceğin o pencere kenarını fark \n" +
+            "etmeyeceksin fark etmeyeceksin rahminde zehir yuttuğun o benliğin lanetini\n" +
+            "you are cursed with simplicity",
+        },
+        {
+          kind: "stanza",
+          text:
+            "ya siyahtır ya beyaz\n" +
+            "keserek almışlar seni annenin karnından\n" +
+            "kolaylaştırmışlar işleri\n" +
+            "iki yol var diye görmüşsün\n" +
+            "acılı ve doğal olan yol seni öldürecekmiş",
+        },
+        {
+          kind: "stanza",
+          text:
+            "acısız hızlı olansa sana bütün bir hayatı getirmiş\n\n" +
+            "seçmişler anneni ve seni yaşatacak yolu\n" +
+            "öğrenmişsin işleri kolaylaştıran siyahı\n" +
+            "beyazdan kesin ayıran yolu\n" +
+            "sınırlar ve tanımlar olmuş kalplerin ahı\n" +
+            "ya siyahtır ya beyaz",
+        },
+      ],
+      more: [
+        { title: "sivri çatlaklar", href: "/siir/sivri-catlaklar" },
+        { title: "piiz ver piiz ver mayday", href: "/siir/piiz-ver-piiz-ver-mayday" },
+        { title: "sabahı göremem", href: "/yazi/sabahi-goremem" },
+      ],
+    },
+
+    "ezbere-saman": {
+      title: "ezbere şaman",
+      label: "şiir",
+      authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
+      body: [
+        {
+          kind: "stanza",
+          text:
+            "bana inanmasan da\n" +
+            "inanabilirsin bunca şehrin yaratıldığına\n" +
+            "artık çok bunaldın kalk da gidelim\n" +
+            "oltanı at birine elbet denk gelirim\n" +
+            "bak yeni bir desen tutturdum ıslığımla\n" +
+            "kuvvet ham derime keskin\n" +
+            "mutlak yansın canımız\n" +
+            "kuvvet ham derime keskin\n" +
+            "sık dişlerini iyice sık ki dökülsünler\n" +
+            "sokağım yorgun sırtlandım yüzyılını\n" +
+            "içimin yağlarını eritecek ne çok şey var\n" +
+            "israil’in köpek kolonisi\n" +
+            "ah şu berlin bir daha bombalansa!",
+        },
+        {
+          kind: "stanza",
+          text:
+            "sigaranın tadı ne zaman karamele çalarsa\n" +
+            "o zaman çağır beni\n" +
+            "müziğin sana dediği gibi\n" +
+            "uçucu bir koku başını döndürse yeter\n" +
+            "telefonun çalabilir komorbidite baştan yalan\n" +
+            "saçmalamayalım onca hayatı yaşamanın bedeli var\n" +
+            "şimdi prospektüslerde arayaduralım şifamızı\n" +
+            "hepimizin bildiği kentlerin ezbere şamanı\n" +
+            "önümüzde koskoca literatür ne aşktır ne değildir\n" +
+            "meyvem hala mı acı da ekşitir yüzünü?\n" +
+            "benim yurdum sensin rot balans bozuk aksi yöne çeker\n" +
+            "babamız öğretti görece toplu adamlar sürer dünyayı\n" +
+            "bunlar yörük adetleri eski türklerden kalma\n" +
+            "annemiz doğurur\n" +
+            "tarla bereketli\n" +
+            "bir çizgi iki çizgi üç çizgi zig zag\n" +
+            "bir de pisinden caz koyalım arkaya\n" +
+            "teyzeler olup açalım eklemlerimizi\n" +
+            "iyice gıcırdasın kirişlerimiz\n" +
+            "rabbim leylaklarımla al beni içine\n" +
+            "rabbim leylaklarınla sız benim içime\n" +
+            "hiçbir batılı çözemesin beni",
+        },
+      ],
+      more: [
+        { title: "haziran’ın keşfi", href: "/siir/haziranin-kesfi" },
+        {
+          title: "göçmüş kediler bahçesi",
+          href: "/siir/gocmus-kediler-bahcesi",
+        },
+        { title: "oyunlarımız var", href: "/siir/oyunlarimiz-var" },
+      ],
+    },
+
+    "sivri-catlaklar": {
+      title: "sivri çatlaklar",
+      label: "şiir",
+      authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
+      body: [
+        {
+          kind: "stanza",
+          text:
+            "iyileşmek isteğiyle bitmeyecek olana\n" +
+            "beni tut beni bırakma diye\n" +
+            "yarı yolda kendime güvendim\n" +
+            "yüzeylerden akacak sıvıların akıntısıyla devinim diye\n" +
+            "yaşam ve küçük ölüm isteğine boyun eğmiyorum!\n" +
+            "derine her çarptığımda gücümü geri toplayacak o kuvveti canlandırmak niyetiyle\n" +
+            "kokusuyla dokunuşuyla sonra kayganlığıyla\n" +
+            "vücudun heyecanı, kıvrımlarında oluşan şeffaf hayatcıklar",
+        },
+        {
+          kind: "stanza",
+          text:
+            "duygularım sublardan yıkılır\n" +
+            "kalbin bezgin cevaplarla kırılır\n" +
+            "dirayetini kaptırmış çene çekilirsin hilal gibi,\n" +
+            "egzoz gazında yapayalnız bir bebek kedi\n" +
+            "dudaklarında kendini bırakmış yaprağın titrekliği\n" +
+            "yanaklarında karşı koyamadığım pürüzsüz yumuşaklık",
+        },
+        {
+          kind: "stanza",
+          text:
+            "bil ki ben seni tamamlayamam\n" +
+            "sivri çatlaklarından sızan insanlığına \n" +
+            "parmak salladım seni tam sevemedim aşkım\n" +
+            "bekledim aşkım, \n" +
+            "akan gözyaşlarında kelebek yolcuğu\n" +
+            "fani göze kandığını belli etmez\n" +
+            "acıyı gören kalbin gözü\n" +
+            "acıyı kaydeden bu görünmez ister",
+        },
+        {
+          kind: "stanza",
+          text:
+            "dualarımı aksatıyorum annem\n" +
+            "yardım dilenmiyorum dimdik \n" +
+            "çok rahatım en görünmediğimde\n" +
+            "gücenmeyiversin alemlerin rabbi de\n" +
+            "su içiyorum adalet mahallesi camiinde\n" +
+            "şehveti tadıyorum canlandır beni\n" +
+            "illellezine ca’m önü bileti al\n" +
+            "taşlının yolları kabelidir, alllah\n" +
+            "manevi star önlüldarham abal",
+        },
+        {
+          kind: "stanza",
+          text:
+            "tak tatak tak dışk dışk dışk dışk\n" +
+            "ecirna minen-nar bi avfike ya rahman\n" +
+            "subhaneke ya tevvab tealeyte ya vahhab\n" +
+            "sublar dört vuruş chargelıyor\n" +
+            "sanki bilinç kapanması",
+        },
+        {
+          kind: "stanza",
+          text:
+            "hayatına intihar aşkçısı gibi dalan bu insan\n" +
+            "ilk akşam bana özel fotoğraf attı\n" +
+            "kıran ve kırılan\n" +
+            "pazar allemand pazar dü levan",
+        },
+      ],
+      more: [
+        { title: "ya siyah ya beyaz", href: "/siir/ya-siyah-ya-beyaz" },
+        { title: "piiz ver piiz ver mayday", href: "/siir/piiz-ver-piiz-ver-mayday" },
+        { title: "sabahı göremem", href: "/yazi/sabahi-goremem" },
+      ],
+    },
+
+    "gocmus-kediler-bahcesi": {
+      title: "göçmüş kediler bahçesi",
+      label: "şiir",
+      authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
+      body: [
+        {
+          kind: "stanza",
+          text:
+            "biliyorum, artık beni göremezsin\n" +
+            "bıçağın kabzası da bileyli.\n" +
+            "yine de utanmayı unutarak\n" +
+            "güneşin doğuşundan\n" +
+            "batışına kadar\n" +
+            "göçmüş kediler bahçesi'nde\n" +
+            "kedileri sevmek isterim.",
+        },
+        {
+          kind: "stanza",
+          text:
+            "kızışmış vaşaklar gibi gergin kaslarımız\n" +
+            "ve buyurgan kalplerimiz\n" +
+            "terli ellerimizde kurulmuş saatler\n" +
+            "şafağa doğru haylaz \n" +
+            "ve atılgan\n" +
+            "bekleriz.",
+        },
+        {
+          kind: "stanza",
+          text:
+            "korkulacak hiçbir şey kalmadı oysa.\n" +
+            "beni sevmen için tüm nedenleri ortadan kaldırdım.\n" +
+            "vazgeçtim görmekten\n" +
+            "bir fiş sırasını bekler gibi alelade\n" +
+            "ve topukların yere değmeden\n" +
+            "bir hayatı içine alıp\n" +
+            "kendinle çoğaltmanı,\n" +
+            "tenine serpiştirdiğin\n" +
+            "onca takımyıldızını.",
+        },
+        {
+          kind: "stanza",
+          text:
+            "bir selam bile bekleyemem\n" +
+            "sen kedilere odaklan.\n" +
+            "hiç kimse bir yere gitmedi bak!\n" +
+            "güneşimiz aynı\n" +
+            "havamız aynı\n" +
+            "ne cüret ki\n" +
+            "günlerin isimleri de aynı.",
+        },
+        {
+          kind: "stanza",
+          text:
+            "çünkü göçmüş kediler bahçesi’nde\n" +
+            "bizden önce ve sonra\n" +
+            "sabah vardiyasına giden adamlar vardı.\n" +
+            "taze ekmek kokuları\n" +
+            "terimizle yıkayıp astığımız çarşaflar.\n" +
+            "yanına yattığımda\n" +
+            "çıplak ayaklarının hizasında \n" +
+            "sokak lambası\n" +
+            "sonra sabah ezanı\n" +
+            "mevsimlere göre sıralarını değiş.",
+        },
+      ],
+      more: [
+        { title: "haziran’ın keşfi", href: "/siir/haziranin-kesfi" },
+        { title: "ezbere şaman", href: "/siir/ezbere-saman" },
+        { title: "oyunlarımız var", href: "/siir/oyunlarimiz-var" },
+      ],
+    },
+
+    "piiz-ver-piiz-ver-mayday": {
+      title: "piiz ver piiz ver mayday",
+      label: "şiir",
+      authors: [
+        { name: "onur duman", href: "/yazar/onur-duman" },
+        { name: "mahmut kıran", href: "/yazar/mahmut-kiran" },
+      ],
+      body: [
+        {
+          kind: "stanza",
+          text:
+            "bir gemi kumandanıyla on beş cevval mürettebatı\n" +
+            "tahammül sınırlarında bir seferde\n" +
+            "deniz çok korkmuş krakenler sonra sirenler\n" +
+            "düşüne yattığım o gece\n" +
+            "piiz ver piiz ver mayday",
+        },
+        {
+          kind: "stanza",
+          text:
+            "allahını unuttu güvertebaşı\n" +
+            "aşçı günde dört kere attırdı\n" +
+            "bu seferler kolay değildir söylüyorum \n" +
+            "gemiler açılır karadeniz’den okyanusa \n" +
+            "yolunu bulmak zordur gps deaktif\n" +
+            "gerekir sigorta girişi yapılmamış en az bir saykik \n" +
+            "ki tüyü bitmemiş oğlanlardır bunların çoğu\n" +
+            "herkes bilir ergenliğe girince kasıklara \n" +
+            "karşı bir savunma mekanizması olarak\n" +
+            "tüyleri hemencecik biter o ara\n" +
+            "süreçte yakılan kalorinin %35 kadarı buraya gider\n" +
+            "korkma inmez iyi ki var anneler!",
+        },
+      ],
+      more: [
+        { title: "afili haytalar", href: "/siir/afili-haytalar" },
+        { title: "ya siyah ya beyaz", href: "/siir/ya-siyah-ya-beyaz" },
+        { title: "sivri çatlaklar", href: "/siir/sivri-catlaklar" },
+      ],
+    },
+
+    "oyunlarimiz-var": {
+      title: "oyunlarımız var",
+      label: "şiir",
+      authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
+      body: [
+        {
+          kind: "stanza",
+          text:
+            "esaslı çocuklardık bir zamanlar\n" +
+            "ölüme ne çok yakın\n" +
+            "ne de çok uzak\n" +
+            "şimdi nizami kar beyazı memleketlerde\n" +
+            "aramızda trenler ve küslükler var",
+        },
+        {
+          kind: "stanza",
+          text:
+            "terli bir akşamüstünde\n" +
+            "biranın ağırlığı \n" +
+            "körpe vücutlarımıza henüz çökmüşken\n" +
+            "iki cigaralık kırıp fırlamalı sokağa\n" +
+            "gecekonduların arasında leyla\n" +
+            "yuvarlanmakla flörtleştiğimiz yokuşlarda\n" +
+            "toyluğu keşfetmeli\n" +
+            "ve yanan her ateşin\n" +
+            "imdat çağrısı olmadığını\n" +
+            "öğrenmeliyiz",
+        },
+        {
+          kind: "stanza",
+          text:
+            "gecenin salyası\n" +
+            "üstümüze bulaşana dek\n" +
+            "kuyruklarımız ayrılmaz birbirinden\n" +
+            "sanmayın ki korkudan\n" +
+            "yoksa hala\n" +
+            "oyunlarımız var",
+        },
+      ],
+      more: [
+        { title: "ezbere şaman", href: "/siir/ezbere-saman" },
+        { title: "haziran’ın keşfi", href: "/siir/haziranin-kesfi" },
+        {
+          title: "göçmüş kediler bahçesi",
+          href: "/siir/gocmus-kediler-bahcesi",
+        },
+      ],
+    },
+
+    "24101990": {
+      title: "24101990",
+      label: "şiir",
+      authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
+      body: [{ kind: "special-24101990" }],
+      more: [
+        { title: "paesino sborramerda", href: "/siir/paesino-sborramerda" },
+        { title: "ya siyah ya beyaz", href: "/siir/ya-siyah-ya-beyaz" },
+        { title: "ezbere şaman", href: "/siir/ezbere-saman" },
+      ],
+    },
+
+    "kendimin-ic-ve-disbukey-sinirlari": {
+      title: "kendimin iç ve dışbükey sınırları",
+      label: "şiir",
+      authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
+      body: [
+        {
+          kind: "stanza",
+          text:
+            "sokak her nefes alıp verdiğinde\n" +
+            "kaldırımlar et olur\n" +
+            "kabarıp söner\n" +
+            "kulağında trenlerin\n" +
+            "boğuk uğultusu\n" +
+            "hoşgörü bağıl\n" +
+            "tüm sabitler uyuşturucu\n" +
+            "kriptolar\n" +
+            "para piyasaları\n" +
+            "kafanı kaldırıma geçirdiklerinde\n" +
+            "ağzına gelen\n" +
+            "adrenalinin metalik tadı",
+        },
+        {
+          kind: "stanza",
+          text:
+            "oysa çamurum aynı sizinki gibi\n" +
+            "kanlı ve yapışkan\n" +
+            "hayal kırıklıklarından yapılma\n" +
+            "sıradan bir hayatı\n" +
+            "mahvetme kaşıntısıyla\n" +
+            "ama hücrelerim\n" +
+            "tam teşekküllü \n" +
+            "f tipi\n" +
+            "bitkilerinki gibi",
+        },
+        {
+          kind: "stanza",
+          text:
+            "yazık\n" +
+            "hislerim bazen\n" +
+            "kucağıma sığmaz\n" +
+            "yerlere dökülür\n" +
+            "ya ziyan olur\n" +
+            "ya da bir yoksunluk anında\n" +
+            "yalanmak için\n" +
+            "öylece beklerler",
+        },
+        {
+          kind: "stanza",
+          text:
+            "ama geriye toplamaya çalışmanın\n" +
+            "saçmalığından gelen \n" +
+            "o cüret\n" +
+            "sonuna kadar\n" +
+            "yaşanmalı",
+        },
+      ],
+      more: [
+        { title: "ezbere şaman", href: "/siir/ezbere-saman" },
+        { title: "turmstraße", href: "/siir/turmstrasse" },
+        { title: "feierabendbier", href: "/siir/feierabendbier" },
+      ],
+    },
+
+    "paesino-sborramerda": {
+      title: "paesino sborramerda",
+      label: "şiir",
+      authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
+      body: [
+        {
+          kind: "stanza",
+          text:
+            "tanıyorum lan seni sen utanmadan öpüşensin\n" +
+            "soğukta en son seni kıstıracaklar\n" +
+            "sanma ki yırttım adını biricit koyacağım\n" +
+            "tam gırtlağına şarkı yapıştıracağım\n" +
+            "ensen kaşınacak kıskanç\n" +
+            "ben ki a scribe of the prophetical order that is batn-ı neobeat\n" +
+            "koca divination senden razı olsun budunbeyi",
+        },
+        {
+          kind: "stanza",
+          text:
+            "sinyor makyavelli telefonda\n" +
+            "beni günde elli kere arıyor açmıyorum\n" +
+            "sinyor makyavelli diyorum ben hepsini zaten ezberledim\n" +
+            "derler ki eskiden istanbula gelir\n" +
+            "tarlabaşlarında kaybolurmuş\n" +
+            "dedikoduları kızlarda saklı kalmış\n" +
+            "sonra kızlar da kimseciklere söylemezmiş\n" +
+            "yok aman efendim iyi biri miymiş para mı verirmiş ne farkı var",
+        },
+        {
+          kind: "stanza",
+          text:
+            "po nehrinde annem boğuldu\n" +
+            "ölüsünü karşıya geçiremedik\n" +
+            "küçükbudunbaşı uygun görmedi\n" +
+            "ben de dönüp bakamadım\n" +
+            "burada cenaze olmaz köpürür diye korktuk\n" +
+            "şükür ki koca kehanet sana sivrisineklerle geldim\n" +
+            "dölleri her yere damladı\n" +
+            "şu toprağın oracıklarında çiçekler bitti\n" +
+            "o gün bugündür orası\n" +
+            "paesino sborramerda",
+        },
+        {
+          kind: "stanza",
+          text:
+            "bize kayık alacaklar\n" +
+            "ki venedik’te tekrar öpüşeceğim\n" +
+            "tüm venedik buluşup beni saklayacak\n" +
+            "san marko’da kocaman taşakların ardında\n" +
+            "sonra balçıkları tarhanaya katacağız bolonya’da",
+        },
+      ],
+      more: [
+        { title: "24101990", href: "/siir/24101990" },
+        { title: "ya siyah ya beyaz", href: "/siir/ya-siyah-ya-beyaz" },
+        { title: "sivri çatlaklar", href: "/siir/sivri-catlaklar" },
+      ],
+    },
+
+    "turmstrasse": {
+      title: "turmstraße",
+      label: "şiir",
+      authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
+      body: [
+        {
+          kind: "stanza",
+          text:
+            "duraktaki ince parmaklı kadın\n" +
+            "sen olmadığın için teşekkür ederim.\n" +
+            "eğer mümkünse\n" +
+            "seni daha iyi günlerime \n" +
+            "saklamak isterim.\n" +
+            "yaza kadar dönmeli\n" +
+            "yaza kadar dönmeli\n" +
+            "yoksa gelen her yazı\n" +
+            "seninle karıştırabilirim.",
+        },
+        {
+          kind: "stanza",
+          text:
+            "kaç kadın yıkarsam\n" +
+            "akar üstümden aşkın?\n" +
+            "şeftali ve süt kokan\n" +
+            "ıslak koltuk altlarında\n" +
+            "beni yine sen yıka\n" +
+            "dokunamaz içime başkası.",
+        },
+      ],
+      more: [
+        { title: "feierabendbier", href: "/siir/feierabendbier" },
+        {
+          title: "kendimin iç ve dışbükey sınırları",
+          href: "/siir/kendimin-ic-ve-disbukey-sinirlari",
+        },
+        { title: "ezbere şaman", href: "/siir/ezbere-saman" },
+      ],
+    },
+
+    "feierabendbier": {
+      title: "feierabendbier",
+      label: "şiir",
+      authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
+      body: [
+        {
+          kind: "stanza",
+          text:
+            "anneannemin dul saçlarından ördüğü dünya\n" +
+            "sabahın beşinde biralar içirir bana\n" +
+            "almanları sarhoş ederim\n" +
+            "sonra ya öpüşür ya dövüşürler\n" +
+            "bu kabuğun kenarları çok kalın\n" +
+            "hava geçirmez\n" +
+            "su geçirmez\n" +
+            "aşk geçirmez\n" +
+            "seni geçirir bazen",
+        },
+        {
+          kind: "stanza",
+          text:
+            "ikna olurum dünyaya\n" +
+            "annem başka anneleri imrendiren\n" +
+            "mütevazı, alçakgönüllü\n" +
+            "ne efendi çocuklar yetiştirir\n" +
+            "sonra babamı besler\n" +
+            "sigara içer\n" +
+            "rakı içer\n" +
+            "et yer",
+        },
+        {
+          kind: "stanza",
+          text:
+            "yanlarına giderim\n" +
+            "nakış gibi işlenmiş dantel\n" +
+            "kondurulurum televizyonun üzerine\n" +
+            "kimi seneler acı domates soslarına yetişirim\n" +
+            "kahvaltılıklara dönüşür\n" +
+            "ekmekle yerim\n" +
+            "havalar güzeldir\n" +
+            "çocukluğumun duvarları daralır\n" +
+            "püfür püfür eser",
+        },
+        {
+          kind: "stanza",
+          text:
+            "sabah olur \n" +
+            "ezan okunur allahuekber\n" +
+            "annem her gördüğümde biraz daha beyazlar\n" +
+            "kime çekmişim,\n" +
+            "kuş kalbi hep mi hızlı atar?\n" +
+            "seni bile düşünür benim yerime,\n" +
+            "sonra ikimiz için de \n" +
+            "kardeşimi öper",
+        },
+        {
+          kind: "stanza",
+          text:
+            "bu kazak bana dikilmiş,\n" +
+            "beş boy büyük\n" +
+            "iyisi mi büyüyünce giyerim\n" +
+            "kaşındırıyor ama",
+        },
+      ],
+      more: [
+        { title: "turmstraße", href: "/siir/turmstrasse" },
+        {
+          title: "kendimin iç ve dışbükey sınırları",
+          href: "/siir/kendimin-ic-ve-disbukey-sinirlari",
+        },
+        { title: "ezbere şaman", href: "/siir/ezbere-saman" },
+      ],
+    },
+
+    "afili-haytalar": {
+      title: "afili haytalar",
+      label: "çeviri",
+      titleHref:
+        "https://www.poetryfoundation.org/poetrymagazine/poems/28112/we-real-cool",
+      authors: [
+        { name: "onur duman", href: "/yazar/onur-duman" },
+        { name: "mahmut kıran", href: "/yazar/mahmut-kiran" },
+      ],
+      body: [
+        {
+          kind: "stanza",
+          text: "kolpo sert, kafalar güzel.\nkör sabahın yedisi.",
+          italic: true,
+        },
+        { kind: "stanza", text: "afili haytalar. okul\nkaçık. gece" },
+        { kind: "stanza", text: "sürtük. yumruk\nhakiki. ağızlar" },
+        { kind: "stanza", text: "bozuk. cin\nseyrelir, yaz" },
+        { kind: "stanza", text: "cazlar. genç\nölür." },
+      ],
+      more: [
+        { title: "piiz ver piiz ver mayday", href: "/siir/piiz-ver-piiz-ver-mayday" },
+        { title: "ya siyah ya beyaz", href: "/siir/ya-siyah-ya-beyaz" },
+        { title: "24101990", href: "/siir/24101990" },
+      ],
+    },
+  };
+
+  const poem = poems[slug];
+
+  if (!poem) {
+    return (
+      <main
+        style={{
+          background: "#f3f0e8",
+          minHeight: "100vh",
+          color: "#111111",
+          fontFamily: "Georgia, Times New Roman, serif",
+          padding: "34px 36px",
+        }}
+      >
+        şiir bulunamadı
+      </main>
+    );
+  }
+
+  return (
+    <main
+      style={{
+        background: "#f3f0e8",
+        minHeight: "100vh",
+        color: "#111111",
+        fontFamily: "Georgia, Times New Roman, serif",
+      }}
+    >
+      <style>{`
+        .author-link:hover,
+        .more-link:hover,
+        .source-link:hover {
+          color: ${accent} !important;
+        }
+      `}</style>
+
+      <SiteHeader />
+
+      <section
+        style={{
+          padding: "24px 36px 110px 36px",
+          maxWidth: "1280px",
+        }}
+      >
+        <div
+          style={{
+            borderTop: "1px solid rgba(17,17,17,0.12)",
+            paddingTop: "18px",
+            marginBottom: "28px",
+          }}
+        >
+          <div
+            style={{
+              fontFamily: "Arial, Helvetica, sans-serif",
+              fontSize: "14px",
+              letterSpacing: "-0.01em",
+              color: "#6f6b63",
+              marginBottom: "14px",
+            }}
+          >
+            {poem.label || "şiir"}
+          </div>
+
+          <h1
+            style={{
+              margin: 0,
+              maxWidth: "980px",
+              fontSize: "92px",
+              lineHeight: 0.93,
+              fontWeight: 600,
+              letterSpacing: "-0.05em",
+            }}
+          >
+            {poem.title}
+            {poem.titleHref ? (
+              <a
+                href={poem.titleHref}
+                target="_blank"
+                rel="noreferrer"
+                className="source-link"
+                style={{
+                  color: "#111111",
+                  textDecoration: "none",
+                  transition: "color 0.18s ease",
+                  marginLeft: "8px",
+                }}
+              >
+                *
+              </a>
+            ) : null}
+          </h1>
+
+          <p
+            style={{
+              marginTop: "16px",
+              marginBottom: 0,
+              fontSize: "20px",
+              lineHeight: 1.15,
+              fontFamily: "Arial, Helvetica, sans-serif",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            {poem.authors.map((author, index) => (
+              <span key={author.href}>
+                <a href={author.href} className="author-link" style={linkStyle}>
+                  {author.name}
+                </a>
+                {index < poem.authors.length - 1 ? (
+                  <span style={{ color: "#6f6b63" }}> & </span>
+                ) : null}
+              </span>
+            ))}
+          </p>
+        </div>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "minmax(0, 760px) 1fr",
+            gap: "72px",
+            alignItems: "start",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "26px",
+              fontSize: "30px",
+              lineHeight: 1.55,
+              letterSpacing: "-0.02em",
+            }}
+          >
+            {poem.body.map((block, index) => {
+              if (block.kind === "special-24101990") {
+                return (
+                  <section
+                    key={index}
+                    style={{
+                     background: "transparent",
+color: "#111111",
+                      padding: "34px 34px 42px 34px",
+                      minHeight: "980px",
+                      display: "grid",
+                      gridTemplateColumns: "1fr 1fr",
+                      gap: "42px",
+                    }}
+                  >
+                    <div>
+                      <div
+                        style={{
+                          fontFamily: "Arial, Helvetica, sans-serif",
+                          fontSize: "20px",
+                          fontWeight: 700,
+                          letterSpacing: "-0.03em",
+                          marginBottom: "42px",
+                        }}
+                      >
+                        24101990 alternatif
+                      </div>
+
+                      <div
+                        style={{
+                          fontFamily: "Arial Black, Arial, Helvetica, sans-serif",
+                          fontSize: "112px",
+                          lineHeight: 0.9,
+                          fontWeight: 900,
+                          color: "#ff2c24",
+                          marginBottom: "18px",
+                          textTransform: "uppercase",
+                          letterSpacing: "-0.06em",
+                        }}
+                      >
+                        GÜNEŞ
+                      </div>
+
+                      <div
+                        style={{
+                          fontFamily: "Arial, Helvetica, sans-serif",
+                          fontSize: "28px",
+                          marginBottom: "18px",
+                          marginLeft: "204px",
+                          marginTop: "-34px",
+                        }}
+                      >
+                        DERSANESİ
+                      </div>
+
+                      <div
+                        style={{
+                          fontFamily: "Arial, Helvetica, sans-serif",
+                          fontSize: "15px",
+                          lineHeight: 1.8,
+                          maxWidth: "320px",
+                        }}
+                      >
+                        <div>VE</div>
+                        <div>SÜRÜCÜ KURSU</div>
+                        <div>Üniversiteye Hazırlık</div>
+                        <div>ise son sınıflara,</div>
+                        <div>Memelilere ve</div>
+                        <div>lise 2. sınıflara</div>
+                        <div>nihai gayemiz düşünce</div>
+                        <div>özgür ve yaratı çoCUMar yetiştirmektir.</div>
+                        <div style={{ marginTop: "10px", fontWeight: 700 }}>
+                          6 AYDA
+                        </div>
+                        <div style={{ fontWeight: 700 }}>İNGİLİZCE</div>
+                        <div>PERA</div>
+                        <div style={{ fontWeight: 700 }}>ENGLISH</div>
+                        <div style={{ fontWeight: 700 }}>SAATTE</div>
+                        <div style={{ textAlign: "center", marginTop: "12px" }}>
+                          İ
+                        </div>
+                        <div style={{ marginTop: "14px" }}>
+                          Gerçekten öğrenmek istiyorsanız...
+                        </div>
+                        <div style={{ marginTop: "10px" }}>YABANCI DİL BİLMEK</div>
+                        <div>ÇAĞDAŞ BİR</div>
+                        <div>ZORUNLULUKTUR.</div>
+                        <div style={{ marginTop: "10px" }}>başlangıç düzeyi.</div>
+                        <div>Orta düzey. İleri düzey.</div>
+                        <div>Proficiency. Toefl.</div>
+                        <div style={{ marginTop: "10px" }}>sizden de beklendiği gibi</div>
+                        <div>Yeni yıla İngilizce girin</div>
+                      </div>
+                    </div>
+
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                        minHeight: "100%",
+                        paddingTop: "168px",
+                      }}
+                    >
+                      <div
+                        style={{
+                          fontFamily: "Arial, Helvetica, sans-serif",
+                          fontSize: "18px",
+                          lineHeight: 1.9,
+                          maxWidth: "320px",
+                        }}
+                      >
+                        <div style={{ fontWeight: 700, marginBottom: "16px" }}>
+                          DİLTEK
+                        </div>
+                        <div>Audio-Visual Yöntem</div>
+                        <div>Sıcak, Uygar Bir Ortam</div>
+                        <div>Beceri Odaklı Eğitim</div>
+                        <div style={{ fontWeight: 700 }}>!!! 3 KUR AL 2 KUR ÖDE !!!</div>
+                      </div>
+
+                      <div
+                        style={{
+                          fontFamily: "Arial, Helvetica, sans-serif",
+                          fontSize: "18px",
+                          fontWeight: 700,
+                          alignSelf: "flex-start",
+                          marginTop: "48px",
+                        }}
+                      >
+                        STOP EVERYTHING START ENGLISH
+                      </div>
+
+                      <div
+                        style={{
+                          fontFamily: "Arial, Helvetica, sans-serif",
+                          fontSize: "15px",
+                          lineHeight: 1.6,
+                          alignSelf: "flex-end",
+                          textAlign: "right",
+                          opacity: 0.88,
+                          marginTop: "80px",
+                        }}
+                      >
+                        <div>Etiler Mahallesi Serçe Sokak No:87,</div>
+                        <div>34337 Beşiktaş/İSTANBUL</div>
+                      </div>
+                    </div>
+                  </section>
+                );
+              }
+
+              return (
+                <p
+                  key={index}
+                  style={{
+                    margin: 0,
+                    whiteSpace: "pre-line",
+                    fontStyle: block.italic ? "italic" : "normal",
+                  }}
+                >
+                  {block.text}
+                </p>
+              );
+            })}
+          </div>
+
+          <aside
+            style={{
+              paddingTop: "8px",
+            }}
+          >
+            <div
+              style={{
+                borderTop: "1px solid rgba(17,17,17,0.12)",
+                paddingTop: "14px",
+              }}
+            >
+              <h2
+                style={{
+                  margin: "0 0 22px 0",
+                  fontSize: "22px",
+                  fontFamily: "Arial, Helvetica, sans-serif",
+                  fontWeight: 600,
+                  letterSpacing: "-0.02em",
+                  color: "#c32721",
+                }}
+              >
+                daha fazlası
+              </h2>
+
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "18px",
+                }}
+              >
+                {poem.more.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="more-link"
+                    style={{
+                      color: "#111111",
+                      textDecoration: "none",
+                      transition: "color 0.18s ease",
+                      fontSize: "30px",
+                      lineHeight: 1.04,
+                      letterSpacing: "-0.04em",
+                    }}
+                  >
+                    {item.title}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+  );
+}

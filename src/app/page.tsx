@@ -1,65 +1,594 @@
-import Image from "next/image";
+import SiteHeader from "@/components/SiteHeader";
 
-export default function Home() {
+export default function HomePage() {
+  const accent = "#c32721";
+
+  const titleLinkStyle = {
+    color: "#111111",
+    textDecoration: "none",
+    transition: "color 0.18s ease",
+  };
+
+  const authorLinkStyle = {
+    color: "#111111",
+    textDecoration: "none",
+    transition: "color 0.18s ease",
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <main
+      style={{
+        background: "#f3f0e8",
+        minHeight: "100vh",
+        color: "#111111",
+        fontFamily: "Georgia, Times New Roman, serif",
+      }}
+    >
+      <style>{`
+        .title-link:hover,
+        .author-link:hover {
+          color: ${accent} !important;
+        }
+      `}</style>
+
+      <SiteHeader />
+
+      <section
+        style={{
+          padding: "46px 36px 110px 36px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "88px",
+        }}
+      >
+        <article style={{ maxWidth: "760px" }}>
+          <h2
+            style={{
+              margin: 0,
+              fontSize: "92px",
+              lineHeight: 0.93,
+              fontWeight: 600,
+              letterSpacing: "-0.05em",
+            }}
+          >
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="/siir/haziranin-kesfi"
+              className="title-link"
+              style={titleLinkStyle}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              haziran’ın
+              <br />
+              keşfi
+            </a>
+          </h2>
+
+          <p
+            style={{
+              marginTop: "14px",
+              marginBottom: 0,
+              fontSize: "20px",
+              lineHeight: 1.15,
+              fontFamily: "Arial, Helvetica, sans-serif",
+              letterSpacing: "-0.02em",
+            }}
+          >
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="/yazar/onur-duman"
+              className="author-link"
+              style={authorLinkStyle}
             >
-              Learning
-            </a>{" "}
-            center.
+              onur duman
+            </a>
+            <span style={{ color: "#6f6b63" }}>, şiir</span>
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        </article>
+
+        <article style={{ maxWidth: "980px", marginLeft: "102px" }}>
+          <h2
+            style={{
+              margin: 0,
+              fontSize: "92px",
+              lineHeight: 0.93,
+              fontWeight: 600,
+              letterSpacing: "-0.05em",
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <a
+              href="/siir/ya-siyah-ya-beyaz"
+              className="title-link"
+              style={titleLinkStyle}
+            >
+              ya siyah
+              <br />
+              ya beyaz
+            </a>
+          </h2>
+
+          <p
+            style={{
+              marginTop: "14px",
+              marginBottom: 0,
+              fontSize: "20px",
+              lineHeight: 1.15,
+              fontFamily: "Arial, Helvetica, sans-serif",
+              letterSpacing: "-0.02em",
+            }}
           >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+            <a
+              href="/yazar/mahmut-kiran"
+              className="author-link"
+              style={authorLinkStyle}
+            >
+              mahmut kıran
+            </a>
+            <span style={{ color: "#6f6b63" }}>, şiir</span>
+          </p>
+        </article>
+
+        <article style={{ maxWidth: "720px" }}>
+          <h2
+            style={{
+              margin: 0,
+              fontSize: "92px",
+              lineHeight: 0.93,
+              fontWeight: 600,
+              letterSpacing: "-0.05em",
+            }}
+          >
+            <a
+              href="/siir/ezbere-saman"
+              className="title-link"
+              style={titleLinkStyle}
+            >
+              ezbere
+              <br />
+              şaman
+            </a>
+          </h2>
+
+          <p
+            style={{
+              marginTop: "14px",
+              marginBottom: 0,
+              fontSize: "21px",
+              lineHeight: 1.15,
+              fontFamily: "Arial, Helvetica, sans-serif",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            <a
+              href="/yazar/onur-duman"
+              className="author-link"
+              style={authorLinkStyle}
+            >
+              onur duman
+            </a>
+            <span style={{ color: "#6f6b63" }}>, şiir</span>
+          </p>
+        </article>
+
+        <article style={{ maxWidth: "860px", marginLeft: "122px" }}>
+          <h2
+            style={{
+              margin: 0,
+              fontSize: "92px",
+              lineHeight: 0.93,
+              fontWeight: 600,
+              letterSpacing: "-0.05em",
+            }}
+          >
+            <a
+              href="/siir/sivri-catlaklar"
+              className="title-link"
+              style={titleLinkStyle}
+            >
+              sivri
+              <br />
+              çatlaklar
+            </a>
+          </h2>
+
+          <p
+            style={{
+              marginTop: "14px",
+              marginBottom: 0,
+              fontSize: "20px",
+              lineHeight: 1.15,
+              fontFamily: "Arial, Helvetica, sans-serif",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            <a
+              href="/yazar/mahmut-kiran"
+              className="author-link"
+              style={authorLinkStyle}
+            >
+              mahmut kıran
+            </a>
+            <span style={{ color: "#6f6b63" }}>, şiir</span>
+          </p>
+        </article>
+
+        <article style={{ maxWidth: "980px" }}>
+          <h2
+            style={{
+              margin: 0,
+              fontSize: "92px",
+              lineHeight: 0.93,
+              fontWeight: 600,
+              letterSpacing: "-0.05em",
+            }}
+          >
+            <a
+              href="/siir/gocmus-kediler-bahcesi"
+              className="title-link"
+              style={titleLinkStyle}
+            >
+              göçmüş kediler bahçesi
+            </a>
+          </h2>
+
+          <p
+            style={{
+              marginTop: "14px",
+              marginBottom: 0,
+              fontSize: "20px",
+              lineHeight: 1.15,
+              fontFamily: "Arial, Helvetica, sans-serif",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            <a
+              href="/yazar/onur-duman"
+              className="author-link"
+              style={authorLinkStyle}
+            >
+              onur duman
+            </a>
+            <span style={{ color: "#6f6b63" }}>, şiir</span>
+          </p>
+        </article>
+
+        <article style={{ maxWidth: "920px", marginLeft: "92px" }}>
+          <h2
+            style={{
+              margin: 0,
+              fontSize: "92px",
+              lineHeight: 0.93,
+              fontWeight: 600,
+              letterSpacing: "-0.05em",
+            }}
+          >
+            <a
+              href="/siir/piiz-ver-piiz-ver-mayday"
+              className="title-link"
+              style={titleLinkStyle}
+            >
+              piiz ver piiz ver mayday
+            </a>
+          </h2>
+
+          <p
+            style={{
+              marginTop: "14px",
+              marginBottom: 0,
+              fontSize: "20px",
+              lineHeight: 1.15,
+              fontFamily: "Arial, Helvetica, sans-serif",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            <a
+              href="/yazar/onur-duman"
+              className="author-link"
+              style={authorLinkStyle}
+            >
+              onur duman
+            </a>
+            <span style={{ color: "#6f6b63" }}> & </span>
+            <a
+              href="/yazar/mahmut-kiran"
+              className="author-link"
+              style={authorLinkStyle}
+            >
+              mahmut kıran
+            </a>
+            <span style={{ color: "#6f6b63" }}>, şiir</span>
+          </p>
+        </article>
+
+        <article style={{ maxWidth: "760px" }}>
+          <h2
+            style={{
+              margin: 0,
+              fontSize: "92px",
+              lineHeight: 0.93,
+              fontWeight: 600,
+              letterSpacing: "-0.05em",
+            }}
+          >
+            <a
+              href="/siir/oyunlarimiz-var"
+              className="title-link"
+              style={titleLinkStyle}
+            >
+              oyunlarımız var
+            </a>
+          </h2>
+
+          <p
+            style={{
+              marginTop: "14px",
+              marginBottom: 0,
+              fontSize: "20px",
+              lineHeight: 1.15,
+              fontFamily: "Arial, Helvetica, sans-serif",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            <a
+              href="/yazar/onur-duman"
+              className="author-link"
+              style={authorLinkStyle}
+            >
+              onur duman
+            </a>
+            <span style={{ color: "#6f6b63" }}>, şiir</span>
+          </p>
+        </article>
+
+        <article style={{ maxWidth: "980px", marginLeft: "118px" }}>
+          <h2
+            style={{
+              margin: 0,
+              fontSize: "92px",
+              lineHeight: 0.93,
+              fontWeight: 600,
+              letterSpacing: "-0.05em",
+            }}
+          >
+            <a
+              href="/siir/24101990"
+              className="title-link"
+              style={titleLinkStyle}
+            >
+              24101990
+            </a>
+          </h2>
+
+          <p
+            style={{
+              marginTop: "14px",
+              marginBottom: 0,
+              fontSize: "20px",
+              lineHeight: 1.15,
+              fontFamily: "Arial, Helvetica, sans-serif",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            <a
+              href="/yazar/goksel-yaman"
+              className="author-link"
+              style={authorLinkStyle}
+            >
+              göksel yaman
+            </a>
+            <span style={{ color: "#6f6b63" }}>, şiir</span>
+          </p>
+        </article>
+
+        <article style={{ maxWidth: "980px" }}>
+          <h2
+            style={{
+              margin: 0,
+              fontSize: "92px",
+              lineHeight: 0.93,
+              fontWeight: 600,
+              letterSpacing: "-0.05em",
+            }}
+          >
+            <a
+              href="/siir/kendimin-ic-ve-disbukey-sinirlari"
+              className="title-link"
+              style={titleLinkStyle}
+            >
+              kendimin iç ve dışbükey
+              <br />
+              sınırları
+            </a>
+          </h2>
+
+          <p
+            style={{
+              marginTop: "14px",
+              marginBottom: 0,
+              fontSize: "20px",
+              lineHeight: 1.15,
+              fontFamily: "Arial, Helvetica, sans-serif",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            <a
+              href="/yazar/onur-duman"
+              className="author-link"
+              style={authorLinkStyle}
+            >
+              onur duman
+            </a>
+            <span style={{ color: "#6f6b63" }}>, şiir</span>
+          </p>
+        </article>
+
+        <article style={{ maxWidth: "980px", marginLeft: "102px" }}>
+          <h2
+            style={{
+              margin: 0,
+              fontSize: "92px",
+              lineHeight: 0.93,
+              fontWeight: 600,
+              letterSpacing: "-0.05em",
+            }}
+          >
+            <a
+              href="/siir/paesino-sborramerda"
+              className="title-link"
+              style={titleLinkStyle}
+            >
+              paesino
+              <br />
+              sborramerda
+            </a>
+          </h2>
+
+          <p
+            style={{
+              marginTop: "14px",
+              marginBottom: 0,
+              fontSize: "20px",
+              lineHeight: 1.15,
+              fontFamily: "Arial, Helvetica, sans-serif",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            <a
+              href="/yazar/goksel-yaman"
+              className="author-link"
+              style={authorLinkStyle}
+            >
+              göksel yaman
+            </a>
+            <span style={{ color: "#6f6b63" }}>, şiir</span>
+          </p>
+        </article>
+
+        <article style={{ maxWidth: "720px" }}>
+          <h2
+            style={{
+              margin: 0,
+              fontSize: "92px",
+              lineHeight: 0.93,
+              fontWeight: 600,
+              letterSpacing: "-0.05em",
+            }}
+          >
+            <a
+              href="/siir/turmstrasse"
+              className="title-link"
+              style={titleLinkStyle}
+            >
+              turmstraße
+            </a>
+          </h2>
+
+          <p
+            style={{
+              marginTop: "14px",
+              marginBottom: 0,
+              fontSize: "20px",
+              lineHeight: 1.15,
+              fontFamily: "Arial, Helvetica, sans-serif",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            <a
+              href="/yazar/onur-duman"
+              className="author-link"
+              style={authorLinkStyle}
+            >
+              onur duman
+            </a>
+            <span style={{ color: "#6f6b63" }}>, şiir</span>
+          </p>
+        </article>
+
+        <article style={{ maxWidth: "760px", marginLeft: "126px" }}>
+          <h2
+            style={{
+              margin: 0,
+              fontSize: "92px",
+              lineHeight: 0.93,
+              fontWeight: 600,
+              letterSpacing: "-0.05em",
+            }}
+          >
+            <a
+              href="/siir/feierabendbier"
+              className="title-link"
+              style={titleLinkStyle}
+            >
+              feierabendbier
+            </a>
+          </h2>
+
+          <p
+            style={{
+              marginTop: "14px",
+              marginBottom: 0,
+              fontSize: "20px",
+              lineHeight: 1.15,
+              fontFamily: "Arial, Helvetica, sans-serif",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            <a
+              href="/yazar/onur-duman"
+              className="author-link"
+              style={authorLinkStyle}
+            >
+              onur duman
+            </a>
+            <span style={{ color: "#6f6b63" }}>, şiir</span>
+          </p>
+        </article>
+
+        <article style={{ maxWidth: "900px" }}>
+          <h2
+            style={{
+              margin: 0,
+              fontSize: "92px",
+              lineHeight: 0.93,
+              fontWeight: 600,
+              letterSpacing: "-0.05em",
+            }}
+          >
+            <a
+              href="/siir/afili-haytalar"
+              className="title-link"
+              style={titleLinkStyle}
+            >
+              afili haytalar
+            </a>
+          </h2>
+
+          <p
+            style={{
+              marginTop: "14px",
+              marginBottom: 0,
+              fontSize: "20px",
+              lineHeight: 1.15,
+              fontFamily: "Arial, Helvetica, sans-serif",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            <a
+              href="/yazar/onur-duman"
+              className="author-link"
+              style={authorLinkStyle}
+            >
+              onur duman
+            </a>
+            <span style={{ color: "#6f6b63" }}> & </span>
+            <a
+              href="/yazar/mahmut-kiran"
+              className="author-link"
+              style={authorLinkStyle}
+            >
+              mahmut kıran
+            </a>
+            <span style={{ color: "#6f6b63" }}>, çeviri</span>
+          </p>
+        </article>
+      </section>
+    </main>
   );
 }
