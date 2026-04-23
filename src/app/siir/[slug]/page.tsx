@@ -148,11 +148,10 @@ export default async function SiirPage({
             "artık çok bunaldın kalk da gidelim\n" +
             "oltanı at birine elbet denk gelirim\n" +
             "bak yeni bir desen tutturdum ıslığımla\n" +
-            "kuvvet ham derime keskin\n" +
-            "mutlak yansın canımız\n" +
+            "sokağım yorgun sırtlandım yüzyılını\n" +
             "kuvvet ham derime keskin\n" +
             "sık dişlerini iyice sık ki dökülsünler\n" +
-            "sokağım yorgun sırtlandım yüzyılını\n" +
+            "mutlak yansın canımız\n" +
             "içimin yağlarını eritecek ne çok şey var\n" +
             "israil’in köpek kolonisi\n" +
             "ah şu berlin bir daha bombalansa!",
