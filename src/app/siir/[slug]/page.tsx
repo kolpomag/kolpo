@@ -109,7 +109,7 @@ export default async function SiirPage({
   {
     kind: "stanza",
     text: "you are cursed with simplicity",
-    italic: true,
+    italic: false,
   },
   {
     kind: "stanza",
