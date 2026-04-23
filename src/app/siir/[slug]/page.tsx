@@ -33,61 +33,88 @@ export default async function SiirPage({
       label: "şiir",
       authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
       body: [
-        {
-          kind: "stanza",
-          text:
-            "ellerimi kullanarak veya kullanmayarak\n" +
-            "sağdan sola koyduğum\n" +
-            "denkleştirdiğim tüm olmazlar,\n" +
-            "aşkımın aksak tınısı\n" +
-            "beni affedin.\n" +
-            "gün döndüğünde elbet\n" +
-            "tütsülerim yine seni yanar.",
-        },
-        {
-          kind: "stanza",
-          text:
-            "kesme yakuttan\n" +
-            "yahut mürver çiçeklerinden yapılma\n" +
-            "o akşamüstlerinden birinde\n" +
-            "bir tavşan,\n" +
-            "alacalı bir tilkiye rast gelir.",
-        },
-        {
-          kind: "stanza",
-          text:
-            "beden, geçmişi şimdi zanneder\n" +
-            "kendi sağlamasına durur\n" +
-            "nesnenin sürekliliğini zorlar.\n" +
-            "orada mı diye üç kez yokladığım\n" +
-            "ancak bir yumru kadar olan kalbi\n" +
-            "eğer ki durursa, diye düşünür tilki\n" +
-            "pek bir şey değişmez ancak\n" +
-            "kendi kendine patlayan \n" +
-            "bir sivilce gibi.",
-        },
-        {
-          kind: "stanza",
-          text:
-            "şükür ki biraz gece ve sonrası\n" +
-            "devrimim yine diskoya çalar\n" +
-            "hiç unutmamalı.\n" +
-            "aşık ve kanlı,\n" +
-            "kekremsi kırmızı yemişler gibi,\n" +
-            "çatlayan genç bir sesle \n" +
-            "boşalmaya benzer.",
-        },
-        {
-          kind: "stanza",
-          text:
-            "tavşan kaç\n" +
-            "burada duramazsın\n" +
-            "hayalleri ve ayrık dişleri\n" +
-            "alacalı tilkinin \n" +
-            "gözlerine bakıyorsun\n" +
-            "sonunda yalnızsın.",
-        },
-      ],
+
+  {
+
+    kind: "stanza",
+
+    text:
+
+      "ellerimi kullanarak veya kullanmayarak\n" +
+
+      "sağdan sola koyduğum\n" +
+
+      "denkleştirdiğim tüm olmazlar\n" +
+
+      "aşkımın aksak tınısı,\n" +
+
+      "beni affedin.\n" +
+
+      "gün döndüğünde elbet\n" +
+
+      "tütsülerim yine seni yanar.\n" +
+
+      "kesme yakuttan\n" +
+
+      "yahut mürver çiçeklerinden yapılma\n" +
+
+      "o akşamüstlerinden birinde\n" +
+
+      "bir tavşan\n" +
+
+      "alacalı bir tilkiye rast gelir.\n" +
+
+      "beden geçmişi şimdi zanneder\n" +
+
+      "kendi sağlamasına durur\n" +
+
+      "nesnenin sürekliliğini zorlar.\n" +
+
+      "orada mı diye üç kez yokladığım\n" +
+
+      "ancak bir yumru kadar olan kalbi\n" +
+
+      "eğer ki durursa diye düşünür tilki\n" +
+
+      "pek bir şey değişmez ancak\n" +
+
+      "kendi kendine patlayan bir sivilce gibi.\n" +
+
+      "şükür ki biraz gece ve sonrası\n" +
+
+      "devrimim yine diskoya çalar.\n" +
+
+      "aşık ve kanlı\n" +
+
+      "kekremsi kırmızı yemişler gibi\n" +
+
+      "çatlayan genç bir sesle\n" +
+
+      "boşalmaya benzer.",
+
+  },
+
+  {
+
+    kind: "stanza",
+
+    text:
+
+      "tavşan kaç,\n" +
+
+      "burada duramazsın.\n" +
+
+      "hayalleri ve ayrık dişleri\n" +
+
+      "alacalı tilkinin\n" +
+
+      "gözlerine bakıyorsun\n" +
+
+      "sonunda yalnızsın.",
+
+  },
+
+],
       more: [
         { title: "ezbere şaman", href: "/siir/ezbere-saman" },
         { title: "göçmüş kediler bahçesi", href: "/siir/gocmus-kediler-bahcesi" },
