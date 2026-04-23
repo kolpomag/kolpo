@@ -2,7 +2,8 @@ import SiteHeader from "@/components/SiteHeader";
 
 type PoemBodyBlock =
   | { kind: "stanza"; text: string; italic?: boolean }
-  | { kind: "special-24101990" };
+  | { kind: "special-24101990" }
+  | { kind: "special-buffalo-bill" };
 
 type Poem = {
   title: string;
@@ -147,9 +148,10 @@ export default async function SiirPage({
             "artık çok bunaldın kalk da gidelim\n" +
             "oltanı at birine elbet denk gelirim\n" +
             "bak yeni bir desen tutturdum ıslığımla\n" +
-            "sık dişlerini iyice sık ki dökülsünler\n" +
+            "kuvvet ham derime keskin\n" +
             "mutlak yansın canımız\n" +
             "kuvvet ham derime keskin\n" +
+            "sık dişlerini iyice sık ki dökülsünler\n" +
             "sokağım yorgun sırtlandım yüzyılını\n" +
             "içimin yağlarını eritecek ne çok şey var\n" +
             "israil’in köpek kolonisi\n" +
@@ -265,62 +267,63 @@ export default async function SiirPage({
         { title: "sabahı göremem", href: "/yazi/sabahi-goremem" },
       ],
     },
-"gocmus-kediler-bahcesi": {
-  title: "göçmüş kediler bahçesi",
-  label: "şiir",
-  authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
-  body: [
-    {
-      kind: "stanza",
-      text:
-        "biliyorum, artık beni göremezsin\n" +
-        "bıçağın kabzası da bileyli.\n" +
-        "yine de utanmayı unutarak\n" +
-        "güneşin doğuşundan\n" +
-        "batışına kadar\n" +
-        "kedileri sevmek isterdim.\n" +
-        "kızışmış vaşaklar gibi gergin kaslarımız\n" +
-        "ve buyurgan kalplerimiz\n" +
-        "terli ellerimizde kurulmuş saatler\n" +
-        "şafağa doğru haylaz\n" +
-        "ve atılgan\n" +
-        "bekleriz.",
-    },
-    {
-      kind: "stanza",
-      text:
-        "korkulacak hiçbir şey kalmadı oysa.\n" +
-        "beni sevmen için tüm nedenleri ortadan kaldırdım.\n" +
-        "vazgeçtim görmekten\n" +
-        "bir fiş sırasını bekler gibi alelade\n" +
-        "ve topukların yere değmeden\n" +
-        "bir hayatı içine alıp\n" +
-        "kendinle çoğaltmanı,\n" +
-        "tenine serpiştirdiğin\n" +
-        "onca takımyıldızını.\n" +
-        "bir selam bile bekleyemem\n" +
-        "sen kedilere odaklan.",
-    },
-    {
-      kind: "stanza",
-      text:
-        "hiç kimse bir yere gitmedi bak!\n" +
-        "güneşimiz aynı\n" +
-        "havamız aynı\n" +
-        "ne cüret ki\n" +
-        "günlerin isimleri de aynı.\n" +
-        "çünkü göçmüş kediler bahçesi’nde\n" +
-        "bizden önce ve sonra\n" +
-        "sabah vardiyasına giden adamlar vardı.\n" +
-        "taze ekmek kokuları\n" +
-        "terimizle yıkayıp astığımız çarşaflar.\n" +
-        "yanına yattığımda\n" +
-        "çıplak ayaklarının hizasında\n" +
-        "sokak lambası\n" +
-        "sonra sabah ezanı\n" +
-        "mevsimlere göre sıralarını değiş.",
-    },
-  ],
+
+    "gocmus-kediler-bahcesi": {
+      title: "göçmüş kediler bahçesi",
+      label: "şiir",
+      authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
+      body: [
+        {
+          kind: "stanza",
+          text:
+            "biliyorum, artık beni göremezsin\n" +
+            "bıçağın kabzası da bileyli.\n" +
+            "yine de utanmayı unutarak\n" +
+            "güneşin doğuşundan\n" +
+            "batışına kadar\n" +
+            "kedileri sevmek isterdim.\n" +
+            "kızışmış vaşaklar gibi gergin kaslarımız\n" +
+            "ve buyurgan kalplerimiz\n" +
+            "terli ellerimizde kurulmuş saatler\n" +
+            "şafağa doğru haylaz\n" +
+            "ve atılgan\n" +
+            "bekleriz.",
+        },
+        {
+          kind: "stanza",
+          text:
+            "korkulacak hiçbir şey kalmadı oysa.\n" +
+            "beni sevmen için tüm nedenleri ortadan kaldırdım.\n" +
+            "vazgeçtim görmekten\n" +
+            "bir fiş sırasını bekler gibi alelade\n" +
+            "ve topukların yere değmeden\n" +
+            "bir hayatı içine alıp\n" +
+            "kendinle çoğaltmanı,\n" +
+            "tenine serpiştirdiğin\n" +
+            "onca takımyıldızını.\n" +
+            "bir selam bile bekleyemem\n" +
+            "sen kedilere odaklan.",
+        },
+        {
+          kind: "stanza",
+          text:
+            "hiç kimse bir yere gitmedi bak!\n" +
+            "güneşimiz aynı\n" +
+            "havamız aynı\n" +
+            "ne cüret ki\n" +
+            "günlerin isimleri de aynı.\n" +
+            "çünkü göçmüş kediler bahçesi’nde\n" +
+            "bizden önce ve sonra\n" +
+            "sabah vardiyasına giden adamlar vardı.\n" +
+            "taze ekmek kokuları\n" +
+            "terimizle yıkayıp astığımız çarşaflar.\n" +
+            "yanına yattığımda\n" +
+            "çıplak ayaklarının hizasında\n" +
+            "sokak lambası\n" +
+            "sonra sabah ezanı\n" +
+            "mevsimlere göre sıralarını değiş.",
+        },
+      ],
       more: [
         { title: "haziran’ın keşfi", href: "/siir/haziranin-kesfi" },
         { title: "ezbere şaman", href: "/siir/ezbere-saman" },
@@ -432,53 +435,53 @@ export default async function SiirPage({
       label: "şiir",
       authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
       body: [
-  {
-    kind: "stanza",
-    text:
-      "sokak her nefes alıp verdiğinde\n" +
-      "kaldırımlar et olur\n" +
-      "kabarıp söner\n" +
-      "kulağında trenlerin\n" +
-      "boğuk uğultusu\n" +
-      "hoşgörü bağıl\n" +
-      "tüm sabitler uyuşturucu\n" +
-      "kriptolar\n" +
-      "para piyasaları\n" +
-      "kafanı kaldırıma geçirdiklerinde\n" +
-      "ağzına gelen\n" +
-      "adrenalinin metalik tadı",
-  },
-  {
-    kind: "stanza",
-    text:
-      "oysa çamurum aynı sizinki gibi\n" +
-      "kanlı ve yapışkan\n" +
-      "hayal kırıklıklarından yapılma\n" +
-      "sıradan bir hayatı\n" +
-      "mahvetme kaşıntısıyla\n" +
-      "ama hücrelerim\n" +
-      "tam teşekküllü\n" +
-      "f tipi\n" +
-      "bitkilerinki gibi",
-  },
-  {
-    kind: "stanza",
-    text:
-      "yazık\n" +
-      "hislerim bazen\n" +
-      "kucağıma sığmaz\n" +
-      "yerlere dökülür\n" +
-      "ya ziyan olur\n" +
-      "ya da bir yoksunluk anında\n" +
-      "yalanmak için\n" +
-      "öylece beklerler\n" +
-      "ama geriye toplamaya çalışmanın\n" +
-      "saçmalığından gelen\n" +
-      "o cüret\n" +
-      "sonuna kadar\n" +
-      "yaşanmalı",
-  },
-],
+        {
+          kind: "stanza",
+          text:
+            "sokak her nefes alıp verdiğinde\n" +
+            "kaldırımlar et olur\n" +
+            "kabarıp söner\n" +
+            "kulağında trenlerin\n" +
+            "boğuk uğultusu\n" +
+            "hoşgörü bağıl\n" +
+            "tüm sabitler uyuşturucu\n" +
+            "kriptolar\n" +
+            "para piyasaları\n" +
+            "kafanı kaldırıma geçirdiklerinde\n" +
+            "ağzına gelen\n" +
+            "adrenalinin metalik tadı",
+        },
+        {
+          kind: "stanza",
+          text:
+            "oysa çamurum aynı sizinki gibi\n" +
+            "kanlı ve yapışkan\n" +
+            "hayal kırıklıklarından yapılma\n" +
+            "sıradan bir hayatı\n" +
+            "mahvetme kaşıntısıyla\n" +
+            "ama hücrelerim\n" +
+            "tam teşekküllü\n" +
+            "f tipi\n" +
+            "bitkilerinki gibi",
+        },
+        {
+          kind: "stanza",
+          text:
+            "yazık\n" +
+            "hislerim bazen\n" +
+            "kucağıma sığmaz\n" +
+            "yerlere dökülür\n" +
+            "ya ziyan olur\n" +
+            "ya da bir yoksunluk anında\n" +
+            "yalanmak için\n" +
+            "öylece beklerler\n" +
+            "ama geriye toplamaya çalışmanın\n" +
+            "saçmalığından gelen\n" +
+            "o cüret\n" +
+            "sonuna kadar\n" +
+            "yaşanmalı",
+        },
+      ],
       more: [
         { title: "ezbere şaman", href: "/siir/ezbere-saman" },
         { title: "turmstraße", href: "/siir/turmstrasse" },
@@ -556,7 +559,7 @@ export default async function SiirPage({
             "duraktaki ince parmaklı kadın\n" +
             "sen olmadığın için teşekkür ederim.\n" +
             "eğer mümkünse\n" +
-            "seni daha iyi günlerime \n" +
+            "seni daha iyi günlerime\n" +
             "saklamak isterim.\n" +
             "yaza kadar dönmeli\n" +
             "yaza kadar dönmeli\n" +
@@ -585,62 +588,62 @@ export default async function SiirPage({
       title: "feierabendbier",
       label: "şiir",
       authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
-  body: [
-  {
-    kind: "stanza",
-    text:
-      "anneannemin dul saçlarından ördüğü dünya\n" +
-      "sabahın beşinde biralar içirir bana\n" +
-      "almanları sarhoş ederim\n" +
-      "sonra ya öpüşür ya dövüşürler\n" +
-      "bu kabuğun kenarları çok kalın\n" +
-      "hava geçirmez\n" +
-      "su geçirmez\n" +
-      "aşk geçirmez\n" +
-      "seni geçirir bazen\n" +
-      "ikna olurum dünyaya",
-  },
-  {
-    kind: "stanza",
-    text:
-      "annem başka anneleri imrendiren\n" +
-      "mütevazı, alçakgönüllü\n" +
-      "ne efendi çocuklar yetiştirir\n" +
-      "sonra babamı besler\n" +
-      "sigara içer\n" +
-      "rakı içer\n" +
-      "et yer\n" +
-      "yanlarına giderim\n" +
-      "nakış gibi işlenmiş dantel\n" +
-      "kondurulurum televizyonun üzerine\n" +
-      "kimi seneler acı domates soslarına yetişirim\n" +
-      "kahvaltılıklara dönüşür\n" +
-      "ekmekle yerim\n" +
-      "havalar güzeldir\n" +
-      "çocukluğumun duvarları daralır\n" +
-      "püfür püfür eser\n" +
-      "sabah olur\n" +
-      "ezan okunur allahuekber",
-  },
-  {
-    kind: "stanza",
-    text:
-      "annem her gördüğümde biraz daha beyazlar\n" +
-      "kime çekmişim,\n" +
-      "kuş kalbi hep mi hızlı atar?\n" +
-      "seni bile düşünür benim yerime,\n" +
-      "sonra ikimiz için de\n" +
-      "kardeşimi öper",
-  },
-  {
-    kind: "stanza",
-    text:
-      "bu kazak bana dikilmiş,\n" +
-      "beş boy büyük\n" +
-      "iyisi mi büyüyünce giyerim\n" +
-      "kaşındırıyor ama",
-  },
-],
+      body: [
+        {
+          kind: "stanza",
+          text:
+            "anneannemin dul saçlarından ördüğü dünya\n" +
+            "sabahın beşinde biralar içirir bana\n" +
+            "almanları sarhoş ederim\n" +
+            "sonra ya öpüşür ya dövüşürler\n" +
+            "bu kabuğun kenarları çok kalın\n" +
+            "hava geçirmez\n" +
+            "su geçirmez\n" +
+            "aşk geçirmez\n" +
+            "seni geçirir bazen\n" +
+            "ikna olurum dünyaya",
+        },
+        {
+          kind: "stanza",
+          text:
+            "annem başka anneleri imrendiren\n" +
+            "mütevazı, alçakgönüllü\n" +
+            "ne efendi çocuklar yetiştirir\n" +
+            "sonra babamı besler\n" +
+            "sigara içer\n" +
+            "rakı içer\n" +
+            "et yer\n" +
+            "yanlarına giderim\n" +
+            "nakış gibi işlenmiş dantel\n" +
+            "kondurulurum televizyonun üzerine\n" +
+            "kimi seneler acı domates soslarına yetişirim\n" +
+            "kahvaltılıklara dönüşür\n" +
+            "ekmekle yerim\n" +
+            "havalar güzeldir\n" +
+            "çocukluğumun duvarları daralır\n" +
+            "püfür püfür eser\n" +
+            "sabah olur\n" +
+            "ezan okunur allahuekber",
+        },
+        {
+          kind: "stanza",
+          text:
+            "annem her gördüğümde biraz daha beyazlar\n" +
+            "kime çekmişim,\n" +
+            "kuş kalbi hep mi hızlı atar?\n" +
+            "seni bile düşünür benim yerime,\n" +
+            "sonra ikimiz için de\n" +
+            "kardeşimi öper",
+        },
+        {
+          kind: "stanza",
+          text:
+            "bu kazak bana dikilmiş,\n" +
+            "beş boy büyük\n" +
+            "iyisi mi büyüyünce giyerim\n" +
+            "kaşındırıyor ama",
+        },
+      ],
       more: [
         { title: "turmstraße", href: "/siir/turmstrasse" },
         { title: "kendimin iç ve dışbükey sınırları", href: "/siir/kendimin-ic-ve-disbukey-sinirlari" },
@@ -698,6 +701,19 @@ export default async function SiirPage({
         { title: "afili haytalar", href: "/siir/afili-haytalar" },
         { title: "feierabendbier", href: "/siir/feierabendbier" },
         { title: "paesino sborramerda", href: "/siir/paesino-sborramerda" },
+      ],
+    },
+
+    "buffalo-bill": {
+      title: "buffalo bill",
+      label: "çeviri",
+      titleHref: "https://www.poetryfoundation.org/poems/47244/buffalo-bill-s",
+      authors: [{ name: "prowler", href: "/yazar/prowler" }],
+      body: [{ kind: "special-buffalo-bill" }],
+      more: [
+        { title: "afili haytalar", href: "/siir/afili-haytalar" },
+        { title: "what remains", href: "/siir/what-remains" },
+        { title: "24101990", href: "/siir/24101990" },
       ],
     },
 
@@ -952,6 +968,31 @@ export default async function SiirPage({
           align-self: flex-end;
         }
 
+        .special-buffalo {
+          padding: 18px 0 6px 0;
+          font-size: 30px;
+          line-height: 1.55;
+          letter-spacing: -0.02em;
+        }
+
+        .special-buffalo-line {
+          display: block;
+          white-space: pre-wrap;
+        }
+
+        .bb-1  { margin-left: 0; }
+        .bb-2  { margin-left: 0; }
+        .bb-3  { margin-left: 150px; }
+        .bb-4  { margin-left: 150px; }
+        .bb-5  { margin-left: 560px; }
+        .bb-6  { margin-left: 0; }
+        .bb-7  { margin-left: 860px; }
+        .bb-8  { margin-left: 0; }
+        .bb-9  { margin-left: 430px; }
+        .bb-10 { margin-left: 0; }
+        .bb-11 { margin-left: 0; }
+        .bb-12 { margin-left: 0; }
+
         @media (max-width: 900px) {
           .poem-shell {
             padding: 20px 20px 72px 20px;
@@ -1047,6 +1088,15 @@ export default async function SiirPage({
             align-self: flex-start;
             margin-top: 0;
           }
+
+          .special-buffalo {
+            font-size: 23px;
+            line-height: 1.58;
+          }
+
+          .bb-1, .bb-2, .bb-3, .bb-4, .bb-5, .bb-6, .bb-7, .bb-8, .bb-9, .bb-10, .bb-11, .bb-12 {
+            margin-left: 0 !important;
+          }
         }
 
         @media (max-width: 560px) {
@@ -1089,6 +1139,11 @@ export default async function SiirPage({
 
           .special-24101990-address {
             font-size: 14px;
+          }
+
+          .special-buffalo {
+            font-size: 20px;
+            line-height: 1.6;
           }
         }
       `}</style>
@@ -1221,6 +1276,39 @@ export default async function SiirPage({
                         </div>
                       </div>
                     </div>
+                  </section>
+                );
+              }
+
+              if (block.kind === "special-buffalo-bill") {
+                return (
+                  <section key={index} className="special-buffalo">
+                    <span className="special-buffalo-line bb-1">Buffalo Bill</span>
+                    <span className="special-buffalo-line bb-2">rahmetli</span>
+
+                    <br />
+
+                    <span className="special-buffalo-line bb-3">sürerdi</span>
+                    <span className="special-buffalo-line bb-4">sugibi-kurşuni</span>
+                    <span className="special-buffalo-line bb-5">beygirini</span>
+
+                    <br />
+
+                    <span className="special-buffalo-line bb-6">
+                      ve pat diye birkiüçdörtbeş güvercini tekte indirirdi
+                    </span>
+
+                    <br />
+
+                    <span className="special-buffalo-line bb-7">allahım</span>
+
+                    <br />
+
+                    <span className="special-buffalo-line bb-8">ne yakışıklı adamdı</span>
+                    <span className="special-buffalo-line bb-9">bilmek isterim</span>
+                    <span className="special-buffalo-line bb-10">Beğendin mi</span>
+                    <span className="special-buffalo-line bb-11">mavigözlü oğlanını</span>
+                    <span className="special-buffalo-line bb-12">Bay Ölüm</span>
                   </section>
                 );
               }

@@ -119,6 +119,15 @@ const entries = [
     multiline: false,
   },
   {
+    title: "buffalo bill",
+    href: "/siir/buffalo-bill",
+    author: "prowler",
+    authorHref: "/yazar/prowler",
+    type: "çeviri",
+    className: "entry entry-o",
+    multiline: false,
+  },
+  {
     title: "afili haytalar",
     href: "/siir/afili-haytalar",
     author: "onur duman & mahmut kıran",
@@ -228,6 +237,7 @@ export default function HomePage() {
         .entry-k { max-width: 720px; margin-left: 0; }
         .entry-l { max-width: 760px; margin-left: 126px; }
         .entry-n { max-width: 760px; margin-left: 98px; }
+        .entry-o { max-width: 760px; margin-left: 0; }
         .entry-m { max-width: 900px; margin-left: 0; }
 
         @media (max-width: 900px) {

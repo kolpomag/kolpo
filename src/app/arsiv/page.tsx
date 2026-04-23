@@ -105,6 +105,12 @@ export default function ArsivPage() {
       type: "şiir",
     },
     {
+      title: "buffalo bill",
+      href: "/siir/buffalo-bill",
+      authors: [{ name: "prowler", href: "/yazar/prowler" }],
+      type: "çeviri",
+    },
+    {
       title: "afili haytalar",
       href: "/siir/afili-haytalar",
       authors: [

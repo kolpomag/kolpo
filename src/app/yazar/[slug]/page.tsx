@@ -90,6 +90,16 @@ export default async function YazarPage({
         },
       ],
     },
+    "prowler": {
+      name: "prowler",
+      entries: [
+        {
+          title: "buffalo bill",
+          href: "/siir/buffalo-bill",
+          type: "çeviri",
+        },
+      ],
+    },
     "ayse-kaya": {
       name: "ayşe kaya",
       entries: [
