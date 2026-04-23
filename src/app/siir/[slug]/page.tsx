@@ -199,10 +199,7 @@ export default async function SiirPage({
       ],
       more: [
         { title: "haziran’ın keşfi", href: "/siir/haziranin-kesfi" },
-        {
-          title: "göçmüş kediler bahçesi",
-          href: "/siir/gocmus-kediler-bahcesi",
-        },
+        { title: "göçmüş kediler bahçesi", href: "/siir/gocmus-kediler-bahcesi" },
         { title: "oyunlarımız var", href: "/siir/oyunlarimiz-var" },
       ],
     },
@@ -439,10 +436,7 @@ export default async function SiirPage({
       more: [
         { title: "ezbere şaman", href: "/siir/ezbere-saman" },
         { title: "haziran’ın keşfi", href: "/siir/haziranin-kesfi" },
-        {
-          title: "göçmüş kediler bahçesi",
-          href: "/siir/gocmus-kediler-bahcesi",
-        },
+        { title: "göçmüş kediler bahçesi", href: "/siir/gocmus-kediler-bahcesi" },
       ],
     },
 
@@ -611,10 +605,7 @@ export default async function SiirPage({
       ],
       more: [
         { title: "feierabendbier", href: "/siir/feierabendbier" },
-        {
-          title: "kendimin iç ve dışbükey sınırları",
-          href: "/siir/kendimin-ic-ve-disbukey-sinirlari",
-        },
+        { title: "kendimin iç ve dışbükey sınırları", href: "/siir/kendimin-ic-ve-disbukey-sinirlari" },
         { title: "ezbere şaman", href: "/siir/ezbere-saman" },
       ],
     },
@@ -685,10 +676,7 @@ export default async function SiirPage({
       ],
       more: [
         { title: "turmstraße", href: "/siir/turmstrasse" },
-        {
-          title: "kendimin iç ve dışbükey sınırları",
-          href: "/siir/kendimin-ic-ve-disbukey-sinirlari",
-        },
+        { title: "kendimin iç ve dışbükey sınırları", href: "/siir/kendimin-ic-ve-disbukey-sinirlari" },
         { title: "ezbere şaman", href: "/siir/ezbere-saman" },
       ],
     },
@@ -754,45 +742,344 @@ export default async function SiirPage({
         .source-link:hover {
           color: ${accent} !important;
         }
+
+        .poem-shell {
+          padding: 24px 36px 110px 36px;
+          max-width: 1280px;
+        }
+
+        .poem-topline {
+          border-top: 1px solid rgba(17,17,17,0.12);
+          padding-top: 18px;
+          margin-bottom: 28px;
+        }
+
+        .poem-label {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 14px;
+          letter-spacing: -0.01em;
+          color: #6f6b63;
+          margin-bottom: 14px;
+        }
+
+        .poem-title {
+          margin: 0;
+          max-width: 980px;
+          font-size: 92px;
+          line-height: 0.93;
+          font-weight: 600;
+          letter-spacing: -0.05em;
+        }
+
+        .poem-meta {
+          margin-top: 16px;
+          margin-bottom: 0;
+          font-size: 20px;
+          line-height: 1.15;
+          font-family: Arial, Helvetica, sans-serif;
+          letter-spacing: -0.02em;
+        }
+
+        .poem-grid {
+          display: grid;
+          grid-template-columns: minmax(0, 760px) 1fr;
+          gap: 72px;
+          align-items: start;
+        }
+
+        .poem-body {
+          display: flex;
+          flex-direction: column;
+          gap: 26px;
+          font-size: 30px;
+          line-height: 1.55;
+          letter-spacing: -0.02em;
+        }
+
+        .poem-more {
+          padding-top: 8px;
+        }
+
+        .poem-more-inner {
+          border-top: 1px solid rgba(17,17,17,0.12);
+          padding-top: 14px;
+        }
+
+        .poem-more-title {
+          margin: 0 0 22px 0;
+          font-size: 22px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: 600;
+          letter-spacing: -0.02em;
+          color: #c32721;
+        }
+
+        .poem-more-list {
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+        }
+
+        .poem-more-link {
+          color: #111111;
+          text-decoration: none;
+          transition: color 0.18s ease;
+          font-size: 30px;
+          line-height: 1.04;
+          letter-spacing: -0.04em;
+        }
+
+        .special-24101990 {
+          background: transparent;
+          color: #111111;
+          padding: 34px 34px 42px 34px;
+          min-height: 860px;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .special-24101990-head {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 22px;
+          font-weight: 700;
+          letter-spacing: -0.03em;
+          margin-bottom: 54px;
+        }
+
+        .special-24101990-title-wrap {
+          position: relative;
+          margin-bottom: 42px;
+        }
+
+        .special-24101990-gunes {
+          font-family: Arial Black, Arial, Helvetica, sans-serif;
+          font-size: 170px;
+          line-height: 0.82;
+          font-weight: 900;
+          color: #c32721;
+          text-transform: uppercase;
+          letter-spacing: -0.08em;
+        }
+
+        .special-24101990-dersane {
+          position: absolute;
+          left: 310px;
+          top: 118px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 44px;
+          line-height: 1;
+          letter-spacing: -0.04em;
+          color: #111111;
+        }
+
+        .special-24101990-grid {
+          display: grid;
+          grid-template-columns: 0.9fr 0.7fr;
+          gap: 56px;
+          align-items: start;
+        }
+
+        .special-24101990-left {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 20px;
+          line-height: 1.8;
+          max-width: 400px;
+        }
+
+        .special-24101990-right {
+          display: flex;
+          flex-direction: column;
+          min-height: 100%;
+          justify-content: space-between;
+          padding-top: 8px;
+        }
+
+        .special-24101990-diltek {
+          font-family: Arial, Helvetica, sans-serif;
+          max-width: 360px;
+        }
+
+        .special-24101990-diltek-title {
+          font-size: 24px;
+          font-weight: 800;
+          margin-bottom: 18px;
+          letter-spacing: -0.03em;
+        }
+
+        .special-24101990-diltek-body {
+          font-size: 24px;
+          line-height: 1.65;
+        }
+
+        .special-24101990-stop {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 30px;
+          line-height: 1.15;
+          font-weight: 800;
+          letter-spacing: -0.04em;
+          max-width: 360px;
+          margin-top: 120px;
+        }
+
+        .special-24101990-address {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 18px;
+          line-height: 1.6;
+          text-align: right;
+          opacity: 0.9;
+          margin-top: 160px;
+          max-width: 420px;
+          align-self: flex-end;
+        }
+
+        @media (max-width: 900px) {
+          .poem-shell {
+            padding: 20px 20px 72px 20px;
+          }
+
+          .poem-title {
+            font-size: 56px;
+            line-height: 0.96;
+          }
+
+          .poem-meta {
+            font-size: 17px;
+            margin-top: 12px;
+          }
+
+          .poem-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+          }
+
+          .poem-body {
+            font-size: 24px;
+            line-height: 1.6;
+            gap: 22px;
+          }
+
+          .poem-more {
+            padding-top: 0;
+          }
+
+          .poem-more-link {
+            font-size: 26px;
+          }
+
+          .special-24101990 {
+            padding: 20px;
+            min-height: auto;
+          }
+
+          .special-24101990-head {
+            font-size: 18px;
+            margin-bottom: 28px;
+          }
+
+          .special-24101990-gunes {
+            font-size: 92px;
+            line-height: 0.84;
+          }
+
+          .special-24101990-dersane {
+            position: static;
+            margin-top: 10px;
+            font-size: 28px;
+          }
+
+          .special-24101990-title-wrap {
+            margin-bottom: 28px;
+          }
+
+          .special-24101990-grid {
+            grid-template-columns: 1fr;
+            gap: 28px;
+          }
+
+          .special-24101990-left {
+            font-size: 17px;
+            line-height: 1.7;
+            max-width: 100%;
+          }
+
+          .special-24101990-right {
+            padding-top: 0;
+            gap: 28px;
+          }
+
+          .special-24101990-diltek-title {
+            font-size: 20px;
+          }
+
+          .special-24101990-diltek-body {
+            font-size: 18px;
+            line-height: 1.6;
+          }
+
+          .special-24101990-stop {
+            font-size: 24px;
+            margin-top: 0;
+          }
+
+          .special-24101990-address {
+            font-size: 16px;
+            text-align: left;
+            align-self: flex-start;
+            margin-top: 0;
+          }
+        }
+
+        @media (max-width: 560px) {
+          .poem-title {
+            font-size: 44px;
+          }
+
+          .poem-meta {
+            font-size: 16px;
+          }
+
+          .poem-body {
+            font-size: 21px;
+            line-height: 1.62;
+          }
+
+          .poem-more-link {
+            font-size: 22px;
+          }
+
+          .special-24101990-gunes {
+            font-size: 72px;
+          }
+
+          .special-24101990-dersane {
+            font-size: 22px;
+          }
+
+          .special-24101990-left {
+            font-size: 15px;
+          }
+
+          .special-24101990-diltek-body {
+            font-size: 16px;
+          }
+
+          .special-24101990-stop {
+            font-size: 20px;
+          }
+
+          .special-24101990-address {
+            font-size: 14px;
+          }
+        }
       `}</style>
 
       <SiteHeader />
 
-      <section
-        style={{
-          padding: "24px 36px 110px 36px",
-          maxWidth: "1280px",
-        }}
-      >
-        <div
-          style={{
-            borderTop: "1px solid rgba(17,17,17,0.12)",
-            paddingTop: "18px",
-            marginBottom: "28px",
-          }}
-        >
-          <div
-            style={{
-              fontFamily: "Arial, Helvetica, sans-serif",
-              fontSize: "14px",
-              letterSpacing: "-0.01em",
-              color: "#6f6b63",
-              marginBottom: "14px",
-            }}
-          >
-            {poem.label || "şiir"}
-          </div>
+      <section className="poem-shell">
+        <div className="poem-topline">
+          <div className="poem-label">{poem.label || "şiir"}</div>
 
-          <h1
-            style={{
-              margin: 0,
-              maxWidth: "980px",
-              fontSize: "92px",
-              lineHeight: 0.93,
-              fontWeight: 600,
-              letterSpacing: "-0.05em",
-            }}
-          >
+          <h1 className="poem-title">
             {poem.title}
             {poem.titleHref ? (
               <a
@@ -812,16 +1099,7 @@ export default async function SiirPage({
             ) : null}
           </h1>
 
-          <p
-            style={{
-              marginTop: "16px",
-              marginBottom: 0,
-              fontSize: "20px",
-              lineHeight: 1.15,
-              fontFamily: "Arial, Helvetica, sans-serif",
-              letterSpacing: "-0.02em",
-            }}
-          >
+          <p className="poem-meta">
             {poem.authors.map((author, index) => (
               <span key={author.href}>
                 <a href={author.href} className="author-link" style={linkStyle}>
@@ -835,170 +1113,92 @@ export default async function SiirPage({
           </p>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "minmax(0, 760px) 1fr",
-            gap: "72px",
-            alignItems: "start",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "26px",
-              fontSize: "30px",
-              lineHeight: 1.55,
-              letterSpacing: "-0.02em",
-            }}
-          >
+        <div className="poem-grid">
+          <div className="poem-body">
             {poem.body.map((block, index) => {
               if (block.kind === "special-24101990") {
                 return (
-                  <section
-                    key={index}
-                    style={{
-                     background: "transparent",
-color: "#111111",
-                      padding: "34px 34px 42px 34px",
-                      minHeight: "980px",
-                      display: "grid",
-                      gridTemplateColumns: "1fr 1fr",
-                      gap: "42px",
-                    }}
-                  >
-                    <div>
-                      <div
-                        style={{
-                          fontFamily: "Arial, Helvetica, sans-serif",
-                          fontSize: "20px",
-                          fontWeight: 700,
-                          letterSpacing: "-0.03em",
-                          marginBottom: "42px",
-                        }}
-                      >
-                        24101990 alternatif
-                      </div>
+                  <section key={index} className="special-24101990">
+                    <div className="special-24101990-head">
+                      24101990 alternatif
+                    </div>
 
-                      <div
-                        style={{
-                          fontFamily: "Arial Black, Arial, Helvetica, sans-serif",
-                          fontSize: "112px",
-                          lineHeight: 0.9,
-                          fontWeight: 900,
-                          color: "#ff2c24",
-                          marginBottom: "18px",
-                          textTransform: "uppercase",
-                          letterSpacing: "-0.06em",
-                        }}
-                      >
-                        GÜNEŞ
-                      </div>
+                    <div className="special-24101990-title-wrap">
+                      <div className="special-24101990-gunes">GÜNEŞ</div>
+                      <div className="special-24101990-dersane">DERSANESİ</div>
+                    </div>
 
-                      <div
-                        style={{
-                          fontFamily: "Arial, Helvetica, sans-serif",
-                          fontSize: "28px",
-                          marginBottom: "18px",
-                          marginLeft: "204px",
-                          marginTop: "-34px",
-                        }}
-                      >
-                        DERSANESİ
-                      </div>
-
-                      <div
-                        style={{
-                          fontFamily: "Arial, Helvetica, sans-serif",
-                          fontSize: "15px",
-                          lineHeight: 1.8,
-                          maxWidth: "320px",
-                        }}
-                      >
-                        <div>VE</div>
-                        <div>SÜRÜCÜ KURSU</div>
+                    <div className="special-24101990-grid">
+                      <div className="special-24101990-left">
+                        <div style={{ marginBottom: "8px" }}>VE</div>
+                        <div style={{ marginBottom: "10px" }}>SÜRÜCÜ KURSU</div>
                         <div>Üniversiteye Hazırlık</div>
                         <div>ise son sınıflara,</div>
                         <div>Memelilere ve</div>
                         <div>lise 2. sınıflara</div>
                         <div>nihai gayemiz düşünce</div>
                         <div>özgür ve yaratı çoCUMar yetiştirmektir.</div>
-                        <div style={{ marginTop: "10px", fontWeight: 700 }}>
+
+                        <div style={{ marginTop: "26px", fontWeight: 800 }}>
                           6 AYDA
                         </div>
-                        <div style={{ fontWeight: 700 }}>İNGİLİZCE</div>
+                        <div style={{ fontWeight: 800 }}>İNGİLİZCE</div>
                         <div>PERA</div>
-                        <div style={{ fontWeight: 700 }}>ENGLISH</div>
-                        <div style={{ fontWeight: 700 }}>SAATTE</div>
-                        <div style={{ textAlign: "center", marginTop: "12px" }}>
+                        <div style={{ fontWeight: 800 }}>ENGLISH</div>
+                        <div style={{ fontWeight: 800 }}>SAATTE</div>
+
+                        <div
+                          style={{
+                            marginTop: "24px",
+                            marginBottom: "18px",
+                            textAlign: "center",
+                            fontSize: "28px",
+                            lineHeight: 1,
+                          }}
+                        >
                           İ
                         </div>
-                        <div style={{ marginTop: "14px" }}>
-                          Gerçekten öğrenmek istiyorsanız...
-                        </div>
-                        <div style={{ marginTop: "10px" }}>YABANCI DİL BİLMEK</div>
+
+                        <div>Gerçekten öğrenmek istiyorsanız...</div>
+
+                        <div style={{ marginTop: "18px" }}>YABANCI DİL BİLMEK</div>
                         <div>ÇAĞDAŞ BİR</div>
                         <div>ZORUNLULUKTUR.</div>
-                        <div style={{ marginTop: "10px" }}>başlangıç düzeyi.</div>
+
+                        <div style={{ marginTop: "26px" }}>başlangıç düzeyi.</div>
                         <div>Orta düzey. İleri düzey.</div>
                         <div>Proficiency. Toefl.</div>
-                        <div style={{ marginTop: "10px" }}>sizden de beklendiği gibi</div>
+
+                        <div style={{ marginTop: "22px" }}>
+                          sizden de beklendiği gibi
+                        </div>
                         <div>Yeni yıla İngilizce girin</div>
                       </div>
-                    </div>
 
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "space-between",
-                        minHeight: "100%",
-                        paddingTop: "168px",
-                      }}
-                    >
-                      <div
-                        style={{
-                          fontFamily: "Arial, Helvetica, sans-serif",
-                          fontSize: "18px",
-                          lineHeight: 1.9,
-                          maxWidth: "320px",
-                        }}
-                      >
-                        <div style={{ fontWeight: 700, marginBottom: "16px" }}>
-                          DİLTEK
+                      <div className="special-24101990-right">
+                        <div className="special-24101990-diltek">
+                          <div className="special-24101990-diltek-title">
+                            DİLTEK
+                          </div>
+
+                          <div className="special-24101990-diltek-body">
+                            <div>Audio-Visual Yöntem</div>
+                            <div>Sıcak, Uygar Bir Ortam</div>
+                            <div>Beceri Odaklı Eğitim</div>
+                            <div style={{ fontWeight: 800 }}>
+                              !!! 3 KUR AL 2 KUR ÖDE !!!
+                            </div>
+                          </div>
                         </div>
-                        <div>Audio-Visual Yöntem</div>
-                        <div>Sıcak, Uygar Bir Ortam</div>
-                        <div>Beceri Odaklı Eğitim</div>
-                        <div style={{ fontWeight: 700 }}>!!! 3 KUR AL 2 KUR ÖDE !!!</div>
-                      </div>
 
-                      <div
-                        style={{
-                          fontFamily: "Arial, Helvetica, sans-serif",
-                          fontSize: "18px",
-                          fontWeight: 700,
-                          alignSelf: "flex-start",
-                          marginTop: "48px",
-                        }}
-                      >
-                        STOP EVERYTHING START ENGLISH
-                      </div>
+                        <div className="special-24101990-stop">
+                          STOP EVERYTHING START ENGLISH
+                        </div>
 
-                      <div
-                        style={{
-                          fontFamily: "Arial, Helvetica, sans-serif",
-                          fontSize: "15px",
-                          lineHeight: 1.6,
-                          alignSelf: "flex-end",
-                          textAlign: "right",
-                          opacity: 0.88,
-                          marginTop: "80px",
-                        }}
-                      >
-                        <div>Etiler Mahallesi Serçe Sokak No:87,</div>
-                        <div>34337 Beşiktaş/İSTANBUL</div>
+                        <div className="special-24101990-address">
+                          <div>Etiler Mahallesi Serçe Sokak No:87,</div>
+                          <div>34337 Beşiktaş/İSTANBUL</div>
+                        </div>
                       </div>
                     </div>
                   </section>
@@ -1020,50 +1220,16 @@ color: "#111111",
             })}
           </div>
 
-          <aside
-            style={{
-              paddingTop: "8px",
-            }}
-          >
-            <div
-              style={{
-                borderTop: "1px solid rgba(17,17,17,0.12)",
-                paddingTop: "14px",
-              }}
-            >
-              <h2
-                style={{
-                  margin: "0 0 22px 0",
-                  fontSize: "22px",
-                  fontFamily: "Arial, Helvetica, sans-serif",
-                  fontWeight: 600,
-                  letterSpacing: "-0.02em",
-                  color: "#c32721",
-                }}
-              >
-                daha fazlası
-              </h2>
+          <aside className="poem-more">
+            <div className="poem-more-inner">
+              <h2 className="poem-more-title">daha fazlası</h2>
 
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "18px",
-                }}
-              >
+              <div className="poem-more-list">
                 {poem.more.map((item) => (
                   <a
                     key={item.href}
                     href={item.href}
-                    className="more-link"
-                    style={{
-                      color: "#111111",
-                      textDecoration: "none",
-                      transition: "color 0.18s ease",
-                      fontSize: "30px",
-                      lineHeight: 1.04,
-                      letterSpacing: "-0.04em",
-                    }}
+                    className="more-link poem-more-link"
                   >
                     {item.title}
                   </a>
