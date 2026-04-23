@@ -50,8 +50,16 @@ export default async function YazarPage({
     "mahmut-kiran": {
       name: "mahmut kıran",
       entries: [
-        { title: "ya siyah ya beyaz", href: "/siir/ya-siyah-ya-beyaz", type: "şiir" },
-        { title: "sivri çatlaklar", href: "/siir/sivri-catlaklar", type: "şiir" },
+        {
+          title: "yolunu öğrenmemiş nehirlere",
+          href: "/siir/ya-siyah-ya-beyaz",
+          type: "şiir",
+        },
+        {
+          title: "dualarımı aksatıyorum canlandır beni",
+          href: "/siir/sivri-catlaklar",
+          type: "şiir",
+        },
         { title: "sabahı göremem", href: "/yazi/sabahi-goremem", type: "yazı" },
         {
           title: "piiz ver piiz ver mayday",

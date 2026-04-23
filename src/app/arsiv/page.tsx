@@ -30,8 +30,8 @@ export default function ArsivPage() {
       type: "şiir",
     },
     {
-      title: "ya siyah ya beyaz",
-      href: "/siir/ya-siyah-ya-beyaz",
+      title: "dualarımı aksatıyorum canlandır beni",
+      href: "/siir/sivri-catlaklar",
       authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
       type: "şiir",
     },
@@ -42,8 +42,8 @@ export default function ArsivPage() {
       type: "şiir",
     },
     {
-      title: "sivri çatlaklar",
-      href: "/siir/sivri-catlaklar",
+      title: "yolunu öğrenmemiş nehirlere",
+      href: "/siir/ya-siyah-ya-beyaz",
       authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
       type: "şiir",
     },

@@ -11,8 +11,8 @@ const entries = [
     multiline: true,
   },
   {
-    title: "ya siyah ya beyaz",
-    href: "/siir/ya-siyah-ya-beyaz",
+    title: "dualarımı aksatıyorum canlandır beni",
+    href: "/siir/sivri-catlaklar",
     author: "mahmut kıran",
     authorHref: "/yazar/mahmut-kiran",
     type: "şiir",
@@ -29,8 +29,8 @@ const entries = [
     multiline: true,
   },
   {
-    title: "sivri çatlaklar",
-    href: "/siir/sivri-catlaklar",
+    title: "yolunu öğrenmemiş nehirlere",
+    href: "/siir/ya-siyah-ya-beyaz",
     author: "mahmut kıran",
     authorHref: "/yazar/mahmut-kiran",
     type: "şiir",
@@ -263,9 +263,15 @@ export default function HomePage() {
                 {entry.multiline ? (
                   entry.title.includes(" ") ? (
                     <>
-                      {entry.title.split(" ").slice(0, Math.ceil(entry.title.split(" ").length / 2)).join(" ")}
+                      {entry.title
+                        .split(" ")
+                        .slice(0, Math.ceil(entry.title.split(" ").length / 2))
+                        .join(" ")}
                       <br />
-                      {entry.title.split(" ").slice(Math.ceil(entry.title.split(" ").length / 2)).join(" ")}
+                      {entry.title
+                        .split(" ")
+                        .slice(Math.ceil(entry.title.split(" ").length / 2))
+                        .join(" ")}
                     </>
                   ) : (
                     entry.title

@@ -33,51 +33,51 @@ export default async function SiirPage({
       label: "şiir",
       authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
       body: [
-  {
-    kind: "stanza",
-    text:
-      "ellerimi kullanarak veya kullanmayarak\n" +
-      "sağdan sola koyduğum\n" +
-      "denkleştirdiğim tüm olmazlar\n" +
-      "aşkımın aksak tınısı,\n" +
-      "beni affedin.",
-  },
-  {
-    kind: "stanza",
-    text:
-      "gün döndüğünde elbet\n" +
-      "tütsülerim yine seni yanar.\n" +
-      "kesme yakuttan\n" +
-      "yahut mürver çiçeklerinden yapılma\n" +
-      "o akşamüstlerinden birinde\n" +
-      "bir tavşan\n" +
-      "alacalı bir tilkiye rast gelir.\n" +
-      "beden geçmişi şimdi zanneder\n" +
-      "kendi sağlamasına durur\n" +
-      "nesnenin sürekliliğini zorlar.\n" +
-      "orada mı diye üç kez yokladığım\n" +
-      "ancak bir yumru kadar olan kalbi\n" +
-      "eğer ki durursa diye düşünür tilki\n" +
-      "pek bir şey değişmez ancak\n" +
-      "kendi kendine patlayan bir sivilce gibi.\n" +
-      "şükür ki biraz gece ve sonrası\n" +
-      "devrimim yine diskoya çalar.\n" +
-      "aşık ve kanlı\n" +
-      "kekremsi kırmızı yemişler gibi\n" +
-      "çatlayan genç bir sesle\n" +
-      "boşalmaya benzer.",
-  },
-  {
-    kind: "stanza",
-    text:
-      "tavşan kaç,\n" +
-      "burada duramazsın.\n" +
-      "hayalleri ve ayrık dişleri\n" +
-      "alacalı tilkinin\n" +
-      "gözlerine bakıyorsun\n" +
-      "sonunda yalnızsın.",
-  },
-],
+        {
+          kind: "stanza",
+          text:
+            "ellerimi kullanarak veya kullanmayarak\n" +
+            "sağdan sola koyduğum\n" +
+            "denkleştirdiğim tüm olmazlar\n" +
+            "aşkımın aksak tınısı,\n" +
+            "beni affedin.",
+        },
+        {
+          kind: "stanza",
+          text:
+            "gün döndüğünde elbet\n" +
+            "tütsülerim yine seni yanar.\n" +
+            "kesme yakuttan\n" +
+            "yahut mürver çiçeklerinden yapılma\n" +
+            "o akşamüstlerinden birinde\n" +
+            "bir tavşan\n" +
+            "alacalı bir tilkiye rast gelir.\n" +
+            "beden geçmişi şimdi zanneder\n" +
+            "kendi sağlamasına durur\n" +
+            "nesnenin sürekliliğini zorlar.\n" +
+            "orada mı diye üç kez yokladığım\n" +
+            "ancak bir yumru kadar olan kalbi\n" +
+            "eğer ki durursa diye düşünür tilki\n" +
+            "pek bir şey değişmez ancak\n" +
+            "kendi kendine patlayan bir sivilce gibi.\n" +
+            "şükür ki biraz gece ve sonrası\n" +
+            "devrimim yine diskoya çalar.\n" +
+            "aşık ve kanlı\n" +
+            "kekremsi kırmızı yemişler gibi\n" +
+            "çatlayan genç bir sesle\n" +
+            "boşalmaya benzer.",
+        },
+        {
+          kind: "stanza",
+          text:
+            "tavşan kaç,\n" +
+            "burada duramazsın.\n" +
+            "hayalleri ve ayrık dişleri\n" +
+            "alacalı tilkinin\n" +
+            "gözlerine bakıyorsun\n" +
+            "sonunda yalnızsın.",
+        },
+      ],
       more: [
         { title: "ezbere şaman", href: "/siir/ezbere-saman" },
         { title: "göçmüş kediler bahçesi", href: "/siir/gocmus-kediler-bahcesi" },
@@ -86,48 +86,49 @@ export default async function SiirPage({
     },
 
     "ya-siyah-ya-beyaz": {
-      title: "ya siyah ya beyaz",
+      title: "yolunu öğrenmemiş nehirlere",
       label: "şiir",
       authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
       body: [
-  {
-    kind: "stanza",
-    text:
-      "kulakların yetmiyor soruyorsun anlamadığında\n" +
-      "cevaplara ulaşacaksın, kapıları aralayacaksın\n" +
-      "hep alelacele hep koştur — bulamayacaksın\n" +
-      "kapını kapatıp pencerenden maviye yeşile,\n" +
-      "güneşi sana ulaştıran boş küreye,\n" +
-      "yolunu öğrenmemiş nehirlere\n" +
-      "bala dönüşmüş\n" +
-      "her bir çiçeğin kimliksizliğini\n" +
-      "patikanın aşağısındaki çeşmeye koşarak giden çocuğun\n" +
-      "iradeyle hiç işinin olmadığını\n" +
-      "sıfırla birin sana ihtiyacım yok dediğine kulak vereceğin o pencere kenarını fark\n" +
-      "etmeyeceksin fark etmeyeceksin rahminde zehir yuttuğun o benliğin lanetini",
-  },
-  {
-    kind: "stanza",
-    text: "you are cursed with simplicity",
-  },
-  {
-    kind: "stanza",
-    text:
-      "ya siyahtır ya beyaz\n" +
-      "keserek almışlar seni annenin karnından\n" +
-      "kolaylaştırmışlar işleri\n" +
-      "iki yol var diye görmüşsün\n" +
-      "acılı ve doğal olan yol seni öldürecekmiş\n" +
-      "acısız hızlı olansa sana bütün bir hayatı getirmiş\n" +
-      "seçmişler anneni ve seni yaşatacak yolu\n" +
-      "öğrenmişsin işleri kolaylaştıran siyahı\n" +
-      "beyazdan kesin ayıran yolu\n" +
-      "sınırlar ve tanımlar olmuş kalplerin ahı\n" +
-      "ya siyahtır ya beyaz",
-  },
-],
+        {
+          kind: "stanza",
+          text:
+            "kulakların yetmiyor soruyorsun anlamadığında\n" +
+            "cevaplara ulaşacaksın, kapıları aralayacaksın\n" +
+            "hep alelacele hep koştur — bulamayacaksın\n" +
+            "kapını kapatıp pencerenden maviye yeşile,\n" +
+            "güneşi sana ulaştıran boş küreye,\n" +
+            "yolunu öğrenmemiş nehirlere\n" +
+            "bala dönüşmüş\n" +
+            "her bir çiçeğin kimliksizliğini\n" +
+            "patikanın aşağısındaki çeşmeye koşarak giden çocuğun\n" +
+            "iradeyle hiç işinin olmadığını\n" +
+            "sıfırla birin sana ihtiyacım yok dediğine kulak vereceğin o pencere kenarını fark\n" +
+            "etmeyeceksin fark etmeyeceksin rahminde zehir yuttuğun o benliğin lanetini",
+        },
+        {
+          kind: "stanza",
+          text: "you are cursed with simplicity",
+          italic: true,
+        },
+        {
+          kind: "stanza",
+          text:
+            "ya siyahtır ya beyaz\n" +
+            "keserek almışlar seni annenin karnından\n" +
+            "kolaylaştırmışlar işleri\n" +
+            "iki yol var diye görmüşsün\n" +
+            "acılı ve doğal olan yol seni öldürecekmiş\n" +
+            "acısız hızlı olansa sana bütün bir hayatı getirmiş\n" +
+            "seçmişler anneni ve seni yaşatacak yolu\n" +
+            "öğrenmişsin işleri kolaylaştıran siyahı\n" +
+            "beyazdan kesin ayıran yolu\n" +
+            "sınırlar ve tanımlar olmuş kalplerin ahı\n" +
+            "ya siyahtır ya beyaz",
+        },
+      ],
       more: [
-        { title: "sivri çatlaklar", href: "/siir/sivri-catlaklar" },
+        { title: "dualarımı aksatıyorum canlandır beni", href: "/siir/sivri-catlaklar" },
         { title: "piiz ver piiz ver mayday", href: "/siir/piiz-ver-piiz-ver-mayday" },
         { title: "sabahı göremem", href: "/yazi/sabahi-goremem" },
       ],
@@ -190,7 +191,7 @@ export default async function SiirPage({
     },
 
     "sivri-catlaklar": {
-      title: "sivri çatlaklar",
+      title: "dualarımı aksatıyorum canlandır beni",
       label: "şiir",
       authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
       body: [
@@ -260,7 +261,7 @@ export default async function SiirPage({
         },
       ],
       more: [
-        { title: "ya siyah ya beyaz", href: "/siir/ya-siyah-ya-beyaz" },
+        { title: "yolunu öğrenmemiş nehirlere", href: "/siir/ya-siyah-ya-beyaz" },
         { title: "piiz ver piiz ver mayday", href: "/siir/piiz-ver-piiz-ver-mayday" },
         { title: "sabahı göremem", href: "/yazi/sabahi-goremem" },
       ],
@@ -374,8 +375,8 @@ export default async function SiirPage({
       ],
       more: [
         { title: "afili haytalar", href: "/siir/afili-haytalar" },
-        { title: "ya siyah ya beyaz", href: "/siir/ya-siyah-ya-beyaz" },
-        { title: "sivri çatlaklar", href: "/siir/sivri-catlaklar" },
+        { title: "yolunu öğrenmemiş nehirlere", href: "/siir/ya-siyah-ya-beyaz" },
+        { title: "dualarımı aksatıyorum canlandır beni", href: "/siir/sivri-catlaklar" },
       ],
     },
 
@@ -432,7 +433,7 @@ export default async function SiirPage({
       body: [{ kind: "special-24101990" }],
       more: [
         { title: "paesino sborramerda", href: "/siir/paesino-sborramerda" },
-        { title: "ya siyah ya beyaz", href: "/siir/ya-siyah-ya-beyaz" },
+        { title: "yolunu öğrenmemiş nehirlere", href: "/siir/ya-siyah-ya-beyaz" },
         { title: "ezbere şaman", href: "/siir/ezbere-saman" },
       ],
     },
@@ -554,8 +555,8 @@ export default async function SiirPage({
       ],
       more: [
         { title: "24101990", href: "/siir/24101990" },
-        { title: "ya siyah ya beyaz", href: "/siir/ya-siyah-ya-beyaz" },
-        { title: "sivri çatlaklar", href: "/siir/sivri-catlaklar" },
+        { title: "yolunu öğrenmemiş nehirlere", href: "/siir/ya-siyah-ya-beyaz" },
+        { title: "dualarımı aksatıyorum canlandır beni", href: "/siir/sivri-catlaklar" },
       ],
     },
 
@@ -688,7 +689,7 @@ export default async function SiirPage({
       ],
       more: [
         { title: "piiz ver piiz ver mayday", href: "/siir/piiz-ver-piiz-ver-mayday" },
-        { title: "ya siyah ya beyaz", href: "/siir/ya-siyah-ya-beyaz" },
+        { title: "yolunu öğrenmemiş nehirlere", href: "/siir/ya-siyah-ya-beyaz" },
         { title: "24101990", href: "/siir/24101990" },
       ],
     },
