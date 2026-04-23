@@ -147,10 +147,9 @@ export default async function SiirPage({
             "artık çok bunaldın kalk da gidelim\n" +
             "oltanı at birine elbet denk gelirim\n" +
             "bak yeni bir desen tutturdum ıslığımla\n" +
-            "kuvvet ham derime keskin\n" +
+            "sık dişlerini iyice sık ki dökülsünler\n" +
             "mutlak yansın canımız\n" +
             "kuvvet ham derime keskin\n" +
-            "sık dişlerini iyice sık ki dökülsünler\n" +
             "sokağım yorgun sırtlandım yüzyılını\n" +
             "içimin yağlarını eritecek ne çok şey var\n" +
             "israil’in köpek kolonisi\n" +
@@ -266,72 +265,62 @@ export default async function SiirPage({
         { title: "sabahı göremem", href: "/yazi/sabahi-goremem" },
       ],
     },
-
-    "gocmus-kediler-bahcesi": {
-      title: "göçmüş kediler bahçesi",
-      label: "şiir",
-      authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
-      body: [
-        {
-          kind: "stanza",
-          text:
-            "biliyorum, artık beni göremezsin\n" +
-            "bıçağın kabzası da bileyli.\n" +
-            "yine de utanmayı unutarak\n" +
-            "güneşin doğuşundan\n" +
-            "batışına kadar\n" +
-            "göçmüş kediler bahçesi'nde\n" +
-            "kedileri sevmek isterim.",
-        },
-        {
-          kind: "stanza",
-          text:
-            "kızışmış vaşaklar gibi gergin kaslarımız\n" +
-            "ve buyurgan kalplerimiz\n" +
-            "terli ellerimizde kurulmuş saatler\n" +
-            "şafağa doğru haylaz \n" +
-            "ve atılgan\n" +
-            "bekleriz.",
-        },
-        {
-          kind: "stanza",
-          text:
-            "korkulacak hiçbir şey kalmadı oysa.\n" +
-            "beni sevmen için tüm nedenleri ortadan kaldırdım.\n" +
-            "vazgeçtim görmekten\n" +
-            "bir fiş sırasını bekler gibi alelade\n" +
-            "ve topukların yere değmeden\n" +
-            "bir hayatı içine alıp\n" +
-            "kendinle çoğaltmanı,\n" +
-            "tenine serpiştirdiğin\n" +
-            "onca takımyıldızını.",
-        },
-        {
-          kind: "stanza",
-          text:
-            "bir selam bile bekleyemem\n" +
-            "sen kedilere odaklan.\n" +
-            "hiç kimse bir yere gitmedi bak!\n" +
-            "güneşimiz aynı\n" +
-            "havamız aynı\n" +
-            "ne cüret ki\n" +
-            "günlerin isimleri de aynı.",
-        },
-        {
-          kind: "stanza",
-          text:
-            "çünkü göçmüş kediler bahçesi’nde\n" +
-            "bizden önce ve sonra\n" +
-            "sabah vardiyasına giden adamlar vardı.\n" +
-            "taze ekmek kokuları\n" +
-            "terimizle yıkayıp astığımız çarşaflar.\n" +
-            "yanına yattığımda\n" +
-            "çıplak ayaklarının hizasında \n" +
-            "sokak lambası\n" +
-            "sonra sabah ezanı\n" +
-            "mevsimlere göre sıralarını değiş.",
-        },
-      ],
+"gocmus-kediler-bahcesi": {
+  title: "göçmüş kediler bahçesi",
+  label: "şiir",
+  authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "biliyorum, artık beni göremezsin\n" +
+        "bıçağın kabzası da bileyli.\n" +
+        "yine de utanmayı unutarak\n" +
+        "güneşin doğuşundan\n" +
+        "batışına kadar\n" +
+        "kedileri sevmek isterdim.\n" +
+        "kızışmış vaşaklar gibi gergin kaslarımız\n" +
+        "ve buyurgan kalplerimiz\n" +
+        "terli ellerimizde kurulmuş saatler\n" +
+        "şafağa doğru haylaz\n" +
+        "ve atılgan\n" +
+        "bekleriz.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "korkulacak hiçbir şey kalmadı oysa.\n" +
+        "beni sevmen için tüm nedenleri ortadan kaldırdım.\n" +
+        "vazgeçtim görmekten\n" +
+        "bir fiş sırasını bekler gibi alelade\n" +
+        "ve topukların yere değmeden\n" +
+        "bir hayatı içine alıp\n" +
+        "kendinle çoğaltmanı,\n" +
+        "tenine serpiştirdiğin\n" +
+        "onca takımyıldızını.\n" +
+        "bir selam bile bekleyemem\n" +
+        "sen kedilere odaklan.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "hiç kimse bir yere gitmedi bak!\n" +
+        "güneşimiz aynı\n" +
+        "havamız aynı\n" +
+        "ne cüret ki\n" +
+        "günlerin isimleri de aynı.\n" +
+        "çünkü göçmüş kediler bahçesi’nde\n" +
+        "bizden önce ve sonra\n" +
+        "sabah vardiyasına giden adamlar vardı.\n" +
+        "taze ekmek kokuları\n" +
+        "terimizle yıkayıp astığımız çarşaflar.\n" +
+        "yanına yattığımda\n" +
+        "çıplak ayaklarının hizasında\n" +
+        "sokak lambası\n" +
+        "sonra sabah ezanı\n" +
+        "mevsimlere göre sıralarını değiş.",
+    },
+  ],
       more: [
         { title: "haziran’ın keşfi", href: "/siir/haziranin-kesfi" },
         { title: "ezbere şaman", href: "/siir/ezbere-saman" },
@@ -443,57 +432,53 @@ export default async function SiirPage({
       label: "şiir",
       authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
       body: [
-        {
-          kind: "stanza",
-          text:
-            "sokak her nefes alıp verdiğinde\n" +
-            "kaldırımlar et olur\n" +
-            "kabarıp söner\n" +
-            "kulağında trenlerin\n" +
-            "boğuk uğultusu\n" +
-            "hoşgörü bağıl\n" +
-            "tüm sabitler uyuşturucu\n" +
-            "kriptolar\n" +
-            "para piyasaları\n" +
-            "kafanı kaldırıma geçirdiklerinde\n" +
-            "ağzına gelen\n" +
-            "adrenalinin metalik tadı",
-        },
-        {
-          kind: "stanza",
-          text:
-            "oysa çamurum aynı sizinki gibi\n" +
-            "kanlı ve yapışkan\n" +
-            "hayal kırıklıklarından yapılma\n" +
-            "sıradan bir hayatı\n" +
-            "mahvetme kaşıntısıyla\n" +
-            "ama hücrelerim\n" +
-            "tam teşekküllü \n" +
-            "f tipi\n" +
-            "bitkilerinki gibi",
-        },
-        {
-          kind: "stanza",
-          text:
-            "yazık\n" +
-            "hislerim bazen\n" +
-            "kucağıma sığmaz\n" +
-            "yerlere dökülür\n" +
-            "ya ziyan olur\n" +
-            "ya da bir yoksunluk anında\n" +
-            "yalanmak için\n" +
-            "öylece beklerler",
-        },
-        {
-          kind: "stanza",
-          text:
-            "ama geriye toplamaya çalışmanın\n" +
-            "saçmalığından gelen \n" +
-            "o cüret\n" +
-            "sonuna kadar\n" +
-            "yaşanmalı",
-        },
-      ],
+  {
+    kind: "stanza",
+    text:
+      "sokak her nefes alıp verdiğinde\n" +
+      "kaldırımlar et olur\n" +
+      "kabarıp söner\n" +
+      "kulağında trenlerin\n" +
+      "boğuk uğultusu\n" +
+      "hoşgörü bağıl\n" +
+      "tüm sabitler uyuşturucu\n" +
+      "kriptolar\n" +
+      "para piyasaları\n" +
+      "kafanı kaldırıma geçirdiklerinde\n" +
+      "ağzına gelen\n" +
+      "adrenalinin metalik tadı",
+  },
+  {
+    kind: "stanza",
+    text:
+      "oysa çamurum aynı sizinki gibi\n" +
+      "kanlı ve yapışkan\n" +
+      "hayal kırıklıklarından yapılma\n" +
+      "sıradan bir hayatı\n" +
+      "mahvetme kaşıntısıyla\n" +
+      "ama hücrelerim\n" +
+      "tam teşekküllü\n" +
+      "f tipi\n" +
+      "bitkilerinki gibi",
+  },
+  {
+    kind: "stanza",
+    text:
+      "yazık\n" +
+      "hislerim bazen\n" +
+      "kucağıma sığmaz\n" +
+      "yerlere dökülür\n" +
+      "ya ziyan olur\n" +
+      "ya da bir yoksunluk anında\n" +
+      "yalanmak için\n" +
+      "öylece beklerler\n" +
+      "ama geriye toplamaya çalışmanın\n" +
+      "saçmalığından gelen\n" +
+      "o cüret\n" +
+      "sonuna kadar\n" +
+      "yaşanmalı",
+  },
+],
       more: [
         { title: "ezbere şaman", href: "/siir/ezbere-saman" },
         { title: "turmstraße", href: "/siir/turmstrasse" },
@@ -600,66 +585,62 @@ export default async function SiirPage({
       title: "feierabendbier",
       label: "şiir",
       authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
-      body: [
-        {
-          kind: "stanza",
-          text:
-            "anneannemin dul saçlarından ördüğü dünya\n" +
-            "sabahın beşinde biralar içirir bana\n" +
-            "almanları sarhoş ederim\n" +
-            "sonra ya öpüşür ya dövüşürler\n" +
-            "bu kabuğun kenarları çok kalın\n" +
-            "hava geçirmez\n" +
-            "su geçirmez\n" +
-            "aşk geçirmez\n" +
-            "seni geçirir bazen",
-        },
-        {
-          kind: "stanza",
-          text:
-            "ikna olurum dünyaya\n" +
-            "annem başka anneleri imrendiren\n" +
-            "mütevazı, alçakgönüllü\n" +
-            "ne efendi çocuklar yetiştirir\n" +
-            "sonra babamı besler\n" +
-            "sigara içer\n" +
-            "rakı içer\n" +
-            "et yer",
-        },
-        {
-          kind: "stanza",
-          text:
-            "yanlarına giderim\n" +
-            "nakış gibi işlenmiş dantel\n" +
-            "kondurulurum televizyonun üzerine\n" +
-            "kimi seneler acı domates soslarına yetişirim\n" +
-            "kahvaltılıklara dönüşür\n" +
-            "ekmekle yerim\n" +
-            "havalar güzeldir\n" +
-            "çocukluğumun duvarları daralır\n" +
-            "püfür püfür eser",
-        },
-        {
-          kind: "stanza",
-          text:
-            "sabah olur \n" +
-            "ezan okunur allahuekber\n" +
-            "annem her gördüğümde biraz daha beyazlar\n" +
-            "kime çekmişim,\n" +
-            "kuş kalbi hep mi hızlı atar?\n" +
-            "seni bile düşünür benim yerime,\n" +
-            "sonra ikimiz için de \n" +
-            "kardeşimi öper",
-        },
-        {
-          kind: "stanza",
-          text:
-            "bu kazak bana dikilmiş,\n" +
-            "beş boy büyük\n" +
-            "iyisi mi büyüyünce giyerim\n" +
-            "kaşındırıyor ama",
-        },
-      ],
+  body: [
+  {
+    kind: "stanza",
+    text:
+      "anneannemin dul saçlarından ördüğü dünya\n" +
+      "sabahın beşinde biralar içirir bana\n" +
+      "almanları sarhoş ederim\n" +
+      "sonra ya öpüşür ya dövüşürler\n" +
+      "bu kabuğun kenarları çok kalın\n" +
+      "hava geçirmez\n" +
+      "su geçirmez\n" +
+      "aşk geçirmez\n" +
+      "seni geçirir bazen\n" +
+      "ikna olurum dünyaya",
+  },
+  {
+    kind: "stanza",
+    text:
+      "annem başka anneleri imrendiren\n" +
+      "mütevazı, alçakgönüllü\n" +
+      "ne efendi çocuklar yetiştirir\n" +
+      "sonra babamı besler\n" +
+      "sigara içer\n" +
+      "rakı içer\n" +
+      "et yer\n" +
+      "yanlarına giderim\n" +
+      "nakış gibi işlenmiş dantel\n" +
+      "kondurulurum televizyonun üzerine\n" +
+      "kimi seneler acı domates soslarına yetişirim\n" +
+      "kahvaltılıklara dönüşür\n" +
+      "ekmekle yerim\n" +
+      "havalar güzeldir\n" +
+      "çocukluğumun duvarları daralır\n" +
+      "püfür püfür eser\n" +
+      "sabah olur\n" +
+      "ezan okunur allahuekber",
+  },
+  {
+    kind: "stanza",
+    text:
+      "annem her gördüğümde biraz daha beyazlar\n" +
+      "kime çekmişim,\n" +
+      "kuş kalbi hep mi hızlı atar?\n" +
+      "seni bile düşünür benim yerime,\n" +
+      "sonra ikimiz için de\n" +
+      "kardeşimi öper",
+  },
+  {
+    kind: "stanza",
+    text:
+      "bu kazak bana dikilmiş,\n" +
+      "beş boy büyük\n" +
+      "iyisi mi büyüyünce giyerim\n" +
+      "kaşındırıyor ama",
+  },
+],
       more: [
         { title: "turmstraße", href: "/siir/turmstrasse" },
         { title: "kendimin iç ve dışbükey sınırları", href: "/siir/kendimin-ic-ve-disbukey-sinirlari" },
