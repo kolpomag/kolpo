@@ -234,10 +234,11 @@ export default function HomePage() {
         .entry-h { max-width: 980px; margin-left: 118px; }
         .entry-i { max-width: 980px; margin-left: 0; }
         .entry-j { max-width: 980px; margin-left: 102px; }
+
         .entry-k { max-width: 720px; margin-left: 0; }
-        .entry-l { max-width: 760px; margin-left: 126px; }
-        .entry-n { max-width: 760px; margin-left: 98px; }
-        .entry-o { max-width: 760px; margin-left: 0; }
+        .entry-l { max-width: 760px; margin-left: 140px; }
+        .entry-n { max-width: 760px; margin-left: 0; }
+        .entry-o { max-width: 760px; margin-left: 138px; }
         .entry-m { max-width: 900px; margin-left: 0; }
 
         @media (max-width: 900px) {
