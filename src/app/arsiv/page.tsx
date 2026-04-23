@@ -99,6 +99,12 @@ export default function ArsivPage() {
       type: "şiir",
     },
     {
+      title: "what remains",
+      href: "/siir/what-remains",
+      authors: [{ name: "emin musaiev", href: "/yazar/emin-musaiev" }],
+      type: "şiir",
+    },
+    {
       title: "afili haytalar",
       href: "/siir/afili-haytalar",
       authors: [

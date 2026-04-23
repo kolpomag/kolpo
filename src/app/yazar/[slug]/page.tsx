@@ -80,6 +80,16 @@ export default async function YazarPage({
         },
       ],
     },
+    "emin-musaiev": {
+      name: "emin musaiev",
+      entries: [
+        {
+          title: "what remains",
+          href: "/siir/what-remains",
+          type: "şiir",
+        },
+      ],
+    },
     "ayse-kaya": {
       name: "ayşe kaya",
       entries: [

@@ -110,6 +110,15 @@ const entries = [
     multiline: false,
   },
   {
+    title: "what remains",
+    href: "/siir/what-remains",
+    author: "emin musaiev",
+    authorHref: "/yazar/emin-musaiev",
+    type: "şiir",
+    className: "entry entry-n",
+    multiline: false,
+  },
+  {
     title: "afili haytalar",
     href: "/siir/afili-haytalar",
     author: "onur duman & mahmut kıran",
@@ -131,6 +140,7 @@ function renderAuthor(
       author === "onur duman & mahmut kıran"
         ? ["/yazar/onur-duman", "/yazar/mahmut-kiran"]
         : ["", ""];
+
     return (
       <>
         <a href={hrefs[0]} className="author-link" style={authorLinkStyle}>
@@ -217,6 +227,7 @@ export default function HomePage() {
         .entry-j { max-width: 980px; margin-left: 102px; }
         .entry-k { max-width: 720px; margin-left: 0; }
         .entry-l { max-width: 760px; margin-left: 126px; }
+        .entry-n { max-width: 760px; margin-left: 98px; }
         .entry-m { max-width: 900px; margin-left: 0; }
 
         @media (max-width: 900px) {

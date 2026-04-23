@@ -667,6 +667,59 @@ export default async function SiirPage({
       ],
     },
 
+    "what-remains": {
+      title: "what remains",
+      label: "şiir",
+      authors: [{ name: "emin musaiev", href: "/yazar/emin-musaiev" }],
+      body: [
+        {
+          kind: "stanza",
+          text:
+            "I ought to write letters -\n" +
+            "letters not to be read\n" +
+            "until the time comes when it's funny\n" +
+            "and not a rotten bit of dread\n" +
+            "and boredom, smeared in honey,\n" +
+            "remains for me to entertain.\n" +
+            "to be as is, sincere and plain,\n" +
+            "to let my childishness remain\n" +
+            "my quirk -\n" +
+            "a funny trait,\n" +
+            "maybe disturbing,\n" +
+            "but yet incapable of burning\n" +
+            "a timid finger upon touch.",
+        },
+        {
+          kind: "stanza",
+          text:
+            "yes, it's too much\n" +
+            "to seek attention and regret\n" +
+            "well-meaning interest that I get,\n" +
+            "to be a bore of my own volition\n" +
+            "and hide a grin that though I hate,\n" +
+            "will twist my lips - its true estate -\n" +
+            "and through my eyes dispense its poison\n" +
+            "while I am cowering, afraid to look\n" +
+            "and meet the gaze of who it took\n" +
+            "to be its prey.",
+        },
+        {
+          kind: "stanza",
+          text:
+            "come what may -\n" +
+            "to take one last look at the vista,\n" +
+            "to close the book before it rains,\n" +
+            "to face towards, and not away,\n" +
+            "is what apparently remains.",
+        },
+      ],
+      more: [
+        { title: "afili haytalar", href: "/siir/afili-haytalar" },
+        { title: "feierabendbier", href: "/siir/feierabendbier" },
+        { title: "paesino sborramerda", href: "/siir/paesino-sborramerda" },
+      ],
+    },
+
     "afili-haytalar": {
       title: "afili haytalar",
       label: "çeviri",
