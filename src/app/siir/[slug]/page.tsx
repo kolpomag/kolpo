@@ -90,47 +90,43 @@ export default async function SiirPage({
       label: "şiir",
       authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
       body: [
-        {
-          kind: "stanza",
-          text:
-            "kulakların yetmiyor soruyorsun anlamadığında\n" +
-            "cevaplara ulaşacaksın, kapıları aralayacaksın \n" +
-            "hep alelacele hep koştur — bulamayacaksın\n" +
-            "kapını kapatıp pencerenden maviye yeşile,\n" +
-            "güneşi sana ulaştıran boş küreye,\n" +
-            "yolunu öğrenmemiş nehirlere \n" +
-            "bala dönüşmüş",
-        },
-        {
-          kind: "stanza",
-          text:
-            "her bir çiçeğin kimliksizliğini \n" +
-            "patikanın aşağısındaki çeşmeye koşarak giden çocuğun \n" +
-            "iradeyle hiç işinin olmadığını \n" +
-            "sıfırla birin sana ihtiyacım yok dediğine kulak vereceğin o pencere kenarını fark \n" +
-            "etmeyeceksin fark etmeyeceksin rahminde zehir yuttuğun o benliğin lanetini\n" +
-            "you are cursed with simplicity",
-        },
-        {
-          kind: "stanza",
-          text:
-            "ya siyahtır ya beyaz\n" +
-            "keserek almışlar seni annenin karnından\n" +
-            "kolaylaştırmışlar işleri\n" +
-            "iki yol var diye görmüşsün\n" +
-            "acılı ve doğal olan yol seni öldürecekmiş",
-        },
-        {
-          kind: "stanza",
-          text:
-            "acısız hızlı olansa sana bütün bir hayatı getirmiş\n\n" +
-            "seçmişler anneni ve seni yaşatacak yolu\n" +
-            "öğrenmişsin işleri kolaylaştıran siyahı\n" +
-            "beyazdan kesin ayıran yolu\n" +
-            "sınırlar ve tanımlar olmuş kalplerin ahı\n" +
-            "ya siyahtır ya beyaz",
-        },
-      ],
+  {
+    kind: "stanza",
+    text:
+      "kulakların yetmiyor soruyorsun anlamadığında\n" +
+      "cevaplara ulaşacaksın, kapıları aralayacaksın\n" +
+      "hep alelacele hep koştur — bulamayacaksın\n" +
+      "kapını kapatıp pencerenden maviye yeşile,\n" +
+      "güneşi sana ulaştıran boş küreye,\n" +
+      "yolunu öğrenmemiş nehirlere\n" +
+      "bala dönüşmüş\n" +
+      "her bir çiçeğin kimliksizliğini\n" +
+      "patikanın aşağısındaki çeşmeye koşarak giden çocuğun\n" +
+      "iradeyle hiç işinin olmadığını\n" +
+      "sıfırla birin sana ihtiyacım yok dediğine kulak vereceğin o pencere kenarını fark\n" +
+      "etmeyeceksin fark etmeyeceksin rahminde zehir yuttuğun o benliğin lanetini",
+  },
+  {
+    kind: "stanza",
+    text: "you are cursed with simplicity",
+    italic: true,
+  },
+  {
+    kind: "stanza",
+    text:
+      "ya siyahtır ya beyaz\n" +
+      "keserek almışlar seni annenin karnından\n" +
+      "kolaylaştırmışlar işleri\n" +
+      "iki yol var diye görmüşsün\n" +
+      "acılı ve doğal olan yol seni öldürecekmiş\n" +
+      "acısız hızlı olansa sana bütün bir hayatı getirmiş\n" +
+      "seçmişler anneni ve seni yaşatacak yolu\n" +
+      "öğrenmişsin işleri kolaylaştıran siyahı\n" +
+      "beyazdan kesin ayıran yolu\n" +
+      "sınırlar ve tanımlar olmuş kalplerin ahı\n" +
+      "ya siyahtır ya beyaz",
+  },
+],
       more: [
         { title: "sivri çatlaklar", href: "/siir/sivri-catlaklar" },
         { title: "piiz ver piiz ver mayday", href: "/siir/piiz-ver-piiz-ver-mayday" },
