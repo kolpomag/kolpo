@@ -4,10 +4,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://kolpomag.com"),
   title: "kolpo.",
-  description: "şiir, yazı ve çeviri etrafında dolaşan bağımsız bir yazın alanı.",
+  description: "çağdaş yazın alanı.",
   openGraph: {
     title: "kolpo.",
-    description: "şiir, yazı ve çeviri etrafında dolaşan bağımsız bir yazın alanı.",
+    description: "çağdaş yazın alanı.",
     url: "https://kolpomag.com",
     siteName: "kolpo.",
     locale: "tr_TR",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "kolpo.",
-    description: "şiir, yazı ve çeviri etrafında dolaşan bağımsız bir yazın alanı.",
+    description: "çağdaş yazın alanı.",
     images: ["/og-image.jpg"],
   },
   icons: {
