@@ -121,7 +121,7 @@ const poems: Record<string, Poem> = {
         href: "/siir/sivri-catlaklar",
       },
       { title: "piiz ver piiz ver mayday", href: "/siir/piiz-ver-piiz-ver-mayday" },
-      { title: "sabahı göremem", href: "/yazi/sabahi-goremem" },
+      { title: "belli belirsiz", href: "/siir/belli-belirsiz" },
     ],
   },
 
@@ -221,7 +221,7 @@ const poems: Record<string, Poem> = {
           "akan gözyaşlarında kelebek yolcuğu\n" +
           "fani göze kandığını belli etmez\n" +
           "acıyı gören kalbin gözü\n" +
-          "acıyı kaydeden bu görünmez izler",
+          "acıyı kaydeden bu görünmez ister",
       },
       {
         kind: "stanza",
@@ -257,7 +257,7 @@ const poems: Record<string, Poem> = {
     more: [
       { title: "yolunu öğrenmemiş nehirlere", href: "/siir/ya-siyah-ya-beyaz" },
       { title: "piiz ver piiz ver mayday", href: "/siir/piiz-ver-piiz-ver-mayday" },
-      { title: "sabahı göremem", href: "/yazi/sabahi-goremem" },
+      { title: "belki bir sabah", href: "/siir/belki-bir-sabah" },
     ],
   },
 
@@ -361,10 +361,7 @@ const poems: Record<string, Poem> = {
     more: [
       { title: "afili haytalar", href: "/siir/afili-haytalar" },
       { title: "yolunu öğrenmemiş nehirlere", href: "/siir/ya-siyah-ya-beyaz" },
-      {
-        title: "dualarımı aksatıyorum canlandır beni",
-        href: "/siir/sivri-catlaklar",
-      },
+      { title: "belli belirsiz", href: "/siir/belli-belirsiz" },
     ],
   },
 
@@ -420,9 +417,32 @@ const poems: Record<string, Poem> = {
     authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
     body: [{ kind: "special-24101990" }],
     more: [
+      { title: "belli belirsiz", href: "/siir/belli-belirsiz" },
       { title: "paesino sborramerda", href: "/siir/paesino-sborramerda" },
-      { title: "yolunu öğrenmemiş nehirlere", href: "/siir/ya-siyah-ya-beyaz" },
-      { title: "ezbere şaman", href: "/siir/ezbere-saman" },
+      { title: "uyku düzeni düzenleyici", href: "/siir/uyku-duzeni-duzenleyici" },
+    ],
+  },
+
+  "belli-belirsiz": {
+    title: "belli belirsiz",
+    label: "şiir",
+    authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
+    body: [
+      {
+        kind: "stanza",
+        text:
+          "Ulan yalvardım bırakalım dedim\n" +
+          "Kaç kere konuştuk üç ay\n" +
+          "hani bidaha yoktu\n" +
+          "Allah belanız versin\n" +
+          "kontrol kanka sıkıntı yok\n" +
+          "bok yok",
+      },
+    ],
+    more: [
+      { title: "24101990", href: "/siir/24101990" },
+      { title: "paesino sborramerda", href: "/siir/paesino-sborramerda" },
+      { title: "belki bir sabah", href: "/siir/belki-bir-sabah" },
     ],
   },
 
@@ -539,11 +559,8 @@ const poems: Record<string, Poem> = {
     ],
     more: [
       { title: "24101990", href: "/siir/24101990" },
-      { title: "yolunu öğrenmemiş nehirlere", href: "/siir/ya-siyah-ya-beyaz" },
-      {
-        title: "dualarımı aksatıyorum canlandır beni",
-        href: "/siir/sivri-catlaklar",
-      },
+      { title: "belli belirsiz", href: "/siir/belli-belirsiz" },
+      { title: "uyku düzeni düzenleyici", href: "/siir/uyku-duzeni-duzenleyici" },
     ],
   },
 
@@ -703,9 +720,41 @@ const poems: Record<string, Poem> = {
       },
     ],
     more: [
-      { title: "afili haytalar", href: "/siir/afili-haytalar" },
-      { title: "feierabendbier", href: "/siir/feierabendbier" },
+      { title: "uyku düzeni düzenleyici", href: "/siir/uyku-duzeni-duzenleyici" },
+      { title: "buffalo bill", href: "/siir/buffalo-bill" },
+      { title: "belki bir sabah", href: "/siir/belki-bir-sabah" },
+    ],
+  },
+
+  "uyku-duzeni-duzenleyici": {
+    title: "uyku düzeni düzenleyici",
+    label: "şiir",
+    authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
+    body: [
+      {
+        kind: "stanza",
+        text:
+          "Yatak boşluğu sandalye göçlüğü masaüstü bardak çokluğu\n" +
+          "Çay üstüne çay ve böbrek faaliyeti bayramı kutlamalarım\n" +
+          "Şu yüzyılda hala kağıtların arasında boğulmak\n" +
+          "Işte ben bu kadarım dedim sonunda ederim budur\n" +
+          "böcekler görmediğim yerlerimde gezerken\n" +
+          "Ayak serçe parmağımda şeytan besliyor-larmış\n" +
+          "Ezoterik şakalar ve/veya hüzün dolu şarkılar\n" +
+          "Üst komşumun sesine engel olacak mısınız\n" +
+          "sorunların bütünü parçalarından az geliyo\n" +
+          "bi düşününce anlık şükretme isteğim uyanıyor ama\n" +
+          "kimi anlar var cidden büyük aparkat\n" +
+          "e ama yıllardır her zaman ayaktayım\n" +
+          "yalnız tek başımayken elimi götürür\n" +
+          "Bazırım bazen bazıyan yerlerimi\n" +
+          "ki bazımasınlar bazen.",
+      },
+    ],
+    more: [
       { title: "paesino sborramerda", href: "/siir/paesino-sborramerda" },
+      { title: "belli belirsiz", href: "/siir/belli-belirsiz" },
+      { title: "belki bir sabah", href: "/siir/belki-bir-sabah" },
     ],
   },
 
@@ -716,9 +765,40 @@ const poems: Record<string, Poem> = {
     authors: [{ name: "prowler", href: "/yazar/prowler" }],
     body: [{ kind: "special-buffalo-bill" }],
     more: [
-      { title: "afili haytalar", href: "/siir/afili-haytalar" },
+      { title: "belki bir sabah", href: "/siir/belki-bir-sabah" },
       { title: "what remains", href: "/siir/what-remains" },
-      { title: "24101990", href: "/siir/24101990" },
+      { title: "afili haytalar", href: "/siir/afili-haytalar" },
+    ],
+  },
+
+  "belki-bir-sabah": {
+    title: "belki bir sabah",
+    label: "çeviri",
+    titleHref:
+      "https://www.libriantichionline.com/divagazioni/eugenio_montale_forse_mattino_andando_aria_vetro_1925",
+    authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
+    body: [
+      {
+        kind: "stanza",
+        text:
+          "belki bir sabah yürürken cam gibi havada kupkuru\n" +
+          "dönüp tanık olacağım mucizenin gelişine:\n" +
+          "sırtımda hiçlik, ardımda boşluk\n" +
+          "bir sarhoşun dehşetiyle",
+      },
+      {
+        kind: "stanza",
+        text:
+          "sonra, sanki bir ekranda gibi ağaçlar evler tepeler\n" +
+          "ansızın toplanacak alelade yanılsamalarına.\n" +
+          "ama çok geç olacak; ve ben sessizce uzaklaşacağım\n" +
+          "arkalarına bakmayan insanların arasından, bu sırrımla.",
+      },
+    ],
+    more: [
+      { title: "uyku düzeni düzenleyici", href: "/siir/uyku-duzeni-duzenleyici" },
+      { title: "buffalo bill", href: "/siir/buffalo-bill" },
+      { title: "afili haytalar", href: "/siir/afili-haytalar" },
     ],
   },
 
@@ -744,8 +824,8 @@ const poems: Record<string, Poem> = {
     ],
     more: [
       { title: "piiz ver piiz ver mayday", href: "/siir/piiz-ver-piiz-ver-mayday" },
-      { title: "yolunu öğrenmemiş nehirlere", href: "/siir/ya-siyah-ya-beyaz" },
-      { title: "24101990", href: "/siir/24101990" },
+      { title: "belki bir sabah", href: "/siir/belki-bir-sabah" },
+      { title: "buffalo bill", href: "/siir/buffalo-bill" },
     ],
   },
 };

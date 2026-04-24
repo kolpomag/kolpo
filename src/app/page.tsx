@@ -74,6 +74,15 @@ const entries = [
     multiline: false,
   },
   {
+    title: "belli belirsiz",
+    href: "/siir/belli-belirsiz",
+    author: "göksel yaman",
+    authorHref: "/yazar/goksel-yaman",
+    type: "şiir",
+    className: "entry entry-h2",
+    multiline: true,
+  },
+  {
     title: "kendimin iç ve dışbükey sınırları",
     href: "/siir/kendimin-ic-ve-disbukey-sinirlari",
     author: "onur duman",
@@ -119,12 +128,30 @@ const entries = [
     multiline: false,
   },
   {
+    title: "uyku düzeni düzenleyici",
+    href: "/siir/uyku-duzeni-duzenleyici",
+    author: "göksel yaman",
+    authorHref: "/yazar/goksel-yaman",
+    type: "şiir",
+    className: "entry entry-n2",
+    multiline: true,
+  },
+  {
     title: "buffalo bill",
     href: "/siir/buffalo-bill",
     author: "prowler",
     authorHref: "/yazar/prowler",
     type: "çeviri",
     className: "entry entry-o",
+    multiline: false,
+  },
+  {
+    title: "belki bir sabah",
+    href: "/siir/belki-bir-sabah",
+    author: "göksel yaman",
+    authorHref: "/yazar/goksel-yaman",
+    type: "çeviri",
+    className: "entry entry-m2",
     multiline: false,
   },
   {
@@ -232,13 +259,15 @@ export default function HomePage() {
         .entry-f { max-width: 920px; margin-left: 92px; }
         .entry-g { max-width: 760px; margin-left: 0; }
         .entry-h { max-width: 980px; margin-left: 118px; }
+        .entry-h2 { max-width: 760px; margin-left: 0; }
         .entry-i { max-width: 980px; margin-left: 0; }
         .entry-j { max-width: 980px; margin-left: 102px; }
-
         .entry-k { max-width: 720px; margin-left: 0; }
         .entry-l { max-width: 760px; margin-left: 140px; }
         .entry-n { max-width: 760px; margin-left: 0; }
-        .entry-o { max-width: 760px; margin-left: 138px; }
+        .entry-n2 { max-width: 920px; margin-left: 112px; }
+        .entry-o { max-width: 760px; margin-left: 0; }
+        .entry-m2 { max-width: 760px; margin-left: 138px; }
         .entry-m { max-width: 900px; margin-left: 0; }
 
         @media (max-width: 900px) {
