@@ -119,18 +119,6 @@ export default function ArsivPage() {
       ],
       type: "çeviri",
     },
-    {
-      title: "sabahı göremem",
-      href: "/yazi/sabahi-goremem",
-      authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
-      type: "yazı",
-    },
-    {
-      title: "bir kafenin içinden",
-      href: "/ceviri/bir-kafenin-icinden",
-      authors: [{ name: "ayşe kaya", href: "/yazar/ayse-kaya" }],
-      type: "çeviri",
-    },
   ];
 
   const filteredEntries = useMemo(() => {
