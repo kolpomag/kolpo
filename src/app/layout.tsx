@@ -3,7 +3,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kolpomag.com"),
-  title: "kolpo.",
+  title: {
+    default: "kolpo.",
+    template: "%s — kolpo.",
+  },
   description: "çağdaş yazın alanı.",
   openGraph: {
     title: "kolpo.",
@@ -28,12 +31,9 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-    shortcut: ["/favicon.ico"],
-    apple: ["/apple-touch-icon.png"],
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
