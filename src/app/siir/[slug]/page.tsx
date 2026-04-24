@@ -221,7 +221,7 @@ const poems: Record<string, Poem> = {
           "akan gözyaşlarında kelebek yolcuğu\n" +
           "fani göze kandığını belli etmez\n" +
           "acıyı gören kalbin gözü\n" +
-          "acıyı kaydeden bu görünmez ister",
+          "acıyı kaydeden bu görünmez izler",
       },
       {
         kind: "stanza",
