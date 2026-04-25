@@ -431,10 +431,10 @@ const poems: Record<string, Poem> = {
       {
         kind: "stanza",
         text:
-          "Ulan yalvardım bırakalım dedim\n" +
-          "Kaç kere konuştuk üç ay\n" +
+          "ulan yalvardım bırakalım dedim\n" +
+          "kaç kere konuştuk üç ay\n" +
           "hani bidaha yoktu\n" +
-          "Allah belanız versin\n" +
+          "allah belanız versin\n" +
           "kontrol kanka sıkıntı yok\n" +
           "bok yok",
       },
@@ -734,20 +734,20 @@ const poems: Record<string, Poem> = {
       {
         kind: "stanza",
         text:
-          "Yatak boşluğu sandalye göçlüğü masaüstü bardak çokluğu\n" +
-          "Çay üstüne çay ve böbrek faaliyeti bayramı kutlamalarım\n" +
-          "Şu yüzyılda hala kağıtların arasında boğulmak\n" +
-          "Işte ben bu kadarım dedim sonunda ederim budur\n" +
+          "yatak boşluğu sandalye göçlüğü masaüstü bardak çokluğu\n" +
+          "çay üstüne çay ve böbrek faaliyeti bayramı kutlamalarım\n" +
+          "şu yüzyılda hala kağıtların arasında boğulmak\n" +
+          "işte ben bu kadarım dedim sonunda ederim budur\n" +
           "böcekler görmediğim yerlerimde gezerken\n" +
-          "Ayak serçe parmağımda şeytan besliyor-larmış\n" +
-          "Ezoterik şakalar ve/veya hüzün dolu şarkılar\n" +
-          "Üst komşumun sesine engel olacak mısınız\n" +
+          "ayak serçe parmağımda şeytan besliyor-larmış\n" +
+          "ezoterik şakalar ve/veya hüzün dolu şarkılar\n" +
+          "üst komşumun sesine engel olacak mısınız\n" +
           "sorunların bütünü parçalarından az geliyo\n" +
           "bi düşününce anlık şükretme isteğim uyanıyor ama\n" +
           "kimi anlar var cidden büyük aparkat\n" +
           "e ama yıllardır her zaman ayaktayım\n" +
           "yalnız tek başımayken elimi götürür\n" +
-          "Bazırım bazen bazıyan yerlerimi\n" +
+          "bazırım bazen bazıyan yerlerimi\n" +
           "ki bazımasınlar bazen.",
       },
     ],
