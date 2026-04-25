@@ -135,14 +135,12 @@ const poems: Record<string, Poem> = {
         text:
           "bana inanmasan da\n" +
           "inanabilirsin bunca şehrin yaratıldığına\n" +
-          "artık çok bunaldın kalk da gidelim\n" +
-          "oltanı at birine elbet denk gelirim\n" +
           "bak yeni bir desen tutturdum ıslığımla\n" +
-          "kuvvet ham derime keskin\n" +
-          "mutlak yansın canımız\n" +
-          "kuvvet ham derime keskin\n" +
-          "sık dişlerini iyice sık ki dökülsünler\n" +
+          "artık çok bunaldım kalk gidelim\n" +
+          "oltanı at birine elbet denk gelirim\n" +
           "sokağım yorgun sırtlandım yüzyılını\n" +
+          "sık dişlerini iyice sık ki dökülsünler\n" +
+          "kuvvet ham derime keskin\n" +
           "içimin yağlarını eritecek ne çok şey var\n" +
           "israil’in köpek kolonisi\n" +
           "ah şu berlin bir daha bombalansa!",
