@@ -238,7 +238,7 @@ const poems: Record<string, Poem> = {
         kind: "stanza",
         text:
           "tak tatak tak dışk dışk dışk dışk\n" +
-          "ecirna minen-nar bi avfike ya rahman\n" +
+          "Mt Etna minen-nar bi avfike ya rahman\n" +
           "subhaneke ya tevvab tealeyte ya vahhab\n" +
           "sublar dört vuruş chargelıyor\n" +
           "sanki bilinç kapanması",
