@@ -248,8 +248,8 @@ const poems: Record<string, Poem> = {
       {
         kind: "stanza",
         text:
-          "hayatına intihar aşkçısı gibi dalan bu insan\n" +
-          "ilk akşam bana özel fotoğraf attı\n" +
+          "hayatına intihar aşkçısı gibi dalan insan\n" +
+          "ilk akşam özel fotoğraf attı\n" +
           "kıran ve kırılan\n" +
           "pazar allemand pazar dü levan",
       },
