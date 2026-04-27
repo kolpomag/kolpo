@@ -128,13 +128,13 @@ export default function NedirPage() {
               }}
             >
               <p style={{ margin: 0 }}>
-                Kolpo, veya yaygın kullanımıyla kolpa, İtalyanca <i>colpo</i>{" "}
-                (darbe, vuruş, çalım) kelimesinden Türkçeye geçen ve argo olarak
+                kolpo, veya yaygın kullanımıyla kolpa, italyanca <i>colpo</i>{" "}
+                (darbe, vuruş, çalım) kelimesinden türkçeye geçen ve argo olarak
                 kullanılan bir terimdir.
               </p>
 
               <p style={{ margin: 0 }}>
-                Kelimenin kökeni Latince <i>colaphus</i> (darbe) kelimesine
+                kelimenin kökeni latince <i>colaphus</i> (darbe) kelimesine
                 dayanmaktadır
                 <a
                   href="https://www.nisanyansozluk.com/kelime/kolpa"

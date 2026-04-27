@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import SiteHeader from "@/components/SiteHeader";
 
 const entries = [
@@ -74,6 +77,15 @@ const entries = [
     multiline: false,
   },
   {
+    title: "belli belirsiz",
+    href: "/siir/belli-belirsiz",
+    author: "göksel yaman",
+    authorHref: "/yazar/goksel-yaman",
+    type: "şiir",
+    className: "entry entry-h2",
+    multiline: true,
+  },
+  {
     title: "kendimin iç ve dışbükey sınırları",
     href: "/siir/kendimin-ic-ve-disbukey-sinirlari",
     author: "onur duman",
@@ -119,12 +131,30 @@ const entries = [
     multiline: false,
   },
   {
+    title: "uyku düzeni düzenleyici",
+    href: "/siir/uyku-duzeni-duzenleyici",
+    author: "göksel yaman",
+    authorHref: "/yazar/goksel-yaman",
+    type: "şiir",
+    className: "entry entry-n2",
+    multiline: true,
+  },
+  {
     title: "buffalo bill",
     href: "/siir/buffalo-bill",
     author: "prowler",
     authorHref: "/yazar/prowler",
     type: "çeviri",
     className: "entry entry-o",
+    multiline: false,
+  },
+  {
+    title: "belki bir sabah",
+    href: "/siir/belki-bir-sabah",
+    author: "göksel yaman",
+    authorHref: "/yazar/goksel-yaman",
+    type: "çeviri",
+    className: "entry entry-m2",
     multiline: false,
   },
   {
@@ -172,6 +202,17 @@ function renderAuthor(
 
 export default function HomePage() {
   const accent = "#c32721";
+  const INITIAL_COUNT = 10;
+  const LOAD_MORE_COUNT = 5;
+
+  const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
+
+  const visibleEntries = entries.slice(0, visibleCount);
+  const hasMore = visibleCount < entries.length;
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => Math.min(prev + LOAD_MORE_COUNT, entries.length));
+  };
 
   const titleLinkStyle = {
     color: "#111111",
@@ -196,7 +237,9 @@ export default function HomePage() {
     >
       <style>{`
         .title-link:hover,
-        .author-link:hover {
+        .author-link:hover,
+        .load-more-button:hover,
+        .load-more-button:hover .load-more-arrow {
           color: ${accent} !important;
         }
 
@@ -232,14 +275,49 @@ export default function HomePage() {
         .entry-f { max-width: 920px; margin-left: 92px; }
         .entry-g { max-width: 760px; margin-left: 0; }
         .entry-h { max-width: 980px; margin-left: 118px; }
+        .entry-h2 { max-width: 760px; margin-left: 0; }
         .entry-i { max-width: 980px; margin-left: 0; }
         .entry-j { max-width: 980px; margin-left: 102px; }
-
         .entry-k { max-width: 720px; margin-left: 0; }
         .entry-l { max-width: 760px; margin-left: 140px; }
         .entry-n { max-width: 760px; margin-left: 0; }
-        .entry-o { max-width: 760px; margin-left: 138px; }
+        .entry-n2 { max-width: 920px; margin-left: 112px; }
+        .entry-o { max-width: 760px; margin-left: 0; }
+        .entry-m2 { max-width: 760px; margin-left: 138px; }
         .entry-m { max-width: 900px; margin-left: 0; }
+
+        .load-more-wrap {
+          margin-top: -12px;
+          padding-top: 26px;
+          border-top: 1px solid rgba(17,17,17,0.12);
+          margin-left: 118px;
+          width: fit-content;
+        }
+
+        .load-more-button {
+          background: transparent;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          color: #111111;
+          font-family: Georgia, Times New Roman, serif;
+          font-size: 30px;
+          line-height: 1;
+          letter-spacing: -0.04em;
+          transition: color 0.18s ease, opacity 0.18s ease;
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .load-more-arrow {
+          display: inline-block;
+          transition: transform 0.18s ease, color 0.18s ease;
+        }
+
+        .load-more-button:hover .load-more-arrow {
+          transform: translateX(6px);
+        }
 
         @media (max-width: 900px) {
           .home-shell {
@@ -262,6 +340,16 @@ export default function HomePage() {
             font-size: 17px;
             margin-top: 10px;
           }
+
+          .load-more-wrap {
+            margin-top: 4px;
+            margin-left: 0;
+            padding-top: 20px;
+          }
+
+          .load-more-button {
+            font-size: 24px;
+          }
         }
 
         @media (max-width: 560px) {
@@ -272,13 +360,17 @@ export default function HomePage() {
           .entry-meta {
             font-size: 16px;
           }
+
+          .load-more-button {
+            font-size: 22px;
+          }
         }
       `}</style>
 
       <SiteHeader />
 
       <section className="home-shell">
-        {entries.map((entry) => (
+        {visibleEntries.map((entry) => (
           <article key={entry.href} className={entry.className}>
             <h2>
               <a href={entry.href} className="title-link" style={titleLinkStyle}>
@@ -310,6 +402,19 @@ export default function HomePage() {
             </p>
           </article>
         ))}
+
+        {hasMore ? (
+          <div className="load-more-wrap">
+            <button
+              type="button"
+              onClick={handleLoadMore}
+              className="load-more-button"
+            >
+              <span>daha fazla</span>
+              <span className="load-more-arrow">→</span>
+            </button>
+          </div>
+        ) : null}
       </section>
     </main>
   );

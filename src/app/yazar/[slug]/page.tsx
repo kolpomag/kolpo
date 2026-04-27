@@ -60,7 +60,6 @@ export default async function YazarPage({
           href: "/siir/sivri-catlaklar",
           type: "şiir",
         },
-        { title: "sabahı göremem", href: "/yazi/sabahi-goremem", type: "yazı" },
         {
           title: "piiz ver piiz ver mayday",
           href: "/siir/piiz-ver-piiz-ver-mayday",
@@ -73,10 +72,21 @@ export default async function YazarPage({
       name: "göksel yaman",
       entries: [
         { title: "24101990", href: "/siir/24101990", type: "şiir" },
+        { title: "belli belirsiz", href: "/siir/belli-belirsiz", type: "şiir" },
         {
           title: "paesino sborramerda",
           href: "/siir/paesino-sborramerda",
           type: "şiir",
+        },
+        {
+          title: "uyku düzeni düzenleyici",
+          href: "/siir/uyku-duzeni-duzenleyici",
+          type: "şiir",
+        },
+        {
+          title: "belki bir sabah",
+          href: "/siir/belki-bir-sabah",
+          type: "çeviri",
         },
       ],
     },
@@ -96,16 +106,6 @@ export default async function YazarPage({
         {
           title: "buffalo bill",
           href: "/siir/buffalo-bill",
-          type: "çeviri",
-        },
-      ],
-    },
-    "ayse-kaya": {
-      name: "ayşe kaya",
-      entries: [
-        {
-          title: "bir kafenin içinden",
-          href: "/ceviri/bir-kafenin-icinden",
           type: "çeviri",
         },
       ],

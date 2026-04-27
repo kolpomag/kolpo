@@ -75,6 +75,12 @@ export default function ArsivPage() {
       type: "şiir",
     },
     {
+      title: "belli belirsiz",
+      href: "/siir/belli-belirsiz",
+      authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
+      type: "şiir",
+    },
+    {
       title: "kendimin iç ve dışbükey sınırları",
       href: "/siir/kendimin-ic-ve-disbukey-sinirlari",
       authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
@@ -105,9 +111,21 @@ export default function ArsivPage() {
       type: "şiir",
     },
     {
+      title: "uyku düzeni düzenleyici",
+      href: "/siir/uyku-duzeni-duzenleyici",
+      authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
+      type: "şiir",
+    },
+    {
       title: "buffalo bill",
       href: "/siir/buffalo-bill",
       authors: [{ name: "prowler", href: "/yazar/prowler" }],
+      type: "çeviri",
+    },
+    {
+      title: "belki bir sabah",
+      href: "/siir/belki-bir-sabah",
+      authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
       type: "çeviri",
     },
     {
@@ -117,18 +135,6 @@ export default function ArsivPage() {
         { name: "onur duman", href: "/yazar/onur-duman" },
         { name: "mahmut kıran", href: "/yazar/mahmut-kiran" },
       ],
-      type: "çeviri",
-    },
-    {
-      title: "sabahı göremem",
-      href: "/yazi/sabahi-goremem",
-      authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
-      type: "yazı",
-    },
-    {
-      title: "bir kafenin içinden",
-      href: "/ceviri/bir-kafenin-icinden",
-      authors: [{ name: "ayşe kaya", href: "/yazar/ayse-kaya" }],
       type: "çeviri",
     },
   ];
