@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SiteHeader from "@/components/SiteHeader";
 
 type PoemBodyBlock =
-  | { kind: "stanza"; text: string; italic?: boolean }
+  | { kind: "stanza"; text: string; italic?: boolean; bold?: boolean }
   | { kind: "special-24101990" }
   | { kind: "special-buffalo-bill" };
 
@@ -28,8 +28,12 @@ const poems: Record<string, Poem> = {
     body: [
       {
         kind: "stanza",
+        text: "daphne & alice için",
+        bold: true,
+      },
+      {
+        kind: "stanza",
         text:
-          "daphne & alice için\n" +
           "eve geldim ve\n" +
           "bir dolu şu\n" +
           "ur kaybettim.",
@@ -48,7 +52,7 @@ const poems: Record<string, Poem> = {
         text:
           "baya istediğim bi\n" +
           "havlu vardı.\n" +
-          "isveç havludan\n" +
+          "isveç havludan\n"+
           "anlıyor",
       },
       {
@@ -568,7 +572,7 @@ const poems: Record<string, Poem> = {
           "sivri çatlaklarından sızan insanlığına \n" +
           "parmak salladım seni tam sevemedim aşkım\n" +
           "bekledim aşkım, \n" +
-          "akan gözyaşlarında kelebek yolcuğu\n" +
+          "akan gözyaşlarynda kelebek yolcuğu\n" +
           "fani göze kandığını belli etmez\n" +
           "acıyı gören kalbin gözü\n" +
           "acıyı kaydeden bu görünmez ister",
@@ -590,7 +594,7 @@ const poems: Record<string, Poem> = {
         kind: "stanza",
         text:
           "tak tatak tak dışk dışk dışk dışk\n" +
-          "Mt Etna minen-nar bi avfike ya rahman\n" +
+          "ecirna minen-nar bi avfike ya rahman\n" +
           "subhaneke ya tevvab tealeyte ya vahhab\n" +
           "sublar dört vuruş chargelıyor\n" +
           "sanki bilinç kapanması",
@@ -598,8 +602,8 @@ const poems: Record<string, Poem> = {
       {
         kind: "stanza",
         text:
-          "hayatına intihar aşkçısı gibi dalan insan\n" +
-          "ilk akşam özel fotoğraf attı\n" +
+          "hayatına intihar aşkçısı gibi dalan bu insan\n" +
+          "ilk akşam bana özel fotoğraf attı\n" +
           "kıran ve kırılan\n" +
           "pazar allemand pazar dü levan",
       },
@@ -985,7 +989,7 @@ const poems: Record<string, Poem> = {
           "yanlarına giderim\n" +
           "nakış gibi işlenmiş dantel\n" +
           "kondurulurum televizyonun üzerine\n" +
-          "kimi seneler acı domates soslarına yetişirim\n" +
+          "kimi seneler acı domates soslaryna yetişirim\n" +
           "kahvaltılıklara dönüşür\n" +
           "ekmekle yerim\n" +
           "havalar güzeldir\n" +
@@ -1262,7 +1266,7 @@ export default async function SiirPage({
 
         .poem-shell {
           padding: 24px 36px 110px 36px;
-          maxWidth: 1280px;
+          max-width: 1280px;
         }
 
         .poem-topline {
@@ -1801,6 +1805,7 @@ export default async function SiirPage({
                     margin: 0,
                     whiteSpace: "pre-line",
                     fontStyle: block.italic ? "italic" : "normal",
+                    fontWeight: block.bold ? 700 : 400,
                   }}
                 >
                   {block.text}
