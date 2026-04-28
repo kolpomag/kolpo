@@ -24,6 +24,7 @@ export default async function YazarPage({
     "onur-duman": {
       name: "onur duman",
       entries: [
+        { title: "göteborg", href: "/siir/goteborg", type: "çeviri - eileen myles" },
         { title: "haziran’ın keşfi", href: "/siir/haziranin-kesfi", type: "şiir" },
         { title: "ezbere şaman", href: "/siir/ezbere-saman", type: "şiir" },
         {
@@ -50,6 +51,7 @@ export default async function YazarPage({
     "mahmut-kiran": {
       name: "mahmut kıran",
       entries: [
+        { title: "göteborg", href: "/siir/goteborg", type: "çeviri - eileen myles" },
         {
           title: "yolunu öğrenmemiş nehirlere",
           href: "/siir/ya-siyah-ya-beyaz",
@@ -71,43 +73,23 @@ export default async function YazarPage({
     "goksel-yaman": {
       name: "göksel yaman",
       entries: [
-        { title: "24101990", href: "/siir/24101990", type: "şiir" },
+        { title: "belki bir sabah", href: "/siir/belki-bir-sabah", type: "çeviri" },
+        { title: "uyku düzeni düzenleyici", href: "/siir/uyku-duzeni-duzenleyici", type: "şiir" },
         { title: "belli belirsiz", href: "/siir/belli-belirsiz", type: "şiir" },
-        {
-          title: "paesino sborramerda",
-          href: "/siir/paesino-sborramerda",
-          type: "şiir",
-        },
-        {
-          title: "uyku düzeni düzenleyici",
-          href: "/siir/uyku-duzeni-duzenleyici",
-          type: "şiir",
-        },
-        {
-          title: "belki bir sabah",
-          href: "/siir/belki-bir-sabah",
-          type: "çeviri",
-        },
+        { title: "24101990", href: "/siir/24101990", type: "şiir" },
+        { title: "paesino sborramerda", href: "/siir/paesino-sborramerda", type: "şiir" },
       ],
     },
     "emin-musaiev": {
       name: "emin musaiev",
       entries: [
-        {
-          title: "what remains",
-          href: "/siir/what-remains",
-          type: "şiir",
-        },
+        { title: "what remains", href: "/siir/what-remains", type: "şiir" },
       ],
     },
-    "prowler": {
+    prowler: {
       name: "prowler",
       entries: [
-        {
-          title: "buffalo bill",
-          href: "/siir/buffalo-bill",
-          type: "çeviri",
-        },
+        { title: "buffalo bill", href: "/siir/buffalo-bill", type: "çeviri" },
       ],
     },
   };

@@ -9,7 +9,7 @@ type ArchiveEntry = {
   title: string;
   href: string;
   authors: { name: string; href: string }[];
-  type: "şiir" | "yazı" | "çeviri";
+  type: string;
 };
 
 export default function ArsivPage() {
@@ -23,6 +23,15 @@ export default function ArsivPage() {
   };
 
   const entries: ArchiveEntry[] = [
+    {
+      title: "göteborg",
+      href: "/siir/goteborg",
+      authors: [
+        { name: "onur duman", href: "/yazar/onur-duman" },
+        { name: "mahmut kıran", href: "/yazar/mahmut-kiran" },
+      ],
+      type: "çeviri - eileen myles",
+    },
     {
       title: "haziran’ın keşfi",
       href: "/siir/haziranin-kesfi",
@@ -141,7 +150,11 @@ export default function ArsivPage() {
 
   const filteredEntries = useMemo(() => {
     if (activeFilter === "tümü") return entries;
-    return entries.filter((entry) => entry.type === activeFilter);
+    return entries.filter((entry) =>
+      activeFilter === "çeviri"
+        ? entry.type.startsWith("çeviri")
+        : entry.type === activeFilter
+    );
   }, [activeFilter]);
 
   const filters: FilterType[] = ["tümü", "şiir", "yazı", "çeviri"];

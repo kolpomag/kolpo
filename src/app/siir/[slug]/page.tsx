@@ -16,6 +16,356 @@ type Poem = {
 };
 
 const poems: Record<string, Poem> = {
+  "goteborg": {
+    title: "göteborg",
+    label: "çeviri - eileen myles",
+    titleHref:
+      "https://www.poetryfoundation.org/poetrymagazine/poems/153229/goteborg",
+    authors: [
+      { name: "onur duman", href: "/yazar/onur-duman" },
+      { name: "mahmut kıran", href: "/yazar/mahmut-kiran" },
+    ],
+    body: [
+      {
+        kind: "stanza",
+        text:
+          "daphne & alice için\n" +
+          "eve geldim ve\n" +
+          "bir dolu şu\n" +
+          "ur kaybettim.",
+      },
+      {
+        kind: "stanza",
+        text:
+          "bir zamanlar\n" +
+          "otellerden tepsi\n" +
+          "çalardım\n" +
+          "& şimdi bardak\n" +
+          "çalıyorum",
+      },
+      {
+        kind: "stanza",
+        text:
+          "baya istediğim bi\n" +
+          "havlu vardı.\n" +
+          "isveç havludan\n" +
+          "anlıyor",
+      },
+      {
+        kind: "stanza",
+        text:
+          "bi gömlek vardı\n" +
+          "havaalanında\n" +
+          "beyaz,\n" +
+          "her şekilde benim\n" +
+          "kini katlar",
+      },
+      {
+        kind: "stanza",
+        text:
+          "eni\n" +
+          "dışında",
+      },
+      {
+        kind: "stanza",
+        text:
+          "ben de o genişliğe\n" +
+          "bi yemek ısmarladım &\n" +
+          "neredeyse uçağımı\n" +
+          "kaçırıyordum.",
+      },
+      {
+        kind: "stanza",
+        text:
+          "koştum\n" +
+          "kalbim\n" +
+          "patlayacaktı",
+      },
+      {
+        kind: "stanza",
+        text:
+          "o kadar da\n" +
+          "hızlı değildim",
+      },
+      {
+        kind: "stanza",
+        text:
+          "benimle birlikte\n" +
+          "koşan\n" +
+          "bi adam vardı",
+      },
+      {
+        kind: "stanza",
+        text:
+          "36 diye\n" +
+          "bağırdım\n" +
+          "dostane",
+      },
+      {
+        kind: "stanza",
+        text:
+          "beni sallamadı\n" +
+          "ama sonra",
+      },
+      {
+        kind: "stanza",
+        text:
+          "sağa sola\n" +
+          "bir şeyler dökmeye\n" +
+          "başladı.",
+      },
+      {
+        kind: "stanza",
+        text:
+          "bana\n" +
+          "da\n" +
+          "olmuştu.",
+      },
+      {
+        kind: "stanza",
+        text:
+          "çok fazla\n" +
+          "kahve",
+      },
+      {
+        kind: "stanza",
+        text:
+          "çok çok fazla\n" +
+          "kahve",
+      },
+      {
+        kind: "stanza",
+        text:
+          "keşke biri\n" +
+          "burada\n" +
+          "olsaydı.",
+      },
+      {
+        kind: "stanza",
+        text:
+          "çok\n" +
+          "hassaslaştım",
+      },
+      {
+        kind: "stanza",
+        text:
+          "on\n" +
+          "saat\n" +
+          "uyumuş",
+      },
+      {
+        kind: "stanza",
+        text:
+          "birisi\n" +
+          "vincent price\n" +
+          "gibiyim\n" +
+          "hiç olmasa",
+      },
+      {
+        kind: "stanza",
+        text:
+          "yumuşak sesim\n" +
+          "fısıldar\n" +
+          "rastgele bir şeyleri",
+      },
+      {
+        kind: "stanza",
+        text:
+          "şiirimde\n" +
+          "bir kadın\n" +
+          "vardı",
+      },
+      {
+        kind: "stanza",
+        text:
+          "aslında kastım\n" +
+          "rüyamda",
+      },
+      {
+        kind: "stanza",
+        text:
+          "ve görüştüğüm\n" +
+          "birine\n" +
+          "benziyordu",
+      },
+      {
+        kind: "stanza",
+        text:
+          "önceleri\n" +
+          "hayır aslında\n" +
+          "onun\n" +
+          "gibiydi",
+      },
+      {
+        kind: "stanza",
+        text:
+          "sanki\n" +
+          "o olacaktı",
+      },
+      {
+        kind: "stanza",
+        text:
+          "ve öyle\n" +
+          "yoğun bir\n" +
+          "zamandı ki\n" +
+          "ikimiz için\n" +
+          "de",
+      },
+      {
+        kind: "stanza",
+        text:
+          "o bir şeyleri\n" +
+          "bitirmeye\n" +
+          "uğraşıyordu ve ben\n" +
+          "günlerce\n" +
+          "uyuyordum",
+      },
+      {
+        kind: "stanza",
+        text:
+          "muhtemelen deli\n" +
+          "işiydi\n" +
+          "ve benimle\n" +
+          "kafa buluyordu\n" +
+          "ama",
+      },
+      {
+        kind: "stanza",
+        text:
+          "aramızdaki boşluk\n" +
+          "kapanacak\n" +
+          "gibi\n" +
+          "hissettim",
+      },
+      {
+        kind: "stanza",
+        text:
+          "gerçek olmalıydı\n" +
+          "dedim",
+      },
+      {
+        kind: "stanza",
+        text:
+          "böyle\n" +
+          "hissettiriyordu",
+      },
+      {
+        kind: "stanza",
+        text:
+          "demek\n" +
+          "bu şekilde\n" +
+          "iki birisi\n" +
+          "biz olabilirdi",
+      },
+      {
+        kind: "stanza",
+        text:
+          "bu coğrafi\n" +
+          "dram",
+      },
+      {
+        kind: "stanza",
+        text:
+          "çoğu zaman\n" +
+          "kişiler olarak\n" +
+          "zuhreder",
+      },
+      {
+        kind: "stanza",
+        text:
+          "yavaşça\n" +
+          "öne doğru\n" +
+          "eğiliyordum",
+      },
+      {
+        kind: "stanza",
+        text:
+          "kapatmak\n" +
+          "için\n" +
+          "küçük",
+      },
+      {
+        kind: "stanza",
+        text:
+          "mesafeyi",
+      },
+      {
+        kind: "stanza",
+        text:
+          "rüyamda\n" +
+          "afalladım",
+      },
+      {
+        kind: "stanza",
+        text:
+          "çünkü\n" +
+          "herhangi\n" +
+          "biriydi",
+      },
+      {
+        kind: "stanza",
+        text:
+          "huyum\n" +
+          "böyle",
+      },
+      {
+        kind: "stanza",
+        text:
+          "paylaşmak için\n" +
+          "benim\n" +
+          "ol ki",
+      },
+      {
+        kind: "stanza",
+        text:
+          "kahvemi\n" +
+          "böylesi daha\n" +
+          "iyi",
+      },
+      {
+        kind: "stanza",
+        text: "öğrenciler!",
+        italic: true,
+      },
+      {
+        kind: "stanza",
+        text:
+          "kahve\n" +
+          "iyi\n" +
+          "olması gerektiği\n" +
+          "gibi",
+      },
+      {
+        kind: "stanza",
+        text:
+          "günün\n" +
+          "bu\n" +
+          "saati",
+      },
+      {
+        kind: "stanza",
+        text:
+          "istediğim\n" +
+          "ilişki\n" +
+          "tam bu",
+      },
+      {
+        kind: "stanza",
+        text:
+          "kara\n" +
+          "sıvı\n" +
+          "beni uyandıran\n" +
+          "çalınmış bir\n" +
+          "bardakta",
+      },
+    ],
+    more: [
+      { title: "belki bir sabah", href: "/siir/belki-bir-sabah" },
+      { title: "afili haytalar", href: "/siir/afili-haytalar" },
+      { title: "buffalo bill", href: "/siir/buffalo-bill" },
+    ],
+  },
+
   "haziranin-kesfi": {
     title: "haziran’ın keşfi",
     label: "şiir",
@@ -135,12 +485,14 @@ const poems: Record<string, Poem> = {
         text:
           "bana inanmasan da\n" +
           "inanabilirsin bunca şehrin yaratıldığına\n" +
-          "bak yeni bir desen tutturdum ıslığımla\n" +
-          "artık çok bunaldım kalk gidelim\n" +
+          "artık çok bunaldın kalk da gidelim\n" +
           "oltanı at birine elbet denk gelirim\n" +
-          "sokağım yorgun sırtlandım yüzyılını\n" +
-          "sık dişlerini iyice sık ki dökülsünler\n" +
+          "bak yeni bir desen tutturdum ıslığımla\n" +
           "kuvvet ham derime keskin\n" +
+          "mutlak yansın canımız\n" +
+          "kuvvet ham derime keskin\n" +
+          "sık dişlerini iyice sık ki dökülsünler\n" +
+          "sokağım yorgun sırtlandım yüzyılını\n" +
           "içimin yağlarını eritecek ne çok şey var\n" +
           "israil’in köpek kolonisi\n" +
           "ah şu berlin bir daha bombalansa!",
@@ -429,10 +781,10 @@ const poems: Record<string, Poem> = {
       {
         kind: "stanza",
         text:
-          "ulan yalvardım bırakalım dedim\n" +
-          "kaç kere konuştuk üç ay\n" +
+          "Ulan yalvardım bırakalım dedim\n" +
+          "Kaç kere konuştuk üç ay\n" +
           "hani bidaha yoktu\n" +
-          "allah belanız versin\n" +
+          "Allah belanız versin\n" +
           "kontrol kanka sıkıntı yok\n" +
           "bok yok",
       },
@@ -732,20 +1084,20 @@ const poems: Record<string, Poem> = {
       {
         kind: "stanza",
         text:
-          "yatak boşluğu sandalye göçlüğü masaüstü bardak çokluğu\n" +
-          "çay üstüne çay ve böbrek faaliyeti bayramı kutlamalarım\n" +
-          "şu yüzyılda hala kağıtların arasında boğulmak\n" +
-          "işte ben bu kadarım dedim sonunda ederim budur\n" +
+          "Yatak boşluğu sandalye göçlüğü masaüstü bardak çokluğu\n" +
+          "Çay üstüne çay ve böbrek faaliyeti bayramı kutlamalarım\n" +
+          "Şu yüzyılda hala kağıtların arasında boğulmak\n" +
+          "Işte ben bu kadarım dedim sonunda ederim budur\n" +
           "böcekler görmediğim yerlerimde gezerken\n" +
-          "ayak serçe parmağımda şeytan besliyor-larmış\n" +
-          "ezoterik şakalar ve/veya hüzün dolu şarkılar\n" +
-          "üst komşumun sesine engel olacak mısınız\n" +
+          "Ayak serçe parmağımda şeytan besliyor-larmış\n" +
+          "Ezoterik şakalar ve/veya hüzün dolu şarkılar\n" +
+          "Üst komşumun sesine engel olacak mısınız\n" +
           "sorunların bütünü parçalarından az geliyo\n" +
           "bi düşününce anlık şükretme isteğim uyanıyor ama\n" +
           "kimi anlar var cidden büyük aparkat\n" +
           "e ama yıllardır her zaman ayaktayım\n" +
           "yalnız tek başımayken elimi götürür\n" +
-          "bazırım bazen bazıyan yerlerimi\n" +
+          "Bazırım bazen bazıyan yerlerimi\n" +
           "ki bazımasınlar bazen.",
       },
     ],
@@ -779,23 +1131,23 @@ const poems: Record<string, Poem> = {
       {
         kind: "stanza",
         text:
-          "belki bir sabah yürürken cam gibi havada kupkuru\n" +
+          "Belki bir sabah, yürürken kuru, cam gibi havada,\n" +
           "dönüp tanık olacağım mucizenin gelişine:\n" +
-          "sırtımda hiçlik, ardımda boşluk\n" +
+          "sırtımı döndüğüm hiçlik, ardımda kalan boşluk\n" +
           "bir sarhoşun dehşetiyle",
       },
       {
         kind: "stanza",
         text:
-          "sonra, sanki bir ekranda gibi ağaçlar evler tepeler\n" +
-          "ansızın toplanacak alelade yanılsamalarına.\n" +
-          "ama çok geç olacak; ve ben sessizce uzaklaşacağım\n" +
-          "arkalarına bakmayan insanların arasından, bu sırrımla.",
+          "Sonra, sanki bir ekranda gibi, ağaçlar evler tepeler\n" +
+          "Hızlıca toplanacaklar tanıdık yanılsamalarla.\n" +
+          "Ama çok geç olacak; ve ben sessizce uzaklaşacağım\n" +
+          "Arkalarına bakmayan insanların arasından, bu sırrımla.",
       },
     ],
     more: [
       { title: "uyku düzeni düzenleyici", href: "/siir/uyku-duzeni-duzenleyici" },
-      { title: "buffalo bill", href: "/siir/buffalo-bill" },
+      { title: "göteborg", href: "/siir/goteborg" },
       { title: "afili haytalar", href: "/siir/afili-haytalar" },
     ],
   },
@@ -822,7 +1174,7 @@ const poems: Record<string, Poem> = {
     ],
     more: [
       { title: "piiz ver piiz ver mayday", href: "/siir/piiz-ver-piiz-ver-mayday" },
-      { title: "belki bir sabah", href: "/siir/belki-bir-sabah" },
+      { title: "göteborg", href: "/siir/goteborg" },
       { title: "buffalo bill", href: "/siir/buffalo-bill" },
     ],
   },
@@ -910,7 +1262,7 @@ export default async function SiirPage({
 
         .poem-shell {
           padding: 24px 36px 110px 36px;
-          max-width: 1280px;
+          maxWidth: 1280px;
         }
 
         .poem-topline {

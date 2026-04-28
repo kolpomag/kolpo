@@ -5,6 +5,15 @@ import SiteHeader from "@/components/SiteHeader";
 
 const entries = [
   {
+    title: "göteborg",
+    href: "/siir/goteborg",
+    author: "onur duman & mahmut kıran",
+    authorHref: "",
+    type: "çeviri - eileen myles",
+    className: "entry entry-top",
+    multiline: false,
+  },
+  {
     title: "haziran’ın keşfi",
     href: "/siir/haziranin-kesfi",
     author: "onur duman",
@@ -267,6 +276,7 @@ export default function HomePage() {
           letter-spacing: -0.02em;
         }
 
+        .entry-top { max-width: 900px; margin-left: 138px; }
         .entry-a { max-width: 760px; margin-left: 0; }
         .entry-b { max-width: 980px; margin-left: 102px; }
         .entry-c { max-width: 720px; margin-left: 0; }
