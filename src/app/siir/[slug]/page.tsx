@@ -598,81 +598,87 @@ const poems: Record<string, Poem> = {
   },
 
   "sivri-catlaklar": {
+  title: "dualarımı aksatıyorum canlandır beni",
+  label: "şiir",
+  authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
+  image: {
+    src: "/images/dualarimi-aksatiyorum-canlandir-beni.jpg",
+    alt: "dualarımı aksatıyorum canlandır beni için çizim",
     title: "dualarımı aksatıyorum canlandır beni",
-    label: "şiir",
-    authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
-    body: [
-      {
-        kind: "stanza",
-        text:
-          "iyileşmek isteğiyle bitmeyecek olana\n" +
-          "beni tut beni bırakma diye\n" +
-          "yarı yolda kendime güvendim\n" +
-          "yüzeylerden akacak sıvıların akıntısıyla devinim diye\n" +
-          "yaşam ve küçük ölüm isteğine boyun eğmiyorum!\n" +
-          "derine her çarptığımda gücümü geri toplayacak o kuvveti canlandırmak niyetiyle\n" +
-          "kokusuyla dokunuşuyla sonra kayganlığıyla\n" +
-          "vücudun heyecanı, kıvrımlarında oluşan şeffaf hayatcıklar",
-      },
-      {
-        kind: "stanza",
-        text:
-          "duygularım sublardan yıkılır\n" +
-          "kalbin bezgin cevaplarla kırılır\n" +
-          "dirayetini kaptırmış çene çekilirsin hilal gibi,\n" +
-          "egzoz gazında yapayalnız bir bebek kedi\n" +
-          "dudaklarında kendini bırakmış yaprağın titrekliği\n" +
-          "yanaklarında karşı koyamadığım pürüzsüz yumuşaklık",
-      },
-      {
-        kind: "stanza",
-        text:
-          "bil ki ben seni tamamlayamam\n" +
-          "sivri çatlaklarından sızan insanlığına \n" +
-          "parmak salladım seni tam sevemedim aşkım\n" +
-          "bekledim aşkım, \n" +
-          "akan gözyaşlarında kelebek yolcuğu\n" +
-          "fani göze kandığını belli etmez\n" +
-          "acıyı gören kalbin gözü\n" +
-          "acıyı kaydeden bu görünmez ister",
-      },
-      {
-        kind: "stanza",
-        text:
-          "dualarımı aksatıyorum annem\n" +
-          "yardım dilenmiyorum dimdik \n" +
-          "çok rahatım en görünmediğimde\n" +
-          "gücenmeyiversin alemlerin rabbi de\n" +
-          "su içiyorum adalet mahallesi camiinde\n" +
-          "şehveti tadıyorum canlandır beni\n" +
-          "illellezine ca’m önü bileti al\n" +
-          "taşlının yolları kabelidir, alllah\n" +
-          "manevi star önlüldarham abal",
-      },
-      {
-        kind: "stanza",
-        text:
-          "tak tatak tak dışk dışk dışk dışk\n" +
-          "ecirna minen-nar bi avfike ya rahman\n" +
-          "subhaneke ya tevvab tealeyte ya vahhab\n" +
-          "sublar dört vuruş chargelıyor\n" +
-          "sanki bilinç kapanması",
-      },
-      {
-        kind: "stanza",
-        text:
-          "hayatına intihar aşkçısı gibi dalan bu insan\n" +
-          "ilk akşam bana özel fotoğraf attı\n" +
-          "kıran ve kırılan\n" +
-          "pazar allemand pazar dü levan",
-      },
-    ],
-    more: [
-      { title: "yolunu öğrenmemiş nehirlere", href: "/siir/ya-siyah-ya-beyaz" },
-      { title: "piiz ver piiz ver mayday", href: "/siir/piiz-ver-piiz-ver-mayday" },
-      { title: "belki bir sabah", href: "/siir/belki-bir-sabah" },
-    ],
+    credit: "çizim: Rachele Demarchi",
   },
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "iyileşmek isteğiyle bitmeyecek olana\n" +
+        "beni tut beni bırakma diye\n" +
+        "yarı yolda kendime güvendim\n" +
+        "yüzeylerden akacak sıvıların akıntısıyla devinim diye\n" +
+        "yaşam ve küçük ölüm isteğine boyun eğmiyorum!\n" +
+        "derine her çarptığımda gücümü geri toplayacak o kuvveti canlandırmak niyetiyle\n" +
+        "kokusuyla dokunuşuyla sonra kayganlığıyla\n" +
+        "vücudun heyecanı, kıvrımlarında oluşan şeffaf hayatcıklar",
+    },
+    {
+      kind: "stanza",
+      text:
+        "duygularım sublardan yıkılır\n" +
+        "kalbin bezgin cevaplarla kırılır\n" +
+        "dirayetini kaptırmış çene çekilirsin hilal gibi,\n" +
+        "egzoz gazında yapayalnız bir bebek kedi\n" +
+        "dudaklarında kendini bırakmış yaprağın titrekliği\n" +
+        "yanaklarında karşı koyamadığım pürüzsüz yumuşaklık",
+    },
+    {
+      kind: "stanza",
+      text:
+        "bil ki ben seni tamamlayamam\n" +
+        "sivri çatlaklarından sızan insanlığına \n" +
+        "parmak salladım seni tam sevemedim aşkım\n" +
+        "bekledim aşkım, \n" +
+        "akan gözyaşlarında kelebek yolcuğu\n" +
+        "fani göze kandığını belli etmez\n" +
+        "acıyı gören kalbin gözü\n" +
+        "acıyı kaydeden bu görünmez ister",
+    },
+    {
+      kind: "stanza",
+      text:
+        "dualarımı aksatıyorum annem\n" +
+        "yardım dilenmiyorum dimdik \n" +
+        "çok rahatım en görünmediğimde\n" +
+        "gücenmeyiversin alemlerin rabbi de\n" +
+        "su içiyorum adalet mahallesi camiinde\n" +
+        "şehveti tadıyorum canlandır beni\n" +
+        "illellezine ca’m önü bileti al\n" +
+        "taşlının yolları kabelidir, alllah\n" +
+        "manevi star önlüldarham abal",
+    },
+    {
+      kind: "stanza",
+      text:
+        "tak tatak tak dışk dışk dışk dışk\n" +
+        "ecirna minen-nar bi avfike ya rahman\n" +
+        "subhaneke ya tevvab tealeyte ya vahhab\n" +
+        "sublar dört vuruş chargelıyor\n" +
+        "sanki bilinç kapanması",
+    },
+    {
+      kind: "stanza",
+      text:
+        "hayatına intihar aşkçısı gibi dalan bu insan\n" +
+        "ilk akşam bana özel fotoğraf attı\n" +
+        "kıran ve kırılan\n" +
+        "pazar allemand pazar dü levan",
+    },
+  ],
+  more: [
+    { title: "yolunu öğrenmemiş nehirlere", href: "/siir/ya-siyah-ya-beyaz" },
+    { title: "piiz ver piiz ver mayday", href: "/siir/piiz-ver-piiz-ver-mayday" },
+    { title: "belki bir sabah", href: "/siir/belki-bir-sabah" },
+  ],
+},
 
   "gocmus-kediler-bahcesi": {
     title: "göçmüş kediler bahçesi",
