@@ -65,7 +65,7 @@ const poems: Record<string, Poem> = {
   ],
   more: [
     { title: "yolunu öğrenmemiş nehirlere", href: "/siir/ya-siyah-ya-beyaz" },
-    { title: "dualarımı aksatıyorum canlandır beni", href: "/siir/sivri-catlaklar" },
+    { title: "duaları aksatıyorum canlandır beni", href: "/siir/sivri-catlaklar" },
     { title: "belli belirsiz", href: "/siir/belli-belirsiz" },
   ],
 },
@@ -530,7 +530,7 @@ const poems: Record<string, Poem> = {
     ],
     more: [
       {
-        title: "dualarımı aksatıyorum canlandır beni",
+        title: "duaları aksatıyorum canlandır beni",
         href: "/siir/sivri-catlaklar",
       },
       { title: "piiz ver piiz ver mayday", href: "/siir/piiz-ver-piiz-ver-mayday" },
@@ -598,13 +598,13 @@ const poems: Record<string, Poem> = {
   },
 
   "sivri-catlaklar": {
-  title: "dualarımı aksatıyorum canlandır beni",
+  title: "duaları aksatıyorum canlandır beni",
   label: "şiir",
   authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
   image: {
     src: "/images/dualarimi-aksatiyorum-canlandir-beni.jpg",
-    alt: "dualarımı aksatıyorum canlandır beni için çizim",
-    title: "dualarımı aksatıyorum canlandır beni",
+    alt: "duaları aksatıyorum canlandır beni için çizim",
+    title: "duaları aksatıyorum canlandır beni",
     credit: "çizim: Rachele Demarchi",
   },
   body: [
@@ -612,8 +612,6 @@ const poems: Record<string, Poem> = {
       kind: "stanza",
       text:
         "iyileşmek isteğiyle bitmeyecek olana\n" +
-        "beni tut beni bırakma diye\n" +
-        "yarı yolda kendime güvendim\n" +
         "yüzeylerden akacak sıvıların akıntısıyla devinim diye\n" +
         "yaşam ve küçük ölüm isteğine boyun eğmiyorum!\n" +
         "derine her çarptığımda gücümü geri toplayacak o kuvveti canlandırmak niyetiyle\n" +
@@ -625,10 +623,9 @@ const poems: Record<string, Poem> = {
       text:
         "duygularım sublardan yıkılır\n" +
         "kalbin bezgin cevaplarla kırılır\n" +
-        "dirayetini kaptırmış çene çekilirsin hilal gibi\n" +
+        "dirayetini kaptırmış çene çekilirsin hilal gibi,\n" +
         "egzoz gazında yapayalnız bir bebek kedi\n" +
-        "dudaklarında kendini bırakmış yaprağın titrekliği\n" +
-        "yanaklarında karşı koyamadığım pürüzsüz yumuşaklık",
+        "dudaklarında kendini bırakmış yaprağın titrekliği",
     },
     {
       kind: "stanza",
@@ -636,7 +633,6 @@ const poems: Record<string, Poem> = {
         "bil ki ben seni tamamlayamam\n" +
         "sivri çatlaklarından sızan insanlığına \n" +
         "parmak salladım seni tam sevemedim aşkım\n" +
-        "bekledim aşkım, \n" +
         "akan gözyaşlarında kelebek yolcuğu\n" +
         "fani göze kaldığını belli etmez\n" +
         "acıyı gören kalbin gözü\n" +
