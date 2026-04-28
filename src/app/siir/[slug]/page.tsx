@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
 
 type PoemBodyBlock =
   | { kind: "stanza"; text: string; italic?: boolean; bold?: boolean }
+  | { kind: "stanza-last-line-italic"; text: string; lastLine: string }
   | { kind: "special-24101990" }
   | { kind: "special-buffalo-bill" };
 
@@ -13,6 +15,13 @@ type Poem = {
   authors: { name: string; href: string }[];
   body: PoemBodyBlock[];
   more: { title: string; href: string }[];
+  image?: {
+    src: string;
+    alt: string;
+    rotate?: number;
+    title?: string;
+    credit?: string;
+  };
 };
 
 const poems: Record<string, Poem> = {
@@ -48,12 +57,12 @@ const poems: Record<string, Poem> = {
           "çalıyorum",
       },
       {
-        kind: "stanza",
+        kind: "stanza-last-line-italic",
         text:
           "baya istediğim bi\n" +
           "havlu vardı.\n" +
-          "isveç havludan\n"+
-          "anlıyor",
+          "isveç havludan",
+        lastLine: "anlıyor",
       },
       {
         kind: "stanza",
@@ -431,6 +440,13 @@ const poems: Record<string, Poem> = {
     title: "yolunu öğrenmemiş nehirlere",
     label: "şiir",
     authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
+    image: {
+      src: "/images/yolunu-ogrenmemis-nehirlere.jpg",
+      alt: "yolunu öğrenmemiş nehirlere için çizim",
+      rotate: 180,
+      title: "yolunu öğrenmemiş nehirlere",
+      credit: "çizim: Rachele Demarchi",
+    },
     body: [
       {
         kind: "stanza",
@@ -572,7 +588,7 @@ const poems: Record<string, Poem> = {
           "sivri çatlaklarından sızan insanlığına \n" +
           "parmak salladım seni tam sevemedim aşkım\n" +
           "bekledim aşkım, \n" +
-          "akan gözyaşlarynda kelebek yolcuğu\n" +
+          "akan gözyaşlarında kelebek yolcuğu\n" +
           "fani göze kandığını belli etmez\n" +
           "acıyı gören kalbin gözü\n" +
           "acıyı kaydeden bu görünmez ister",
@@ -989,7 +1005,7 @@ const poems: Record<string, Poem> = {
           "yanlarına giderim\n" +
           "nakış gibi işlenmiş dantel\n" +
           "kondurulurum televizyonun üzerine\n" +
-          "kimi seneler acı domates soslaryna yetişirim\n" +
+          "kimi seneler acı domates soslarına yetişirim\n" +
           "kahvaltılıklara dönüşür\n" +
           "ekmekle yerim\n" +
           "havalar güzeldir\n" +
@@ -1266,7 +1282,7 @@ export default async function SiirPage({
 
         .poem-shell {
           padding: 24px 36px 110px 36px;
-          max-width: 1280px;
+          max-width: 1440px;
         }
 
         .poem-topline {
@@ -1303,8 +1319,8 @@ export default async function SiirPage({
 
         .poem-grid {
           display: grid;
-          grid-template-columns: minmax(0, 760px) 1fr;
-          gap: 72px;
+          grid-template-columns: minmax(0, 760px) minmax(360px, 520px);
+          gap: 88px;
           align-items: start;
         }
 
@@ -1318,7 +1334,9 @@ export default async function SiirPage({
         }
 
         .poem-more {
-          padding-top: 8px;
+          align-self: start;
+          position: sticky;
+          top: 24px;
         }
 
         .poem-more-inner {
@@ -1339,6 +1357,7 @@ export default async function SiirPage({
           display: flex;
           flex-direction: column;
           gap: 18px;
+          margin-bottom: 34px;
         }
 
         .poem-more-link {
@@ -1348,6 +1367,43 @@ export default async function SiirPage({
           font-size: 30px;
           line-height: 1.04;
           letter-spacing: -0.04em;
+        }
+
+        .poem-image-wrap {
+          width: 100%;
+        }
+
+        .poem-image {
+          width: 100%;
+          height: auto;
+          display: block;
+          border: 1px solid rgba(17,17,17,0.08);
+          background: #f3f0e8;
+        }
+
+        .poem-image-meta {
+          margin-top: 14px;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
+
+        .poem-image-title {
+          margin: 0;
+          font-size: 18px;
+          line-height: 1.2;
+          font-family: Arial, Helvetica, sans-serif;
+          color: #111111;
+          letter-spacing: -0.02em;
+        }
+
+        .poem-image-credit {
+          margin: 0;
+          font-size: 15px;
+          line-height: 1.3;
+          font-family: Arial, Helvetica, sans-serif;
+          color: #6f6b63;
+          letter-spacing: -0.01em;
         }
 
         .special-24101990 {
@@ -1478,6 +1534,13 @@ export default async function SiirPage({
         .bb-11 { margin-left: 0; }
         .bb-12 { margin-left: 0; }
 
+        @media (max-width: 1100px) {
+          .poem-grid {
+            grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
+            gap: 56px;
+          }
+        }
+
         @media (max-width: 900px) {
           .poem-shell {
             padding: 20px 20px 72px 20px;
@@ -1505,11 +1568,24 @@ export default async function SiirPage({
           }
 
           .poem-more {
-            padding-top: 0;
+            position: static;
+            top: auto;
+          }
+
+          .poem-more-list {
+            margin-bottom: 24px;
           }
 
           .poem-more-link {
             font-size: 26px;
+          }
+
+          .poem-image-title {
+            font-size: 17px;
+          }
+
+          .poem-image-credit {
+            font-size: 14px;
           }
 
           .special-24101990 {
@@ -1600,6 +1676,14 @@ export default async function SiirPage({
 
           .poem-more-link {
             font-size: 22px;
+          }
+
+          .poem-image-title {
+            font-size: 16px;
+          }
+
+          .poem-image-credit {
+            font-size: 13px;
           }
 
           .special-24101990-gunes {
@@ -1798,6 +1882,22 @@ export default async function SiirPage({
                 );
               }
 
+              if (block.kind === "stanza-last-line-italic") {
+                return (
+                  <p
+                    key={index}
+                    style={{
+                      margin: 0,
+                      whiteSpace: "pre-line",
+                    }}
+                  >
+                    {block.text}
+                    {"\n"}
+                    <span style={{ fontStyle: "italic" }}>{block.lastLine}</span>
+                  </p>
+                );
+              }
+
               return (
                 <p
                   key={index}
@@ -1830,6 +1930,32 @@ export default async function SiirPage({
                 ))}
               </div>
             </div>
+
+            {poem.image ? (
+              <div className="poem-image-wrap">
+                <Image
+                  src={poem.image.src}
+                  alt={poem.image.alt}
+                  width={1200}
+                  height={1600}
+                  className="poem-image"
+                  style={{
+                    transform: poem.image.rotate
+                      ? `rotate(${poem.image.rotate}deg)`
+                      : "none",
+                  }}
+                />
+
+                <div className="poem-image-meta">
+                  {poem.image.title ? (
+                    <p className="poem-image-title">{poem.image.title}</p>
+                  ) : null}
+                  {poem.image.credit ? (
+                    <p className="poem-image-credit">{poem.image.credit}</p>
+                  ) : null}
+                </div>
+              </div>
+            ) : null}
           </aside>
         </div>
       </section>
