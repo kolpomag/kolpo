@@ -58,7 +58,7 @@ export default async function YazarPage({
           type: "şiir",
         },
         {
-          title: "dualarımı aksatıyorum canlandır beni",
+          title: "duaları aksatıyorum canlandır beni",
           href: "/siir/sivri-catlaklar",
           type: "şiir",
         },
