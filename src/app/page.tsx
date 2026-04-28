@@ -3,7 +3,18 @@
 import { useState } from "react";
 import SiteHeader from "@/components/SiteHeader";
 
-const entries = [
+type HomeEntry = {
+  title: string;
+  href: string;
+  author: string;
+  authorHref: string;
+  type: string;
+  sourceAuthor?: string;
+  className: string;
+  multiline: boolean;
+};
+
+const entries: HomeEntry[] = [
   {
     title: "müjde şey",
     href: "/siir/mujde-sey",
@@ -18,7 +29,8 @@ const entries = [
     href: "/siir/goteborg",
     author: "onur duman & mahmut kıran",
     authorHref: "",
-    type: "çeviri - eileen myles",
+    type: "çeviri",
+    sourceAuthor: "eileen myles",
     className: "entry entry-b",
     multiline: false,
   },
@@ -163,6 +175,7 @@ const entries = [
     author: "prowler",
     authorHref: "/yazar/prowler",
     type: "çeviri",
+    sourceAuthor: "e. e. cummings",
     className: "entry entry-m",
     multiline: false,
   },
@@ -172,6 +185,7 @@ const entries = [
     author: "göksel yaman",
     authorHref: "/yazar/goksel-yaman",
     type: "çeviri",
+    sourceAuthor: "eugenio montale",
     className: "entry entry-p",
     multiline: false,
   },
@@ -181,6 +195,7 @@ const entries = [
     author: "onur duman & mahmut kıran",
     authorHref: "",
     type: "çeviri",
+    sourceAuthor: "gwendolyn brooks",
     className: "entry entry-q",
     multiline: false,
   },
@@ -418,7 +433,10 @@ export default function HomePage() {
 
             <p className="entry-meta">
               {renderAuthor(entry.author, entry.authorHref, authorLinkStyle)}
-              <span style={{ color: "#6f6b63" }}>, {entry.type}</span>
+              <span style={{ color: "#6f6b63" }}>
+                , {entry.type}
+                {entry.sourceAuthor ? ` - ${entry.sourceAuthor}` : ""}
+              </span>
             </p>
           </article>
         ))}
