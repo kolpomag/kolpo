@@ -25,6 +25,50 @@ type Poem = {
 };
 
 const poems: Record<string, Poem> = {
+  "mujde-sey": {
+  title: "müjde şey",
+  label: "şiir",
+  authors: [{ name: "emrullah şekerci", href: "/yazar/emrullah-sekerci" }],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "birbiri izinde eksiltilen ayarı dar\n" +
+        "müjde biriktirir kendine amansız\n" +
+        "kıssa bir düşünceye dair denenmiş\n" +
+        "hafıza içerisinde bir platonik ten",
+    },
+    {
+      kind: "stanza",
+      text:
+        "kendi adında meydanı biriktirir iz\n" +
+        "görünür içerisinde kovan bir ağırlık\n" +
+        "canın kabarır uzantısı taştığında\n" +
+        "bir müfredat üzerine vebali ölüm",
+    },
+    {
+      kind: "stanza",
+      text:
+        "nasıl anlatılır nasıl bilirim bunu\n" +
+        "taşımaktan yeryüzünü izinde bir\n" +
+        "tekliğin yanında inanacak şimdi\n" +
+        "özünde bunu boğmuyor hayali",
+    },
+    {
+      kind: "stanza",
+      text:
+        "lekeli bedeni yansır ve tuzağa\n" +
+        "arasında hummalı bir sedef\n" +
+        "ötekinin iradesiz karmaşıklığı\n" +
+        "yolunda korkuyorum amansız",
+    },
+  ],
+  more: [
+    { title: "yolunu öğrenmemiş nehirlere", href: "/siir/ya-siyah-ya-beyaz" },
+    { title: "dualarımı aksatıyorum canlandır beni", href: "/siir/sivri-catlaklar" },
+    { title: "belli belirsiz", href: "/siir/belli-belirsiz" },
+  ],
+},
   "goteborg": {
     title: "göteborg",
     label: "çeviri - eileen myles",

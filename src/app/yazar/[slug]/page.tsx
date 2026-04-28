@@ -82,15 +82,15 @@ export default async function YazarPage({
     },
     "emin-musaiev": {
       name: "emin musaiev",
-      entries: [
-        { title: "what remains", href: "/siir/what-remains", type: "şiir" },
-      ],
+      entries: [{ title: "what remains", href: "/siir/what-remains", type: "şiir" }],
+    },
+    "emrullah-sekerci": {
+      name: "emrullah şekerci",
+      entries: [{ title: "müjde şey", href: "/siir/mujde-sey", type: "şiir" }],
     },
     prowler: {
       name: "prowler",
-      entries: [
-        { title: "buffalo bill", href: "/siir/buffalo-bill", type: "çeviri" },
-      ],
+      entries: [{ title: "buffalo bill", href: "/siir/buffalo-bill", type: "çeviri" }],
     },
   };
 

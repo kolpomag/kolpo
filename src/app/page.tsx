@@ -5,12 +5,21 @@ import SiteHeader from "@/components/SiteHeader";
 
 const entries = [
   {
+    title: "müjde şey",
+    href: "/siir/mujde-sey",
+    author: "emrullah şekerci",
+    authorHref: "/yazar/emrullah-sekerci",
+    type: "şiir",
+    className: "entry entry-a",
+    multiline: true,
+  },
+  {
     title: "göteborg",
     href: "/siir/goteborg",
     author: "onur duman & mahmut kıran",
     authorHref: "",
     type: "çeviri - eileen myles",
-    className: "entry entry-top",
+    className: "entry entry-b",
     multiline: false,
   },
   {
@@ -19,7 +28,7 @@ const entries = [
     author: "onur duman",
     authorHref: "/yazar/onur-duman",
     type: "şiir",
-    className: "entry entry-a",
+    className: "entry entry-c",
     multiline: true,
   },
   {
@@ -28,7 +37,7 @@ const entries = [
     author: "mahmut kıran",
     authorHref: "/yazar/mahmut-kiran",
     type: "şiir",
-    className: "entry entry-b",
+    className: "entry entry-d",
     multiline: true,
   },
   {
@@ -37,7 +46,7 @@ const entries = [
     author: "onur duman",
     authorHref: "/yazar/onur-duman",
     type: "şiir",
-    className: "entry entry-c",
+    className: "entry entry-e",
     multiline: true,
   },
   {
@@ -46,7 +55,7 @@ const entries = [
     author: "mahmut kıran",
     authorHref: "/yazar/mahmut-kiran",
     type: "şiir",
-    className: "entry entry-d",
+    className: "entry entry-f",
     multiline: true,
   },
   {
@@ -55,7 +64,7 @@ const entries = [
     author: "onur duman",
     authorHref: "/yazar/onur-duman",
     type: "şiir",
-    className: "entry entry-e",
+    className: "entry entry-g",
     multiline: true,
   },
   {
@@ -64,7 +73,7 @@ const entries = [
     author: "onur duman & mahmut kıran",
     authorHref: "",
     type: "şiir",
-    className: "entry entry-f",
+    className: "entry entry-h",
     multiline: false,
   },
   {
@@ -73,7 +82,7 @@ const entries = [
     author: "onur duman",
     authorHref: "/yazar/onur-duman",
     type: "şiir",
-    className: "entry entry-g",
+    className: "entry entry-h2",
     multiline: false,
   },
   {
@@ -82,7 +91,7 @@ const entries = [
     author: "göksel yaman",
     authorHref: "/yazar/goksel-yaman",
     type: "şiir",
-    className: "entry entry-h",
+    className: "entry entry-i",
     multiline: false,
   },
   {
@@ -91,7 +100,7 @@ const entries = [
     author: "göksel yaman",
     authorHref: "/yazar/goksel-yaman",
     type: "şiir",
-    className: "entry entry-h2",
+    className: "entry entry-j",
     multiline: true,
   },
   {
@@ -100,7 +109,7 @@ const entries = [
     author: "onur duman",
     authorHref: "/yazar/onur-duman",
     type: "şiir",
-    className: "entry entry-i",
+    className: "entry entry-k",
     multiline: true,
   },
   {
@@ -109,7 +118,7 @@ const entries = [
     author: "göksel yaman",
     authorHref: "/yazar/goksel-yaman",
     type: "şiir",
-    className: "entry entry-j",
+    className: "entry entry-l",
     multiline: true,
   },
   {
@@ -118,7 +127,7 @@ const entries = [
     author: "onur duman",
     authorHref: "/yazar/onur-duman",
     type: "şiir",
-    className: "entry entry-k",
+    className: "entry entry-n",
     multiline: false,
   },
   {
@@ -127,7 +136,7 @@ const entries = [
     author: "onur duman",
     authorHref: "/yazar/onur-duman",
     type: "şiir",
-    className: "entry entry-l",
+    className: "entry entry-n2",
     multiline: false,
   },
   {
@@ -136,7 +145,7 @@ const entries = [
     author: "emin musaiev",
     authorHref: "/yazar/emin-musaiev",
     type: "şiir",
-    className: "entry entry-n",
+    className: "entry entry-o",
     multiline: false,
   },
   {
@@ -145,7 +154,7 @@ const entries = [
     author: "göksel yaman",
     authorHref: "/yazar/goksel-yaman",
     type: "şiir",
-    className: "entry entry-n2",
+    className: "entry entry-m2",
     multiline: true,
   },
   {
@@ -154,7 +163,7 @@ const entries = [
     author: "prowler",
     authorHref: "/yazar/prowler",
     type: "çeviri",
-    className: "entry entry-o",
+    className: "entry entry-m",
     multiline: false,
   },
   {
@@ -163,7 +172,7 @@ const entries = [
     author: "göksel yaman",
     authorHref: "/yazar/goksel-yaman",
     type: "çeviri",
-    className: "entry entry-m2",
+    className: "entry entry-p",
     multiline: false,
   },
   {
@@ -172,7 +181,7 @@ const entries = [
     author: "onur duman & mahmut kıran",
     authorHref: "",
     type: "çeviri",
-    className: "entry entry-m",
+    className: "entry entry-q",
     multiline: false,
   },
 ];
@@ -276,25 +285,26 @@ export default function HomePage() {
           letter-spacing: -0.02em;
         }
 
-        .entry-top { max-width: 900px; margin-left: 138px; }
         .entry-a { max-width: 760px; margin-left: 0; }
-        .entry-b { max-width: 980px; margin-left: 102px; }
-        .entry-c { max-width: 720px; margin-left: 0; }
-        .entry-d { max-width: 860px; margin-left: 122px; }
-        .entry-e { max-width: 980px; margin-left: 0; }
-        .entry-f { max-width: 920px; margin-left: 92px; }
-        .entry-g { max-width: 760px; margin-left: 0; }
-        .entry-h { max-width: 980px; margin-left: 118px; }
+        .entry-b { max-width: 900px; margin-left: 138px; }
+        .entry-c { max-width: 760px; margin-left: 0; }
+        .entry-d { max-width: 980px; margin-left: 102px; }
+        .entry-e { max-width: 720px; margin-left: 0; }
+        .entry-f { max-width: 860px; margin-left: 122px; }
+        .entry-g { max-width: 980px; margin-left: 0; }
+        .entry-h { max-width: 920px; margin-left: 92px; }
         .entry-h2 { max-width: 760px; margin-left: 0; }
-        .entry-i { max-width: 980px; margin-left: 0; }
-        .entry-j { max-width: 980px; margin-left: 102px; }
-        .entry-k { max-width: 720px; margin-left: 0; }
-        .entry-l { max-width: 760px; margin-left: 140px; }
-        .entry-n { max-width: 760px; margin-left: 0; }
-        .entry-n2 { max-width: 920px; margin-left: 112px; }
-        .entry-o { max-width: 760px; margin-left: 0; }
-        .entry-m2 { max-width: 760px; margin-left: 138px; }
-        .entry-m { max-width: 900px; margin-left: 0; }
+        .entry-i { max-width: 980px; margin-left: 118px; }
+        .entry-j { max-width: 760px; margin-left: 0; }
+        .entry-k { max-width: 980px; margin-left: 102px; }
+        .entry-l { max-width: 720px; margin-left: 0; }
+        .entry-n { max-width: 760px; margin-left: 140px; }
+        .entry-n2 { max-width: 760px; margin-left: 0; }
+        .entry-o { max-width: 920px; margin-left: 112px; }
+        .entry-m2 { max-width: 760px; margin-left: 0; }
+        .entry-m { max-width: 760px; margin-left: 138px; }
+        .entry-p { max-width: 900px; margin-left: 0; }
+        .entry-q { max-width: 900px; margin-left: 138px; }
 
         .load-more-wrap {
           margin-top: -12px;
