@@ -625,7 +625,7 @@ const poems: Record<string, Poem> = {
       text:
         "duygularım sublardan yıkılır\n" +
         "kalbin bezgin cevaplarla kırılır\n" +
-        "dirayetini kaptırmış çene çekilirsin hilal gibi,\n" +
+        "dirayetini kaptırmış çene çekilirsin hilal gibi\n" +
         "egzoz gazında yapayalnız bir bebek kedi\n" +
         "dudaklarında kendini bırakmış yaprağın titrekliği\n" +
         "yanaklarında karşı koyamadığım pürüzsüz yumuşaklık",
@@ -638,37 +638,30 @@ const poems: Record<string, Poem> = {
         "parmak salladım seni tam sevemedim aşkım\n" +
         "bekledim aşkım, \n" +
         "akan gözyaşlarında kelebek yolcuğu\n" +
-        "fani göze kandığını belli etmez\n" +
+        "fani göze kaldığını belli etmez\n" +
         "acıyı gören kalbin gözü\n" +
-        "acıyı kaydeden bu görünmez ister",
+        "acıyı kaydeden bu görünmez izler",
     },
     {
       kind: "stanza",
       text:
-        "dualarımı aksatıyorum annem\n" +
-        "yardım dilenmiyorum dimdik \n" +
-        "çok rahatım en görünmediğimde\n" +
+        "duaları aksatıyorum\n" +
+        "yardım dilenmiyorum dimdik\n" +
+        "çok rahatım hiç görünmediğimde\n" +
         "gücenmeyiversin alemlerin rabbi de\n" +
         "su içiyorum adalet mahallesi camiinde\n" +
         "şehveti tadıyorum canlandır beni\n" +
-        "illellezine ca’m önü bileti al\n" +
-        "taşlının yolları kabelidir, alllah\n" +
-        "manevi star önlüldarham abal",
-    },
-    {
-      kind: "stanza",
-      text:
-        "tak tatak tak dışk dışk dışk dışk\n" +
-        "ecirna minen-nar bi avfike ya rahman\n" +
-        "subhaneke ya tevvab tealeyte ya vahhab\n" +
-        "sublar dört vuruş chargelıyor\n" +
-        "sanki bilinç kapanması",
+        "'illellezine ca’m önü bileti al taşlının yolları kabelidir,\n" +
+        "manevi star önlüldarham abal\n" +
+        "tak tatak tak chic çık bık\n" +
+        "mount etna yenen-nar bi avfike ya rahman\n" +
+        "sublar dört vuruş chargelıyor sanki bilinç kapanması",
     },
     {
       kind: "stanza",
       text:
         "hayatına intihar aşkçısı gibi dalan bu insan\n" +
-        "ilk akşam özel fotoğraf attı\n" +
+        "'ilk akşam özel fotoğraf attı,\n" +
         "kıran ve kırılan\n" +
         "pazar allemand pazar dü levan",
     },
