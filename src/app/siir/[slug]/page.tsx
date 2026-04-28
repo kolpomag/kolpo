@@ -443,7 +443,6 @@ const poems: Record<string, Poem> = {
     image: {
       src: "/images/yolunu-ogrenmemis-nehirlere.jpg",
       alt: "yolunu öğrenmemiş nehirlere için çizim",
-      rotate: 180,
       title: "yolunu öğrenmemiş nehirlere",
       credit: "çizim: Rachele Demarchi",
     },
