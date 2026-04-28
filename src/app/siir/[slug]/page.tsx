@@ -434,43 +434,43 @@ const poems: Record<string, Poem> = {
           "ellerimi kullanarak veya kullanmayarak\n" +
           "sağdan sola koyduğum\n" +
           "denkleştirdiğim tüm olmazlar\n" +
-          "aşkımın aksak tınısı,\n" +
-          "beni affedin.",
+          "aşkımın aksak tınısı\n" +
+          "beni affedin",
       },
       {
         kind: "stanza",
         text:
           "gün döndüğünde elbet\n" +
-          "tütsülerim yine seni yanar.\n" +
+          "tütsülerim yine seni yanar\n" +
           "kesme yakuttan\n" +
           "yahut mürver çiçeklerinden yapılma\n" +
           "o akşamüstlerinden birinde\n" +
           "bir tavşan\n" +
-          "alacalı bir tilkiye rast gelir.\n" +
+          "alacalı bir tilkiye rast gelir\n" +
           "beden geçmişi şimdi zanneder\n" +
           "kendi sağlamasına durur\n" +
-          "nesnenin sürekliliğini zorlar.\n" +
+          "nesnenin sürekliliğini zorlar\n" +
           "orada mı diye üç kez yokladığım\n" +
           "ancak bir yumru kadar olan kalbi\n" +
           "eğer ki durursa diye düşünür tilki\n" +
           "pek bir şey değişmez ancak\n" +
-          "kendi kendine patlayan bir sivilce gibi.\n" +
+          "kendi kendine patlayan bir sivilce gibi\n" +
           "şükür ki biraz gece ve sonrası\n" +
-          "devrimim yine diskoya çalar.\n" +
+          "devrimim yine diskoya çalar\n" +
           "aşık ve kanlı\n" +
           "kekremsi kırmızı yemişler gibi\n" +
           "çatlayan genç bir sesle\n" +
-          "boşalmaya benzer.",
+          "boşalmaya benzer",
       },
       {
         kind: "stanza",
         text:
-          "tavşan kaç,\n" +
-          "burada duramazsın.\n" +
+          "tavşan kaç\n" +
+          "burada duramazsın\n" +
           "hayalleri ve ayrık dişleri\n" +
           "alacalı tilkinin\n" +
           "gözlerine bakıyorsun\n" +
-          "sonunda yalnızsın.",
+          "sonunda yalnızsın",
       },
     ],
     more: [
@@ -691,7 +691,7 @@ const poems: Record<string, Poem> = {
           "biliyorum, artık beni göremezsin\n" +
           "bıçağın kabzası da bileyli.\n" +
           "yine de utanmayı unutarak\n" +
-          "güneşin doğuşundan\n" +
+          "seninle güneşin doğuşundan\n" +
           "batışına kadar\n" +
           "kedileri sevmek isterdim.\n" +
           "kızışmış vaşaklar gibi gergin kaslarımız\n" +
@@ -704,7 +704,7 @@ const poems: Record<string, Poem> = {
       {
         kind: "stanza",
         text:
-          "korkulacak hiçbir şey kalmadı oysa.\n" +
+          "korkulacak hiçbir şey kalmadı oysa\n" +
           "beni sevmen için tüm nedenleri ortadan kaldırdım.\n" +
           "vazgeçtim görmekten\n" +
           "bir fiş sırasını bekler gibi alelade\n" +
@@ -722,13 +722,13 @@ const poems: Record<string, Poem> = {
           "hiç kimse bir yere gitmedi bak!\n" +
           "güneşimiz aynı\n" +
           "havamız aynı\n" +
-          "ne cüret ki\n" +
+          "bu ne cüret ki\n" +
           "günlerin isimleri de aynı.\n" +
           "çünkü göçmüş kediler bahçesi’nde\n" +
           "bizden önce ve sonra\n" +
           "sabah vardiyasına giden adamlar vardı.\n" +
           "taze ekmek kokuları\n" +
-          "terimizle yıkayıp astığımız çarşaflar.\n" +
+          "terimizle yıkayıp astığımız çarşaflar,\n" +
           "yanına yattığımda\n" +
           "çıplak ayaklarının hizasında\n" +
           "sokak lambası\n" +
