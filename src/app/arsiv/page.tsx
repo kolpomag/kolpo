@@ -10,6 +10,7 @@ type ArchiveEntry = {
   href: string;
   authors: { name: string; href: string }[];
   type: string;
+  sourceAuthor?: string;
 };
 
 export default function ArsivPage() {
@@ -36,7 +37,8 @@ export default function ArsivPage() {
         { name: "onur duman", href: "/yazar/onur-duman" },
         { name: "mahmut kıran", href: "/yazar/mahmut-kiran" },
       ],
-      type: "çeviri - eileen myles",
+      type: "çeviri",
+      sourceAuthor: "eileen myles",
     },
     {
       title: "haziran’ın keşfi",
@@ -136,12 +138,14 @@ export default function ArsivPage() {
       href: "/siir/buffalo-bill",
       authors: [{ name: "prowler", href: "/yazar/prowler" }],
       type: "çeviri",
+      sourceAuthor: "e. e. cummings",
     },
     {
       title: "belki bir sabah",
       href: "/siir/belki-bir-sabah",
       authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
       type: "çeviri",
+      sourceAuthor: "eugenio montale",
     },
     {
       title: "afili haytalar",
@@ -151,6 +155,7 @@ export default function ArsivPage() {
         { name: "mahmut kıran", href: "/yazar/mahmut-kiran" },
       ],
       type: "çeviri",
+      sourceAuthor: "gwendolyn brooks",
     },
   ];
 
@@ -158,7 +163,7 @@ export default function ArsivPage() {
     if (activeFilter === "tümü") return entries;
     return entries.filter((entry) =>
       activeFilter === "çeviri"
-        ? entry.type.startsWith("çeviri")
+        ? entry.type === "çeviri"
         : entry.type === activeFilter
     );
   }, [activeFilter]);
@@ -299,7 +304,10 @@ export default function ArsivPage() {
                     ) : null}
                   </span>
                 ))}
-                <span style={{ color: "#6f6b63" }}>, {entry.type}</span>
+                <span style={{ color: "#6f6b63" }}>
+                  , {entry.type}
+                  {entry.sourceAuthor ? ` - ${entry.sourceAuthor}` : ""}
+                </span>
               </p>
             </article>
           ))}
