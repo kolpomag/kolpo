@@ -44,7 +44,7 @@ const entries: HomeEntry[] = [
     multiline: true,
   },
   {
-    title: "dualarımı aksatıyorum canlandır beni",
+    title: "duaları aksatıyorum canlandır beni",
     href: "/siir/sivri-catlaklar",
     author: "mahmut kıran",
     authorHref: "/yazar/mahmut-kiran",
