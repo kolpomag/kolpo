@@ -24,6 +24,7 @@ export default async function YazarPage({
     "onur-duman": {
       name: "onur duman",
       entries: [
+        { title: "maverick", href: "/siir/maverick", type: "şiir" },
         { title: "göteborg", href: "/siir/goteborg", type: "çeviri - eileen myles" },
         { title: "haziran’ın keşfi", href: "/siir/haziranin-kesfi", type: "şiir" },
         { title: "ezbere şaman", href: "/siir/ezbere-saman", type: "şiir" },

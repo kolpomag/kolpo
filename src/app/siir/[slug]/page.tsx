@@ -25,6 +25,61 @@ type Poem = {
 };
 
 const poems: Record<string, Poem> = {
+  "maverick": {
+  title: "maverick",
+  label: "şiir",
+  authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "bu oda bana bağıra çağıra küçük\n" +
+        "dedim sığmayınca köpekliğim giderim\n" +
+        "ben sınır çekmem ben alan alırım\n" +
+        "aldığımı yerine koymam tam kere benimdir\n" +
+        "üstü terim kokar ekşi tatlı\n" +
+        "başka yırtıcıları çeker daveti\n" +
+        "bendeniz hayal kırıklıklarının tanjusu\n" +
+        "fox in the box",
+    },
+    {
+      kind: "stanza",
+      text:
+        "jason molina’nın bıraktığı yerden\n" +
+        "makinayı çekeyim sana ey bıçaklı\n" +
+        "haydi örüntüm sımsıkı tufan\n" +
+        "bastır düzenin suratına\n" +
+        "ağzım tükürük dolu\n" +
+        "çapayı şimdi nereye atmalı\n" +
+        "bazı incelikler tam doksana\n" +
+        "başat gidiyorum hangi tarafa\n" +
+        "zamansal ve üretken olan her şey\n" +
+        "oyunun dışında\n" +
+        "yaz makine\n" +
+        "böl makine\n" +
+        "çöz makine\n" +
+        "bizim dilsiz kullarımız\n" +
+        "komodor dervişi\n" +
+        "inceden de tech-savvy",
+    },
+    {
+      kind: "stanza",
+      text:
+        "ama dervişlerse gelir\n" +
+        "dervişler derviştir\n" +
+        "ve dervişliğini bilir\n" +
+        "sakın ola karıştırma\n" +
+        "ola ki karıştırdın hatırla\n" +
+        "bendeniz fırsatçı köpek\n" +
+        "bastır beni suratına",
+    },
+  ],
+  more: [
+    { title: "gümrük", href: "/siir/gumruk" },
+    { title: "müjde şey", href: "/siir/mujde-sey" },
+    { title: "ezbere şaman", href: "/siir/ezbere-saman" },
+  ],
+},
   "gumruk": {
   title: "gümrük",
   label: "şiir",
