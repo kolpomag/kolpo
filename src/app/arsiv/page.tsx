@@ -25,6 +25,12 @@ export default function ArsivPage() {
 
   const entries: ArchiveEntry[] = [
     {
+  title: "gümrük",
+  href: "/siir/gumruk",
+  authors: [{ name: "caner torun", href: "/yazar/caner-torun" }],
+  type: "şiir",
+},
+    {
       title: "müjde şey",
       href: "/siir/mujde-sey",
       authors: [{ name: "emrullah şekerci", href: "/yazar/emrullah-sekerci" }],

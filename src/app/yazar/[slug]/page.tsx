@@ -92,6 +92,12 @@ export default async function YazarPage({
       name: "prowler",
       entries: [{ title: "buffalo bill", href: "/siir/buffalo-bill", type: "çeviri" }],
     },
+    "caner-torun": {
+  name: "caner torun",
+  entries: [
+    { title: "gümrük", href: "/siir/gumruk", type: "şiir" },
+  ],
+},
   };
 
   const author = authors[slug];

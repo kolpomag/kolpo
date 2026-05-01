@@ -25,6 +25,31 @@ type Poem = {
 };
 
 const poems: Record<string, Poem> = {
+  "gumruk": {
+  title: "gümrük",
+  label: "şiir",
+  authors: [{ name: "caner torun", href: "/yazar/caner-torun" }],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "İptidai aşktan mustaripseniz korkmayın\n" +
+        "Mide-i ekberimiz size nazırdır\n" +
+        "Mademki kalbiniz tüketime hazır",
+    },
+    {
+      kind: "stanza",
+      text:
+        "Ezkaza vatandaşlarımıza duyuru\n" +
+        "Hislere vize serbestisi",
+    },
+  ],
+  more: [
+    { title: "müjde şey", href: "/siir/mujde-sey" },
+    { title: "yolunu öğrenmemiş nehirlere", href: "/siir/ya-siyah-ya-beyaz" },
+    { title: "dualarımı aksatıyorum canlandır beni", href: "/siir/sivri-catlaklar" },
+  ],
+},
   "mujde-sey": {
   title: "müjde şey",
   label: "şiir",
