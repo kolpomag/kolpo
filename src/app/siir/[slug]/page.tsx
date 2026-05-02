@@ -47,12 +47,10 @@ const poems: Record<string, Poem> = {
       text:
         "jason molina’nın bıraktığı yerden\n" +
         "makinayı çekeyim sana ey bıçaklı\n" +
-        "haydi örüntüm sımsıkı tufan\n" +
-        "bastır düzenin suratına\n" +
         "ağzım tükürük dolu\n" +
         "çapayı şimdi nereye atmalı\n" +
-        "bazı incelikler tam doksana\n" +
-        "başat gidiyorum hangi tarafa\n" +
+        "haydi örüntüm sımsıkı tufan\n" +
+        "bastır düzenin suratına\n" +
         "zamansal ve üretken olan her şey\n" +
         "oyunun dışında\n" +
         "yaz makine\n" +
@@ -628,13 +626,11 @@ const poems: Record<string, Poem> = {
         text:
           "bana inanmasan da\n" +
           "inanabilirsin bunca şehrin yaratıldığına\n" +
-          "artık çok bunaldın kalk da gidelim\n" +
+          "artık çok bunaldın kalk gidelim\n" +
           "oltanı at birine elbet denk gelirim\n" +
           "bak yeni bir desen tutturdum ıslığımla\n" +
-          "kuvvet ham derime keskin\n" +
-          "mutlak yansın canımız\n" +
-          "kuvvet ham derime keskin\n" +
           "sık dişlerini iyice sık ki dökülsünler\n" +
+          "kuvvet ham derime keskin\n" +
           "sokağım yorgun sırtlandım yüzyılını\n" +
           "içimin yağlarını eritecek ne çok şey var\n" +
           "israil’in köpek kolonisi\n" +
