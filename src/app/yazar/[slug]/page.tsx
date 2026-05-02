@@ -71,9 +71,17 @@ export default async function YazarPage({
         { title: "afili haytalar", href: "/siir/afili-haytalar", type: "çeviri" },
       ],
     },
+    "zehra-erkoc": {
+  name: "zehra erkoç",
+  entries: [
+    { title: "masal", href: "/siir/masal", type: "şiir" },
+    { title: "nerede kaldın geç oldu", href: "/siir/nerede-kaldin-gec-oldu", type: "şiir" },
+  ],
+},
     "goksel-yaman": {
       name: "göksel yaman",
       entries: [
+        { title: "sadness prevails all again", href: "/siir/sadness-prevails-all-again", type: "şiir" },
         { title: "belki bir sabah", href: "/siir/belki-bir-sabah", type: "çeviri" },
         { title: "uyku düzeni düzenleyici", href: "/siir/uyku-duzeni-duzenleyici", type: "şiir" },
         { title: "belli belirsiz", href: "/siir/belli-belirsiz", type: "şiir" },

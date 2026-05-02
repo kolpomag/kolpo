@@ -25,6 +25,180 @@ type Poem = {
 };
 
 const poems: Record<string, Poem> = {
+"masal": {
+  title: "masal",
+  label: "şiir",
+  authors: [{ name: "zehra erkoç", href: "/yazar/zehra-erkoc" }],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "tahmin ettiğinden biraz daha zor olacak.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "bulut gibi bir oğlandı. saçları kıvırcık.\n" +
+        "ismi h ile başlıyor.\n" +
+        "köşeli bir şey görmeyeli uzun zaman olmuştu.\n" +
+        "gümüş yaprakların isimleri vardı.\n" +
+        "ve sis uzun sarı saçlı perilerin elbisesine dolanıyordu.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "elimde kesmeyen bıçaklar var. burada kan akıtamıyorum.\n" +
+        "bütün renkler parlayarak\n" +
+        "metalleşiyor. birzamanlarhatırlanmayanlaröncesinde\n" +
+        "ateşle\n" +
+        "yüz yüze gelmemiş\n" +
+        "hiçbir\n" +
+        "şey.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "dünyanın ucundan\n" +
+        "bir adım daha.  nereye",
+    },
+    {
+      kind: "stanza",
+      text:
+        "oğlan evi terk ediyor.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "kanatları çıkıp kesildiğinde bronz yeşili.\n" +
+        "sonra bakırlar paslandı. sonra bir başkası. bir başka",
+    },
+    {
+      kind: "stanza",
+      text:
+        "bunları toparlayacak gücü var mı. gerçekler-\n" +
+        "eğilip bükülebilenden kof kabuklara\n" +
+        "yöneldiğimi de gizledim. bundan sonra hep daha zor olacak. düştü dünyaya olan borcunu ödemeye. bulutlartuzbuz ve kokmaz\n" +
+        "gittikçe ağırlaşan\n" +
+        "yaşamaklı bir çizgiye döndü.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "olmadıysa baştan madem çocukların gözleri kırmızıydı ve zar zor nefes alıyorlardı. bazı organları yenidoğmuş zayıf ve titrekti. bir yarığın içinden çıktılar.\n" +
+        "orda daha bundan çok var.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "kapıları kapatırsanız giremezler kale muhafızları ve baş büyücüler bütün başları başa\n" +
+        "kaşlarını kaldıracak yüzünde komik bir ifade belirecek.\n" +
+        "bütün bunları oyuncak evlerinin tanrısı yapıp yıkıyor.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "bunu dün biri rüyasında görmüştü.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "üstümüze gelmeyin artık ne olur bizlere acıyın.\n" +
+        "tekrarı olmayacak bundan sonra bu benim tek atımlık kurşunum ıskaladıkça cebimden yenisini çıkarıyorum.\n" +
+        "dümdüz dedin bak ne hoş.\n" +
+        "başladığımız yere dönemeyiz çünkü iz bırakmadık. toprak çok çamurluydu yahut,\n" +
+        "ayaklarımızın çizgileri silinmişti.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "durup dinlenmekse bazen nefesi daha çok tıkayabilir. bunu yokuşta öğrenmiştik.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "bazılarıysa şikayet ediyor.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "madem ipin ucunu çakmakla yaktım. elastenpolyester naylonpetrol ve türevleri içeren hammadelerin uçucu pis kokusuyla bütün telekler kendi karınlarının içine çekildiler.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "belki bu sefer başka olabilir.",
+    },
+  ],
+  more: [
+    { title: "sadness prevails all again", href: "/siir/sadness-prevails-all-again" },
+    { title: "nerede kaldın geç oldu", href: "/siir/nerede-kaldin-gec-oldu" },
+    { title: "maverick", href: "/siir/maverick" },
+  ],
+},
+"nerede-kaldin-gec-oldu": {
+  title: "nerede kaldın geç oldu",
+  label: "şiir",
+  authors: [{ name: "zehra erkoç", href: "/yazar/zehra-erkoc" }],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "evin ahalisi üç katlıdır, bütün odaları bitişik\n" +
+        "gözleri kırmızı babamın, çok susmaktan parmakları\n" +
+        "sabahlara kadar sevişiyor, her sabah evden çapraz etekli kadınlar çıkıyor\n" +
+        "tırnaklarının sesine uyanıyorum, ben evden çıkıp her sabah\n" +
+        "yaşadıklarımı yaşamaya kapıyı babamın üstüne kilitliyorum\n" +
+        "uykularını uyumayı hiç bilmeyen bu adamların bu kızları\n" +
+        "kızlar toplayın beni evin her köşesindeyim\n" +
+        "söyleyeceklerimi hiç söyleyemiyorum\n" +
+        "zaman böyle uzayandır koridorlar bizi birbirimize bağlar\n" +
+        "eteklerimi topluyorum, ayaklarımı topluyorum, tırnaklarımı topluyorum\n" +
+        "kara kaşlı kara gözlü bir sevgilim vardı, ona da söyleyemedim. sonra beni bıraktı\n" +
+        "evin ahalisi üç katlıdır",
+    },
+    {
+      kind: "stanza",
+      text:
+        "hepsi beni böler",
+    },
+  ],
+  more: [
+    { title: "masal", href: "/siir/masal" },
+    { title: "sadness prevails all again", href: "/siir/sadness-prevails-all-again" },
+    { title: "müjde şey", href: "/siir/mujde-sey" },
+  ],
+},
+
+"sadness-prevails-all-again": {
+  title: "sadness prevails all again",
+  label: "şiir",
+  authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "memlekette yalnız burda kuzgun var\n" +
+        "allah topun bin belasını verdiğim şu günlerin hatrına\n" +
+        "biraz da beni ansaydınız gün böcekleri\n" +
+        "soğuk şerbetler içtiğimiz ilk eylül akşamında\n" +
+        "çirkin sivilcelerimizleydik\n" +
+        "sen ki demiştin peygamberler şehri çocuğusun\n" +
+        "söylenilen her şeyi en az bir kere duymuşsun\n" +
+        "pembe tokam boktan gömlek ve ilk kez bir dört levent galibiyeti\n" +
+        "şiirin umrunda bile olmamalı\n" +
+        "geride bırakılan birkaç hikâye bence\n" +
+        "somon balığı tarlasında leş gibi zeytin\n" +
+        "ve kim bilir nerden çıktı bu akdeniz rüyası\n" +
+        "ya, bu kaşıntım hiç bitmez\n" +
+        "delikanlısın sen de ve asla unutmayan sıcak pijamalarım",
+    },
+  ],
+  more: [
+    { title: "masal", href: "/siir/masal" },
+    { title: "uyku düzeni düzenleyici", href: "/siir/uyku-duzeni-duzenleyici" },
+    { title: "belli belirsiz", href: "/siir/belli-belirsiz" },
+  ],
+},
   "maverick": {
   title: "maverick",
   label: "şiir",
@@ -46,7 +220,7 @@ const poems: Record<string, Poem> = {
       kind: "stanza",
       text:
         "jason molina’nın bıraktığı yerden\n" +
-        "makinayı çekeyim sana ey bıçaklı\n" +
+        "makinayı sana çekeyim ey bıçaklı\n" +
         "ağzım tükürük dolu\n" +
         "çapayı şimdi nereye atmalı\n" +
         "haydi örüntüm sımsıkı tufan\n" +

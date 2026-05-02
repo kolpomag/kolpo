@@ -15,6 +15,33 @@ type HomeEntry = {
 };
 
 const entries: HomeEntry[] = [
+ {
+  title: "masal",
+  href: "/siir/masal",
+  author: "zehra erkoç",
+  authorHref: "/yazar/zehra-erkoc",
+  type: "şiir",
+  className: "entry entry-b",
+  multiline: false,
+},
+{
+  title: "sadness prevails all again",
+  href: "/siir/sadness-prevails-all-again",
+  author: "göksel yaman",
+  authorHref: "/yazar/goksel-yaman",
+  type: "şiir",
+  className: "entry entry-a",
+  multiline: true,
+},
+{
+  title: "nerede kaldın geç oldu",
+  href: "/siir/nerede-kaldin-gec-oldu",
+  author: "zehra erkoç",
+  authorHref: "/yazar/zehra-erkoc",
+  type: "şiir",
+  className: "entry entry-b",
+  multiline: true,
+},
   {
   title: "maverick",
   href: "/siir/maverick",

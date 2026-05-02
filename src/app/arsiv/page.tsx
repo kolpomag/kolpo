@@ -24,6 +24,24 @@ export default function ArsivPage() {
   };
 
   const entries: ArchiveEntry[] = [
+  {
+  title: "masal",
+  href: "/siir/masal",
+  authors: [{ name: "zehra erkoç", href: "/yazar/zehra-erkoc" }],
+  type: "şiir",
+},
+{
+  title: "sadness prevails all again",
+  href: "/siir/sadness-prevails-all-again",
+  authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
+  type: "şiir",
+},
+{
+  title: "nerede kaldın geç oldu",
+  href: "/siir/nerede-kaldin-gec-oldu",
+  authors: [{ name: "zehra erkoç", href: "/yazar/zehra-erkoc" }],
+  type: "şiir",
+},
     {
   title: "maverick",
   href: "/siir/maverick",
