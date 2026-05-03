@@ -24,6 +24,12 @@ export default function ArsivPage() {
   };
 
   const entries: ArchiveEntry[] = [
+    {
+  title: "YES",
+  href: "/siir/yes",
+  authors: [{ name: "uygar", href: "/yazar/uygar" }],
+  type: "şiir",
+},
   {
   title: "masal",
   href: "/siir/masal",

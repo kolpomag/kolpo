@@ -101,6 +101,12 @@ export default async function YazarPage({
       name: "prowler",
       entries: [{ title: "buffalo bill", href: "/siir/buffalo-bill", type: "çeviri" }],
     },
+    "uygar": {
+  name: "uygar",
+  entries: [
+    { title: "YES", href: "/siir/yes", type: "şiir" },
+  ],
+},
     "caner-torun": {
   name: "caner torun",
   entries: [

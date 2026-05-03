@@ -15,6 +15,15 @@ type HomeEntry = {
 };
 
 const entries: HomeEntry[] = [
+  {
+  title: "YES",
+  href: "/siir/yes",
+  author: "uygar",
+  authorHref: "/yazar/uygar",
+  type: "şiir",
+  className: "entry entry-a",
+  multiline: false,
+},
  {
   title: "masal",
   href: "/siir/masal",

@@ -6,7 +6,8 @@ type PoemBodyBlock =
   | { kind: "stanza"; text: string; italic?: boolean; bold?: boolean }
   | { kind: "stanza-last-line-italic"; text: string; lastLine: string }
   | { kind: "special-24101990" }
-  | { kind: "special-buffalo-bill" };
+  | { kind: "special-buffalo-bill" }
+  | { kind: "special-yes" };
 
 type Poem = {
   title: string;
@@ -25,6 +26,17 @@ type Poem = {
 };
 
 const poems: Record<string, Poem> = {
+  "yes": {
+  title: "YES",
+  label: "şiir",
+  authors: [{ name: "uygar", href: "/yazar/uygar" }],
+  body: [{ kind: "special-yes" }],
+  more: [
+    { title: "masal", href: "/siir/masal" },
+    { title: "sadness prevails all again", href: "/siir/sadness-prevails-all-again" },
+    { title: "nerede kaldın geç oldu", href: "/siir/nerede-kaldin-gec-oldu" },
+  ],
+},
 "masal": {
   title: "masal",
   label: "şiir",
@@ -1796,7 +1808,55 @@ export default async function SiirPage({
           max-width: 420px;
           align-self: flex-end;
         }
+.special-yes {
+  padding: 18px 0 6px 0;
+  font-size: 31px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+}
 
+.special-yes-line {
+  display: block;
+  white-space: pre-wrap;
+}
+
+.yes-1  { margin-left: 0px; }
+.yes-2  { margin-left: 0px; }
+.yes-3  { margin-left: 210px; }
+.yes-4  { margin-left: 420px; }
+
+.yes-5  { margin-left: 56px; margin-top: 92px; }
+
+.yes-6  { margin-left: 0px; margin-top: 92px; }
+.yes-7  { margin-left: 0px; }
+.yes-8  { margin-left: 0px; }
+.yes-9  { margin-left: 180px; }
+
+.yes-10 { margin-left: 150px; margin-top: 92px; }
+
+@media (max-width: 900px) {
+  .special-yes {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .yes-1, .yes-2, .yes-3, .yes-4,
+  .yes-5, .yes-6, .yes-7, .yes-8,
+  .yes-9, .yes-10 {
+    margin-left: 0 !important;
+  }
+
+  .yes-5, .yes-6, .yes-10 {
+    margin-top: 44px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .special-yes {
+    font-size: 20px;
+    line-height: 1.34;
+  }
+}
         .special-buffalo {
           padding: 18px 0 6px 0;
           font-size: 30px;
@@ -2048,6 +2108,42 @@ export default async function SiirPage({
         <div className="poem-grid">
           <div className="poem-body">
             {poem.body.map((block, index) => {
+              if (block.kind === "special-yes") {
+  return (
+    <section key={index} className="special-yes">
+      <span className="special-yes-line yes-1">
+        The most exciting thing about you is the itch
+      </span>
+      <span className="special-yes-line yes-2">
+        Lift a layer of rot,{"    "}The green egg is ugly
+      </span>
+      <span className="special-yes-line yes-3">
+        Maybe I DO love it
+      </span>
+
+      <span className="special-yes-line yes-5">
+        Piss red on the floor
+      </span>
+
+      <span className="special-yes-line yes-6">
+        Excite the system
+      </span>
+      <span className="special-yes-line yes-7">
+        He shouldn't puke
+      </span>
+      <span className="special-yes-line yes-8">
+        Hide the baby under the towel
+      </span>
+      <span className="special-yes-line yes-9">
+        Poke, spill the pus
+      </span>
+
+      <span className="special-yes-line yes-10">
+        Maybe I DO love it
+      </span>
+    </section>
+  );
+}
               if (block.kind === "special-24101990") {
                 return (
                   <section key={index} className="special-24101990">
