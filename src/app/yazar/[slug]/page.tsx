@@ -21,9 +21,23 @@ export default async function YazarPage({
       entries: { title: string; href: string; type: string }[];
     }
   > = {
+    "nikita-vainores": {
+  name: "nikita vainores",
+  entries: [
+    { title: "gigantic", href: "/siir/gigantic", type: "şiir" },
+  ],
+},
+
+"aras-arslan": {
+  name: "aras arslan",
+  entries: [
+    { title: "beton ormanda tarla faresi", href: "/siir/beton-ormanda-tarla-faresi", type: "şiir" },
+  ],
+},
     "onur-duman": {
       name: "onur duman",
       entries: [
+        { title: "speed ile yapılacaklar", href: "/siir/speed-ile-yapilacaklar", type: "çeviri" },
         { title: "maverick", href: "/siir/maverick", type: "şiir" },
         { title: "göteborg", href: "/siir/goteborg", type: "çeviri - eileen myles" },
         { title: "haziran’ın keşfi", href: "/siir/haziranin-kesfi", type: "şiir" },
@@ -76,6 +90,7 @@ export default async function YazarPage({
   entries: [
     { title: "masal", href: "/siir/masal", type: "şiir" },
     { title: "nerede kaldın geç oldu", href: "/siir/nerede-kaldin-gec-oldu", type: "şiir" },
+    { title: "prehistorik bir güzelliğin var", href: "/siir/prehistorik-bir-guzelligin-var", type: "şiir" },
   ],
 },
     "goksel-yaman": {
@@ -94,9 +109,12 @@ export default async function YazarPage({
       entries: [{ title: "what remains", href: "/siir/what-remains", type: "şiir" }],
     },
     "emrullah-sekerci": {
-      name: "emrullah şekerci",
-      entries: [{ title: "müjde şey", href: "/siir/mujde-sey", type: "şiir" }],
-    },
+  name: "emrullah şekerci",
+  entries: [
+    { title: "müjde şey", href: "/siir/mujde-sey", type: "şiir" },
+    { title: "mahşeri doku", href: "/siir/mahseri-doku", type: "şiir" },
+  ],
+},
     prowler: {
       name: "prowler",
       entries: [{ title: "buffalo bill", href: "/siir/buffalo-bill", type: "çeviri" }],

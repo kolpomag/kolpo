@@ -26,6 +26,290 @@ type Poem = {
 };
 
 const poems: Record<string, Poem> = {
+ "speed-ile-yapilacaklar": {
+  title: "speed ile yapılacaklar",
+  label: "çeviri",
+  titleHref: "https://allpoetry.com/Things-To-Do-On-Speed",
+  authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "kafan vitese tak diye geçer\n" +
+        "& çarpık görüntüler beyninden\n" +
+        "geçip giderken\n" +
+        "parmakların klavyede takırdamaya başlar;\n" +
+        "yaklaşık on saat kadar bu böyle gider:\n" +
+        "sonra, ince bi mola: tüm\n" +
+        "çekmeceleri temizle, tüm\n" +
+        "kalemleri paralel şekillerde diz;\n" +
+        "kitapları kenarları tam masanın\n" +
+        "köşelerine oturacak şekilde yerleştir.\n" +
+        "tılsımlı görülerle on saat daha:\n" +
+        "buz gibi bi litre pepsi’yi götür\n" +
+        "buzluğu temizle:\n" +
+        "tam on saatlik\n" +
+        "acayip rüyalara yat.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "yazıları bitir, yerleri cifle, kilo ver, şarkı yaz, şarkı söyle, konferans ver, heykel yap, uyan & daha berrak düşün. astımdan kurtul. obeziteyi hallet, hafif depresyondan kaçın, ferahla, uyku problemlerini çöz, hiperaktif ve aklen sakat çocuklarını iyileştir. amfetamin bağımlılığının pandora kutusunu aç.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "duygusal sinüs eğrisini gerdir; keyfin dibini\n" +
+        "sıyırırken bir anda depresyonun kuyularına in. bitap bir korkuluğa dönüş. vücudunu çarpık biçimlere sok. oyuk, iz dolu derini kaşı, konuş da konuş.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "doğu yakası’nın aşağılarında bir çatıdan atla\n" +
+        "veya\n" +
+        "453 sayfalık anlamsız bi kitap yaz.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "12 tane radyo sök\n" +
+        "durmadan boncuk diz\n" +
+        "cüzdanını boşalt\n" +
+        "bi sandalyede kambur otur\n" +
+        "& bir zarfın köşesine\n" +
+        "karmaşık bi şeyler karala",
+    },
+    {
+      kind: "stanza",
+      text:
+        "“kısa devre yapar gibi beynime\n" +
+        "hücum ettiğini hissettim. vücudum\n" +
+        "kasılmaya başladı & beklentiyle titreyen minik\n" +
+        "antenler çıkarttı. etrafımdakilerle\n" +
+        "telepatik iletişiyordum. çok mutluydum.”",
+    },
+    {
+      kind: "stanza",
+      text:
+        "zıvanadan çık.\n" +
+        "dilinin döküldüğünü, dudaklarının\n" +
+        "çatladığını, ağzının içerden dışarı doğru\n" +
+        "yenildiğini hisset. her yerin kaşınsın. tırnaklarının\n" +
+        "soyulduğunu, saçlarının & dişlerinin döküldüğünü fark et.\n" +
+        "bir rolls royce al\n" +
+        "mafya babası ol\n" +
+        "antimaddeyi düşle.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "vücudun boyunca, sivilcelerinin aralarında ve üstlerinde gezen\n" +
+        "minik böcekleri fark et.\n" +
+        "çürümüş etlerini kes.\n" +
+        "annenin hafifmeşrepliğinden bahset\n" +
+        "sinemada tedirgin ol\n" +
+        "açıl\n" +
+        "güçlen\n" +
+        "ibneleş",
+    },
+    {
+      kind: "stanza",
+      text:
+        "kış geldiğinde eroine dön ki zatürre olma.\n" +
+        "bahar geldiğinde speed’e devam.",
+    },
+  ],
+  more: [
+    { title: "göteborg", href: "/siir/goteborg" },
+    { title: "afili haytalar", href: "/siir/afili-haytalar" },
+    { title: "buffalo bill", href: "/siir/buffalo-bill" },
+  ],
+},
+  "gigantic": {
+  title: "gigantic",
+  label: "şiir",
+  authors: [{ name: "nikita vainores", href: "/yazar/nikita-vainores" }],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "a big sigh for my grandpa,\n" +
+        "two more for me and my mum\n" +
+        "the size of death is nothing,\n" +
+        "so be gigantic!",
+    },
+    {
+      kind: "stanza",
+      text:
+        "to live is to climb mountain peaks\n" +
+        "it's to love\n" +
+        "to understand\n" +
+        "to cry and to try",
+    },
+    {
+      kind: "stanza",
+      text:
+        "now, i know\n" +
+        "his belly filled a universe,\n" +
+        "so will my heart,\n" +
+        "and your coffee stained eyes",
+    },
+  ],
+  more: [
+    { title: "beton ormanda tarla faresi", href: "/siir/beton-ormanda-tarla-faresi" },
+    { title: "prehistorik bir güzelliğin var", href: "/siir/prehistorik-bir-guzelligin-var" },
+    { title: "mahşeri doku", href: "/siir/mahseri-doku" },
+  ],
+},
+
+"beton-ormanda-tarla-faresi": {
+  title: "beton ormanda tarla faresi",
+  label: "şiir",
+  authors: [{ name: "aras arslan", href: "/yazar/aras-arslan" }],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "Hayat yokuşu dizime ağır geliyo’ biliyo’n mu?\n" +
+        "22’den geri çelik başlı postal eserleri kaldı\n" +
+        "Eklem tutan inat rutinlere döndü,\n" +
+        "Biz erişkine, memleket cehenneme",
+    },
+    {
+      kind: "stanza",
+      text:
+        "Ruhu yine buluyoruz elbet balkonda bi’ fincanda\n" +
+        "Ortak dil ve sohbetin eksiğini telve kapat’cak\n" +
+        "Ki daha topuk delen taşlar anılacak\n" +
+        "Kimi cebimizden düşmüş, kimi her zamanki elden fırlamış.\n" +
+        "Velhasıl, buralar hala aynı aslında\n" +
+        "Yener abi küfretmeden vites atamıyor,\n" +
+        "Tırnak tırnak delik deşik en öpülesi avuçlar,\n" +
+        "Ve damalar kükürt, asit, çay dolu",
+    },
+    {
+      kind: "stanza",
+      text:
+        "Da işte, nası’ çıkaracaksın huyu çıkmayan candan?\n" +
+        "27 yıldır deniyorlar, deniyorum\n" +
+        "“Hiç olmasa mıydım?” diyorum,\n" +
+        "Fikrim kayıyor.\n" +
+        "Babamın inadı inat sevgisi, anamın gözü kör neşesi,\n" +
+        "Abimin, ablamın büyümüş de küçülmüş bana bakan suratları,\n" +
+        "Toprağın en püründen süzülüp gelen dostlarım;\n" +
+        "Asosyaller, dahiler, garipler,\n" +
+        "Umarı kendi gönlüne sığamayan kardeşler,\n" +
+        "Sen;\n" +
+        "Utanıyorum.",
+    },
+  ],
+  more: [
+    { title: "gigantic", href: "/siir/gigantic" },
+    { title: "maverick", href: "/siir/maverick" },
+    { title: "gümrük", href: "/siir/gumruk" },
+  ],
+},
+
+"prehistorik-bir-guzelligin-var": {
+  title: "prehistorik bir güzelliğin var",
+  label: "şiir",
+  authors: [{ name: "zehra erkoç", href: "/yazar/zehra-erkoc" }],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "senin ellerini kırmızı çamurdan yaptım, kuruttum\n" +
+        "bu bir melodrama olsaydı bütün ciddiyetimle ciddi parmaklarımla ciddi ellerimle\n" +
+        "uzun zaman önce heybetli dağların tepelerine bırakılmış\n" +
+        "üç insan boyunda taştan gövdeler çok eskiden\n" +
+        "senin ataların yüzyıl yaşayıp hiç uyumazlarmış üç insan boyunda\n" +
+        "kaşlarımı çatarak konuşmaya başlardım, dudaklarımı kemirerek,\n" +
+        "buradan çıkış yok herkes uyurken yatağımdan kalkıp yastıklarının altına üfledim\n" +
+        "turuncu bir hayal kurdum, hava çok sıcaktı ayaklarım yürümekten yorulmuşlardı\n" +
+        "eminim sabahın ilk ışıklarını kaçırmayı hiç sevmezsin.",
+    },
+    {
+      kind: "stanza",
+      text:
+        "şimdi sana en çok korktuğum şeyi anlatacağım kulaklarını aç beni dinle\n" +
+        "çocuktum bir mağaranın içinde unuttular beni\n" +
+        "sırtımı taşa verirsem taşa dönüşecektim yastığımın altında ellerimi birleştirdiğimde\n" +
+        "bana böyle söylemişlerdi. zaman çok hızlı geçer ağaçların kökleri\n" +
+        "toprağı sandığından sıkı tutar doğduğumda da elimin ortasından bu çizgi geçiyormuş\n" +
+        "dik kafalılığımı bu çizgiye borçluyum bana böyle söylemişlerdi\n" +
+        "zaman çok hızlı geçer karaağaç gövdesinin ne zaman yarıldığını sarmaşığın dört kolunun",
+    },
+    {
+      kind: "stanza",
+      italic: true,
+      text:
+        "dallarını ne zaman kavradığını mağaranın ortasında kurbanların kanının akıtıldığı bir sunak varmış\n" +
+        "duvarın ortasında nasıl ne zaman oyulmuş bir delik uzun günlerin güneşleri buradan batıyor",
+    },
+    {
+      kind: "stanza",
+      text:
+        "unutmak için getirmişler beni dizlerim bütün ciddiyetiyle boşalıyor\n" +
+        "sana böyle hikayeler anlatıyorum dizlerin boşalsın istiyorum",
+    },
+    {
+      kind: "stanza",
+      text:
+        "yarın uyandığımda ilk iş bu oyunu bozacağım\n" +
+        "beni sinirlendirmek hiç de sandığın kadar kolay değildir,\n" +
+        "senin hakkında birçok şey biliyorum hepsini ben düşündüm\n" +
+        "etrafında döndüm söylemem gerekenleri hatırladım söylemem gerekenleri\n" +
+        "söyledim",
+    },
+    {
+      kind: "stanza",
+      italic: true,
+      text: "gözlerimi kapattığımda yüzünü hayal edemiyorum",
+    },
+  ],
+  more: [
+    { title: "masal", href: "/siir/masal" },
+    { title: "nerede kaldın geç oldu", href: "/siir/nerede-kaldin-gec-oldu" },
+    { title: "sadness prevails all again", href: "/siir/sadness-prevails-all-again" },
+  ],
+},
+
+"mahseri-doku": {
+  title: "mahşeri doku",
+  label: "şiir",
+  authors: [{ name: "emrullah şekerci", href: "/yazar/emrullah-sekerci" }],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "sapsağır parçalanır kimliği, beni çiğneyip çalakalmış\n" +
+        "firavun ağını göklerde ve asılıyor kendi yerine\n" +
+        "düşü kayır ummadığın zamanda, dar ve yoksul ân\n" +
+        "aşırmış kendi boynunda – sonsuz süreğen",
+    },
+    {
+      kind: "stanza",
+      text:
+        "çerçevesinde sürç ve de ki; cismin dokusu sızıyor\n" +
+        "ağza yakın sevinçler ve görünüyor kendi yerine\n" +
+        "ölü kayır ayaklarıyla, kapanıyor yarası ağzın\n" +
+        "devrik tacın bütününde – birebir çoğalan",
+    },
+    {
+      kind: "stanza",
+      text:
+        "bağlarlar sönmüş dünyaya, ilkinde tebessüm\n" +
+        "sorarken düşlüyor yarayı ve duyuyor kendi yerine\n" +
+        "bir nabz ağı kabarcıklı, yasasında kült mahşerin\n" +
+        "koşturan uyruğa sorsun – zamanla kararan",
+    },
+  ],
+  more: [
+    { title: "müjde şey", href: "/siir/mujde-sey" },
+    { title: "prehistorik bir güzelliğin var", href: "/siir/prehistorik-bir-guzelligin-var" },
+    { title: "gigantic", href: "/siir/gigantic" },
+  ],
+},
   "yes": {
   title: "YES",
   label: "şiir",

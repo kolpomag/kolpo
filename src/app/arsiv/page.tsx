@@ -25,6 +25,37 @@ export default function ArsivPage() {
 
   const entries: ArchiveEntry[] = [
     {
+  title: "speed ile yapılacaklar",
+  href: "/siir/speed-ile-yapilacaklar",
+  authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
+  type: "çeviri",
+  sourceAuthor: "ted berrigan",
+},
+    {
+  title: "gigantic",
+  href: "/siir/gigantic",
+  authors: [{ name: "nikita vainores", href: "/yazar/nikita-vainores" }],
+  type: "şiir",
+},
+{
+  title: "beton ormanda tarla faresi",
+  href: "/siir/beton-ormanda-tarla-faresi",
+  authors: [{ name: "aras arslan", href: "/yazar/aras-arslan" }],
+  type: "şiir",
+},
+{
+  title: "prehistoric bir güzelliğin var",
+  href: "/siir/prehistoric-bir-guzelligin-var",
+  authors: [{ name: "zehra erkoç", href: "/yazar/zehra-erkoc" }],
+  type: "şiir",
+},
+{
+  title: "mahşeri doku",
+  href: "/siir/mahseri-doku",
+  authors: [{ name: "emrullah şekerci", href: "/yazar/emrullah-sekerci" }],
+  type: "şiir",
+},
+    {
   title: "YES",
   href: "/siir/yes",
   authors: [{ name: "uygar", href: "/yazar/uygar" }],
