@@ -131,6 +131,7 @@ export default async function YazarPage({
   entries: [
     { title: "gümrük", href: "/siir/gumruk", type: "şiir" },
     { title: "sürü", href: "/siir/suru", type: "şiir" },
+    { title: "kızıl rüzgâr", href: "/siir/kizil-ruzgar", type: "şiir" },
   ],
 },
   };

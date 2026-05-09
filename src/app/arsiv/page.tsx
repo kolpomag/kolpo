@@ -24,6 +24,12 @@ export default function ArsivPage() {
   };
 
   const entries: ArchiveEntry[] = [
+{
+  title: "kızıl rüzgâr",
+  href: "/siir/kizil-ruzgar",
+  authors: [{ name: "caner torun", href: "/yazar/caner-torun" }],
+  type: "şiir",
+},
     {
   title: "sürü",
   href: "/siir/suru",

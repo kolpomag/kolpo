@@ -26,6 +26,57 @@ type Poem = {
 };
 
 const poems: Record<string, Poem> = {
+  "kizil-ruzgar": {
+  title: "kızıl rüzgâr",
+  label: "şiir",
+  authors: [{ name: "caner torun", href: "/yazar/caner-torun" }],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "Yılların hesabı raks istiyor\n" +
+        "Aynada sima siliniyor\n" +
+        "Tamam yeter\n" +
+        "It’s all feigning away\n" +
+        "Ya da soluyor ne bileyim işte\n" +
+        "Sessiz olur musun",
+    },
+    {
+      kind: "stanza",
+      text:
+        "Artık söyle meramını ya da sus\n" +
+        "edebinle ebediyen\n" +
+        "Muzafferiyette yiten havari misin\n" +
+        "Sen ki özenilesi ve gericisin\n" +
+        "Bak yine susar davulun",
+    },
+    {
+      kind: "stanza",
+      text:
+        "Burada masal ehli yok\n" +
+        "Romanlılarsa hiç olmadı\n" +
+        "Bil ki bu ölmek sanatıdır",
+    },
+    {
+      kind: "stanza",
+      text:
+        "Dudaklar kıstırmış\n" +
+        "Kızıl rüzgâr bürünmüşüm\n" +
+        "Maktul kulenin tahtına\n" +
+        "Bir de güzel sırtımı vermişim\n" +
+        "Bu bir gömmek sanatıdır",
+    },
+    {
+      kind: "stanza",
+      text: "Konuş konuşabilirsen",
+    },
+  ],
+  more: [
+    { title: "sürü", href: "/siir/suru" },
+    { title: "gümrük", href: "/siir/gumruk" },
+    { title: "beton ormanda tarla faresi", href: "/siir/beton-ormanda-tarla-faresi" },
+  ],
+},
  "suru": {
   title: "sürü",
   label: "şiir",
