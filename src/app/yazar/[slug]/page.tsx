@@ -96,6 +96,7 @@ export default async function YazarPage({
     "goksel-yaman": {
       name: "göksel yaman",
       entries: [
+        { title: "yaşasın deniz kenarı ahalisi", href: "/siir/yasasin-deniz-kenari-ahalisi", type: "şiir" },
         { title: "sadness prevails all again", href: "/siir/sadness-prevails-all-again", type: "şiir" },
         { title: "belki bir sabah", href: "/siir/belki-bir-sabah", type: "çeviri" },
         { title: "uyku düzeni düzenleyici", href: "/siir/uyku-duzeni-duzenleyici", type: "şiir" },
@@ -129,6 +130,7 @@ export default async function YazarPage({
   name: "caner torun",
   entries: [
     { title: "gümrük", href: "/siir/gumruk", type: "şiir" },
+    { title: "sürü", href: "/siir/suru", type: "şiir" },
   ],
 },
   };

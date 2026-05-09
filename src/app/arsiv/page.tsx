@@ -25,6 +25,18 @@ export default function ArsivPage() {
 
   const entries: ArchiveEntry[] = [
     {
+  title: "sürü",
+  href: "/siir/suru",
+  authors: [{ name: "caner torun", href: "/yazar/caner-torun" }],
+  type: "şiir",
+},
+{
+  title: "yaşasın deniz kenarı ahalisi",
+  href: "/siir/yasasin-deniz-kenari-ahalisi",
+  authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
+  type: "şiir",
+},
+    {
   title: "speed ile yapılacaklar",
   href: "/siir/speed-ile-yapilacaklar",
   authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],

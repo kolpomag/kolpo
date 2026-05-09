@@ -26,6 +26,56 @@ type Poem = {
 };
 
 const poems: Record<string, Poem> = {
+ "suru": {
+  title: "sürü",
+  label: "şiir",
+  authors: [{ name: "caner torun", href: "/yazar/caner-torun" }],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "bir Türkiye adam\n" +
+        "yaşlarını hatırlıyor\n" +
+        "her yer duman\n" +
+        "ve bir dolu adam\n" +
+        "ölen dünyada\n" +
+        "ol dahi olmak da olamıyorlar",
+    },
+  ],
+  more: [
+    { title: "gümrük", href: "/siir/gumruk" },
+    { title: "beton ormanda tarla faresi", href: "/siir/beton-ormanda-tarla-faresi" },
+    { title: "maverick", href: "/siir/maverick" },
+  ],
+},
+
+"yasasin-deniz-kenari-ahalisi": {
+  title: "yaşasın deniz kenarı ahalisi",
+  label: "şiir",
+  authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "Yaz bitmeye yakın sıcak kalınca deniz\n" +
+        "Ben ve benim gibiler denize girmeyi severiz.\n" +
+        "Her şey soğumadan deniz suyu kristalleşir\n" +
+        "Ve hep birlikteliğimle bütünleşir.\n" +
+        "Yüksekten düşersen kısa mesafede\n" +
+        "Tek bir nefeste dikkat etmezsen\n" +
+        "Kum akorları doksandört senesinde\n" +
+        "Yeni doğmuş bebek ise memesinde kimlerin\n" +
+        "Tebrikler sörfçü hanım ne güzeldi onbeş dalga\n" +
+        "Çıkınca davul çaldım senin için\n" +
+        "Sen de kalk ayağa çok yaşa değil mi!",
+    },
+  ],
+  more: [
+    { title: "sadness prevails all again", href: "/siir/sadness-prevails-all-again" },
+    { title: "uyku düzeni düzenleyici", href: "/siir/uyku-duzeni-duzenleyici" },
+    { title: "belli belirsiz", href: "/siir/belli-belirsiz" },
+  ],
+},
  "speed-ile-yapilacaklar": {
   title: "speed ile yapılacaklar",
   label: "çeviri",

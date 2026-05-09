@@ -27,6 +27,7 @@ export default function SiteHeader({
     fontSize: "18px",
     fontWeight: 600,
     letterSpacing: "-0.02em",
+    flexWrap: "wrap",
   } as const;
 
   const getLinkStyle = (href: string) => {
@@ -45,9 +46,17 @@ export default function SiteHeader({
         .shared-nav-link:hover {
           color: ${accent} !important;
         }
+
+        @media (max-width: 900px) {
+          .shared-site-header {
+            flex-direction: column;
+            gap: 18px;
+          }
+        }
       `}</style>
 
       <header
+        className="shared-site-header"
         style={{
           display: "flex",
           justifyContent: "space-between",
@@ -78,6 +87,13 @@ export default function SiteHeader({
             style={getLinkStyle("/arsiv")}
           >
             arşiv
+          </Link>
+          <Link
+            href="/yazarlar"
+            className="shared-nav-link"
+            style={getLinkStyle("/yazarlar")}
+          >
+            yazarlar
           </Link>
           <Link
             href="/nedir"
