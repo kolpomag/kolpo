@@ -18,8 +18,8 @@ const entries: HomeEntry[] = [
   {
   title: "gigantic",
   href: "/siir/gigantic",
-  author: "nikita vainores",
-  authorHref: "/yazar/nikita-vainores",
+  author: "nikita",
+  authorHref: "/yazar/nikita",
   type: "şiir",
   className: "entry entry-b",
   multiline: false,

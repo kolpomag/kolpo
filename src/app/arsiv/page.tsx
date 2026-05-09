@@ -34,7 +34,7 @@ export default function ArsivPage() {
     {
   title: "gigantic",
   href: "/siir/gigantic",
-  authors: [{ name: "nikita vainores", href: "/yazar/nikita-vainores" }],
+  authors: [{ name: "nikita", href: "/yazar/nikita" }],
   type: "şiir",
 },
 {
@@ -44,8 +44,8 @@ export default function ArsivPage() {
   type: "şiir",
 },
 {
-  title: "prehistoric bir güzelliğin var",
-  href: "/siir/prehistoric-bir-guzelligin-var",
+  title: "prehistorik bir güzelliğin var",
+  href: "/siir/prehistorik-bir-guzelligin-var",
   authors: [{ name: "zehra erkoç", href: "/yazar/zehra-erkoc" }],
   type: "şiir",
 },

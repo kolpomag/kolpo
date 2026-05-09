@@ -128,7 +128,7 @@ const poems: Record<string, Poem> = {
   "gigantic": {
   title: "gigantic",
   label: "şiir",
-  authors: [{ name: "nikita vainores", href: "/yazar/nikita-vainores" }],
+  authors: [{ name: "nikita", href: "/yazar/nikita" }],
   body: [
     {
       kind: "stanza",

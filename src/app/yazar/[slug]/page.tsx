@@ -21,8 +21,8 @@ export default async function YazarPage({
       entries: { title: string; href: string; type: string }[];
     }
   > = {
-    "nikita-vainores": {
-  name: "nikita vainores",
+    "nikita": {
+  name: "nikita",
   entries: [
     { title: "gigantic", href: "/siir/gigantic", type: "şiir" },
   ],
