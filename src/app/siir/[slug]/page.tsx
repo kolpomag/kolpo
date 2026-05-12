@@ -1906,7 +1906,7 @@ export default async function SiirPage({
 
         .poem-grid {
           display: grid;
-          grid-template-columns: minmax(0, 760px) minmax(360px, 520px);
+          grid-template-columns: 1fr 300px;
           gap: 88px;
           align-items: start;
         }
@@ -1915,11 +1915,20 @@ export default async function SiirPage({
           display: flex;
           flex-direction: column;
           gap: 26px;
-          font-size: 30px;
+          font-size: clamp(18px, 3vw, 30px);
           line-height: 1.55;
           letter-spacing: -0.02em;
         }
+.schizo-line {
+          transition: none; /* Yumuşak geçiş yok, tokat gibi ani bir tepki */
+          display: inline; /* Sadece metnin olduğu yeri hedef alması için */
+        }
 
+        .schizo-line:hover {
+          font-style: italic !important;
+          font-weight: 800 !important; /* Metni aniden kalınlaştırır */
+          letter-spacing: -0.05em; /* Harfleri hafifçe birbirine yapıştırarak "çarpılma" hissi verir */
+        }
         .poem-more {
           align-self: start;
           position: sticky;
@@ -2169,10 +2178,14 @@ export default async function SiirPage({
         .bb-11 { margin-left: 0; }
         .bb-12 { margin-left: 0; }
 
-        @media (max-width: 1100px) {
+        @media (max-width: 1280px) {
           .poem-grid {
-            grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
-            gap: 56px;
+            grid-template-columns: 1fr;
+            gap: 40px;
+          }
+          .poem-more {
+            position: static;
+            top: auto;
           }
         }
 
@@ -2555,32 +2568,34 @@ export default async function SiirPage({
 
               if (block.kind === "stanza-last-line-italic") {
                 return (
-                  <p
-                    key={index}
-                    style={{
-                      margin: 0,
-                      whiteSpace: "pre-line",
-                    }}
-                  >
-                    {block.text}
-                    {"\n"}
-                    <span style={{ fontStyle: "italic" }}>{block.lastLine}</span>
-                  </p>
+                  <div key={index} style={{ margin: 0 }}>
+                    {block.text.split("\n").map((line, i) => (
+                      <div key={i} style={{ paddingLeft: "32px", textIndent: "-32px" }}>
+                        <span className="schizo-line">{line}</span>
+                      </div>
+                    ))}
+                    <div style={{ paddingLeft: "32px", textIndent: "-32px", fontStyle: "italic" }}>
+                      <span className="schizo-line">{block.lastLine}</span>
+                    </div>
+                  </div>
                 );
               }
 
               return (
-                <p
+                <div
                   key={index}
                   style={{
                     margin: 0,
-                    whiteSpace: "pre-line",
                     fontStyle: block.italic ? "italic" : "normal",
                     fontWeight: block.bold ? 700 : 400,
                   }}
                 >
-                  {block.text}
-                </p>
+                  {block.text.split("\n").map((line, i) => (
+                    <div key={i} style={{ paddingLeft: "32px", textIndent: "-32px" }}>
+                      <span className="schizo-line">{line}</span>
+                    </div>
+                  ))}
+                </div>
               );
             })}
           </div>
