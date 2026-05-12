@@ -160,7 +160,7 @@ const poems: Record<string, Poem> = {
   ],
   more: [
     { title: "beton ormanda tarla faresi", href: "/siir/beton-ormanda-tarla-faresi" },
-    { title: "prehistorik bir güzelliğin var", href: "/siir/prehistorik-bir-guzelligin-var" },
+    { title: "prehistoric bir güzelliğin var", href: "/siir/prehistoric-bir-guzelligin-var" },
     { title: "mahşeri doku", href: "/siir/mahseri-doku" },
   ],
 },
@@ -213,8 +213,8 @@ const poems: Record<string, Poem> = {
   ],
 },
 
-"prehistorik-bir-guzelligin-var": {
-  title: "prehistorik bir güzelliğin var",
+"prehistoric-bir-guzelligin-var": {
+  title: "prehistoric bir güzelliğin var",
   label: "şiir",
   authors: [{ name: "zehra erkoç", href: "/yazar/zehra-erkoc" }],
   body: [
@@ -240,13 +240,13 @@ const poems: Record<string, Poem> = {
         "bana böyle söylemişlerdi. zaman çok hızlı geçer ağaçların kökleri\n" +
         "toprağı sandığından sıkı tutar doğduğumda da elimin ortasından bu çizgi geçiyormuş\n" +
         "dik kafalılığımı bu çizgiye borçluyum bana böyle söylemişlerdi\n" +
-        "zaman çok hızlı geçer karaağaç gövdesinin ne zaman yarıldığını sarmaşığın dört kolunun",
+        "zaman çok hızlı geçer karaağaç gövdesinin ne zaman yarıldığını sarmaşığın dört kolunun dallarını ne zaman kavradığını",
     },
     {
       kind: "stanza",
       italic: true,
       text:
-        "dallarını ne zaman kavradığını mağaranın ortasında kurbanların kanının akıtıldığı bir sunak varmış\n" +
+        "mağaranın ortasında kurbanların kanının akıtıldığı bir sunak varmış\n" +
         "duvarın ortasında nasıl ne zaman oyulmuş bir delik uzun günlerin güneşleri buradan batıyor",
     },
     {
@@ -309,7 +309,7 @@ const poems: Record<string, Poem> = {
   ],
   more: [
     { title: "müjde şey", href: "/siir/mujde-sey" },
-    { title: "prehistorik bir güzelliğin var", href: "/siir/prehistorik-bir-guzelligin-var" },
+    { title: "prehistoric bir güzelliğin var", href: "/siir/prehistoric-bir-guzelligin-var" },
     { title: "gigantic", href: "/siir/gigantic" },
   ],
 },

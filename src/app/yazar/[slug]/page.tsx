@@ -89,7 +89,7 @@ export default async function YazarPage({
   entries: [
     { title: "masal", href: "/siir/masal", type: "şiir" },
     { title: "nerede kaldın geç oldu", href: "/siir/nerede-kaldin-gec-oldu", type: "şiir" },
-    { title: "prehistorik bir güzelliğin var", href: "/siir/prehistorik-bir-guzelligin-var", type: "şiir" },
+    { title: "prehistoric bir güzelliğin var", href: "/siir/prehistoric-bir-guzelligin-var", type: "şiir" },
   ],
 },
     "goksel-yaman": {

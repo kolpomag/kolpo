@@ -61,8 +61,8 @@ const entries: HomeEntry[] = [
   multiline: true,
 },
 {
-  title: "prehistorik bir güzelliğin var",
-  href: "/siir/prehistorik-bir-guzelligin-var",
+  title: "prehistoric bir güzelliğin var",
+  href: "/siir/prehistoric-bir-guzelligin-var",
   author: "zehra erkoç",
   authorHref: "/yazar/zehra-erkoc",
   type: "şiir",

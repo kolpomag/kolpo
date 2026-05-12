@@ -55,8 +55,8 @@ export default function ArsivPage() {
   type: "şiir",
 },
 {
-  title: "prehistorik bir güzelliğin var",
-  href: "/siir/prehistorik-bir-guzelligin-var",
+  title: "prehistoric bir güzelliğin var",
+  href: "/siir/prehistoric-bir-guzelligin-var",
   authors: [{ name: "zehra erkoç", href: "/yazar/zehra-erkoc" }],
   type: "şiir",
 },
