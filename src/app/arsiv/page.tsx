@@ -43,13 +43,6 @@ export default function ArsivPage() {
   type: "şiir",
 },
     {
-  title: "speed ile yapılacaklar",
-  href: "/siir/speed-ile-yapilacaklar",
-  authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
-  type: "çeviri",
-  sourceAuthor: "ted berrigan",
-},
-    {
   title: "gigantic",
   href: "/siir/gigantic",
   authors: [{ name: "nikita", href: "/yazar/nikita" }],

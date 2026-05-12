@@ -21,7 +21,7 @@ const entries: HomeEntry[] = [
   author: "caner torun",
   authorHref: "/yazar/caner-torun",
   type: "şiir",
-  className: "entry entry-a",
+  className: "entry entry-b",
   multiline: true,
 },
   {
@@ -30,7 +30,7 @@ const entries: HomeEntry[] = [
   author: "caner torun",
   authorHref: "/yazar/caner-torun",
   type: "şiir",
-  className: "entry entry-b",
+  className: "entry entry-a",
   multiline: false,
 },
 {
@@ -39,7 +39,7 @@ const entries: HomeEntry[] = [
   author: "göksel yaman",
   authorHref: "/yazar/goksel-yaman",
   type: "şiir",
-  className: "entry entry-a",
+  className: "entry entry-b",
   multiline: true,
 },
   {
@@ -48,7 +48,7 @@ const entries: HomeEntry[] = [
   author: "nikita",
   authorHref: "/yazar/nikita",
   type: "şiir",
-  className: "entry entry-b",
+  className: "entry entry-a",
   multiline: false,
 },
 {
@@ -57,7 +57,7 @@ const entries: HomeEntry[] = [
   author: "aras arslan",
   authorHref: "/yazar/aras-arslan",
   type: "şiir",
-  className: "entry entry-a",
+  className: "entry entry-b",
   multiline: true,
 },
 {
@@ -66,7 +66,7 @@ const entries: HomeEntry[] = [
   author: "zehra erkoç",
   authorHref: "/yazar/zehra-erkoc",
   type: "şiir",
-  className: "entry entry-b",
+  className: "entry entry-a",
   multiline: true,
 },
 {
@@ -75,16 +75,6 @@ const entries: HomeEntry[] = [
   author: "emrullah şekerci",
   authorHref: "/yazar/emrullah-sekerci",
   type: "şiir",
-  className: "entry entry-a",
-  multiline: true,
-},
-{
-  title: "speed ile yapılacaklar",
-  href: "/siir/speed-ile-yapilacaklar",
-  author: "onur duman",
-  authorHref: "/yazar/onur-duman",
-  type: "çeviri",
-  sourceAuthor: "ted berrigan",
   className: "entry entry-b",
   multiline: true,
 },
