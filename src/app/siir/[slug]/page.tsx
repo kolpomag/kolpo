@@ -5,6 +5,8 @@ import SiteHeader from "@/components/SiteHeader";
 type PoemBodyBlock =
   | { kind: "stanza"; text: string; italic?: boolean; bold?: boolean }
   | { kind: "stanza-last-line-italic"; text: string; lastLine: string }
+  | { kind: "stanza-html"; htmlLines: string[] }
+  | { kind: "separator" }
   | { kind: "special-24101990" }
   | { kind: "special-buffalo-bill" }
   | { kind: "special-yes" };
@@ -26,6 +28,79 @@ type Poem = {
 };
 
 const poems: Record<string, Poem> = {
+  "yerine-koymak-istemez-misiniz": {
+    title: "yerine koymak istemez misiniz",
+    label: "şiir",
+    authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
+    body: [
+      {
+        kind: "stanza",
+        text:
+          "nasıl dersen öyle\n" +
+          "haberdar oluyoruz\n" +
+          "mobeseden bildirim geliyor kardeşim",
+      },
+      { kind: "separator" },
+      {
+        kind: "stanza",
+        text:
+          "baktı bakıyor buharlıgece ışık-tozluduman\n" +
+          "kendini bırakmak istedi kumandan\n" +
+          "kara kutu kutulardan dalgalar boyu uzanan\n" +
+          "kulağın artık yok ey komutan",
+      },
+      {
+        kind: "stanza",
+        text:
+          "gayri menkul olur sana\n" +
+          "olduğun yerde olduğun gibi yaşamak\n" +
+          "en uygun boşluğa yerleşmeye çalışmak\n" +
+          "kalıcılıkla ilgisi bakımından",
+      },
+      {
+        kind: "stanza",
+        text:
+          ".hermesin adresi\n" +
+          "tozkoparan mah. gidengitti caddesi\n" +
+          "unutkanlık apartmanı insanın halleri",
+      },
+      {
+        kind: "stanza",
+        text:
+          "tabipler sıyırdı rahat olsun\n" +
+          "geçti\n" +
+          ".",
+      },
+      {
+        kind: "stanza",
+        text:
+          "pek çok kafasız hesaplılık\n" +
+          "böyle değil midir bir bir var ederken dünleri\n" +
+          "otuzmetrekarede\n" +
+          "ışık yine yok, ayağım bulacak mı yerini",
+      },
+     {
+        kind: "stanza",
+        text:
+          "vücudun hakkını veriyorum\n" +
+          "kelimelerle kaşıyorum derini akıyorum\n" +
+          "gizler aleminde nuhun cruise gemisi",
+      },
+      {
+        kind: "stanza-html",
+        htmlLines: [
+          "burada <strong>ROMA ASKERLERİ</strong>",
+          "burada <strong>ÇEVİK KUVVET</strong>",
+          "burada <strong>TIMARLI SİPAHİ</strong>"
+        ]
+      }
+    ],
+    more: [
+      { title: "kendimin iç ve dışbükey sınırları", href: "/siir/kendimin-ic-ve-disbukey-sinirlari" },
+      { title: "oyunlarımız var", href: "/siir/oyunlarimiz-var" },
+      { title: "paesino sborramerda", href: "/siir/paesino-sborramerda" },
+    ],
+  },
   "wisteria-magnolia": {
   title: "wisteria, magnolia",
   label: "şiir",
@@ -1970,11 +2045,13 @@ export default async function SiirPage({
         .poem-body {
           display: flex;
           flex-direction: column;
-          gap: 26px;
-          font-size: clamp(18px, 3vw, 30px);
-          line-height: 1.55;
-          letter-spacing: -0.02em;
-        }
+          gap: 22px;
+          font-size: 22px;
+          line-height: 1.5;
+          letter-spacing: -0.01em;
+          overflow-x: auto;
+        } 
+
 .schizo-line {
           transition: none; /* Yumuşak geçiş yok, tokat gibi ani bir tepki */
           display: inline; /* Sadece metnin olduğu yeri hedef alması için */
@@ -2265,10 +2342,10 @@ export default async function SiirPage({
             gap: 40px;
           }
 
-          .poem-body {
-            font-size: 24px;
-            line-height: 1.6;
-            gap: 22px;
+         .poem-body {
+            font-size: 18px; 
+            line-height: 1.5;
+            gap: 18px;
           }
 
           .poem-more {
@@ -2622,6 +2699,25 @@ export default async function SiirPage({
                 );
               }
 
+              if (block.kind === "separator") {
+                return (
+                  <div key={index} style={{ margin: "32px 0", paddingLeft: "120px", letterSpacing: "6px" }}>
+                    * * *
+                  </div>
+                );
+              }
+
+              if (block.kind === "stanza-html") {
+                return (
+                  <div key={index} style={{ margin: 0 }}>
+                    {block.htmlLines.map((line, i) => (
+                      <div key={i} style={{ paddingLeft: "32px", textIndent: "-32px" }}>
+                        <span className="schizo-line" dangerouslySetInnerHTML={{ __html: line }} />
+                      </div>
+                    ))}
+                  </div>
+                );
+              }
               if (block.kind === "stanza-last-line-italic") {
                 return (
                   <div key={index} style={{ margin: 0 }}>
