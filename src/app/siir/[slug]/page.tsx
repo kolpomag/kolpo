@@ -26,6 +26,57 @@ type Poem = {
 };
 
 const poems: Record<string, Poem> = {
+  "wisteria-magnolia": {
+  title: "Wisteria, Magnolia",
+  label: "şiir",
+  authors: [{ name: "öykü özmakinacı", href: "/yazar/oyku-ozmakinaci" }],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "Kim bilir ne kadar zaman oldu\n" +
+        "senin arkana saklanabileli\n" +
+        "başının arkasını göreli\n" +
+        "kimyamın güzel alnından öpeli\n" +
+        "saatin kaç olduğunu bileli",
+    },
+    {
+      kind: "stanza",
+      text:
+        "Kabuk her çatladığında ellerim hep çok meşgul\n" +
+        "Silahlarımı elbisemin eteğinin altına saklamakla\n" +
+        "Toprağı kanla sulamakla\n" +
+        "Şehir özellikle acımasız her nar yağdığında\n" +
+        "Denizsiz deniz kestanesi gibi\n" +
+        "Dilinin ayarı yok gibi\n" +
+        "Bensiz sen yok gibi\n" +
+        "Nefes al duman solu\n" +
+        "Kalk yat, okul yolu\n" +
+        "Karanlık kentin kayıp çocuğu",
+    },
+    {
+      kind: "stanza",
+      text:
+        "Büyüyünce ne olmak istersin diye sordular bana anaokulunda\n" +
+        "Aşkın evinde bir casus\n" +
+        "suyunda bir kuğu\n" +
+        "morsalkım ya da manolya\n" +
+        "babamın evinin ruhu",
+    },
+    {
+      kind: "stanza",
+      text:
+        "Hepsini bildim\n" +
+        "o kadar iyi bildim ki\n" +
+        "unuttum",
+    },
+  ],
+  more: [
+    { title: "masal", href: "/siir/masal" },
+    { title: "prehistoric bir güzelliğin var", href: "/siir/prehistoric-bir-guzelligin-var" },
+    { title: "nerede kaldın geç oldu", href: "/siir/nerede-kaldin-gec-oldu" },
+  ],
+},
   "kizil-ruzgar": {
   title: "kızıl rüzgâr",
   label: "şiir",

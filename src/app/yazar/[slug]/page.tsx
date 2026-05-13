@@ -20,7 +20,14 @@ export default async function YazarPage({
       name: string;
       entries: { title: string; href: string; type: string }[];
     }
+    
   > = {
+    "oyku-ozmakinaci": {
+  name: "öykü özmakinacı",
+  entries: [
+    { title: "wisteria, magnolia", href: "/siir/wisteria-magnolia", type: "şiir" },
+  ],
+},
     "nikita": {
   name: "nikita",
   entries: [

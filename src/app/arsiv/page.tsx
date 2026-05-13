@@ -24,6 +24,12 @@ export default function ArsivPage() {
   };
 
   const entries: ArchiveEntry[] = [
+    {
+  title: "Wisteria, Magnolia",
+  href: "/siir/wisteria-magnolia",
+  authors: [{ name: "öykü özmakinacı", href: "/yazar/oyku-ozmakinaci" }],
+  type: "şiir",
+},
 {
   title: "kızıl rüzgâr",
   href: "/siir/kizil-ruzgar",
