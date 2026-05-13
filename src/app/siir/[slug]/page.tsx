@@ -47,7 +47,7 @@ const poems: Record<string, Poem> = {
         "Silahlarımı elbisemin eteğinin altına saklamakla\n" +
         "Toprağı kanla sulamakla\n" +
         "Şehir özellikle acımasız\n" +
-        "Her nar yağdığında\n" +
+        "her nar yağdığında\n" +
         "Denizsiz deniz kestanesi gibi\n" +
         "Dilinin ayarı yok gibi\n" +
         "Bensiz sen yok gibi",
