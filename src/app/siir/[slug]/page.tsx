@@ -27,7 +27,7 @@ type Poem = {
 
 const poems: Record<string, Poem> = {
   "wisteria-magnolia": {
-  title: "Wisteria, Magnolia",
+  title: "wisteria, magnolia",
   label: "şiir",
   authors: [{ name: "öykü özmakinacı", href: "/yazar/oyku-ozmakinaci" }],
   body: [
