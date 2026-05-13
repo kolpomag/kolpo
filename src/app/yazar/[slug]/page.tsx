@@ -22,16 +22,6 @@ export default async function YazarPage({
     }
     
   > = {
-    "mahmut-kiran": {
-      name: "mahmut kıran",
-      entries: [
-        { 
-          title: "yerine koymak istemez misiniz", 
-          href: "/siir/yerine-koymak-istemez-misiniz", 
-          type: "şiir" 
-        },
-      ],
-    },
     "oyku-ozmakinaci": {
   name: "öykü özmakinacı",
   entries: [
