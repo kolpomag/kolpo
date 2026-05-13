@@ -46,11 +46,16 @@ const poems: Record<string, Poem> = {
         "Kabuk her çatladığında ellerim hep çok meşgul\n" +
         "Silahlarımı elbisemin eteğinin altına saklamakla\n" +
         "Toprağı kanla sulamakla\n" +
-        "Şehir özellikle acımasız her nar yağdığında\n" +
+        "Şehir özellikle acımasız\n" +
+        "Her nar yağdığında\n" +
         "Denizsiz deniz kestanesi gibi\n" +
         "Dilinin ayarı yok gibi\n" +
-        "Bensiz sen yok gibi\n" +
-        "Nefes al duman solu\n" +
+        "Bensiz sen yok gibi",
+         },
+    {
+      kind: "stanza",
+      text:
+        "Nefes al, duman solu\n" +
         "Kalk yat, okul yolu\n" +
         "Karanlık kentin kayıp çocuğu",
     },
