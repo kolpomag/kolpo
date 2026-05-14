@@ -25,7 +25,7 @@ export type Poem = {
 
 export const poems: Record<string, Poem> = {
   "celik": {
-    title: "çelik,",
+    title: "çelik",
     label: "şiir",
     authors: [{ name: "ece zeynep unutur", href: "/yazar/ece-zeynep-unutur" }],
     body: [
@@ -467,6 +467,26 @@ export const poems: Record<string, Poem> = {
       { kind: "stanza", text: "sürtük. yumruk\nhakiki. ağızlar" },
       { kind: "stanza", text: "bozuk. cin\nseyrelir, yaz" },
       { kind: "stanza", text: "cazlar. genç\nölür." }
-   ],
+    ],
+  },
+
+
+  // -- ÇEVİRİ VE YAZI ÖRNEKLERİ --
+  "bir-kafenin-icinden": {
+    title: "bir kafenin içinden",
+    label: "çeviri",
+    authors: [{ name: "ayşe kaya", href: "/yazar/ayse-kaya" }],
+    // Çeviri ve yazılarda body düz metin paragrafı olarak tutulduğu için stanza kullanıyoruz
+    body: [
+      { kind: "stanza", text: "bu sayfa şimdilik yer tutucu bir çeviri sayfası.\nbirazdan buraya gerçek çeviri metnini koyacağız.\nistersek ileride özgün metin bilgisi, kaynak künyesi ve çeviren notu da ekleriz." }
+    ]
+  },
+  "sabahi-goremem": {
+    title: "sabahı göremem",
+    label: "yazı",
+    authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
+    body: [
+      { kind: "stanza", text: "bu sayfa şimdilik yer tutucu bir yazı sayfası.\nbirazdan buraya gerçek düzyazı metnini koyacağız.\nparagraf ritmi ve satır uzunluğu da buna göre şekillenecek." }
+    ]
   }
 };

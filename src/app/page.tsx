@@ -16,7 +16,7 @@ type HomeEntry = {
 
 const entries: HomeEntry[] = [
   {
-    title: "çelik,",
+    title: "çelik",
     href: "/siir/celik",
     author: "ece zeynep unutur",
     authorHref: "/yazar/ece-zeynep-unutur",
