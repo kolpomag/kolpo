@@ -44,7 +44,7 @@ const poems: Record<string, Poem> = {
         "insana hayret gerek\n" +
         "sevgilim,\n" +
         "sana kurbanlar kesilmesine\n" +
-        "ve önünde secde edilmesine\n" +
+        "tabiatın önünde secde etmesine\n" +
         "şaşırmam\n" +
         "bazı huylarına şaşırırım\n" +
         "sonra geçer",
