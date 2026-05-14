@@ -8,10 +8,10 @@ export const metadata: Metadata = {
     default: "kolpo.",
     template: "%s — kolpo.",
   },
-  description: "çağdaş yazın alanı.",
+  description: "kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir düğüm. manuel bir devre, çağdaş yazın alanı.",
   openGraph: {
     title: "kolpo.",
-    description: "çağdaş yazın alanı.",
+    description: "kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir düğüm. manuel bir devre, çağdaş yazın alanı.",
     url: "https://kolpomag.com",
     siteName: "kolpo.",
     locale: "tr_TR",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "kolpo.",
-    description: "çağdaş yazın alanı.",
+    description: "kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir düğüm. manuel bir devre, çağdaş yazın alanı.",
     images: ["/og-image.jpg"],
   },
   icons: {
