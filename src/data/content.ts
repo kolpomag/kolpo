@@ -467,8 +467,6 @@ export const poems: Record<string, Poem> = {
       { kind: "stanza", text: "sürtük. yumruk\nhakiki. ağızlar" },
       { kind: "stanza", text: "bozuk. cin\nseyrelir, yaz" },
       { kind: "stanza", text: "cazlar. genç\nölür." }
-    ],
+   ],
   }
-
-
- 
+};

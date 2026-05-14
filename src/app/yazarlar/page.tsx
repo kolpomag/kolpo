@@ -1,5 +1,5 @@
 import SiteHeader from "@/components/SiteHeader";
-import { poems } from "@/data/poems";
+import { poems } from "@/data/content";
 
 export default function YazarlarPage() {
   const accent = "#c32721";
