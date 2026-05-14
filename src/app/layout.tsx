@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@next/third-parties/google"; // <-- Burayı ekledik
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
     default: "kolpo.",
     template: "%s — kolpo.",
   },
-  description: "kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir düğüm. manuel bir devre, çağdaş yazın alanı.",
+  description: "ana sayfa | arşiv | yazar | nedir | iletişim | kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir düğüm. manuel bir devre, çağdaş yazın alanı.",
   openGraph: {
     title: "kolpo.",
     description: "kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir düğüm. manuel bir devre, çağdaş yazın alanı.",
@@ -48,6 +49,8 @@ export default function RootLayout({
       <body>
         {children}
         <Analytics />
+        {/* Google Analytics Ölçüm Kimliği buraya eklendi */}
+        <GoogleAnalytics gaId="G-BSTX2X9XWH" /> 
       </body>
     </html>
   );
