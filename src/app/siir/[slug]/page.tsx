@@ -150,17 +150,6 @@ export default async function SiirPage({
           overflow-x: auto;
         } 
 
-        .schizo-line {
-          transition: none;
-          display: inline;
-        }
-
-        .schizo-line:hover {
-          font-style: italic !important;
-          font-weight: 800 !important;
-          letter-spacing: -0.05em;
-        }
-
         .poem-more {
           align-self: start;
           position: sticky;
