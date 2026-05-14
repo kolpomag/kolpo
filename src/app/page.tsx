@@ -16,6 +16,15 @@ type HomeEntry = {
 
 const entries: HomeEntry[] = [
   {
+    title: "çelik,",
+    href: "/siir/celik",
+    author: "ece zeynep unutur",
+    authorHref: "/yazar/ece-zeynep-unutur",
+    type: "şiir",
+    className: "entry entry-b", // Bunu entry-b veya entry-c yaparak sağa sola kaydırabilirsin
+    multiline: false,
+  },
+  {
   title: "yerine koymak istemez misiniz",
   href: "/siir/yerine-koymak-istemez-misiniz",
   author: "mahmut kıran", 
