@@ -28,6 +28,61 @@ type Poem = {
 };
 
 const poems: Record<string, Poem> = {
+  "dog-days": {
+  title: "dog days",
+  label: "şiir",
+  authors: [{ name: "onur duman", href: "/yazar/onur-duman" }],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "kalbinin incelikleri\n" +
+        "kalbinin katı hali\n" +
+        "tırtıklı duvarlarının\n" +
+        "sürtünme kuvveti\n" +
+        "senin karşında\n" +
+        "insana hayret gerek\n" +
+        "sevgilim,\n" +
+        "sana kurbanlar kesilmesine\n" +
+        "ve önünde secde edilmesine\n" +
+        "şaşırmam\n" +
+        "bazı huylarına şaşırırım\n" +
+        "sonra geçer",
+    },
+    {
+      kind: "stanza",
+      text:
+        "yaşlı alman ve sakat oğluyla\n" +
+        "yaşadığın ev\n" +
+        "evinin yanındaki koca kilise\n" +
+        "güvenmekten yorulduğun gün\n" +
+        "pişmanlık dolu torbalar\n" +
+        "yiyemediğimiz yemekler\n" +
+        "hiç gidilmeyecek şehirler\n" +
+        "istemeden katlandığın her şey\n" +
+        "karşıdan gelen hiç kimse\n" +
+        "ben ölüm görmedim\n" +
+        "senden ayrılmak\n" +
+        "adını koyamadığım bir şey gibi",
+    },
+    {
+      kind: "stanza",
+      text:
+        "burada davrandığım allah’a\n" +
+        "orada uzaklaşırım\n" +
+        "allah seni kıskanır\n" +
+        "halbuki ikiniz de benden\n" +
+        "daha gerçeksiniz\n" +
+        "ellerin hakeza\n" +
+        "öyle tutulası",
+    },
+  ],
+  more: [
+    { title: "maverick", href: "/siir/maverick" },
+    { title: "ezbere şaman", href: "/siir/ezbere-saman" },
+    { title: "göçmüş kediler bahçesi", href: "/siir/gocmus-kediler-bahcesi" },
+  ],
+},
   "yerine-koymak-istemez-misiniz": {
     title: "yerine koymak istemez misiniz",
     label: "şiir",
