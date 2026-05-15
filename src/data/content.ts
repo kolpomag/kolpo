@@ -13,7 +13,7 @@ export type Poem = {
   titleHref?: string;
   authors: { name: string; href: string }[];
   body: PoemBodyBlock[];
-  more?: { title: string; href: string }[]; // Artık opsiyonel, çünkü algoritma seçecek
+  more?: { title: string; href: string }[];
   image?: {
     src: string;
     alt: string;
@@ -395,7 +395,7 @@ export const poems: Record<string, Poem> = {
     authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
     body: [
       { kind: "stanza", text: "tanıyorum lan seni sen utanmadan öpüşensin\nsoğukta en son seni kıstıracaklar\nsanma ki yırttım adını biricit koyacağım\ntam gırtlağına şarkı yapıştıracağım\nensen kaşınacak kıskanç\nben ki a scribe of the prophetical order that is batn-ı neobeat\nkoca divination senden razı olsun budunbeyi" },
-      { kind: "stanza", text: "sinyor makyavelli telefonda\nbeni günde elli kere arıyor açmıyorum\nsinyor makyavelli diyorum ben hepsini zaten ezberledim\nderler ki eskiden istanbula gelir\ntarlabaşlarında kaybolurmuş\ndedikoduları kızlarda saklı kalmış\nsonra kızlar da kimseciklere söylemezmiş\nyok aman efendim iyi biri miymiş para mı verirmiş ne farkı var" },
+      { kind: "stanza", text: "sinyor makyavelli telefonda\nbeni günde elli kere arıyor açmıyorum\nsinyor makyavelli diyorum ben hepsini zaten ezberledim\derler ki eskiden istanbula gelir\ntarlabaşlarında kaybolurmuş\ndedikoduları kızlarda saklı kalmış\nsonra kızlar da kimseciklere söylemezmiş\nyok aman efendim iyi biri miymiş para mı verirmiş ne farkı var" },
       { kind: "stanza", text: "po nehrinde annem boğuldu\nölüsünü karşıya geçiremedik\nküçükbudunbaşı uygun görmedi\nben de dönüp bakamadım\nburada cenaze olmaz köpürür diye korktuk\nşükür ki koca kehanet sana sivrisineklerle geldim\ndölleri her yere damladı\nşu toprağın oracıklarında çiçekler bitti\no gün bugündür orası\npaesino sborramerda" },
       { kind: "stanza", text: "bize kayık alacaklar\nki venedik’te tekrar öpüşeceğim\ntüm venedik buluşup beni saklayacak\nsan marko’da kocaman taşakların ardında\nsonra balçıkları tarhanaya katacağız bolonya’da" }
     ],
@@ -453,7 +453,7 @@ export const poems: Record<string, Poem> = {
       { kind: "stanza", text: "Sonra, sanki bir ekranda gibi, ağaçlar evler tepeler\nHızlıca toplanacaklar tanıdık yanılsamalarla.\nAma çok geç olacak; ve ben sessizce uzaklaşacağım\nArkalarına bakmayan insanların arasından, bu sırrımla." }
     ],
   },
-  "afili haytalar": {
+  "afili-haytalar": {
     title: "afili haytalar",
     label: "çeviri",
     titleHref: "https://www.poetryfoundation.org/poetrymagazine/poems/28112/we-real-cool",
@@ -469,24 +469,42 @@ export const poems: Record<string, Poem> = {
       { kind: "stanza", text: "cazlar. genç\nölür." }
     ],
   },
-
-
-  // -- ÇEVİRİ VE YAZI ÖRNEKLERİ --
-  "bir-kafenin-icinden": {
-    title: "bir kafenin içinden",
-    label: "çeviri",
-    authors: [{ name: "ayşe kaya", href: "/yazar/ayse-kaya" }],
-    // Çeviri ve yazılarda body düz metin paragrafı olarak tutulduğu için stanza kullanıyoruz
+  "gunceme": {
+    title: "\"teşrif edin siz de günceme,\" diye buyurdular",
+    label: "şiir",
+    authors: [{ name: "av. ifi yılmaz", href: "/yazar/av-ifi-yilmaz" }],
     body: [
-      { kind: "stanza", text: "bu sayfa şimdilik yer tutucu bir çeviri sayfası.\nbirazdan buraya gerçek çeviri metnini koyacağız.\nistersek ileride özgün metin bilgisi, kaynak künyesi ve çeviren notu da ekleriz." }
+      {
+        kind: "stanza",
+        text: "\"Teşrif edin sizler de günceme,\" diye buyurdular.\n\"İlk harfi siz yazın,\" dediler.\nDediler ki: \"İzinizden terakki edelim.\"\nAma adımlarımın sağlam basmaması bir kenara,\nsabıkalarımın çeşitliliğine çarpılmış olmaları lazımdı.\n\"Yalnız,\" dedim, \"ben dedemi hiç görmedim, ters gittiğim yolları da çok beğendim, dönmedim.\"\n\"Vay anam, öyle olur mu?\" dediler.\n\"Siz de elbet dağdan akan suyu içersiniz,\nbulamazsanız bir kuyu...\nSonuçta bir huylunun huyu, bir de ampulün duyu,\" deyiverdiler.\n\"Yani bakın,\" dedim.\n\"Benim yazıtlarımda zorla ikna sonucu kabul etmişlikler söz konusudur, ben en iyisi bizim yörenin armağanlarına ek olarak\npaslanmaz çelikten yaptırdığım 41 delikli kevgiri vereyim,\" diye ekledim. Sonuçta asal sayılara olan tutkum dillere şayandır.\n\"Gökyüzünün yarısı buluttur, bizim de karnımız armağana toktur. Sizi duayenler yıkamış efendim, sabrın sınırları sizde mevcut\ndeğildir. Atın şu ilk harfi de akbabaya saç ektirmeye gidelim.\"\nAkbaba hep kel mi kalacaktı?\nAllem ettiler, kallem ettiler, bana okuma yazmayı bellettiler ama ben o son noktayı koymamaya ant içtim"
+      }
     ]
   },
-  "sabahi-goremem": {
-    title: "sabahı göremem",
-    label: "yazı",
-    authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
+  "denizden-karaya": {
+    title: "denizden karaya çıktığım günlerin birinde",
+    label: "şiir",
+    authors: [{ name: "av. ifi yılmaz", href: "/yazar/av-ifi-yilmaz" }],
     body: [
-      { kind: "stanza", text: "bu sayfa şimdilik yer tutucu bir yazı sayfası.\nbirazdan buraya gerçek düzyazı metnini koyacağız.\nparagraf ritmi ve satır uzunluğu da buna göre şekillenecek." }
+      { 
+        kind: "stanza", 
+        text: "Denizden karaya çıktığım günlerin birinde\nSayılardan bir haber 18 tane adama\nAdabı muaşeret konusunda eğitim almaları gerektiği tasfiyesinde bulundum." 
+      },
+      { 
+        kind: "stanza", 
+        text: "Aralarından cambaz olan\ncambazlığını da içtiği suyun boğazının ortasına oturmasından anladığım\nkara gözlü hırt tırnaklı tepegöz kılıklı bir beyefendi, yağlandırmanın ne kadar ağır geçtiğini ve kulüplerin teklifini kabul\nedemeyeceğini dudakları kulaklarına varan şekillerde hızlıca anlatmaya çabaladı" 
+      },
+      { 
+        kind: "stanza", 
+        text: "ammma" 
+      },
+      { 
+        kind: "stanza", 
+        text: "Kumu yiyen oğlan durur mu? Durmaz. Kiramen katibin de gazıyla, cengaveroğulları paşası gibi\nÇengelsiz konfetilerden ve albayın ettiği yeminlerden\nÜrgüpü anımsatan\nBir yapıya benzemeye kalktı" 
+      },
+      { 
+        kind: "stanza", 
+        text: "Radyasyonu hissettin mi? Aman deliklerimizi kapatalım efendim" 
+      }
     ]
   }
 };
