@@ -16,6 +16,15 @@ type HomeEntry = {
 
 const entries: HomeEntry[] = [
   {
+    title: "baharları da dahil eden yaz dönemi boyunca",
+    href: "/siir/baharlari-da-dahil-eden-yaz-donemi-boyunca",
+    author: "mahmut kıran",
+    authorHref: "/yazar/mahmut-kiran",
+    type: "şiir",
+    className: "entry entry-b",
+    multiline: true,
+  },
+  {
     title: "\"teşrif edin siz de günceme,\" diye buyurdular",
     href: "/siir/gunceme",
     author: "av. ifi yılmaz",

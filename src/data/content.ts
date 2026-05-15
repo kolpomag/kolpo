@@ -506,5 +506,28 @@ export const poems: Record<string, Poem> = {
         text: "Radyasyonu hissettin mi? Aman deliklerimizi kapatalım efendim" 
       }
     ]
+  },
+  "baharlari-da-dahil-eden-yaz-donemi-boyunca": {
+    title: "baharları da dahil eden yaz dönemi boyunca",
+    label: "şiir",
+    authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
+    body: [
+      { 
+        kind: "stanza", 
+        text: "‘bizi kurtar bi şarkı aç dinleyelim" 
+      },
+      { 
+        kind: "stanza", 
+        text: "kaya…tuzu…peritozu-polenleşme\n    ara sokaklarda\n    ve küçük parkta\nduvarcılar kenarda" 
+      },
+      { 
+        kind: "stanza", 
+        text: "bak bi bana bak sana kafana kafana yüzüne gözüne\ndiyeyim\nişaret grup - Can Erzincan Kürede\nbebeğimiz daha yeni doğdu\neldiven takıyor yüzünü çizmesin diye\ntamam ev sahibi bey kirayı yüzde atmış beş artıralım." 
+      },
+      { 
+        kind: "stanza", 
+        text: "evet zaten\nbir yazlık beldede denize iki yüz metrede\nlinkedinde\namaan canım ölüm her yerde\ntam burnun ucunda\nbaharları da dahil eden yaz dönemi boyunca\nvalimizle müdürümüz\nyerel yönetim ile iyi bağlar\nüretiyor kazanıyor kazandırıyor insanlara\nbaşım neden dönüyor o his geldiğinde\naz önce\ngöğüs cebinde\nakşam az bi dolanalım" 
+      }
+    ]
   }
 };
