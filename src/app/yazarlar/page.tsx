@@ -8,6 +8,9 @@ export default function YazarlarPage() {
   const authorsMap = new Map();
   Object.values(poems).forEach(poem => {
     poem.authors.forEach(author => {
+      // Prowler'ı listeden atla (yazarlar sayfasında görünmesin)
+      if (author.name === "prowler") return;
+
       // author.href'i (slug) anahtar olarak kullanarak tekrarı önle
       if (!authorsMap.has(author.href)) {
         authorsMap.set(author.href, author.name);
