@@ -545,7 +545,7 @@ export const poems: Record<string, Poem> = {
       },
       {
         kind: "stanza",
-        text: "hayır bu uzun sürmemeli diye isyanda\n/mı?\npencereye yaklaşalım.\nkavanozun içi\ndar yapışkan\nyorucu\n    ufacık şeyler nasıl da öyleler ama!\nakupunktur gibi,\nbazısı saklı bazısı tam gözüne\nfarklar\n    kümeler\n    tekillikler\n    birliktelikler\ntekrarlar\nfark ettin mi bastırıyor derine"
+        text: "hayır bu uzun sürmemeli diye isyanda\n/mı?\npencereye yaklaşalım.\nkavanozun içi\ndar yapışkan\nyorucu\n\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0ufacık şeyler nasıl da öyleler ama!\nakupunktur gibi,\nbazısı saklı bazısı tam gözüne\nfarklar\n\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0kümeler\n\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0tekillikler\n\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0birliktelikler\ntekrarlar\nfark ettin mi bastırıyor derine"
       },
       {
         kind: "stanza",
