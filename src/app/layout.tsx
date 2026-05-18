@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     default: "kolpo.",
     template: "%s — kolpo.",
   },
-  description: "ana sayfa | arşiv | yazar | nedir | iletişim | kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir düğüm. manuel bir devre, çağdaş yazın alanı.",
+  description: "kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir düğüm. manuel bir devre, çağdaş yazın alanı.",
   openGraph: {
     title: "kolpo.",
     description: "kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir düğüm. manuel bir devre, çağdaş yazın alanı.",
