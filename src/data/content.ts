@@ -529,5 +529,32 @@ export const poems: Record<string, Poem> = {
         text: "evet zaten\nbir yazlık beldede denize iki yüz metrede\nlinkedinde\namaan canım ölüm her yerde\ntam burnun ucunda\nbaharları da dahil eden yaz dönemi boyunca\nvalimizle müdürümüz\nyerel yönetim ile iyi bağlar\nüretiyor kazanıyor kazandırıyor insanlara\nbaşım neden dönüyor o his geldiğinde\naz önce\ngöğüs cebinde\nakşam az bi dolanalım" 
       }
     ]
+  },
+  "daha-yeni": {
+    title: "daha yeni",
+    label: "şiir",
+    authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
+    body: [
+      {
+        kind: "stanza",
+        text: "daha yeni\ntemiz tezgahta reçelli kavanoz\nduruyor\ndaha yeni\nçıkmış kirliliği meydana\nduvardaki yarığın sınırlarında\nbir doğal kanatlı böceğimsi"
+      },
+      {
+        kind: "stanza",
+        text: "kavanoz tatlı ve reçelli.\nçilekli bir dünya!"
+      },
+      {
+        kind: "stanza",
+        text: "hayır bu uzun sürmemeli diye isyanda\n/mı?\npencereye yaklaşalım.\nkavanozun içi\ndar yapışkan\nyorucu\n    ufacık şeyler nasıl da öyleler ama!\nakupunktur gibi,\nbazısı saklı bazısı tam gözüne\nfarklar\n    kümeler\n    tekillikler\n    birliktelikler\ntekrarlar\nfark ettin mi bastırıyor derine"
+      },
+      {
+        kind: "stanza",
+        text: "uçuyorsun. izliyorum seni, pek\nçok ağaç var\nyemyeşil oldular son bir ayda.\nhayret doğrusu, seni hala görebiliyorum\nbir metre on metre otuz metre\nmesafede, ufak bir kuş serbest,\ntam hedefe, aniden,\nve bir tanesi daha\ndaha yeni\nbitti\n/mi\nsence?"
+      },
+      {
+        kind: "stanza",
+        text: "hareket ediyorsun\nazalıyorsun hareket\nediyorsun çoğalıyorsun\nmekanı yaratıyorsun\nyeni-eski yeni düğümler\nel işleri ve danteller\nsahi\neskidendi.\nhoşgeldin zaman\nmekanın hıfzına\nkarnına\nve bacaklarına\nayakkabılarının bağına"
+      }
+    ]
   }
 };
