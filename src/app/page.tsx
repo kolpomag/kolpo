@@ -21,7 +21,7 @@ const entries: HomeEntry[] = [
     author: "mahmut kıran",
     authorHref: "/yazar/mahmut-kiran",
     type: "şiir",
-    className: "entry entry-b", // Bunu kendi tasarım zevkine göre entry-a veya entry-c yapabilirsin
+    className: "entry entry-a", 
     multiline: false,
   },
   {
