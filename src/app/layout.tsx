@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import { GoogleAnalytics } from "@next/third-parties/google"; // <-- Burayı ekledik
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -49,8 +49,7 @@ export default function RootLayout({
       <body>
         {children}
         <Analytics />
-        {/* Google Analytics Ölçüm Kimliği buraya eklendi */}
-        <GoogleAnalytics gaId="G-BSTX2X9XWH" /> 
+        <GoogleAnalytics gaId="G-B5TX2X9XWH" /> 
       </body>
     </html>
   );
