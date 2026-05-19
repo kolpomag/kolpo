@@ -556,5 +556,32 @@ export const poems: Record<string, Poem> = {
         text: "hareket ediyorsun\nazalıyorsun hareket\nediyorsun çoğalıyorsun\nmekanı yaratıyorsun\nyeni-eski yeni düğümler\nel işleri ve danteller\nsahi\neskidendi.\nhoşgeldin zaman\nmekanın hıfzına\nkarnına\nve bacaklarına\nayakkabılarının bağına"
       }
     ]
+  },
+  "hammer-amour": {
+    title: "hammer amour",
+    label: "şiir",
+    authors: [{ name: "öykü özmakinacı", href: "/yazar/oyku-ozmakinaci" }],
+    body: [
+      {
+        kind: "stanza",
+        text: "You broke my big fat\nwhite satellite heart\ninto pieces\ninto dust\nSplit the full moon apart"
+      },
+      {
+        kind: "stanza",
+        text: "If you had let me\nI would have waltzed\non your frequency\nfor another lifetime\nas I watched you\nGrow yellow\nin our first-ever houselet\nlike wallpaper in a bar\nlike a pear softening\nleft on the countertop"
+      },
+      {
+        kind: "stanza",
+        text: "With spring, the wind has sprung\nSpread me all over town\nI am one too many now\nOne but none\nNone but all"
+      },
+      {
+        kind: "stanza",
+        text: "Listen\nYou can hear me\ncrack and pop\non your grandma's old radio\nShadowplay tunes\nMoody blues\nNostalgic for a future that never arrived"
+      },
+      {
+        kind: "stanza",
+        text: "Lorine said that Hudson says\nBirds feel something akin to pain\nbefore the flight\nBetween you and I,\nI never feared the flight\nas much as I dreaded the rot."
+      }
+    ]
   }
 };
