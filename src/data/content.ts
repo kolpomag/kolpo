@@ -583,5 +583,16 @@ export const poems: Record<string, Poem> = {
         text: "Lorine said that Hudson says\nBirds feel something akin to pain\nbefore the flight\nBetween you and I,\nI never feared the flight\nas much as I dreaded the rot."
       }
     ]
+  },
+  "rats": {
+    title: "rats",
+    label: "şiir",
+    authors: [{ name: "ruth", href: "/yazar/ruth" }],
+    body: [
+      {
+        kind: "stanza",
+        text: "since falling in love I've seen so many dead rats\njust there\non the floor\nthe first time (I remember it distinctly)\ni audibly gasped\ni was riding my bike and got so startled\ni almost fell off"
+      }
+    ]
   }
 };
