@@ -564,11 +564,15 @@ export const poems: Record<string, Poem> = {
     body: [
       {
         kind: "stanza",
-        text: "You broke my big fat\nwhite satellite heart\ninto pieces\ninto dust\nSplit the full moon apart"
+        text: "You broke my big fat white"
       },
       {
         kind: "stanza",
-        text: "If you had let me\nI would have waltzed\non your frequency\nfor another lifetime\nas I watched you\nGrow yellow\nin our first-ever houselet\nlike wallpaper in a bar\nlike a pear softening\nleft on the countertop"
+        text: "satellite heart\ninto pieces\ninto dust\nSplit the full moon apart"
+      },
+      {
+        kind: "stanza",
+        text: "If you had let me\nI would have waltzed\non your frequency\nfor another lifetime\nI watched you\nGrow yellow\nin our first-ever houselet\nlike wallpaper in a bar\nlike a pear softening\nleft on the countertop"
       },
       {
         kind: "stanza",
