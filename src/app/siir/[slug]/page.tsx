@@ -8,6 +8,8 @@ function getRandomContent(currentSlug: string, count: number = 3) {
   const shuffled = [...allSlugs].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, count).map(slug => ({
     title: poems[slug].title,
+    // Yazar adını veritabanından çekiyoruz (Birden fazla yazar varsa & ile ayırır)
+    author: poems[slug].authors.map(a => a.name).join(" & "), 
     href: `/${poems[slug].label === 'yazı' ? 'yazi' : poems[slug].label === 'çeviri' ? 'ceviri' : 'siir'}/${slug}`
   }));
 }
@@ -173,17 +175,32 @@ export default async function SiirPage({
         .poem-more-list {
           display: flex;
           flex-direction: column;
-          gap: 18px;
+          gap: 22px;
           margin-bottom: 34px;
         }
 
         .poem-more-link {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
           color: #111111;
           text-decoration: none;
           transition: color 0.18s ease;
           font-size: 30px;
           line-height: 1.04;
           letter-spacing: -0.04em;
+        }
+
+        .poem-more-author {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 16px;
+          color: #6f6b63;
+          letter-spacing: -0.01em;
+          transition: color 0.18s ease;
+        }
+
+        .poem-more-link:hover .poem-more-author {
+          color: ${accent};
         }
 
         .poem-image-wrap {
@@ -449,6 +466,10 @@ export default async function SiirPage({
             font-size: 26px;
           }
 
+          .poem-more-author {
+            font-size: 15px;
+          }
+
           .poem-image-title {
             font-size: 17px;
           }
@@ -545,6 +566,10 @@ export default async function SiirPage({
 
           .poem-more-link {
             font-size: 22px;
+          }
+
+          .poem-more-author {
+            font-size: 14px;
           }
 
           .poem-image-title {
@@ -853,7 +878,8 @@ export default async function SiirPage({
                     href={item.href}
                     className="more-link poem-more-link"
                   >
-                    {item.title}
+                    <span>{item.title}</span>
+                    <span className="poem-more-author">{item.author}</span>
                   </a>
                 ))}
               </div>

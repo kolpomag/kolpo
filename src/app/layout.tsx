@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import TerminalSubscribe from "@/components/TerminalSubscribe";
+import SiteFooter from "@/components/SiteFooter";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -48,6 +50,8 @@ export default function RootLayout({
     <html lang="tr">
       <body>
         {children}
+        <TerminalSubscribe />
+        <SiteFooter />
         <Analytics />
         <GoogleAnalytics gaId="G-B5TX2X9XWH" /> 
       </body>

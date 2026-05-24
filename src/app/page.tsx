@@ -30,7 +30,7 @@ const entries: HomeEntry[] = [
     author: "zehra erkoç",
     authorHref: "/yazar/zehra-erkoc",
     type: "şiir",
-    className: "entry entry-a",
+    className: "entry entry-b",
     multiline: false,
   },
   {
