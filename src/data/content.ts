@@ -598,5 +598,35 @@ export const poems: Record<string, Poem> = {
         text: "since falling in love I've seen so many dead rats\njust there\non the floor\nthe first time (I remember it distinctly)\ni audibly gasped\ni was riding my bike and got so startled\ni almost fell off"
       }
     ]
+  },
+  "cambaz": {
+    title: "cambaz",
+    label: "şiir",
+    authors: [{ name: "zehra erkoç", href: "/yazar/zehra-erkoc" }],
+    body: [
+      {
+        kind: "stanza",
+        text: "birinden diğerine geçişine çalışıyor aklım\ntransit transis transition trans\nbölükçülendi zihnim birbirbin adacığın\nsöyle söyle söyle hangisinden – di\nbiraz sonra genişleyecek ve ovalaşacak ve buraya tekrar dönemez – se ya o ra da sonsuza\nkalsa kadar kadar kadar ka\nkorkutucu olurdu bir korkmaorganı bulmuş olsaydı yolda hayaletlerin\nölümdensonraya geçmekten mi\ngeçememişlerve şimdi olur olmaz beliriyorlar\nsesleri birbirine girmekten kurtaran kim\nbeni kurtar atladığım ipten bir diğerine\nbu ipleri burgula astığımız yerlere bundan sonra\nbir cambaz gibi yüzü gülümser boyalı hatta saçları iki örük\nartık düşmez üstüne beni de çağırdılar\nmutlu olmuştum. sonra kollarım uzadı"
+      },
+      {
+        kind: "stanza",
+        text: "tutamadım"
+      }
+    ]
+  },
+  "24-mayis": {
+    title: "24 mayıs",
+    label: "şiir",
+    authors: [{ name: "göksu köse", href: "/yazar/goksu-kose" }],
+    body: [
+      {
+        kind: "stanza",
+        text: "napılır bilmiyorum, bu kuşlara mı\nkızmalı? neşeli bağırıp çağırmalar\nnehire mi kızmalı, sokaklarda avuntuların takırtıları\nher gün yeni bayramlar\nbir dakika daha sarf edemem\ndeliler matbaasında\nyeni havadisler öksürüğüme karışır\nbu yoksunlukta"
+      },
+      {
+        kind: "stanza",
+        text: "aslında yeni yok hiçbir şey.\nkalbim tufandan daha eski\noturur yerinde\noluk oluk senelerdir\nbeş sene, on sene, bin ve milyon sene\ndinozorlar bile hatırlamaz sorsan\ndoğduğum günü"
+      }
+    ]
   }
 };
