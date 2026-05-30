@@ -3,7 +3,7 @@ import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
 import { poems } from "@/data/content";
 
-function getRandomContent(currentSlug: string, count: number = 3) {
+function getRandomContent(currentSlug: string, count: number = 5) {
   const allSlugs = Object.keys(poems).filter(slug => slug !== currentSlug);
   const shuffled = [...allSlugs].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, count).map(slug => ({
