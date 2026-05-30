@@ -91,6 +91,39 @@ export default async function YaziPage({
                 ))}
               </div>
             </div>
+
+            {/* Fanzin Görsel Motoru - "Daha fazlası" bölümünün altına eklendi */}
+            {text.image && (
+              <div style={{ 
+                marginTop: "48px", 
+                transform: `rotate(${text.image.rotate || 0}deg)`,
+                transition: "transform 0.3s ease"
+              }}>
+                <img 
+                  src={text.image.src} 
+                  alt={text.image.alt} 
+                  style={{ 
+                    width: "100%", 
+                    height: "auto", 
+                    display: "block",
+                    border: "1px solid rgba(17,17,17,0.15)",
+                    filter: "contrast(1.2) grayscale(100%)"
+                  }} 
+                />
+                {text.image.credit && (
+                  <div style={{ 
+                    marginTop: "12px", 
+                    fontSize: "14px", 
+                    fontFamily: "Arial, Helvetica, sans-serif", 
+                    color: "rgba(17,17,17,0.5)", 
+                    textAlign: "right",
+                    letterSpacing: "-0.01em"
+                  }}>
+                    [ {text.image.credit} ]
+                  </div>
+                )}
+              </div>
+            )}
           </aside>
         </div>
       </section>

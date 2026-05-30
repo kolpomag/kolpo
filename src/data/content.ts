@@ -633,6 +633,12 @@ export const poems: Record<string, Poem> = {
     title: "ızdırap mühendisliği anabilim dalı",
     label: "yazı",
     authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
+     image: {
+      src: "/images/goksel-arizali-cizim.jpg",
+      alt: "ızdırap mühendisliği anabilim dalı için çizim",
+      title: "ızdırap mühendisi",
+      credit: "çizim: goxel",
+    },
     body: [
       {
         kind: "stanza",
