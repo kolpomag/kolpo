@@ -628,5 +628,16 @@ export const poems: Record<string, Poem> = {
         text: "aslında yeni yok hiçbir şey.\nkalbim tufandan daha eski\noturur yerinde\noluk oluk senelerdir\nbeş sene, on sene, bin ve milyon sene\ndinozorlar bile hatırlamaz sorsan\ndoğduğum günü"
       }
     ]
+  },
+  "izdirap-muhendisligi": {
+    title: "ızdırap mühendisliği anabilim dalı",
+    label: "yazı",
+    authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
+    body: [
+      {
+        kind: "stanza",
+        text: "Televizyon seni hasta etti, küçükken ninja kaplumbağalar izliyordun. Yediğin cips seni hasta etti. Salak gibi ellerin titriyor, çünkü dün çok içtin. Arkadaşların seni hasta etti, sigaraları hala elinden düşmüyor. Gerçekten gerizekalısın, kendin de olabilirdin. İnsanların seni önemsemediğini biliyorsun. Telefonun elinden düşmüyor, sürekli tırnaklarını yiyorsun, elin ağzından düşmüyor. Öylece neden oturamıyorsun? Ayakların seni hasta etti, yabancı mekanlarda kaybolmaktan gurur duyuyorsun. Köprülerin etrafında ne aradığını sorabilir miyim? Hayalle şişirilmiş miden seni hasta ediyor. Yuttuğun havayı artık kusma vakti. Zavallılara acıyorsun çünkü başka bir çaren yok. Empati! Uyanık eziklerin bir numaralı ilgi arayışı metodu. Izdırap mühendisliği anabölüm dalı başkanı leş orospu çocuğu kavat"
+      }
+    ]
   }
 };
