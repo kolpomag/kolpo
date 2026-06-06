@@ -645,5 +645,47 @@ export const poems: Record<string, Poem> = {
         text: "Televizyon seni hasta etti, küçükken ninja kaplumbağalar izliyordun. Yediğin cips seni hasta etti. Salak gibi ellerin titriyor, çünkü dün çok içtin. Arkadaşların seni hasta etti, sigaraları hala elinden düşmüyor. Gerçekten gerizekalısın, kendin de olabilirdin. İnsanların seni önemsemediğini biliyorsun. Telefonun elinden düşmüyor, sürekli tırnaklarını yiyorsun, elin ağzından düşmüyor. Öylece neden oturamıyorsun? Ayakların seni hasta etti, yabancı mekanlarda kaybolmaktan gurur duyuyorsun. Köprülerin etrafında ne aradığını sorabilir miyim? Hayalle şişirilmiş miden seni hasta ediyor. Yuttuğun havayı artık kusma vakti. Zavallılara acıyorsun çünkü başka bir çaren yok. Empati! Uyanık eziklerin bir numaralı ilgi arayışı metodu. Izdırap mühendisliği anabölüm dalı başkanı leş orospu çocuğu kavat"
       }
     ]
+  },
+  "super-bal-satan-cicekler": {
+    title: "süper bal satan çiçekler",
+    label: "şiir",
+    authors: [{ name: "esra kuş", href: "/yazar/esra-kus" }],
+    body: [
+      {
+        kind: "stanza-html",
+        htmlLines: [
+          "<span style=\"padding-left: 240px; font-style: italic;\">arı bende bal</span>",
+          "<span style=\"font-style: italic;\">yok,çiçeklerde bal çok*</span>",
+          "<span style=\"padding-left: 240px; font-style: italic;\">arın”a*</span>"
+        ]
+      },
+      {
+        kind: "stanza",
+        text: "bu dar evlerin olduğu sokakta büyüdüm,devlet geniş\nbunun oturuşumu düzelttiren,elalem kesici taraflarını kıra döke arzulamadan,\narzu da şehvete pek yaklaşmadı buralarda,belki film izlerken sahnelere arkamızı\ndöndüğümüz içindir\ndeniz kabuklarıyla yaptığım özel çerçeve ağzının ilk boşluğu\nve\nben boşluklardan bağımsız ağzımı açamam\nağzının açtığı boşluk Yusuf’un kuyusu değil,ilk kez değil,\nbundan hep bahsetti usta isimler,usta isimlere süper ballar ısmarladı devlet,\nsüper ballara süper çiçekler,\nbu dar evlerin becerdiği kısa kollar,devlet hep geniş"
+      },
+      {
+        kind: "stanza",
+        text: "sanki ininde mutluydun da ben kımıldattım seni,devletle genişleyesin diye ittim,\nitilesin varmış,\nsaymanın fasülye ve abaküsleri olmasaydı bak aramızdan kıl gibi bir 11 geçti\ndemeyecektin,\nduyasım varmış,\nsayıların artışından balların miktarını anlıyordum o zamanlar ve\narındıramadığım yüz on tane günahsız arı,"
+      },
+      {
+        kind: "stanza-html",
+        htmlLines: [
+          "emip çiçeğini genişleyen arı görmedim doğrusu,",
+          "günahsız olduklarını da yaradanın mutlak gücüne veriyorum,bu mutlaklığa sığmam,",
+          "bu dar evlerin olduğu sokakta büyüdüm",
+          "gittikçe genişleyen devleti unutmayayım diye",
+          "sırtımdaki terli gecelerin,terli atletlerini değiştirirdi babam,",
+          "memelerime bakmıyormuş gibi yaparak",
+          "genişleyesi var olan devletle bakmıyormuş gibi yapılan bakışlar arasına sıkıştım kaldım,",
+          "sıkıştı atlet,<span style=\"margin-left: 140px;\">genişlemedi arı,</span>",
+          "<span style=\"margin-left: 80px;\">yüz on tane günahsız arı,</span>",
+          "hangi dar sokakta olsam tanırım,hangi devlet genişlese düşerim"
+        ]
+      },
+      {
+        kind: "stanza",
+        text: "süper bal satan çiçekler arıları harcadığını bilsin diye\nhiçbir yere kona kona yaşayamıyorum ben\nbu dar sokakta aramızdan kıl gibi bir 11 geçti\ngeçesi varmış"
+      }
+    ]
   }
 };
