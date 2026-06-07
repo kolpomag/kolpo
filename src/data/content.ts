@@ -687,5 +687,28 @@ export const poems: Record<string, Poem> = {
         text: "süper bal satan çiçekler arıları harcadığını bilsin diye\nhiçbir yere kona kona yaşayamıyorum ben\nbu dar sokakta aramızdan kıl gibi bir 11 geçti\ngeçesi varmış"
       }
     ]
+  },
+  "inscription": {
+    title: "inscription",
+    label: "şiir",
+    authors: [{ name: "aras arslan", href: "/yazar/aras-arslan" }],
+    body: [
+      {
+        kind: "stanza",
+        text: "At some point in the night, I got suspended in the tightening lids of your eyes,\nAnd couldn’t let them come down on me.\nThe pride, the blood flowing behind the eyes, the desire\nTo be there, uncontested in your gaze, yet subdued\nBy the possibility that we might lose me for a second, that you won’t care to look back again."
+      },
+      {
+        kind: "stanza",
+        text: "So I did what I do (to the best of my knowledge of the sham that is the self),\nI set free the three-headed fox on whomever might have been around us. And I didn’t know which would face you.\nOne apprehensive and dismissive, given the chance,\nTeeth cocked under thin lips, ready.\nOne in thunderous laughter and fairytale whimsy,\nEyes lidless and steady."
+      },
+      {
+        kind: "stanza",
+        text: "Last one, I prayed\nStays muzzled, dumb and drowned.\nI wipe its mouth everyday but you can tell the saliva stains,\nPus and rust in reddish gold,\nThere to stay, like the piece of lead shining on its dome,\nNo more than a piece of emerald lodged into the spirit’s home."
+      },
+      {
+        kind: "stanza",
+        text: "So let me tell you the trick,\nThe three are one in crystal notes oozing out of humming amps.\nHug his bones broken, and let ‘em dangle\nIn the winds of imagined change."
+      }
+    ]
   }
 };
