@@ -710,5 +710,40 @@ export const poems: Record<string, Poem> = {
         text: "So let me tell you the trick,\nThe three are one in crystal notes oozing out of humming amps.\nHug his bones broken, and let ‘em dangle\nIn the winds of imagined change."
       }
     ]
+  },
+  "setaneios": {
+    title: "setaneios",
+    label: "şiir",
+    authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
+    body: [
+      {
+        kind: "stanza",
+        text: "hem dekadan hem yaratan\ntopraklama yapıyorduk\niş görebilmesindendir kadr-i kalkışma\nlatex adem çamurdan"
+      },
+      {
+        kind: "stanza",
+        text: "malzemeyi her şey ve herkes kılarak\nveremli grafitilere secde\nolduğu şeyin yaptığı şeyin ta kendisi olduğu şey,\nkotbusator mevlana camii"
+      },
+      {
+        kind: "stanza",
+        text: "alayının toptan yaptığı soyutlamacılık derecesine toptan\nvarabilen\nduyumunda kavram ve işlev kadar öngörülemez coğrafi\nçalışmalar"
+      },
+      {
+        kind: "stanza",
+        text: "bir temsil aşırılık\nyabandayım barbar bir aşkla xenofili\nkarmaşıklık çeşitlemecilik\nsiktiğimin"
+      },
+      {
+        kind: "stanza",
+        text: "ibne adresi\nkendi deneyim imkansız bedeninde\nne kadar\nyaşadığın gewobag"
+      },
+      {
+        kind: "stanza",
+        text: "ben artık o günden sonra\nkendimi coğrafyacı olarak\ngörücem ve coğrafya yazıları yazıcam\nher şey şeyliğiyle\nbeşinci coğrafya hareketi"
+      },
+      {
+        kind: "stanza",
+        text: "şüphesiz\nkendimizin biziyiz\nkoca bir sahnede bay andersson\nyine mi eşinizin iç çamaşırlarını giydiniz\nbunu konuşmuştuk."
+      }
+    ]
   }
 };
