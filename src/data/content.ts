@@ -711,7 +711,7 @@ export const poems: Record<string, Poem> = {
       }
     ]
   },
-  "setaneios": {
+ "setaneios": {
     title: "setaneios",
     label: "şiir",
     authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
@@ -726,7 +726,7 @@ export const poems: Record<string, Poem> = {
       },
       {
         kind: "stanza",
-        text: "alayının toptan yaptığı soyutlamacılık derecesine toptan\nvarabilen\nduyumunda kavram ve işlev kadar öngörülemez coğrafi\nçalışmalar"
+        text: "alayının toptan yaptığı soyutlamacılık derecesine toptan varabilen\nduyumunda kavram ve işlev kadar öngörülemez coğrafi çalışmalar"
       },
       {
         kind: "stanza",
@@ -734,7 +734,7 @@ export const poems: Record<string, Poem> = {
       },
       {
         kind: "stanza",
-        text: "ibne adresi\nkendi deneyim imkansız bedeninde\nne kadar\nyaşadığın gewobag"
+        text: "ibne adresi\nkendi deneyim imkansız bedeninde\nne kadarı\nyaşadığın gewobag"
       },
       {
         kind: "stanza",
