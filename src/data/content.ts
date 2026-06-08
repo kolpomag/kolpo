@@ -549,11 +549,15 @@ export const poems: Record<string, Poem> = {
       },
       {
         kind: "stanza",
-        text: "uçuyorsun. izliyorum seni, pek\nçok ağaç var\nyemyeşil oldular son bir ayda.\nhayret doğrusu, seni hala görebiliyorum\nbir metre on metre otuz metre\nmesafede, ufak bir kuş serbest,\ntam hedefe, aniden,\nve bir tanesi daha\ndaha yeni\nbitti\n/mi\nsence?"
+        text: "uçuyorsun. izliyorum seni, pek\nçok ağaç var\nyemyeşil oldular son bir ayda.\nhayret doğrusu, seni hala görebiliyorum"
       },
       {
         kind: "stanza",
-        text: "hareket ediyorsun\nazalıyorsun hareket\nediyorsun çoğalıyorsun\nmekanı yaratıyorsun\nyeni-eski yeni düğümler\nel işleri ve danteller\nsahi\neskidendi.\nhoşgeldin zaman\nmekanın hıfzına\nkarnına\nve bacaklarına\nayakkabılarının bağına"
+        text: "bir metre on metre otuz metre\nmesafede, ufak bir kuş serbest,\ntam hedefe, aniden,\nve bir tanesi daha\ndaha yeni\nbitti\n/mi\nsence?"
+      },
+      {
+        kind: "stanza",
+        text: "hareket ediyorsun\nazalıyorsun hareket\nediyorsun çoğalıyorsun\nmekanı yaratıyorsun\nyeni-eski yeni düğümler\nel işleri ve danteller\nsahi\neskidendi.\nhoşgeldin zaman\nmekanın hıfzına\nkarnına\nbacaklarına\nve ayakkabılarının bağına"
       }
     ]
   },
