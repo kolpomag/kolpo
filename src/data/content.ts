@@ -749,5 +749,29 @@ export const poems: Record<string, Poem> = {
         text: "şüphesiz\nkendimizin biziyiz\nkoca bir sahnede bay andersson\nyine mi eşinizin iç çamaşırlarını giydiniz\nbunu konuşmuştuk."
       }
     ]
+  },
+  "ankara-bir-memur-sehridir": {
+    title: "ankara bir memur şehridir -sokakları geniş sayılır",
+    label: "şiir",
+    authors: [{ name: "zehra erkoç", href: "/yazar/zehra-erkoc" }],
+    body: [
+      {
+        kind: "stanza",
+        text: "ankara bir memur şehridir ellerimi\nnasırlı tutar ve beni sert siker\nkapıları kapattığımda boynunu uzatır\nalnında hep bir damarı belirgindir\ncebimi beş kuruşlarla doldurdum\nkuşların gagasını sert kapattım elimin\naltında bir başkasını duyuyorum elimi ağzıma\nkapatıyorum"
+      },
+      {
+        kind: "stanza",
+        text: "her gün\nhep gün doğar\nmutfakta bulgur güvelenmiş\naklıma geliyor birileri bana yalan söyledi\nmasalarda parmağım daireler çiziyor\nmasalarda parmağım bir ileri bir geri\nutanmasam bilmiyorum"
+      },
+      {
+        kind: "stanza",
+        text: "ankara bir memur şehridir eskiden\nmemurlar kumral olurmuş çayı şekerle\niçerlermiş\nmendilimi hep sağ cebimde taşıyorum"
+      },
+      {
+        kind: "stanza",
+        text: "kimse gittiği yerden dönmüyor",
+        italic: true
+      }
+    ]
   }
 };
