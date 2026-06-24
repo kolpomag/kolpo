@@ -773,5 +773,48 @@ export const poems: Record<string, Poem> = {
         italic: true
       }
     ]
+  },
+  "kavramsal-anlami-yaratan-gibi-oku": {
+    title: "kavramsal anlamı yaratan gibi oku",
+    label: "şiir",
+    authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
+    body: [ 
+      {
+        kind: "stanza-html",
+        htmlLines: [
+          "<span style=\"display: block; text-align: right; margin-bottom: 4px;\">biliriz söylemesini sahiciye benzeyen nice aldatıcı şeyleri,</span>",
+          "<span style=\"display: block; text-align: right; margin-bottom: 8px;\">biliriz yine de istediğimiz zaman hakikati dile getirmesini.</span>",
+          "<span style=\"display: block; text-align: right;\">Hesiodos <span style=\"font-size: 16px; color: #6f6b63;\">(çev. Erman Gören)</span></span>"
+        ]
+      },
+      {
+        kind: "separator" 
+      },
+      {
+        kind: "stanza-html",
+        htmlLines: [
+          "unity<span style=\"margin-left: 60px;\">of</span><span style=\"margin-left: 80px;\">consciousness</span>",
+          "<span style=\"margin-left: 80px;\">kendi</span>",
+          "<span style=\"margin-left: 150px;\">gerçeğini</span>",
+          "<span style=\"margin-left: 60px;\">kurmak adına merda d'artista</span>"
+        ]
+      },
+      {
+        kind: "stanza",
+        text: "nazariyata kavuşup hatrıma girenler sahnede,\nlogos itibariyle özgürlüğüne\nkavuşturmanın iç içe örülmesidir bu yaptığım dört dörtlük yakıştırma, doğrudan\ndoğruya yerli yerine\nvarlığı seyretmek demektir bu. hepsinin bendeki karşılığıdır\ntemas önemli olduğu için yaklaşıyorum. tanrıyı\nindirecem sanmaktan oluyor ki ilk o zaman siz varlığın o veçhesine müşahede\nedersiniz. bu varlığı doğrudan doğruya seyirdir.\non the edge analysis, coğrafi çalışma. yazın bilim kışın da başka bir şey.\nher şey, şeyliğiyle örgün eğitimde."
+      },
+      {
+        kind: "stanza",
+        text: "değişime tabi olmama esası üzerinden: the application of scarce means against\nalternative ends to derive the most satisfaction possible (marshall sahlins).\n“evet, her şeye tahammülümün olduğu bir gün daha. kulaklarımı çok önemli\ngördüğüm için kara kutulardan sesi yüksek bir kalp buldum kendime. “kaderi onu\nduymuş olan var mı? “biz sabah olunca uyanacağız (referans ahmet güntan\nsevdiğim laflar; not defteri; telefon; ohm; bağdaş kurmuş otururken, “tarihin ilk\nteröristi olarak anılan ve tarihe nam salmış ünlü kundakçılardan Herostratus'un anti\nhukuk mücadelesine.\nortamlarımız imajlı dünyanın logosu ve ifade problemini aşımın topluluğu ve\ntarihinin tarihidir. kendi-üretimimi-kurtarmak-için-böyle-bir-problemi-ele-aldım. —\nkavramsalsezgi-uçurumudaralttı."
+      },
+      {
+        kind: "stanza",
+        text: "sen kavramsal anlamı yaratan gibi oku."
+      },
+      {
+        kind: "stanza",
+        text: "providencia universalis. gegebenheit."
+      }
+    ]
   }
 };

@@ -16,6 +16,15 @@ type HomeEntry = {
 
 const entries: HomeEntry[] = [
   {
+    title: "kavramsal anlamı yaratan gibi oku",
+    href: "/siir/kavramsal-anlami-yaratan-gibi-oku",
+    author: "mahmut kıran",
+    authorHref: "/yazar/mahmut-kiran",
+    type: "şiir",
+    className: "entry entry-a",
+    multiline: false,
+  },
+  {
     title: "ankara bir memur şehridir -sokakları geniş sayılır",
     href: "/siir/ankara-bir-memur-sehridir",
     author: "zehra erkoç",
