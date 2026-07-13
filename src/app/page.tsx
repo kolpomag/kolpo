@@ -16,6 +16,15 @@ type HomeEntry = {
 
 const entries: HomeEntry[] = [
   {
+    title: "içinden çıkılamaz umut- / boroloyko",
+    href: "/siir/icinden-cikilamaz-umut-boroloyko",
+    author: "göksel",
+    authorHref: "/yazar/goksel-yaman",
+    type: "şiir",
+    className: "entry entry-b",
+    multiline: false,
+  },
+  {
     title: "kavramsal anlamı yaratan gibi oku",
     href: "/siir/kavramsal-anlami-yaratan-gibi-oku",
     author: "mahmut kıran",

@@ -816,5 +816,20 @@ export const poems: Record<string, Poem> = {
         text: "providencia universalis. gegebenheit."
       }
     ]
+  },
+  "icinden-cikilamaz-umut-boroloyko": {
+    title: "içinden çıkılamaz umut- /boroloyko",
+    label: "şiir",
+    authors: [{ name: "göksel", href: "/yazar/goksel-yaman" }],
+    body: [
+      {
+        kind: "stanza-html",
+        htmlLines: [
+          "<div style=\"display: flex; justify-content: center; padding: 2rem 0;\">",
+          "  <img src=\"/images/goksel-gorsel-siir.png.jpeg\" alt=\"Göksel - Görsel Şiir\" style=\"max-width: 100%; height: auto;\" />",
+          "</div>"
+        ]
+      }
+    ]
   }
 };
