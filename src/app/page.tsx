@@ -16,7 +16,7 @@ type HomeEntry = {
 
 const entries: HomeEntry[] = [
   {
-    title: "Unstable Signs: Meaning and Truth in The Crying of Lot 49",
+    title: "Unstable Signs in The Crying of Lot 49",
     href: "/yazi/unstable-signs-lot-49",
     author: "mahmut kıran",
     authorHref: "/yazar/mahmut-kiran",

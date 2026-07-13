@@ -884,7 +884,7 @@ export const poems: Record<string, Poem> = {
     ]
   },
   "unstable-signs-lot-49": {
-    title: "Unstable Signs: Meaning and Truth in The Crying of Lot 49",
+    title: "Unstable Signs in The Crying of Lot 49",
     label: "yazı",
     authors: [{ name: "mahmut kıran", href: "/yazar/mahmut-kiran" }],
     body: [
