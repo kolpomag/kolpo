@@ -16,6 +16,24 @@ type HomeEntry = {
 
 const entries: HomeEntry[] = [
   {
+    title: "Landscape II",
+    href: "/siir/landscape-ii-zehra-erkoc",
+    author: "zehra erkoç",
+    authorHref: "/yazar/zehra-erkoc",
+    type: "şiir",
+    className: "entry entry-b",
+    multiline: false,
+  },
+  {
+    title: "Landscape",
+    href: "/siir/landscape-zehra-erkoc",
+    author: "zehra erkoç",
+    authorHref: "/yazar/zehra-erkoc",
+    type: "şiir",
+    className: "entry entry-a",
+    multiline: false,
+  },
+  {
     title: "içinden çıkılamaz umut- /boroloyko",
     href: "/siir/icinden-cikilamaz-umut-boroloyko",
     author: "göksel yaman",

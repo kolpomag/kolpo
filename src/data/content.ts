@@ -831,5 +831,79 @@ export const poems: Record<string, Poem> = {
         ]
       }
     ]
-  }
+  },
+  "landscape-zehra-erkoc": {
+    title: "Landscape",
+    label: "şiir",
+    authors: [{ name: "zehra erkoç", href: "/yazar/zehra-erkoc" }],
+    body: [
+      {
+        kind: "stanza",
+        lines: [
+          "Etera dağının kuzey yamacında milyon 3 2 zaman önce çokyüksek ve çoksert kayalar",
+          "uçurumun başına oturmuşlar göğün 3 / 2si yarılmış yanına oturmuştu"
+        ]
+      },
+      {
+        kind: "stanza",
+        lines: [
+          "Uzun gölgeliksiz üç dal üç çalı keçi yollarından ve dar ağızlı taşların ince dudaklarından tek",
+          "tük otlar"
+        ]
+      },
+      {
+        kind: "stanza",
+        lines: [
+          "Haşmetli bir dağın karşısındadır ve aralarından gözlerden uzak ipince bir su akar,",
+          "Buradan bakan dağın kuzeyine ve kuzey doğusuna arkasını döndüğünde alabildiğine geniş",
+          "ovasına"
+        ]
+      },
+      {
+        kind: "stanza",
+        lines: [
+          "Kafasını kaldırdığında bir kertenkele diğerine, nedense gözümü kapatırsam aklıma onlar",
+          "geliyor. Selam sana kara derili kuru kertenkele diğeri başını eğer kuyruğunu bırakıp gider."
+        ]
+      }
+    ]
+  },
+  "landscape-ii-zehra-erkoc": {
+    title: "Landscape II",
+    label: "şiir",
+    authors: [{ name: "zehra erkoç", href: "/yazar/zehra-erkoc" }],
+    body: [
+      {
+        kind: "stanza",
+        lines: [
+          "yeşilden sarıya sekiz ve kahverengiye dokuz kırmızıya doğru",
+          "saymaya başlamadan önce böylesine görebilir miydin",
+          "yer yarıldığında yanıp sönen bu taşlar üstlerinde ateş izleriyle",
+          "serpantin koyun kıyılarını binyıllık bir yılan gibi sarıyor"
+        ]
+      },
+      {
+        kind: "stanza",
+        lines: [
+          "korku bilseydi kızılçamların göğsü patlardı",
+          "dikenyaprakları dağılıp"
+        ]
+      },
+      {
+        kind: "stanza-html",
+        htmlLines: [
+          "sevgilim elimde bir izopod iskeleti tutuyorum<br/>",
+          "onu kumların arasındaki deniz şehrinden çıkardım, <i>bir dilek tut</i><br/>",
+          "parmaklarımın ucunda eziliyor, kemik sihirli bir tozdur<br/>",
+          "birleşir canlanır dağılıp"
+        ]
+      },
+      {
+        kind: "stanza",
+        lines: [
+          "hepsini havaya üfleyeceğim"
+        ]
+      }
+    ]
+  },
 };
