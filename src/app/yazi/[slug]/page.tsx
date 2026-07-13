@@ -48,13 +48,59 @@ export default async function YaziPage({
       <style>{`
         .author-link:hover, .more-link:hover { color: ${accent} !important; }
         .more-link:hover .poem-more-author { color: ${accent} !important; }
+        
+        /* Yazı Kategorisi Link Tasarımı */
+        .category-link {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 16px;
+          font-weight: bold;
+          color: ${accent};
+          text-decoration: none;
+          letter-spacing: -0.01em;
+          transition: opacity 0.2s ease;
+          display: inline-block;
+          margin-bottom: 14px;
+        }
+        .category-link:hover {
+          opacity: 0.6;
+        }
+
+        /* Sıkışma problemini çözen akışkan yapı */
+        .yazi-content-wrapper {
+          display: block;
+        }
+        .yazi-sidebar {
+          float: right;
+          width: 320px;
+          margin-left: 72px;
+          margin-bottom: 40px;
+          padding-top: 8px;
+        }
+        .yazi-text-body {
+          font-size: 26px;
+          line-height: 1.68;
+          letter-spacing: -0.015em;
+        }
+        
+        /* Mobilde yan kolonu alta it ve %100 genişlik ver */
+        @media (max-width: 1024px) {
+          .yazi-sidebar {
+            float: none;
+            width: 100%;
+            margin-left: 0;
+            margin-top: 64px;
+          }
+        }
       `}</style>
       
       <SiteHeader />
 
       <section style={{ padding: "24px 36px 110px 36px", maxWidth: "1280px" }}>
         <div style={{ borderTop: "1px solid rgba(17,17,17,0.12)", paddingTop: "18px", marginBottom: "28px" }}>
-          <div style={{ fontFamily: "Arial, Helvetica, sans-serif", fontSize: "14px", letterSpacing: "-0.01em", color: "#6f6b63", marginBottom: "14px" }}>yazı</div>
+          
+          {/* Ana sayfa yerine doğrudan Arşiv'e yönlendiren güncel link */}
+          <a href="/arsiv" className="category-link">yazı</a>
+          
           <h1 style={{ margin: 0, maxWidth: "980px", fontSize: "92px", lineHeight: 0.93, fontWeight: 600, letterSpacing: "-0.05em" }}>{text.title}</h1>
           <p style={{ marginTop: "16px", marginBottom: 0, fontSize: "20px", lineHeight: 1.15, fontFamily: "Arial, Helvetica, sans-serif", letterSpacing: "-0.02em" }}>
             {text.authors.map((author, index) => (
@@ -66,19 +112,8 @@ export default async function YaziPage({
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 880px) 1fr", gap: "72px", alignItems: "start" }}>
-          <div style={{ display: "flex", flexDirection: "column", gap: "24px", fontSize: "26px", lineHeight: 1.68, letterSpacing: "-0.015em" }}>
-            {text.body.map((block, index) => {
-              if (block.kind === "stanza") {
-                return block.text.split("\n").map((line, i) => (
-                  <p key={`${index}-${i}`} style={{ margin: 0, whiteSpace: "pre-line" }}>{line}</p>
-                ));
-              }
-              return null;
-            })}
-          </div>
-
-          <aside style={{ paddingTop: "8px" }}>
+        <div className="yazi-content-wrapper">
+          <aside className="yazi-sidebar">
             <div style={{ borderTop: "1px solid rgba(17,17,17,0.12)", paddingTop: "14px" }}>
               <h2 style={{ margin: "0 0 22px 0", fontSize: "22px", fontFamily: "Arial, Helvetica, sans-serif", fontWeight: 600, letterSpacing: "-0.02em", color: "#c32721" }}>daha fazlası</h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "22px" }}>
@@ -91,7 +126,6 @@ export default async function YaziPage({
               </div>
             </div>
 
-            {/* Fanzin Görsel Motoru */}
             {text.image && (
               <div style={{ 
                 marginTop: "48px", 
@@ -124,6 +158,60 @@ export default async function YaziPage({
               </div>
             )}
           </aside>
+
+          <div className="yazi-text-body">
+            {text.body.map((block, index) => {
+              if (block.kind === "stanza") {
+                
+                if (block.bold) {
+                  return (
+                    <div key={index} style={{ margin: "64px 0 32px 0", textAlign: "center" }}>
+                      {block.text.split("\n").map((line, i) => (
+                        <h3 key={`${index}-${i}`} style={{ margin: 0, fontSize: "32px", fontWeight: "bold", letterSpacing: "-0.02em" }}>{line}</h3>
+                      ))}
+                    </div>
+                  );
+                }
+
+                if (block.italic) {
+                  return (
+                    <blockquote 
+                      key={index} 
+                      style={{ 
+                        margin: "36px 0 36px 48px", 
+                        fontStyle: "italic", 
+                        color: "#4a4a4a" 
+                      }}
+                    >
+                      {block.text.split("\n").map((line, i) => (
+                        <p key={`${index}-${i}`} style={{ margin: "0 0 12px 0", whiteSpace: "pre-line" }}>{line}</p>
+                      ))}
+                    </blockquote>
+                  );
+                }
+
+                return (
+                  <div key={index} style={{ marginBottom: "28px" }}>
+                    {block.text.split("\n").map((line, i) => (
+                      <p key={`${index}-${i}`} style={{ margin: 0, whiteSpace: "pre-line" }}>{line}</p>
+                    ))}
+                  </div>
+                );
+              }
+              
+              if (block.kind === "separator") {
+                return (
+                  <div key={index} style={{ margin: "56px 0" }}>
+                    <hr style={{ border: "none", borderTop: "1px solid rgba(17,17,17,0.12)", width: "30%", margin: "0 auto" }} />
+                  </div>
+                );
+              }
+
+              return null;
+            })}
+          </div>
+          
+          <div style={{ clear: "both" }}></div>
         </div>
       </section>
     </main>
