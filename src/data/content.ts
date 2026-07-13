@@ -1114,7 +1114,7 @@ export const poems: Record<string, Poem> = {
       },
       {
         kind: "stanza",
-        text: "The novel's non-ending is both a rupture in the narrative and a fulfilment of theoretical stakes. By leaving the questions of whether the Tristero exists and whether Oedipa has uncovered a conspiracy or fallen into psychosis still unresolved, the novel remains indifferent to definite answers and incredulous toward metanarratives. What is at work instead are fragments and ambiguity. The novel performs the very paradox it has built its narrative upon by inviting interpretation but resisting disclosure by leaving its central questions unresolved. The very operation has become deterrence itself."
+        text: "The novel's non-ending is both a rupture in the narrative and a fulfilment of theoretical stakes. By leaving the questions of whether the Tristero exists and whether Oedipa has uncovered a conspiracy or fallen into psychosis still unresolved, the novel remains indifferent to definite answers and incredulous toward metanarratives. Instead, fragments and ambiguity are at work. The novel performs the very paradox it has built its narrative upon by inviting interpretation but resisting disclosure by leaving its central questions unresolved. The very operation has become deterrence itself."
       },
       {
         kind: "separator"
