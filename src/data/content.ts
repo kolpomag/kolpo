@@ -825,8 +825,8 @@ export const poems: Record<string, Poem> = {
       {
         kind: "stanza-html",
         htmlLines: [
-          "<span style=\"display: block; text-align: center; padding: 2rem 0;\">",
-          "  <img src=\"/images/goksel-gorsel-siir.png.jpeg\" alt=\"Göksel - Görsel Şiir\" style=\"max-width: 100%; height: auto; mix-blend-mode: multiply; -webkit-mix-blend-mode: multiply;\" />",
+          "<span style=\"display: block; text-align: center; padding: 2rem 0; mix-blend-mode: multiply; -webkit-mix-blend-mode: multiply; transform: translate3d(0,0,0);\">",
+          "  <img src=\"/images/goksel-gorsel-siir.png\" alt=\"Göksel - Görsel Şiir\" style=\"max-width: 100%; height: auto;\" />",
           "</span>"
         ]
       }
