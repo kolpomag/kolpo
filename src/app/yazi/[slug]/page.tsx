@@ -84,6 +84,10 @@ export default async function YaziPage({
         
         /* Mobilde yan kolonu alta it ve %100 genişlik ver */
         @media (max-width: 1024px) {
+          .yazi-content-wrapper {
+            display: flex;
+            flex-direction: column-reverse;
+          }
           .yazi-sidebar {
             float: none;
             width: 100%;
