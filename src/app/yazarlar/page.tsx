@@ -1,24 +1,10 @@
 import SiteHeader from "@/components/SiteHeader";
-import { poems } from "@/data/content";
+import { getAuthors } from "@/data/content-index";
 
 export default function YazarlarPage() {
   const accent = "#c32721";
 
-  // poems.ts içindeki tüm yazarları benzersiz olarak topla
-  const authorsMap = new Map();
-  Object.values(poems).forEach(poem => {
-    poem.authors.forEach(author => {
-      // Prowler'ı listeden atla (yazarlar sayfasında görünmesin)
-      if (author.name === "prowler") return;
-
-      // author.href'i (slug) anahtar olarak kullanarak tekrarı önle
-      if (!authorsMap.has(author.href)) {
-        authorsMap.set(author.href, author.name);
-      }
-    });
-  });
-
-  const authorsList = Array.from(authorsMap, ([href, name]) => ({ href, name }));
+  const authorsList = getAuthors().filter((author) => author.name !== "prowler");
 
   return (
     <main style={{ background: "#f3f0e8", minHeight: "100vh", color: "#111111", fontFamily: "Georgia, serif" }}>

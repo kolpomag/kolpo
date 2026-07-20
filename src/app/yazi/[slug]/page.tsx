@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
 import SiteHeader from "@/components/SiteHeader";
 import { poems } from "@/data/content";
+import { getContentHref, SITE_URL } from "@/data/content-index";
 
 function getRandomContent(currentSlug: string, count: number = 5) {
   const allSlugs = Object.keys(poems).filter(slug => slug !== currentSlug);
@@ -8,7 +12,7 @@ function getRandomContent(currentSlug: string, count: number = 5) {
   return shuffled.slice(0, count).map(slug => ({
     title: poems[slug].title,
     author: poems[slug].authors.map(a => a.name).join(" & "), 
-    href: `/${poems[slug].label === 'yazı' ? 'yazi' : poems[slug].label === 'çeviri' ? 'ceviri' : 'siir'}/${slug}`
+    href: getContentHref(slug, poems[slug])
   }));
 }
 
@@ -17,12 +21,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const text = poems[slug];
   const seoDescription = "kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir düğüm. manuel bir devre, çağdaş yazın alanı.";
   
-  if (!text) return { title: "bulunamadı", description: seoDescription };
+  if (!text || text.label !== "yazı") notFound();
+
+  const canonical = getContentHref(slug, text);
   
   return {
     title: text.title,
     description: seoDescription,
-    openGraph: { title: `${text.title} — kolpo.`, description: seoDescription, images: ["/og-image.jpg"] },
+    alternates: { canonical },
+    openGraph: {
+      title: `${text.title} — kolpo.`,
+      description: seoDescription,
+      url: new URL(canonical, SITE_URL),
+      images: ["/og-image.jpg"],
+    },
   };
 }
 
@@ -37,9 +49,7 @@ export default async function YaziPage({
 
   const linkStyle = { color: "#111111", textDecoration: "none", transition: "color 0.18s ease" };
 
-  if (!text || text.label !== "yazı") {
-    return <main style={{ background: "#f3f0e8", minHeight: "100vh", color: "#111111", fontFamily: "Georgia, Times New Roman, serif", padding: "34px 36px" }}>yazı bulunamadı</main>;
-  }
+  if (!text || text.label !== "yazı") notFound();
 
   const randomMore = getRandomContent(slug);
 
@@ -103,7 +113,7 @@ export default async function YaziPage({
         <div style={{ borderTop: "1px solid rgba(17,17,17,0.12)", paddingTop: "18px", marginBottom: "28px" }}>
           
           {/* Ana sayfa yerine doğrudan Arşiv'e yönlendiren güncel link */}
-          <a href="/arsiv" className="category-link">yazı</a>
+          <Link href="/arsiv" className="category-link">yazı</Link>
           
           <h1 style={{ margin: 0, maxWidth: "980px", fontSize: "92px", lineHeight: 0.93, fontWeight: 600, letterSpacing: "-0.05em" }}>{text.title}</h1>
           <p style={{ marginTop: "16px", marginBottom: 0, fontSize: "20px", lineHeight: 1.15, fontFamily: "Arial, Helvetica, sans-serif", letterSpacing: "-0.02em" }}>
@@ -136,15 +146,18 @@ export default async function YaziPage({
                 transform: `rotate(${text.image.rotate || 0}deg)`,
                 transition: "transform 0.3s ease"
               }}>
-                <img 
+                <Image
                   src={text.image.src} 
-                  alt={text.image.alt} 
+                  alt={text.image.alt}
+                  width={text.image.width}
+                  height={text.image.height}
                   style={{ 
                     width: "100%", 
                     height: "auto", 
                     display: "block",
                     border: "1px solid rgba(17,17,17,0.15)",
-                    filter: "contrast(1.2) grayscale(100%)"
+                    filter: "contrast(1.2) grayscale(100%)",
+                    mixBlendMode: "multiply"
                   }} 
                 />
                 {text.image.credit && (

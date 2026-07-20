@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 type SiteHeaderProps = {
@@ -65,9 +66,11 @@ export default function SiteHeader({
         }}
       >
         <Link href="/" style={{ display: "block" }}>
-          <img
+          <Image
             src="/kolpo.png"
             alt="kolpo."
+            width={2100}
+            height={1500}
             style={{
               width: "230px",
               height: "auto",

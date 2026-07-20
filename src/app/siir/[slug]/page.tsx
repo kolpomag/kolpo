@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import SiteHeader from "@/components/SiteHeader";
 import { poems } from "@/data/content";
+import { getContentHref, SITE_URL } from "@/data/content-index";
 
 function getRandomContent(currentSlug: string, count: number = 5) {
   const allSlugs = Object.keys(poems).filter(slug => slug !== currentSlug);
@@ -10,7 +12,7 @@ function getRandomContent(currentSlug: string, count: number = 5) {
     title: poems[slug].title,
     // Yazar adını veritabanından çekiyoruz (Birden fazla yazar varsa & ile ayırır)
     author: poems[slug].authors.map(a => a.name).join(" & "), 
-    href: `/${poems[slug].label === 'yazı' ? 'yazi' : poems[slug].label === 'çeviri' ? 'ceviri' : 'siir'}/${slug}`
+    href: getContentHref(slug, poems[slug])
   }));
 }
 
@@ -22,21 +24,19 @@ export async function generateMetadata({
   const { slug } = await params;
   const poem = poems[slug];
 
-  if (!poem) {
-    return {
-      title: "şiir bulunamadı",
-      description: "kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir düğüm. manuel bir devre, çağdaş yazın alanı.",
-    };
-  }
+  if (!poem || poem.label === "yazı") notFound();
 
   const seoDesc = "kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir düğüm. manuel bir devre, çağdaş yazın alanı.";
+  const canonical = getContentHref(slug, poem);
 
   return {
     title: poem.title,
     description: seoDesc,
+    alternates: { canonical },
     openGraph: {
       title: `${poem.title} — kolpo.`,
       description: seoDesc,
+      url: new URL(canonical, SITE_URL),
       images: ["/og-image.jpg"],
     },
     twitter: {
@@ -64,21 +64,7 @@ export default async function SiirPage({
 
   const poem = poems[slug];
 
-  if (!poem) {
-    return (
-      <main
-        style={{
-          background: "#f3f0e8",
-          minHeight: "100vh",
-          color: "#111111",
-          fontFamily: "Georgia, Times New Roman, serif",
-          padding: "34px 36px",
-        }}
-      >
-        şiir bulunamadı
-      </main>
-    );
-  }
+  if (!poem || poem.label === "yazı") notFound();
 
   const randomMore = getRandomContent(slug);
 
@@ -211,6 +197,7 @@ export default async function SiirPage({
           width: 100%;
           height: auto;
           display: block;
+          mix-blend-mode: multiply;
           border: 1px solid rgba(17,17,17,0.08);
           background: #f3f0e8;
         }
@@ -238,6 +225,13 @@ export default async function SiirPage({
           font-family: Arial, Helvetica, sans-serif;
           color: #6f6b63;
           letter-spacing: -0.01em;
+        }
+
+        .visual-poem {
+          width: min(100%, 467px);
+          height: auto;
+          display: block;
+          margin: 10px auto;
         }
 
         .special-24101990 {
@@ -675,7 +669,7 @@ export default async function SiirPage({
                       Excite the system
                     </span>
                     <span className="special-yes-line yes-7">
-                      He shouldn't puke
+                      He shouldn&apos;t puke
                     </span>
                     <span className="special-yes-line yes-8">
                       Hide the baby under the towel
@@ -821,6 +815,19 @@ export default async function SiirPage({
                 );
               }
 
+              if (block.kind === "visual-poem") {
+                return (
+                  <Image
+                    key={index}
+                    src={block.src}
+                    alt={block.alt}
+                    width={block.width}
+                    height={block.height}
+                    className="visual-poem"
+                  />
+                );
+              }
+
               if (block.kind === "stanza-html") {
                 return (
                   <div key={index} style={{ margin: 0 }}>
@@ -890,8 +897,8 @@ export default async function SiirPage({
                 <Image
                   src={poem.image.src}
                   alt={poem.image.alt}
-                  width={1200}
-                  height={1600}
+                  width={poem.image.width}
+                  height={poem.image.height}
                   className="poem-image"
                   style={{
                     transform: poem.image.rotate

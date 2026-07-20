@@ -2,6 +2,7 @@ export type PoemBodyBlock =
   | { kind: "stanza"; text: string; italic?: boolean; bold?: boolean }
   | { kind: "stanza-last-line-italic"; text: string; lastLine: string }
   | { kind: "stanza-html"; htmlLines: string[] }
+  | { kind: "visual-poem"; src: string; alt: string; width: number; height: number }
   | { kind: "separator" }
   | { kind: "special-24101990" }
   | { kind: "special-buffalo-bill" }
@@ -17,6 +18,8 @@ export type Poem = {
   image?: {
     src: string;
     alt: string;
+    width: number;
+    height: number;
     rotate?: number;
     title?: string;
     credit?: string;
@@ -299,6 +302,8 @@ export const poems: Record<string, Poem> = {
     image: {
       src: "/images/yolunu-ogrenmemis-nehirlere.jpg",
       alt: "yolunu öğrenmemiş nehirlere için çizim",
+      width: 1536,
+      height: 2048,
       title: "yolunu öğrenmemiş nehirlere",
       credit: "çizim: Rachele Demarchi",
     },
@@ -324,6 +329,8 @@ export const poems: Record<string, Poem> = {
     image: {
       src: "/images/dualarimi-aksatiyorum-canlandir-beni.jpg",
       alt: "duaları aksatıyorum canlandır beni için çizim",
+      width: 1536,
+      height: 2048,
       title: "duaları aksatıyorum canlandır beni",
       credit: "çizim: Rachele Demarchi",
     },
@@ -640,6 +647,8 @@ export const poems: Record<string, Poem> = {
      image: {
       src: "/images/goksel-arizali-cizim.jpg",
       alt: "ızdırap mühendisliği anabilim dalı için çizim",
+      width: 974,
+      height: 1256,
       title: "ızdırap mühendisi",
       credit: "çizim: goxel",
     },
@@ -820,15 +829,14 @@ export const poems: Record<string, Poem> = {
   "icinden-cikilamaz-umut-boroloyko": {
     title: "içinden çıkılamaz umut- /boroloyko",
     label: "şiir",
-    authors: [{ name: "göksel", href: "/yazar/goksel-yaman" }],
+    authors: [{ name: "göksel yaman", href: "/yazar/goksel-yaman" }],
     body: [
       {
-        kind: "stanza-html",
-        htmlLines: [
-          "<span style=\"display: block; text-align: center; padding: 2rem 0; mix-blend-mode: multiply; -webkit-mix-blend-mode: multiply; transform: translate3d(0,0,0);\">",
-          "  <img src=\"/images/goksel-gorsel-siir.png\" alt=\"Göksel - Görsel Şiir\" style=\"max-width: 100%; height: auto;\" />",
-          "</span>"
-        ]
+        kind: "visual-poem",
+        src: "/images/goksel-gorsel-siir.png",
+        alt: "Göksel Yaman — içinden çıkılamaz umut / boroloyko",
+        width: 467,
+        height: 534,
       }
     ]
   },

@@ -1,37 +1,51 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import SiteHeader from "@/components/SiteHeader";
-import { poems } from "@/data/content";
+import {
+  getAuthor,
+  getContentHref,
+  SITE_URL,
+} from "@/data/content-index";
+
+type AuthorPageProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({
+  params,
+}: AuthorPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const author = getAuthor(slug);
+
+  if (!author) notFound();
+
+  const canonical = `/yazar/${slug}`;
+
+  return {
+    title: author.name,
+    alternates: { canonical },
+    openGraph: {
+      title: `${author.name} — kolpo.`,
+      url: new URL(canonical, SITE_URL),
+      images: ["/og-image.jpg"],
+    },
+  };
+}
 
 export default async function YazarPage({
   params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+}: AuthorPageProps) {
   const { slug } = await params;
   const accent = "#c32721";
+  const author = getAuthor(slug);
 
-  const authorEntries: { title: string; href: string; type: string }[] = [];
-  let authorName = "";
+  if (!author) notFound();
 
-  Object.entries(poems).forEach(([poemSlug, poem]) => {
-    const foundAuthor = poem.authors.find(a => a.href === `/yazar/${slug}`);
-    
-    if (foundAuthor) {
-      authorName = foundAuthor.name;
-      
-      // KURAL: Sadece "yazı" olanlar /yazi rotasına gider. Geri kalanlar /siir rotasında kalır.
-      let basePath = poem.label === "yazı" ? "yazi" : "siir";
-
-      authorEntries.push({
-        title: poem.title,
-        href: `/${basePath}/${poemSlug}`,
-        type: poem.label || "şiir"
-      });
-    }
-  });
-
-  if (!authorName) {
-    return <main style={{ background: "#f3f0e8", minHeight: "100vh", padding: "34px 36px" }}>yazar bulunamadı</main>;
-  }
+  const authorEntries = author.entries.map(([contentSlug, content]) => ({
+    title: content.title,
+    href: getContentHref(contentSlug, content),
+    type: content.label || "şiir",
+  }));
 
   return (
     <main style={{ background: "#f3f0e8", minHeight: "100vh", color: "#111111", fontFamily: "Georgia, serif" }}>
@@ -40,7 +54,7 @@ export default async function YazarPage({
       <section style={{ padding: "30px 36px 110px 36px" }}>
         <div style={{ borderTop: "1px solid rgba(17,17,17,0.12)", paddingTop: "18px", marginBottom: "30px" }}>
           <h1 style={{ margin: 0, fontSize: "84px", lineHeight: 0.94, fontWeight: 600, letterSpacing: "-0.05em", color: "#c32721" }}>
-            {authorName}
+            {author.name}
           </h1>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "54px" }}>

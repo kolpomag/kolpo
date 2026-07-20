@@ -2,7 +2,10 @@
 
 import { useMemo, useState } from "react";
 import SiteHeader from "@/components/SiteHeader";
-import { poems } from "@/data/content";
+import {
+  getContentHref,
+  getOrderedContentEntries,
+} from "@/data/content-index";
 
 type FilterType = "tümü" | "şiir" | "yazı" | "çeviri";
 
@@ -24,7 +27,7 @@ export default function ArsivPage() {
     transition: "color 0.18s ease",
   };
 
-  const entries: ArchiveEntry[] = Object.entries(poems).map(([slug, poem]) => {
+  const entries: ArchiveEntry[] = useMemo(() => getOrderedContentEntries().map(([slug, poem]) => {
     let type = poem.label || "şiir";
     let sourceAuthor;
 
@@ -35,17 +38,14 @@ export default function ArsivPage() {
       sourceAuthor = poem.authors.find(a => a.name !== "onur duman" && a.name !== "mahmut kıran")?.name;
     }
 
-    // KURAL: Sadece "yazı" olanlar /yazi rotasına gider. Geri kalanlar /siir rotasında kalır.
-    let basePath = poem.label === "yazı" ? "yazi" : "siir";
-
     return {
       title: poem.title,
-      href: `/${basePath}/${slug}`,
+      href: getContentHref(slug, poem),
       authors: poem.authors,
       type: type,
       sourceAuthor: sourceAuthor,
     };
-  });
+  }), []);
 
   const filteredEntries = useMemo(() => {
     if (activeFilter === "tümü") return entries;
@@ -54,7 +54,7 @@ export default function ArsivPage() {
         ? entry.type === "çeviri"
         : entry.type === activeFilter
     );
-  }, [activeFilter]);
+  }, [activeFilter, entries]);
 
   const filters: FilterType[] = ["tümü", "şiir", "yazı", "çeviri"];
 

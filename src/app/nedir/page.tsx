@@ -1,11 +1,7 @@
+import SiteHeader from "@/components/SiteHeader";
+
 export default function NedirPage() {
   const accent = "#c32721";
-
-  const navLinkStyle = {
-    textDecoration: "none",
-    color: "#f3f0e8",
-    transition: "color 0.18s ease",
-  };
 
   return (
     <main
@@ -17,70 +13,12 @@ export default function NedirPage() {
       }}
     >
       <style>{`
-        .nav-link:hover,
         .body-link:hover {
           color: ${accent} !important;
         }
       `}</style>
 
-      <header
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "flex-start",
-          padding: "34px 36px 18px 36px",
-        }}
-      >
-        <a href="/" style={{ display: "block" }}>
-          <img
-            src="/kolpo.png"
-            alt="kolpo."
-            style={{
-              width: "230px",
-              height: "auto",
-              display: "block",
-              filter: "brightness(0) invert(1)",
-            }}
-          />
-        </a>
-
-        <nav
-          style={{
-            display: "flex",
-            gap: "26px",
-            paddingTop: "8px",
-            fontFamily: "Arial, Helvetica, sans-serif",
-            fontSize: "18px",
-            fontWeight: 600,
-            letterSpacing: "-0.02em",
-          }}
-        >
-          <a
-            href="/"
-            className="nav-link"
-            style={{ ...navLinkStyle, opacity: 0.78 }}
-          >
-            ana sayfa
-          </a>
-          <a
-            href="/arsiv"
-            className="nav-link"
-            style={{ ...navLinkStyle, opacity: 0.78 }}
-          >
-            arşiv
-          </a>
-          <a href="/nedir" className="nav-link" style={navLinkStyle}>
-            nedir
-          </a>
-          <a
-            href="/iletisim"
-            className="nav-link"
-            style={{ ...navLinkStyle, opacity: 0.78 }}
-          >
-            iletişim
-          </a>
-        </nav>
-      </header>
+      <SiteHeader theme="dark" />
 
       <section
         style={{
@@ -159,6 +97,8 @@ export default function NedirPage() {
           </div>
 
           <div style={{ paddingTop: "0" }}>
+            {/* Bu gravürü tarayıcıda özgün dosyasından, işlenmeden gösteriyoruz. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/fludd.jpeg"
               alt="Robert Fludd, The Nothingness That Was Prior to the Universe (1617)"
