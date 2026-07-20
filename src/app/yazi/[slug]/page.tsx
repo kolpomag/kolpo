@@ -19,7 +19,7 @@ function getRandomContent(currentSlug: string, count: number = 5) {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const text = poems[slug];
-  const seoDescription = "kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir düğüm. manuel bir devre, çağdaş yazın alanı.";
+  const seoDescription = "kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir çağdaş yazın alanı.";
   
   if (!text || text.label !== "yazı") notFound();
 

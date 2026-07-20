@@ -26,7 +26,7 @@ export async function generateMetadata({
 
   if (!poem || poem.label === "yazı") notFound();
 
-  const seoDesc = "kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir düğüm. manuel bir devre, çağdaş yazın alanı.";
+  const seoDesc = "kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir çağdaş yazın alanı.";
   const canonical = getContentHref(slug, poem);
   const visualImage = poem.body.find((block) => block.kind === "visual-poem");
   const socialImage = poem.image?.src ?? visualImage?.src ?? "/og-image.jpg";
