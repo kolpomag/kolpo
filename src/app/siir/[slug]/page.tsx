@@ -862,7 +862,7 @@ export default async function SiirPage({
                 <div
                   key={index}
                   style={{
-                    margin: 0,
+                    margin: block.pageBreakBefore ? "120px 0 0" : 0,
                     fontStyle: block.italic ? "italic" : "normal",
                     fontWeight: block.bold ? 700 : 400,
                   }}

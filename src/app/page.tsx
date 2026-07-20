@@ -25,7 +25,7 @@ const entries: HomeEntry[] = [
     multiline: false,
   },
   {
-    title: "lüks bir ihtiyaçtır (kropotkin)",
+    title: "“LÜKS BİR İHTİYAÇTIR (KROPOTKİN)”",
     href: "/siir/luks-bir-ihtiyactir-kropotkin",
     author: "şevket kağan şimşekalp",
     authorHref: "/yazar/sevket-kagan-simsekalp",

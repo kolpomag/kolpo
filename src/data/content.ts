@@ -1,5 +1,11 @@
 export type PoemBodyBlock =
-  | { kind: "stanza"; text: string; italic?: boolean; bold?: boolean }
+  | {
+      kind: "stanza";
+      text: string;
+      italic?: boolean;
+      bold?: boolean;
+      pageBreakBefore?: boolean;
+    }
   | { kind: "stanza-last-line-italic"; text: string; lastLine: string }
   | { kind: "stanza-html"; htmlLines: string[] }
   | {
@@ -54,7 +60,7 @@ export const poems: Record<string, Poem> = {
     ],
   },
   "luks-bir-ihtiyactir-kropotkin": {
-    title: "lüks bir ihtiyaçtır (kropotkin)",
+    title: "“LÜKS BİR İHTİYAÇTIR (KROPOTKİN)”",
     label: "şiir",
     authors: [
       {
@@ -69,7 +75,8 @@ export const poems: Record<string, Poem> = {
       },
       {
         kind: "stanza",
-        text: "aşka sokulmayan\ndile sokiyim",
+        text: "aşka sokulmayan\ndile sokiym",
+        pageBreakBefore: true,
       },
     ],
   },
