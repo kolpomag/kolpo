@@ -5,6 +5,9 @@ export const SITE_URL = "https://kolpomag.com";
 // Ana sayfadaki editoryal sirayi sitenin diger listelerinde de korur.
 // Yeni ve henuz bu listeye eklenmemis icerikler otomatik olarak basa gelir.
 export const CONTENT_ORDER = [
+  "dus",
+  "luks-bir-ihtiyactir-kropotkin",
+  "diyagram",
   "unstable-signs-lot-49",
   "landscape-ii-zehra-erkoc",
   "landscape-zehra-erkoc",

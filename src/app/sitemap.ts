@@ -16,14 +16,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/iletisim`, changeFrequency: "yearly", priority: 0.3 },
   ];
   const contentPages: MetadataRoute.Sitemap = getOrderedContentEntries().map(
-    ([slug, content]) => ({
-      url: new URL(getContentHref(slug, content), SITE_URL).toString(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-      images: content.image
-        ? [new URL(content.image.src, SITE_URL).toString()]
-        : undefined,
-    })
+    ([slug, content]) => {
+      const images = [
+        ...(content.image ? [content.image.src] : []),
+        ...content.body.flatMap((block) =>
+          block.kind === "visual-poem" ? [block.src] : []
+        ),
+      ].map((src) => new URL(src, SITE_URL).toString());
+
+      return {
+        url: new URL(getContentHref(slug, content), SITE_URL).toString(),
+        changeFrequency: "monthly",
+        priority: 0.7,
+        images: images.length > 0 ? images : undefined,
+      };
+    }
   );
   const authorPages: MetadataRoute.Sitemap = getAuthors().map((author) => ({
     url: new URL(author.href, SITE_URL).toString(),

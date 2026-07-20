@@ -16,6 +16,33 @@ type HomeEntry = {
 
 const entries: HomeEntry[] = [
   {
+    title: "Düş",
+    href: "/siir/dus",
+    author: "zehra erkoç",
+    authorHref: "/yazar/zehra-erkoc",
+    type: "şiir",
+    className: "entry entry-b",
+    multiline: false,
+  },
+  {
+    title: "lüks bir ihtiyaçtır (kropotkin)",
+    href: "/siir/luks-bir-ihtiyactir-kropotkin",
+    author: "şevket kağan şimşekalp",
+    authorHref: "/yazar/sevket-kagan-simsekalp",
+    type: "şiir",
+    className: "entry entry-a",
+    multiline: false,
+  },
+  {
+    title: "diyagram",
+    href: "/siir/diyagram",
+    author: "şevket kağan şimşekalp",
+    authorHref: "/yazar/sevket-kagan-simsekalp",
+    type: "şiir",
+    className: "entry entry-b",
+    multiline: false,
+  },
+  {
     title: "Unstable Signs in The Crying of Lot 49",
     href: "/yazi/unstable-signs-lot-49",
     author: "mahmut kıran",

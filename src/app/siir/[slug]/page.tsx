@@ -28,6 +28,8 @@ export async function generateMetadata({
 
   const seoDesc = "kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir düğüm. manuel bir devre, çağdaş yazın alanı.";
   const canonical = getContentHref(slug, poem);
+  const visualImage = poem.body.find((block) => block.kind === "visual-poem");
+  const socialImage = poem.image?.src ?? visualImage?.src ?? "/og-image.jpg";
 
   return {
     title: poem.title,
@@ -37,13 +39,13 @@ export async function generateMetadata({
       title: `${poem.title} — kolpo.`,
       description: seoDesc,
       url: new URL(canonical, SITE_URL),
-      images: ["/og-image.jpg"],
+      images: [socialImage],
     },
     twitter: {
       card: "summary_large_image",
       title: `${poem.title} — kolpo.`,
       description: seoDesc,
-      images: ["/og-image.jpg"],
+      images: [socialImage],
     },
   };
 }
@@ -228,7 +230,7 @@ export default async function SiirPage({
         }
 
         .visual-poem {
-          width: min(100%, 467px);
+          width: 100%;
           height: auto;
           display: block;
           margin: 10px auto;
@@ -824,6 +826,7 @@ export default async function SiirPage({
                     width={block.width}
                     height={block.height}
                     className="visual-poem"
+                    style={{ maxWidth: `${block.maxWidth ?? block.width}px` }}
                   />
                 );
               }

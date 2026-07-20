@@ -2,7 +2,14 @@ export type PoemBodyBlock =
   | { kind: "stanza"; text: string; italic?: boolean; bold?: boolean }
   | { kind: "stanza-last-line-italic"; text: string; lastLine: string }
   | { kind: "stanza-html"; htmlLines: string[] }
-  | { kind: "visual-poem"; src: string; alt: string; width: number; height: number }
+  | {
+      kind: "visual-poem";
+      src: string;
+      alt: string;
+      width: number;
+      height: number;
+      maxWidth?: number;
+    }
   | { kind: "separator" }
   | { kind: "special-24101990" }
   | { kind: "special-buffalo-bill" }
@@ -27,6 +34,65 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "dus": {
+    title: "Düş",
+    label: "şiir",
+    authors: [{ name: "zehra erkoç", href: "/yazar/zehra-erkoc" }],
+    body: [
+      {
+        kind: "stanza",
+        text: "ayağı takıldı kuyuyu duymuştu merkeze doğru yolculuklardan bu biridir kazma kürekle ya da düşenlerin bedeni yavaş yavaş ısınır",
+      },
+      { kind: "stanza", text: "yere çakıldığımız değil." },
+      { kind: "stanza", text: "zamanla yerçekimsizleştiğimiz" },
+      { kind: "stanza", text: "böylece" },
+      {
+        kind: "stanza",
+        text: "devam devam devam devam ediyor.",
+        italic: true,
+      },
+    ],
+  },
+  "luks-bir-ihtiyactir-kropotkin": {
+    title: "lüks bir ihtiyaçtır (kropotkin)",
+    label: "şiir",
+    authors: [
+      {
+        name: "şevket kağan şimşekalp",
+        href: "/yazar/sevket-kagan-simsekalp",
+      },
+    ],
+    body: [
+      {
+        kind: "stanza",
+        text: "dezenformatif zaman hırsızları\ngeçmişi geleceğe doğru çalıyor\nnasıl man bites dog’u izleyip\nseri katil olmaya gerek yoksa\nyüreğinden geçen iğrençlikleri\ngönül rahatlığıyla seyredebilme\nlüksün olmalı\nbaudlaire gibi bir ateist\nbunun için yakarmış tanrıya\nçeşitliliğin ve çok katmanlılığın dip sesleri\ntek bir konuda uzmanlaşmanın dip sesinden\ndaha derinden gel-ince\nrahatsız edici gerçeklik\nve gündelik dilini\nbırakıyorsa yanına\nhem sevgiyle hem de alaycı bir mesafeyle\nsok şiirlerine\nmuhabbet derinleştikçe\nyapay zeka dilime yaklaşıyor\nona şiirin kendi dilinde söylüyorum\nçocukla çocuksu\narasındaki farka",
+      },
+      {
+        kind: "stanza",
+        text: "aşka sokulmayan\ndile sokiyim",
+      },
+    ],
+  },
+  "diyagram": {
+    title: "diyagram",
+    label: "şiir",
+    authors: [
+      {
+        name: "şevket kağan şimşekalp",
+        href: "/yazar/sevket-kagan-simsekalp",
+      },
+    ],
+    body: [
+      {
+        kind: "visual-poem",
+        src: "/images/sevket-kagan-simsekalp-diyagram.png",
+        alt: "Şevket Kağan Şimşekalp — diyagram",
+        width: 1440,
+        height: 1800,
+        maxWidth: 760,
+      },
+    ],
+  },
   "celik": {
     title: "çelik",
     label: "şiir",
