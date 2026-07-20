@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteHeader from "@/components/SiteHeader";
+import TrackedRecommendationLink from "@/components/TrackedRecommendationLink";
 import { poems } from "@/data/content";
 import { getContentHref, SITE_URL } from "@/data/content-index";
 
@@ -52,6 +53,7 @@ export default async function YaziPage({
   if (!text || text.label !== "yazı") notFound();
 
   const randomMore = getRandomContent(slug);
+  const currentPath = getContentHref(slug, text);
 
   return (
     <main style={{ background: "#f3f0e8", minHeight: "100vh", color: "#111111", fontFamily: "Georgia, Times New Roman, serif" }}>
@@ -132,10 +134,18 @@ export default async function YaziPage({
               <h2 style={{ margin: "0 0 22px 0", fontSize: "22px", fontFamily: "Arial, Helvetica, sans-serif", fontWeight: 600, letterSpacing: "-0.02em", color: "#c32721" }}>daha fazlası</h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "22px" }}>
                 {randomMore.map((item) => (
-                  <a key={item.href} href={item.href} className="more-link" style={{ color: "#111111", textDecoration: "none", transition: "color 0.18s ease", display: "flex", flexDirection: "column", gap: "6px" }}>
+                  <TrackedRecommendationLink
+                    key={item.href}
+                    href={item.href}
+                    sourcePath={currentPath}
+                    sourceTitle={text.title}
+                    destinationTitle={item.title}
+                    className="more-link"
+                    style={{ color: "#111111", textDecoration: "none", transition: "color 0.18s ease", display: "flex", flexDirection: "column", gap: "6px" }}
+                  >
                     <span style={{ fontSize: "30px", lineHeight: 1.04, letterSpacing: "-0.04em" }}>{item.title}</span>
                     <span className="poem-more-author" style={{ fontFamily: "Arial, Helvetica, sans-serif", fontSize: "16px", color: "#6f6b63", letterSpacing: "-0.01em", transition: "color 0.18s ease" }}>{item.author}</span>
-                  </a>
+                  </TrackedRecommendationLink>
                 ))}
               </div>
             </div>

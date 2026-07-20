@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import SiteHeader from "@/components/SiteHeader";
+import TrackedRecommendationLink from "@/components/TrackedRecommendationLink";
 import { poems } from "@/data/content";
 import { getContentHref, SITE_URL } from "@/data/content-index";
 
@@ -69,6 +70,7 @@ export default async function SiirPage({
   if (!poem || poem.label === "yazı") notFound();
 
   const randomMore = getRandomContent(slug);
+  const currentPath = getContentHref(slug, poem);
 
   return (
     <main
@@ -883,14 +885,17 @@ export default async function SiirPage({
 
               <div className="poem-more-list">
                 {randomMore.map((item) => (
-                  <a
+                  <TrackedRecommendationLink
                     key={item.href}
                     href={item.href}
+                    sourcePath={currentPath}
+                    sourceTitle={poem.title}
+                    destinationTitle={item.title}
                     className="more-link poem-more-link"
                   >
                     <span>{item.title}</span>
                     <span className="poem-more-author">{item.author}</span>
-                  </a>
+                  </TrackedRecommendationLink>
                 ))}
               </div>
             </div>
