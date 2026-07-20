@@ -4,7 +4,6 @@ export type PoemBodyBlock =
       text: string;
       italic?: boolean;
       bold?: boolean;
-      pageBreakBefore?: boolean;
     }
   | { kind: "stanza-last-line-italic"; text: string; lastLine: string }
   | { kind: "stanza-html"; htmlLines: string[] }
@@ -71,12 +70,7 @@ export const poems: Record<string, Poem> = {
     body: [
       {
         kind: "stanza",
-        text: "dezenformatif zaman hırsızları\ngeçmişi geleceğe doğru çalıyor\nnasıl man bites dog’u izleyip\nseri katil olmaya gerek yoksa\nyüreğinden geçen iğrençlikleri\ngönül rahatlığıyla seyredebilme\nlüksün olmalı\nbaudlaire gibi bir ateist\nbunun için yakarmış tanrıya\nçeşitliliğin ve çok katmanlılığın dip sesleri\ntek bir konuda uzmanlaşmanın dip sesinden\ndaha derinden gel-ince\nrahatsız edici gerçeklik\nve gündelik dilini\nbırakıyorsa yanına\nhem sevgiyle hem de alaycı bir mesafeyle\nsok şiirlerine\nmuhabbet derinleştikçe\nyapay zeka dilime yaklaşıyor\nona şiirin kendi dilinde söylüyorum\nçocukla çocuksu\narasındaki farka",
-      },
-      {
-        kind: "stanza",
-        text: "aşka sokulmayan\ndile sokiym",
-        pageBreakBefore: true,
+        text: "dezenformatif zaman hırsızları\ngeçmişi geleceğe doğru çalıyor\nnasıl man bites dog’u izleyip\nseri katil olmaya gerek yoksa\nyüreğinden geçen iğrençlikleri\ngönül rahatlığıyla seyredebilme\nlüksün olmalı\nbaudlaire gibi bir ateist\nbunun için yakarmış tanrıya\nçeşitliliğin ve çok katmanlılığın dip sesleri\ntek bir konuda uzmanlaşmanın dip sesinden\ndaha derinden gel-ince\nrahatsız edici gerçeklik\nve gündelik dilini\nbırakıyorsa yanına\nhem sevgiyle hem de alaycı bir mesafeyle\nsok şiirlerine\nmuhabbet derinleştikçe\nyapay zeka dilime yaklaşıyor\nona şiirin kendi dilinde söylüyorum\nçocukla çocuksu\narasındaki farka\naşka sokulmayan\ndile sokiym",
       },
     ],
   },
