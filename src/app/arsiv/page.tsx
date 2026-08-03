@@ -1,5 +1,7 @@
 "use client";
 
+import { sendGAEvent } from "@next/third-parties/google";
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import SiteHeader from "@/components/SiteHeader";
 import {
@@ -72,7 +74,12 @@ export default function ArsivPage() {
             return (
               <button
                 key={filter}
-                onClick={() => setActiveFilter(filter)}
+                onClick={() => {
+                  setActiveFilter(filter);
+                  sendGAEvent("event", "archive_filter", {
+                    archive_filter: filter,
+                  });
+                }}
                 className="filter-button"
                 style={{ background: "transparent", border: "none", padding: 0, cursor: "pointer", font: "inherit", color: isActive ? "#c32721" : "#111111", opacity: isActive ? 1 : 0.72, transition: "color 0.18s ease, opacity 0.18s ease" }}
               >
@@ -85,7 +92,22 @@ export default function ArsivPage() {
           {filteredEntries.map((entry, index) => (
             <article key={entry.href} style={{ maxWidth: index % 2 === 0 ? "980px" : "760px", marginLeft: index % 2 === 0 ? "0" : "110px" }}>
               <h2 style={{ margin: 0, fontSize: "78px", lineHeight: 0.94, fontWeight: 600, letterSpacing: "-0.05em" }}>
-                <a href={entry.href} className="title-link" style={linkStyle}>{entry.title}</a>
+                <Link
+                  href={entry.href}
+                  className="title-link"
+                  style={linkStyle}
+                  onClick={() =>
+                    sendGAEvent("event", "archive_click", {
+                      source_path: "/arsiv",
+                      destination_path: entry.href,
+                      destination_title: entry.title,
+                      content_category: entry.type,
+                      archive_filter: activeFilter,
+                    })
+                  }
+                >
+                  {entry.title}
+                </Link>
               </h2>
               <p style={{ marginTop: "14px", marginBottom: 0, fontSize: "20px", lineHeight: 1.15, fontFamily: "Arial, Helvetica, sans-serif", letterSpacing: "-0.02em" }}>
                 {entry.authors.map((author, authorIndex) => (

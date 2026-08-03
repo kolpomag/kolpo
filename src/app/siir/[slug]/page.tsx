@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import SiteHeader from "@/components/SiteHeader";
+import TrackedAuthorLink from "@/components/TrackedAuthorLink";
 import TrackedRecommendationLink from "@/components/TrackedRecommendationLink";
 import { poems } from "@/data/content";
 import { getContentHref, SITE_URL } from "@/data/content-index";
@@ -638,9 +639,16 @@ export default async function SiirPage({
           <p className="poem-meta">
             {poem.authors.map((author, index) => (
               <span key={author.href}>
-                <a href={author.href} className="author-link" style={linkStyle}>
+                <TrackedAuthorLink
+                  href={author.href}
+                  sourcePath={currentPath}
+                  sourceTitle={poem.title}
+                  authorName={author.name}
+                  className="author-link"
+                  style={linkStyle}
+                >
                   {author.name}
-                </a>
+                </TrackedAuthorLink>
                 {index < poem.authors.length - 1 ? (
                   <span style={{ color: "#6f6b63" }}> & </span>
                 ) : null}

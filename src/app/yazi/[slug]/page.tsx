@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteHeader from "@/components/SiteHeader";
+import TrackedAuthorLink from "@/components/TrackedAuthorLink";
 import TrackedRecommendationLink from "@/components/TrackedRecommendationLink";
 import { poems } from "@/data/content";
 import { getContentHref, SITE_URL } from "@/data/content-index";
@@ -121,7 +122,16 @@ export default async function YaziPage({
           <p style={{ marginTop: "16px", marginBottom: 0, fontSize: "20px", lineHeight: 1.15, fontFamily: "Arial, Helvetica, sans-serif", letterSpacing: "-0.02em" }}>
             {text.authors.map((author, index) => (
               <span key={author.href}>
-                <a href={author.href} className="author-link" style={linkStyle}>{author.name}</a>
+                <TrackedAuthorLink
+                  href={author.href}
+                  sourcePath={currentPath}
+                  sourceTitle={text.title}
+                  authorName={author.name}
+                  className="author-link"
+                  style={linkStyle}
+                >
+                  {author.name}
+                </TrackedAuthorLink>
                 {index < text.authors.length - 1 ? <span style={{ color: "#6f6b63" }}> & </span> : null}
               </span>
             ))}

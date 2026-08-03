@@ -39,6 +39,55 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "kulaklar-ve-kutsal": {
+    title: "KULAKLAR VE KUTSAL",
+    label: "şiir",
+    authors: [{ name: "esra kuş", href: "/yazar/esra-kus" }],
+    body: [
+      {
+        kind: "stanza",
+        text: "heyecanlı bir günün saçlarında dolaşmasını ellerinle ileri seviye,hırpanı\nkarıştırıyorsun\nbunlar benim firuze zamanlarım,\nbunlar benim ellerimle kopardığım saçlarım,\nkaç tarafı denizlerle çevrili bu ülkemde,hatta bu sapakta\nsanıyorum ki daha önce tanışmadık,\ndaha önce tanışılmamış kokuyorsun",
+      },
+      {
+        kind: "stanza-html",
+        htmlLines: [
+          "tanıştığın kadının saçlarını geceyi bölmeden karıştırıyorsun",
+          "biraz size,<span style=\"display:inline-block;width:clamp(72px,18vw,260px);\"></span>uzağım biraz kendime bile",
+          "kadına,kadınlığına",
+          "içimden hiç yakın olmadım sana,",
+          "sesini birleştirmek için uzanıyorum,",
+          "zeus”a,kutsala,adaya yağan yağmura yakınım",
+        ],
+      },
+      {
+        kind: "stanza-html",
+        htmlLines: [
+          "onlar bilseydi annen ödünç,baban öcü",
+          "ben sana<span style=\"display:inline-block;width:32px;\"></span>uzanmazdım hiç",
+        ],
+      },
+      {
+        kind: "stanza",
+        text: "yine sapaktan sapmadan,\nbir valeyi çevirmeden -üzgünüm hiç bale bile yapmadan-\nbiraz rı ze sin şın\nbiraz sana karışıyorum,\nsana yaklaşarak uzaklaşıyorum,",
+      },
+      {
+        kind: "stanza",
+        text: "açımın açısına yaklaşıyorsun\nyakışmakla hiç ilgisi yok bunun\nbir duyguyu arşivlemenin,hüznüne sakız çiçeği ekiyorsun - kadınına-\nkadına bulaşıyor,kadına karışıyor,kadına ulaşamıyorsun\nkadına hiç yakışmıyorsun",
+      },
+      {
+        kind: "stanza",
+        text: "bitmez ülkemde sürüsüne bereket çorba oluyor\nkadın içiyor çorbayı,kadın çorba oluyor\nkadın sabaha kadar kadın olarak kalmıyor\nkadının çorbasını,\nkadının aklını karıştırıyorsun",
+      },
+      {
+        kind: "stanza",
+        text: "-kadınının kanında boğulacaksın,nasıl haberin olmaz-",
+      },
+      {
+        kind: "stanza",
+        text: "heyecanlı bir günün saçlarında dolaşmasından haberin yok\nbenden haberinin olmadığı kaçıncı hırpani kulak bu",
+      },
+    ],
+  },
   "dus": {
     title: "Düş",
     label: "şiir",
