@@ -39,6 +39,119 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "zauberkoenig": {
+  title: "zauberkönig",
+  label: "şiir",
+  authors: [
+    {
+      name: "onur duman",
+      href: "/yazar/onur-duman",
+    },
+  ],
+  body: [
+   {
+  kind: "stanza",
+  text:
+    "iki kallavi matematikçi bir garson eder\n" +
+    "ben taş çatlasın üçüncü sınıf bir şair\n" +
+    "arkaya çekmelik bir filmim\n" +
+    "ama hiç yoksa bir şeyleri\n" +
+    "başka bir şeylere yakıştırmayı bilirim",
+},
+{
+  kind: "stanza",
+  text:
+    "ulan batur’dan aldığım gözlüğüm\n" +
+    "senin aşkınla güzel match",
+  italic: true,
+},
+{
+  kind: "stanza",
+  text:
+    "isim sıralarını saklı tuttuğum\n" +
+    "emrimde yüz binlerce atlım var",
+},
+    {
+      kind: "stanza",
+      text:
+        "erikleri soydum ve iyice sakladım\n" +
+        "acı yağlar süründüm\n" +
+        "düşündüm ki gizim giz olarak kalmalı\n" +
+        "fevkalade bir günü üçe bölmeyi bilerek\n" +
+        "ve hesabı iyi tutulmuş bir alışveriş gibi\n" +
+        "alacağın vakit hücum etmeli hayata\n" +
+        "belki icra memuru demek isterim adına\n" +
+        "veya kucaklarım dolusu manolya\n" +
+        "bu pişmanlığı hiçbir şey gidermez\n" +
+        "di mi opel?",
+    },
+  ],
+},
+  "dirsek-temasi": {
+  title: "dirsek teması",
+  label: "şiir",
+  authors: [
+    {
+      name: "ece zeynep unutur",
+      href: "/yazar/ece-zeynep-unutur",
+    },
+  ],
+  body: [
+    {
+      kind: "stanza",
+      text: "tuzlu suyun ıslattığı kollar daha iyi sarılır\ndalgaların kuvvetiyle sarsılan baldırlar\nvücudu taşımaktan sorumlu olduklarını hatırlar\nve aşk da\naynı merak ve çocuk neşesi kumlu toprakları sever\nkolaydır zira irili ufaklı kaleler inşa etmesi\nçamur banyosu kaostan bıkmış ruhun çeperlerini temizler\nyayılır, sıvar da sıvar\nruhun ılık ve sararmış yerlerini mesken edinmiş kargaşaya\nne tutuşabileceği oksijen kalır, ne tutunabileceği yer",
+    },
+    {
+      kind: "stanza",
+      text: "ama iyisi mi biz kuvvetle saran kolları\nkuma batmış saffı sık dört ayağı\niri bedenleri on yıllarca taşımış güçlü baldırları düşünelim, aldırmayalım\nkaosun rengiyle boyanmış ruhların akıbetine\nboğ çamura, kumla kapa üstünü\nplastik kum oyuncakları aldım, bak\niçlerinden en irisi surları dev bir kale – sapsarı\nyan yana iki tane koysak\nkapatır yumuşak karnımızı",
+    },
+  ],
+},
+"untitled": {
+  title: "untitled",
+  label: "şiir",
+  authors: [
+    {
+      name: "ada olimpos tatoğlu",
+      href: "/yazar/ada-olimpos-tatoglu",
+    },
+  ],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "sonsuz cihan sonsuz varolum\n" +
+        "bir buçuklar, üçler sayıyorum\n" +
+        "yüzlük sedatiflerin yüzü var mı\n" +
+        "dese o mumu ben yakmadım\n" +
+        "tanrım bir kere beni göklere ersen\n" +
+        "düşlerde düşen uçaklarda\n" +
+        "afyon kokan barlarda\n" +
+        "ama eriyor\n" +
+        "ay gibi yüzlerde\n" +
+        "bir kere beni göklerde eylesen\n" +
+        "mermerime bunu yazarlar\n" +
+        "sonsuz varolmuş\n" +
+        "ne kaçırdım neyi duymadım",
+    },
+    {
+      kind: "stanza",
+      text:
+        "fallik bir çıkış\n" +
+        "bu sonuncu tamam yeter\n" +
+        "canın yanmamalı\n" +
+        "çünkü ben bu caddede yürüyorsam\n" +
+        "bu merdivenleri çıkıyorsam\n" +
+        "vecd ediyorsam ve sana\n" +
+        "secde ediyorsam\n" +
+        "daha ölmedim\n" +
+        "ama eriyor\n" +
+        "ki bir gün gelecek\n" +
+        "daha kalkmadığım\n" +
+        "ve yeşilde dolanmadığım",
+    },
+  ],
+},
   "kulaklar-ve-kutsal": {
     title: "KULAKLAR VE KUTSAL",
     label: "şiir",
