@@ -39,6 +39,91 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "vukuata-devam": {
+  title: "VUKUATA DEVAM",
+  label: "şiir",
+  authors: [
+    {
+      name: "şevket kağan şimşekalp",
+      href: "/yazar/sevket-kagan-simsekalp",
+    },
+  ],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "gırtlak sıkan bir kitapla ilişkilendiğimde\n" +
+        "zaman çizelgesi değil\n" +
+        "bıraktığı tortu\n" +
+        "içime sinen müzikal hava\n" +
+        "yürüyen seretonine dönüşüp\n" +
+        "artık kendimi\n" +
+        "anarşist değilim diye kandırmamam önemli\n" +
+        "vukuata devam etmek\n" +
+        "tercihlerimle oranlı bir ayrıcalık\n" +
+        "neden o zaman tanışmamışız\n" +
+        "artık bio müzik marmarada müsilaj\n" +
+        "kayaların üstünde\n" +
+        "şimdi ne yapacağız diye uzaklara\n" +
+        "uzun uzun bakan martılar yeni\n" +
+        "penaltıyı kaçırdığın için\n" +
+        "kanalizasyonda saklanmana gerek yok\n" +
+        "kusurlarından ötürü\n" +
+        "insanları aslanlara atmıyorum\n" +
+        "onunla ilişki diğeriyle seks öbürüyle esriyip\n" +
+        "ağrısız hayat nedir\n" +
+        "bir kez daha bilmiyorum\n" +
+        "acı nedir ki\n" +
+        "çınarın tepesine çıkıp atlamak?\n" +
+        "dış uzaydaki yegane canlı?\n" +
+        "kimse o kadar yalnız değil\n" +
+        "hiçbir tanrı\n" +
+        "gökyüzü babası değil\n" +
+        "ideoloğun biri dedi diye\n" +
+        "geçmişin güçlerini\n" +
+        "göz ardı edecek değilim\n" +
+        "ekarte edilecek kadın mıyım\n" +
+        "cinsel beklenti içinde\n" +
+        "kadınların derdini dinleyen aseksüel tip miyim\n" +
+        "köpeğim bacağımı düdüklerken\n" +
+        "ahlakçılık uyguladım mı\n" +
+        "refah payı olmadan\n" +
+        "emeklilik ölümü beklemektir\n" +
+        "genelin görgüsüzlüğünü bilerek savunmak\n" +
+        "görgüsüzlük değil\n" +
+        "başkaları için hayatından feragat\n" +
+        "tolstoya göre\n" +
+        "stirnere göre değil\n" +
+        "graeber anarşi ideolojilerin çeşitliliğinin ideolojisidir derken\n" +
+        "anarşinin tarihsel bir gelişimi var\n" +
+        "on altı yaşındaki pank neyse hala oyum\n" +
+        "sanatımı kavmimin yaptığı\n" +
+        "hiçbir şeyi beğenmemek üzerine kurdum\n" +
+        "yanlış yere iskele yanaştırdın\n" +
+        "işaret fişekleri yüzünden kuşlar kaçtı\n" +
+        "kamyonlar noel pazarına daldı\n" +
+        "çocuk birey patlayan balonuna ağlıyor\n" +
+        "her kardan adam kar sanatı değil ki\n" +
+        "erirken dalgaların süpürdüğü\n" +
+        "kuma yazılan şiirler gibi\n" +
+        "suda\n" +
+        "son balıklarla\n" +
+        "aşkı tersten düşünüp\n" +
+        "ölümü atlatacak kadar zeki\n" +
+        "gelgelelim bütün savaşlar\n" +
+        "doğaya hükmedenlerle uyum içinde olanlar arasında\n" +
+        "var olmak için birbirine ihtiyacı olsa da\n" +
+        "sudan geldik suya mı döneceğiz\n" +
+        "sardunyalar kumsalında\n" +
+        "söyleyiş sağlamlığı ifade güzelliği\n" +
+        "senin yüzünden akar\n" +
+        "market hurması gibi\n" +
+        "hem buruk hem sulu\n" +
+        "bir daha gel\n" +
+        "her zaman beklerim",
+    },
+  ],
+},
   "last-day-of-good-days": {
   title: "last day of good days",
   label: "şiir",
