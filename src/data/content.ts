@@ -39,6 +39,57 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "neredesin-lethe-sulari": {
+  title: "Neredesin Lethe Suları",
+  label: "şiir",
+  authors: [
+    {
+      name: "zehra erkoç",
+      href: "/yazar/zehra-erkoc",
+    },
+  ],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "unutulmaya sekiz gün verdim\n" +
+        "lambaları söndürüyorlar\n" +
+        "kelimelerin arasına koyardım\n" +
+        "bulunacakları bulamasınlar diye\n" +
+        "seni kumruların ve dağ kavaklarının\n" +
+        "arkasına",
+    },
+    {
+      kind: "stanza",
+      text:
+        "saklıyor ve saklanıyorlar\n" +
+        "taşların altında pagan rüyalar\n" +
+        "hepsi yandı yanacak\n" +
+        "29. derece güneşimin\n" +
+        "altında",
+    },
+    {
+      kind: "stanza",
+      text:
+        "burada oturuyorlar\n" +
+        "yokuşların son uçlarında\n" +
+        "tütün çiğneyip gülüyorlar\n" +
+        "dişlerinin arasını tükürüyorlar",
+    },
+    {
+      kind: "stanza",
+      text:
+        "çok üzgünsem buraya gelirim\n" +
+        "çok üzgünleri boynundan tutarlar\n" +
+        "çok üzgünleri çok kızarlar\n" +
+        "biraz kızarıp",
+    },
+    {
+      kind: "stanza",
+      text: "sonra uyuruz",
+    },
+  ],
+},
   "zauberkoenig": {
   title: "zauberkönig",
   label: "şiir",

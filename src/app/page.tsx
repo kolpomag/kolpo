@@ -16,6 +16,15 @@ type HomeEntry = {
 
 const entries: HomeEntry[] = [
   {
+  title: "Neredesin Lethe Suları",
+  href: "/siir/neredesin-lethe-sulari",
+  author: "zehra erkoç",
+  authorHref: "/yazar/zehra-erkoc",
+  type: "şiir",
+  className: "entry entry-b",
+  multiline: true,
+},
+  {
   title: "zauberkönig",
   href: "/siir/zauberkoenig",
   author: "onur duman",
@@ -48,7 +57,7 @@ const entries: HomeEntry[] = [
     author: "esra kuş",
     authorHref: "/yazar/esra-kus",
     type: "şiir",
-    className: "entry entry-a",
+    className: "entry entry-b",
     multiline: false,
   },
   {
@@ -57,7 +66,7 @@ const entries: HomeEntry[] = [
     author: "zehra erkoç",
     authorHref: "/yazar/zehra-erkoc",
     type: "şiir",
-    className: "entry entry-b",
+    className: "entry entry-a",
     multiline: false,
   },
   {
@@ -66,7 +75,7 @@ const entries: HomeEntry[] = [
     author: "şevket kağan şimşekalp",
     authorHref: "/yazar/sevket-kagan-simsekalp",
     type: "şiir",
-    className: "entry entry-a",
+    className: "entry entry-b",
     multiline: false,
   },
   {
