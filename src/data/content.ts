@@ -39,6 +39,56 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "last-day-of-good-days": {
+  title: "last day of good days",
+  label: "şiir",
+  authors: [
+    {
+      name: "mahmut kıran",
+      href: "/yazar/mahmut-kiran",
+    },
+  ],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "oturuyoruz hava çok chill\n" +
+        "last day of good days",
+    },
+    {
+      kind: "stanza",
+      text:
+        "her yerime nüfuz etti\n" +
+        "temassızslowlife\n" +
+        "he hemen sonu gelir kağıdımın\n" +
+        "salak orospu çocuğu özcan\n" +
+        "15 temmuz son büyük destan!\n" +
+        "e zaten\n" +
+        "modernize yaşıyordu hayatı\n" +
+        "rolluprollro to the party",
+    },
+    {
+      kind: "stanza-html",
+      htmlLines: [
+        "dört birra ederi",
+        "buranın şurasında pisuvar sanki",
+        "<strong>letztes jahr in berlin, und</strong>",
+        "<em>zauberkönig hayaller alemi</em>",
+      ],
+    },
+    {
+      kind: "stanza",
+      text:
+        "oturuyoruz hava çok chill\n" +
+        "last day of good days",
+    },
+    {
+      kind: "stanza",
+      text: "dieser laden ist ein muss für alle",
+      italic: true,
+    },
+  ],
+},
   "neredesin-lethe-sulari": {
   title: "Neredesin Lethe Suları",
   label: "şiir",

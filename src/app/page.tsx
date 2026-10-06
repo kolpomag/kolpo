@@ -16,6 +16,15 @@ type HomeEntry = {
 
 const entries: HomeEntry[] = [
   {
+  title: "last day of good days",
+  href: "/siir/last-day-of-good-days",
+  author: "mahmut kıran",
+  authorHref: "/yazar/mahmut-kiran",
+  type: "şiir",
+  className: "entry entry-a",
+  multiline: true,
+},
+  {
   title: "Neredesin Lethe Suları",
   href: "/siir/neredesin-lethe-sulari",
   author: "zehra erkoç",
