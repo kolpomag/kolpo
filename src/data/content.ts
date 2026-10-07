@@ -44,7 +44,7 @@ export const poems: Record<string, Poem> = {
   label: "görsel",
   authors: [
     {
-      name: "Ulaş Tomaç",
+      name: "ulaş tomaç",
       href: "/yazar/ulas-tomac",
     },
   ],
@@ -52,7 +52,7 @@ export const poems: Record<string, Poem> = {
     {
       kind: "visual-poem",
       src: "/images/george-w-bush-cheese-pizza.png",
-      alt: "George W Bush Reimagined as a Deconstructed Cheese Pizza — Ulaş Tomaç, 2026",
+      alt: "George W Bush Reimagined as a Deconstructed Cheese Pizza — ulaş tomaç, 2026",
       width: 3000,
       height: 3000,
       maxWidth: 900,
