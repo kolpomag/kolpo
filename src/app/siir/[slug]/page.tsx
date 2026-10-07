@@ -827,19 +827,30 @@ export default async function SiirPage({
                 );
               }
 
-              if (block.kind === "visual-poem") {
-                return (
-                  <Image
-                    key={index}
-                    src={block.src}
-                    alt={block.alt}
-                    width={block.width}
-                    height={block.height}
-                    className="visual-poem"
-                    style={{ maxWidth: `${block.maxWidth ?? block.width}px` }}
-                  />
-                );
-              }
+             if (block.kind === "visual-poem") {
+  return (
+    <div
+      key={index}
+      style={{
+        width: "100%",
+        maxWidth: `${block.maxWidth ?? block.width}px`,
+      }}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={block.src}
+        alt={block.alt}
+        width={block.width}
+        height={block.height}
+        style={{
+          display: "block",
+          width: "100%",
+          height: "auto",
+        }}
+      />
+    </div>
+  );
+}
 
               if (block.kind === "stanza-html") {
                 return (

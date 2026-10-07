@@ -15,6 +15,15 @@ type HomeEntry = {
 };
 
 const entries: HomeEntry[] = [
+  {
+  title: "George W. Bush Reimagined as a Deconstructed Cheese Pizza",
+  href: "/siir/george-w-bush-cheese-pizza",
+  author: "Ulaş Tomaç",
+  authorHref: "/yazar/ulas-tomac",
+  type: "görsel",
+  className: "entry entry-a",
+  multiline: true,
+},
   
   {
   title: "last day of good days",

@@ -39,6 +39,32 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "george-w-bush-cheese-pizza": {
+  title: "George W. Bush Reimagined as a Deconstructed Cheese Pizza",
+  label: "görsel",
+  authors: [
+    {
+      name: "Ulaş Tomaç",
+      href: "/yazar/ulas-tomac",
+    },
+  ],
+  body: [
+    {
+      kind: "visual-poem",
+      src: "/images/george-w-bush-cheese-pizza.png",
+      alt: "George W Bush Reimagined as a Deconstructed Cheese Pizza — Ulaş Tomaç, 2026",
+      width: 3000,
+      height: 3000,
+      maxWidth: 900,
+    },
+    {
+      kind: "stanza-html",
+      htmlLines: [
+        '<span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #6f6b63;">by Ulaş Tomaç, 2026</span>',
+      ],
+    },
+  ],
+},
   "vukuata-devam": {
   title: "VUKUATA DEVAM",
   label: "şiir",
