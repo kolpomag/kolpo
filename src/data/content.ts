@@ -39,6 +39,84 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "istanbul-avrupa-yakasi": {
+  title: "istanbul avrupa yakası",
+  label: "şiir",
+  authors: [
+    {
+      name: "kadir kılıç",
+      href: "/yazar/kadir-kilic",
+    },
+  ],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "istanbul avrupa yakası\n" +
+        "geçti ömrümün vakası",
+    },
+    {
+      kind: "stanza",
+      text:
+        "nefes aldım verdim sokağında\n" +
+        "aldım verdim hiç durmadım\n" +
+        "minibüslerin kapılarında\n" +
+        "istanbul hepimize biraz yer verdi\n" +
+        "sen hep yukarıyı aşağıyı işaret et\n" +
+        "yerinde duran öldü sayılır",
+    },
+    {
+      kind: "stanza",
+      text:
+        "istanbul avrupa yakası\n" +
+        "saydım günlerin parasını\n" +
+        "attım cebime beş liranın ömrü uzadı",
+    },
+    {
+      kind: "stanza",
+      text:
+        "istanbulda vakit nakittir\n" +
+        "demirkapı’da durup durup herkese az gelir\n" +
+        "bodrum katlarının bitmeyen arabeskiyle ölçülür\n" +
+        "konfeksiyonlar sokak müziğini böyle icra eder",
+    },
+    {
+      kind: "stanza",
+      text:
+        "duyguları olan bir geçimsizlik şiiri yazmak istersin ki bi şeyler azalsın\n" +
+        "garip, geçim sıkıntısında şiir buldu\n" +
+        "biz tersinde duruyoruz\n" +
+        "her kıtada kıtalararasında\n" +
+        "akılda kalanda kalıp takılanda\n" +
+        "göze gönle değsin içinde kalmasın",
+    },
+    {
+  kind: "stanza",
+  text: "garibin bulduğu şiir harbi garibin bulmadığı şiirden daha mı şiir",
+},
+{
+  kind: "stanza",
+  text:
+    "istanbul avrupa yakası\n" +
+    "kayıkların demirlediği kıyısı\n" +
+    "güzel kokular eşliğinde nişantaşı\n" +
+    "cıvıl cıvıl gaziosmanpaşa\n" +
+    "olası bir derdin hepimizin üstünde heyulası\n" +
+    "kafiye iyidir dedik dünyaya kapalı dünyası\n" +
+    "şiir lüks diyen şiiri lüks alır",
+},
+    {
+      kind: "stanza",
+      text:
+        "istanbul avrupa yakası\n" +
+        "boğazına dayalı tekme tokat yakası\n" +
+        "gitse bıraksa\n" +
+        "kaçsa koşsa\n" +
+        "bi yer bulsa\n" +
+        "huzuru köşeyi dönene kadardır",
+    },
+  ],
+},
   "pandemic-edition": {
   title: "pandemic edition",
   label: "şiir",
