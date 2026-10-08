@@ -16,6 +16,24 @@ type HomeEntry = {
 
 const entries: HomeEntry[] = [
   {
+  title: "pandemic edition",
+  href: "/siir/pandemic-edition",
+  author: "caner torun",
+  authorHref: "/yazar/caner-torun",
+  type: "şiir",
+  className: "entry entry-a",
+  multiline: false,
+},
+{
+  title: "penis",
+  href: "/siir/penis",
+  author: "uygar",
+  authorHref: "/yazar/uygar",
+  type: "şiir",
+  className: "entry entry-b",
+  multiline: false,
+},
+  {
   title: "George W. Bush Reimagined as a Deconstructed Cheese Pizza",
   href: "/siir/george-w-bush-cheese-pizza",
   author: "ulaş tomaç",

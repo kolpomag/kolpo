@@ -39,6 +39,115 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "pandemic-edition": {
+  title: "pandemic edition",
+  label: "şiir",
+  authors: [
+    {
+      name: "caner torun",
+      href: "/yazar/caner-torun",
+    },
+  ],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "Töngellerden apathy\n" +
+        "O bir ruhsuz muşmula\n" +
+        "Töngeller aile gibi her biri\n" +
+        "It’s like a small universe you know",
+    },
+    {
+      kind: "stanza",
+      text:
+        "Melankolisi affedilir gibi değildi\n" +
+        "O utanmazca muşmula olmak istedi\n" +
+        "İklim elvermeyebiliyor",
+    },
+    {
+      kind: "stanza",
+      text:
+        "Hamakta töngel\n" +
+        "Hırçın köpeğin postunda töngel\n" +
+        "Çogulda töngel tekilde töngeller\n" +
+        "Apaty mutsuz değil ama\n" +
+        "Töngeller her tarafında zırlıyor\n" +
+        "Nerde o eski muşmulalar",
+    },
+  ],
+},
+
+"penis": {
+  title: "penis",
+  label: "şiir",
+  authors: [
+    {
+      name: "uygar",
+      href: "/yazar/uygar",
+    },
+  ],
+  body: [
+    {
+      kind: "stanza-html",
+      htmlLines: [
+        "Sonu evde bitemeyen geceleri özledim",
+        "Biranın son yudumuna kadar kalıyor",
+        "İnsanı öğüreceği varsa öğürten",
+        "Yoksa üzen, ya da eve şimdi",
+        "“Bitti işte” diye “Artık sizden biri değilim”",
+        "Sokak seçim değil",
+        '<span style="white-space: pre-wrap; tab-size: 4;">\t\tSen küçüksün</span>',
+        "Biri kovalarsa yine de kaçman lazım ama",
+      ],
+    },
+    {
+      kind: "stanza-html",
+      htmlLines: [
+        "Evler bizim değildi, hala değil",
+        '<span style="white-space: pre-wrap; tab-size: 4;">\t\t\tBedavaydı ama</span>',
+        "Yan bakılan piçlerden biri",
+        "ya da yan bakan",
+        '<span style="white-space: pre-wrap; tab-size: 4;">\tBankta yatarsan annen kızar</span>',
+        "Hatta belki biraz ağlar",
+        '<span style="white-space: pre-wrap; tab-size: 4;">\tama Piç</span>',
+        "Kendi odana kusunca kimse kızmaz. Annen kızar da",
+        "Çok da değil, alışır zaten",
+        "Ama harbiden",
+        "Harbiden kafanı dinlemek istiyorsan",
+        "başkasının koltuğuna işemen lazım.",
+        "O zaman annen bile kızmaz.",
+        "Çünkü artık sen sikinle koltuğa işiyosun",
+        "Sikerlerse bi daha",
+      ],
+    },
+    {
+      kind: "stanza-html",
+      htmlLines: [
+        "Hem annen sike ya da sakala sahip değil",
+        '<span style="white-space: pre-wrap; tab-size: 4;">\t\tSikine kadar yani</span>',
+        "Siki olan da sana sokacak halde değil",
+        "Kime ne zaten senin sikinden",
+        '<span style="white-space: pre-wrap; tab-size: 4;">\tKoparırsın bi gün (sikin olmasına doyarsan)</span>',
+        "Kitlersin bi kutuya. Zaten illa geri taktırırlar",
+      ],
+    },
+    {
+      kind: "stanza",
+      text:
+        "Ama atarsan kutuyu kafan atıp uçurumdan\n" +
+        "Ve kendin atlamayabilirsen peşine özleminden\n" +
+        "O zaman diyebilirsin:\n" +
+        "“Anne, ben orospu oldum”\n" +
+        "Sonunda\n" +
+        "“Sikimi kopardım, artık sadece götten yiyorum”\n" +
+        "“Ben de ağlayabilir miyim artık?”",
+    },
+    {
+      kind: "stanza",
+      text: "Oley",
+    },
+  ],
+},
   "george-w-bush-cheese-pizza": {
   title: "George W. Bush Reimagined as a Deconstructed Cheese Pizza",
   label: "görsel",
