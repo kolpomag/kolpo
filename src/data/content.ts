@@ -39,6 +39,46 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "artik-hissetmiyorum-eskisi-gibi": {
+  title: "artık hissetmiyorum eskisi gibi",
+  label: "şiir",
+  authors: [
+    {
+      name: "mahmut kıran",
+      href: "/yazar/mahmut-kiran",
+    },
+  ],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "yazmak ortaya yazının çıktığı bir üretimdir\n" +
+        "okumak cinsel bir eylem\n" +
+        "yazmak yazmaktır\n" +
+        "okumak da bir yazmaktır\n" +
+        "yani aslında y fazladır,\n" +
+        "allahın işine bakın\n" +
+        "my what.. oh yeah those things",
+    },
+    {
+      kind: "stanza",
+      text:
+        "“placed on top” “added”\n" +
+        "“appended” “imported” “foreign”\n" +
+        "boyle orman olmaz heryer sivrisinek kocaman\n" +
+        "(koca-man gibi okunmalı, güneyli bir aksanla)",
+    },
+    {
+      kind: "stanza",
+      text:
+        "uyurken modemin fişi çekilmeli, sew olun ve\n" +
+        "sew inizi sevin\n" +
+        "orman guzel ama yazin gelinmesi lazim yoksa\n" +
+        "batarsiniz ben bile yazin geldim bacagimin\n" +
+        "yarisi batakliga girdi ayakkabim cikti battim.",
+    },
+  ],
+},
   "istanbul-avrupa-yakasi": {
   title: "istanbul avrupa yakası",
   label: "şiir",
