@@ -16,6 +16,15 @@ type HomeEntry = {
 
 const entries: HomeEntry[] = [
   {
+  title: "tüm olmazlar / miras boşluk",
+  href: "/siir/tum-olmazlar-miras-bosluk",
+  author: "onur duman",
+  authorHref: "/yazar/onur-duman",
+  type: "şiir",
+  className: "entry entry-b",
+  multiline: true,
+},
+  {
   title: "artık hissetmiyorum eskisi gibi",
   href: "/siir/artik-hissetmiyorum-eskisi-gibi",
   author: "mahmut kıran",

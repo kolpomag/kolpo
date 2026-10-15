@@ -39,6 +39,56 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "tum-olmazlar-miras-bosluk": {
+  title: "tüm olmazlar / miras boşluk",
+  label: "şiir",
+  authors: [
+    {
+      name: "onur duman",
+      href: "/yazar/onur-duman",
+    },
+  ],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "schillerkiez küçük mü büyük mü\n" +
+        "bir günahı işlemekle işlememek arasındaki fark\n" +
+        "diyorum artık içimdeki bu kaygı\n" +
+        "yerini bir diğerine bıraksa\n" +
+        "aportta sırasında",
+    },
+    {
+      kind: "stanza",
+      text:
+        "kendimle tükürük yarışı yapıyorum\n" +
+        "ama salyam ağzımdan uzuyor\n" +
+        "hep üstüme başıma akıyor\n" +
+        "hayatın derin basslar\n" +
+        "çok fazla stimülan\n" +
+        "ve patronunu öldürmemeye çalışmakla geçecek",
+    },
+    {
+      kind: "stanza",
+      text:
+        "seni özlüyorum\n" +
+        "özledikçe eve dönemiyorum\n" +
+        "limbik sistemimin kılcal damarları\n" +
+        "seninle kaplı\n" +
+        "işte ben bunları düşünürken\n" +
+        "kafa derimdeki tüm kabukları yoldum\n" +
+        "yerlerine yenileri çıksın diye\n" +
+        "bekliyorum",
+    },
+    {
+      kind: "stanza",
+      text:
+      "söyle\n" +
+        "şiirde mickey rourke mu\n" +
+        "ben mi?",
+    },
+  ],
+},
   "artik-hissetmiyorum-eskisi-gibi": {
   title: "artık hissetmiyorum eskisi gibi",
   label: "şiir",
