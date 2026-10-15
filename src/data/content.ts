@@ -39,6 +39,50 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "mecbur-nuans": {
+  title: "mecbur nüans",
+  label: "şiir",
+  authors: [
+    {
+      name: "emrullah şekerci",
+      href: "/yazar/emrullah-sekerci",
+    },
+  ],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "kırkayak buğ biriktirir Pandorası artan tenezzühle\n" +
+        "tiryaki olan yerde bir mebusan meclisi daha\n" +
+        "sapır kaosu kendi meylettiği yerde hızla belirir\n" +
+        "ilelebet mecbur nüansa terk edildiğinde bozgun",
+    },
+    {
+      kind: "stanza",
+      text:
+        "yanılıyorum en kritik yerde çıplaklığımda bir ben\n" +
+        "soyunduğunda dirim ebucehil maskesi önünde\n" +
+        "cin nihayet hafifletir kendini kırk takla atarak\n" +
+        "burgaç sızar avlusunda rahlem bir ulvi müessese",
+    },
+    {
+      kind: "stanza",
+      text:
+        "hayret makamında bir sur üflenir kaşif kodlar\n" +
+        "hizalanır kendi ilmeğinde bir ten duvar daha\n" +
+        "azalıp da bozguna uğrayan yerde maraziyi yoket\n" +
+        "alışamadığım dilin taneciklerinde takdis edilen",
+    },
+    {
+      kind: "stanza",
+      text:
+        "mülk terazisi haz treninde sarp oğullara aktarılır\n" +
+        "teninden uzlaşıp da vamp üzre durağan cambaz\n" +
+        "içlerinde hummalı bir mutlak merasim buyrulur\n" +
+        "ve endişe verir elleriyle ve eğleşir kökü akbaba",
+    },
+  ],
+},
   "tum-olmazlar-miras-bosluk": {
   title: "tüm olmazlar / miras boşluk",
   label: "şiir",
