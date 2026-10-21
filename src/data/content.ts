@@ -39,6 +39,41 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "reykjavik": {
+  title: "reykjavik",
+  label: "şiir",
+  authors: [
+    {
+      name: "göksü köse",
+      href: "/yazar/goksu-kose",
+    },
+  ],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "kutuplar arasında seyrediyorum\n" +
+        "beyazlar hücum ediyor her yere\n" +
+        "çelik melik hiçbir şey kalmadı\n" +
+        "çaresizliğimizden başka\n" +
+        "penguenler mayısın şarkısını söylüyor\n" +
+        "insanın tövbe ettiği gibi\n" +
+        "müminlerin secde ettiği gibi\n" +
+        "şiirler şımarık ıslak kumbaralar\n" +
+        "atların homurdanmaları görünüyor çıplak\n" +
+        "bir de bunlar çıktı şimdi\n" +
+        "can pazarında\n" +
+        "çay içmek vardı orada bi esnafla şimdi\n" +
+        "dışişleri, kıyamet günü\n" +
+        "o geçen hafta olmamış mıydı\n" +
+        "belli ki olmamış abi konuşuyoruz işte\n" +
+        "görmedin mi ama tüm televizyon altyazı girdi, gel neyse senin şu yanları düzeltelim,\n" +
+        "enseye de tekrar baktık derken hazırdım artık, nişanlımla buluşacağız bu akşam\n" +
+        "balık yiyeceğiz\n" +
+        "reykjavik'in fiyortlarına sarılmış gözlerimiz",
+    },
+  ],
+},
   "mecbur-nuans": {
   title: "mecbur nüans",
   label: "şiir",
