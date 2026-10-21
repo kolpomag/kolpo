@@ -39,6 +39,52 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "keats-oldu-oyleyse-beni-gotumden-sik": {
+  title: "Keats öldü öyleyse beni götümden sik",
+  label: "çeviri - hera lindsay bird",
+  titleHref:
+    "https://thespinoff.co.nz/culture/11-07-2016/the-monday-extract-keats-is-dead-so-fuck-me-from-behind-by-hera-lindsay-bird",
+  authors: [
+    {
+      name: "ekim idil kargı",
+      href: "/yazar/ekim-idil-kargi",
+    },
+  ],
+  body: [
+    {
+      kind: "stanza",
+      text:
+        "Keats öldü öyleyse beni götümden sik\n" +
+        "Yavaş ve şehvetli\n" +
+        "Kara bir kış ikindisinde\n" +
+        "Çocuklar okuldan eve yürürken\n" +
+        "Çoraplarımı dişlerinle sıyır\n" +
+        "Coleridge ölü, Auden da\n" +
+        "Kabanıyla gülerken\n" +
+        "Öldü denizde Shelley ve kalbi yanmandı\n" +
+        "& Wordsworth……………………………………………..\n" +
+        "Cesedini asla bulamadılar\n" +
+        "Karısı yastan delirmiş, boş çayıra çiviler çakıyor\n" +
+        "Byron, Whitman ve köpeğimiz garaj kapısında ezildi\n" +
+        "Yavaşça beni parmakla\n" +
+        "Çocukluğunun karlı ufuklarında\n" +
+        "Ölülerimiz toprağın hemen altında\n" +
+        "Beni nöbetçi öğretmen gibi domalt\n" +
+        "& titrek oklarla pompala\n" +
+        "Ah duygusal hassasiyet\n" +
+        "Bosna türküsü, bacalardaki kuşlar\n" +
+        "Söyle bana sevdiklerini dinlemediğimi düşünürken\n" +
+        "Annesi yemeğe çağırıyor Wallace Stevens’ı\n" +
+        "Ama gelmiyormuş, o da ölü, altmış sene önce öldü\n" +
+        "Kimse cenazesini sallamadı\n" +
+        "Hayat gerçek\n" +
+        "Ve günler leopar desenleri gibi ateş\n" +
+        "Hiç kimse, ölüler bile bana ne yapacağımı söyleyemez\n" +
+        "Amımı arkadan ye\n" +
+        "Zaten Bill Manhire’ın gençleştiği de yok",
+    },
+  ],
+},
   "reykjavik": {
   title: "reykjavik",
   label: "şiir",

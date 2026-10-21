@@ -16,6 +16,16 @@ type HomeEntry = {
 
 const entries: HomeEntry[] = [
   {
+  title: "Keats öldü öyleyse beni götümden sik",
+  href: "/siir/keats-oldu-oyleyse-beni-gotumden-sik",
+  author: "ekim idil kargı",
+  authorHref: "/yazar/ekim-idil-kargi",
+  type: "çeviri",
+  sourceAuthor: "hera lindsay bird",
+  className: "entry entry-a",
+  multiline: true,
+},
+  {
   title: "reykjavik",
   href: "/siir/reykjavik",
   author: "göksü köse",
