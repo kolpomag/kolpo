@@ -165,7 +165,7 @@ export const poems: Record<string, Poem> = {
         "Cesedini asla bulamadılar\n" +
         "Karısı yastan delirmiş, boş çayıra çiviler çakıyor\n" +
         "Byron, Whitman ve köpeğimiz garaj kapısında ezildi\n" +
-        "Yavaşça beni parmakla\n" +
+        "Yavaşça parmakla beni\n" +
         "Çocukluğunun karlı ufuklarında\n" +
         "Ölülerimiz toprağın hemen altında\n" +
         "Beni nöbetçi öğretmen gibi domalt\n" +
