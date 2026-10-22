@@ -53,7 +53,7 @@ body {
 .kolpo-index .kolpo-index-heading h1,
 .kolpo-authors .kolpo-authors-title {
   margin:0; color:#bc3027;
-  font:400 clamp(76px,9vw,128px)/.95 Georgia,"Times New Roman",serif;
+  font:400 clamp(52px,6vw,80px)/1 Georgia,"Times New Roman",serif;
   letter-spacing:-.07em;
 }
 .kolpo-contact .kolpo-contact-content { padding-top:36px; }
@@ -77,7 +77,7 @@ body {
   .kolpo-authors .kolpo-authors-heading { padding:28px 0 38px; }
   .kolpo-index .kolpo-index-heading h1,
   .kolpo-authors .kolpo-authors-title {
-    margin:0!important; font-size:clamp(64px,14vw,96px)!important; line-height:.95!important;
+    margin:0!important; font-size:clamp(44px,10vw,60px)!important; line-height:1!important;
   }
   .kolpo-contact .kolpo-contact-content { padding-top:28px; }
 }

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
+import ReadingListOrder from "@/components/ReadingListOrder";
 import ReadingListExport from "@/components/ReadingListExport";
 import SaveForLater from "@/components/SaveForLater";
 import { sendGAEvent } from "@next/third-parties/google";
@@ -50,7 +51,8 @@ export default function ArchiveBrowser({ savedView = false }: { savedView?: bool
     const next = new URLSearchParams(searchParams.toString());
     if (value) next.set(key, value); else next.delete(key);
     const suffix = next.toString();
-    window.history.replaceState({ ...window.history.state, kolpoArchiveScroll: null }, "", pathname + (suffix ? `?${suffix}` : ""));
+    // Next.js copies its own history state; passing it here skips URL synchronization.
+    window.history.replaceState({ kolpoArchiveScroll: null }, "", pathname + (suffix ? `?${suffix}` : ""));
   }
   function rememberPosition() {
     window.history.replaceState({ ...window.history.state, kolpoArchiveScroll: window.scrollY }, "");
@@ -69,7 +71,7 @@ export default function ArchiveBrowser({ savedView = false }: { savedView?: bool
       );
     }
 
-    return filtered;
+    return savedOnly ? filtered.sort((a, b) => saved.indexOf(a.href) - saved.indexOf(b.href)) : filtered;
   }, [category, sort, savedOnly, saved]);
 
   useEffect(() => {
@@ -109,7 +111,7 @@ export default function ArchiveBrowser({ savedView = false }: { savedView?: bool
 
         .kolpo-index-heading h1 {
           margin: 0;
-          font: 400 clamp(64px, 8vw, 100px)/.9 Georgia, serif;
+          font: 400 clamp(52px, 6vw, 80px)/1 Georgia, serif;
           letter-spacing: -.065em;
           color: #bc3027;
         }
@@ -267,6 +269,10 @@ export default function ArchiveBrowser({ savedView = false }: { savedView?: bool
           color: #676257;
         }
 
+        .reading-order { display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-top:10px; }
+        .reading-order button { width:32px; height:32px; border:1px solid #c9c4b9; background:transparent; color:#bc3027; cursor:pointer; font:18px Georgia,serif; }
+        .reading-order button:disabled { opacity:.3; cursor:default; }
+        .reading-order span { font:11px/1.5 "Courier New",monospace; color:#676257; }
         .kolpo-index-empty {
           padding: 30px 0;
           font: italic 25px/1.3 Georgia, serif;
@@ -286,7 +292,7 @@ export default function ArchiveBrowser({ savedView = false }: { savedView?: bool
           }
 
           .kolpo-index-heading h1 {
-            font-size: 64px !important;
+            font-size: clamp(44px, 10vw, 60px) !important;
             line-height: .95 !important;
             margin-top: 0 !important;
           }
@@ -382,7 +388,7 @@ export default function ArchiveBrowser({ savedView = false }: { savedView?: bool
               value={sort}
               onChange={(event) => updateFilter("sira", event.target.value === "alphabetical" ? "az" : null)}
             >
-              <option value="editorial">editoryal</option>
+              <option value="editorial">{savedOnly ? "sıram" : "editoryal"}</option>
               <option value="alphabetical">a–z</option>
             </select>
           </label>
@@ -392,7 +398,7 @@ export default function ArchiveBrowser({ savedView = false }: { savedView?: bool
           {visibleEntries.length} eser / {category}{savedOnly ? " / ayırdıklarım — bu tarayıcıda saklanır" : ""}
         </div>
 
-        {savedOnly && <ReadingListExport key={saved.join("|")} entries={entries.filter((entry) => saved.includes(entry.href))} />}
+        {savedOnly && <ReadingListExport key={saved.join("|")} entries={saved.flatMap((href) => entries.filter((entry) => entry.href === href))} />}
 
         <ol className="kolpo-index-list" onClickCapture={(event) => {
           if (event.target instanceof Element && event.target.closest("a")) rememberPosition();
@@ -425,7 +431,8 @@ export default function ArchiveBrowser({ savedView = false }: { savedView?: bool
                   </Link>
                 </h2>
 
-                {savedOnly && <SaveForLater href={entry.href} />}
+                {savedOnly && <SaveForLater href={entry.href} title={entry.title} />}
+                {savedOnly && sort === "editorial" && <ReadingListOrder href={entry.href} title={entry.title} previous={visibleEntries[index - 1]?.href} next={visibleEntries[index + 1]?.href} />}
                 <div className="kolpo-index-authors">
                   {entry.authors.map((author, authorIndex) => (
                     <span key={author.href}>

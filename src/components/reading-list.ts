@@ -29,3 +29,12 @@ export function toggleReadingList(href: string) {
   localStorage.setItem(KEY, JSON.stringify(next));
   window.dispatchEvent(new Event(EVENT));
 }
+
+export function moveReadingList(href: string, neighbor: string) {
+  const next = parse(snapshot());
+  const from = next.indexOf(href), to = next.indexOf(neighbor);
+  if (from < 0 || to < 0 || from === to) return;
+  [next[from], next[to]] = [next[to], next[from]];
+  localStorage.setItem(KEY, JSON.stringify(next));
+  window.dispatchEvent(new Event(EVENT));
+}

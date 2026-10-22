@@ -21,19 +21,33 @@ function wrap(ctx: CanvasRenderingContext2D, text: string, width: number) {
   return lines;
 }
 
-async function makeCard(quote: string, title: string, author: string) {
+type CardTheme = "paper" | "night";
+const palettes = {
+  paper: { background: "#f3f0e8", ink: "#24231f", muted: "#676257", line: "#c9c4b9", accent: "#bc3027" },
+  night: { background: "#181918", ink: "#eeeade", muted: "#b7b3a9", line: "#454640", accent: "#eeeade" },
+};
+async function makeCard(quote: string, title: string, author: string, theme: CardTheme) {
+  const palette = palettes[theme];
   await document.fonts.ready;
   const canvas = document.createElement("canvas");
   canvas.width = 1080; canvas.height = 1350;
   const ctx = canvas.getContext("2d");
   if (!ctx) throw new Error("Canvas unavailable");
-  ctx.fillStyle = "#f3f0e8"; ctx.fillRect(0, 0, 1080, 1350);
-  ctx.fillStyle = "#bc3027"; ctx.fillRect(0, 0, 1080, 10);
+  ctx.fillStyle = palette.background; ctx.fillRect(0, 0, 1080, 1350);
+  ctx.fillStyle = palette.accent; ctx.fillRect(0, 0, 1080, 10);
   const logo = new Image();
   logo.src = "/kolpo.png";
   await logo.decode();
-  ctx.drawImage(logo, 56, 36, 240, 240 * 1500 / 2100);
-  ctx.fillStyle = "#676257"; ctx.font = "22px monospace";
+  const logoCanvas = document.createElement("canvas");
+  logoCanvas.width = logo.naturalWidth; logoCanvas.height = logo.naturalHeight;
+  const logoContext = logoCanvas.getContext("2d");
+  if (!logoContext) throw new Error("Canvas unavailable");
+  logoContext.drawImage(logo, 0, 0);
+  logoContext.globalCompositeOperation = "source-in";
+  logoContext.fillStyle = palette.accent;
+  logoContext.fillRect(0, 0, logoCanvas.width, logoCanvas.height);
+  ctx.drawImage(logoCanvas, 56, 36, 240, 240 * 1500 / 2100);
+  ctx.fillStyle = palette.muted; ctx.font = "22px monospace";
   ctx.textAlign = "right"; ctx.fillText("bir dize / kolpo.", 1000, 128); ctx.textAlign = "left";
   let size = 64;
   let lines: string[] = [];
@@ -43,13 +57,13 @@ async function makeCard(quote: string, title: string, author: string) {
     if (lines.length * size * 1.3 <= 760) break;
   }
   if (size < 28) throw new Error("Selection too long");
-  ctx.fillStyle = "#24231f";
+  ctx.fillStyle = palette.ink;
   const start = 260 + (760 - lines.length * size * 1.3) / 2;
   lines.forEach((line, index) => ctx.fillText(line, 80, start + size + index * size * 1.3));
-  ctx.fillStyle = "#c9c4b9"; ctx.fillRect(80, 1080, 920, 1);
-  ctx.fillStyle = "#bc3027"; ctx.font = "30px Georgia, serif";
+  ctx.fillStyle = palette.line; ctx.fillRect(80, 1080, 920, 1);
+  ctx.fillStyle = palette.accent; ctx.font = "30px Georgia, serif";
   wrap(ctx, title, 920).forEach((line, index) => ctx.fillText(line, 80, 1130 + index * 36));
-  ctx.fillStyle = "#676257"; ctx.font = "22px Georgia, serif";
+  ctx.fillStyle = palette.muted; ctx.font = "22px Georgia, serif";
   ctx.fillText(author, 80, 1245, 920);
   ctx.font = "18px monospace"; ctx.fillText("kolpomag.com", 80, 1290);
   return new Promise<Blob>((resolve, reject) => canvas.toBlob((blob) => blob ? resolve(blob) : reject(new Error("PNG unavailable")), "image/png"));
@@ -64,6 +78,9 @@ export default function ShareablePoem({ children, title, author, slug }: {
   const generation = useRef({ version: 0 });
   const [selection, setSelection] = useState("");
   const [preview, setPreview] = useState("");
+  const [open, setOpen] = useState(false);
+  const [theme, setTheme] = useState<CardTheme>("paper");
+  const [cardQuote, setCardQuote] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
 
@@ -82,25 +99,37 @@ export default function ShareablePoem({ children, title, author, slug }: {
   }, []);
 
   useEffect(() => {
-    if (!preview || !dialog.current) return;
+    if (!open || !dialog.current) return;
     const element = dialog.current;
     const button = trigger.current;
     const overflow = document.body.style.overflow;
     element.showModal(); document.body.style.overflow = "hidden";
     return () => {
       element.close(); document.body.style.overflow = overflow;
-      URL.revokeObjectURL(preview);
       if (button?.isConnected) button.focus();
     };
+  }, [open]);
+
+  useEffect(() => {
+    return () => { if (preview) URL.revokeObjectURL(preview); };
   }, [preview]);
 
-  async function generate() {
-    if (busy || !selection || selection.length > 400) return;
+  function close() {
+    generation.current.version++;
+    setOpen(false); setPreview(""); setBusy(false); setError("");
+  }
+
+  async function generate(nextTheme: CardTheme = theme) {
+    const quote = open ? cardQuote : selection;
+    if (busy || !quote || quote.length > 400) return;
     const version = ++generation.current.version;
     setBusy(true); setError("");
     try {
-      const blob = await makeCard(selection, title, author);
-      if (version === generation.current.version) setPreview(URL.createObjectURL(blob));
+      const blob = await makeCard(quote, title, author, nextTheme);
+      if (version === generation.current.version) {
+        setPreview(URL.createObjectURL(blob)); setTheme(nextTheme);
+        setCardQuote(quote); setOpen(true);
+      }
     } catch { if (version === generation.current.version) setError("Kart oluşturulamadı. Daha kısa bir bölüm seçip tekrar dene."); }
     finally { if (version === generation.current.version) setBusy(false); }
   }
@@ -117,22 +146,31 @@ export default function ShareablePoem({ children, title, author, slug }: {
       .quote-dialog header { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:18px; font:12px/1.5 "Courier New",monospace; }
       .quote-dialog button,.quote-dialog a { border:0; background:transparent; padding:10px 0; color:#bc3027; font:13px/1.5 "Courier New",monospace; cursor:pointer; }
       .quote-dialog img { display:block; width:100%; height:auto; max-height:calc(100dvh - 190px); object-fit:contain; }
+      .quote-themes { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:16px; font:12px/1.5 "Courier New",monospace; }
+      .quote-themes button { padding:7px 14px; border:1px solid #c9c4b9; }
+      .quote-themes button[aria-pressed="true"] { background:#24231f; color:#eeeade; border-color:#24231f; }
+      .quote-themes button:disabled { opacity:.5; cursor:wait; }
       .quote-download { display:inline-block; margin-top:10px; text-underline-offset:4px; }
       .quote-toolbar button:focus-visible,.quote-dialog :focus-visible { outline:2px solid #bc3027; outline-offset:5px; }
     `}</style>
     <div ref={body} className="poem-body">{children}</div>
-    {selection && <div hidden={!!preview} className="quote-toolbar" aria-label="Seçili dizeyi paylaş">
-      <button ref={trigger} type="button" disabled={busy || selection.length > 400} onPointerDown={(event) => event.preventDefault()} onClick={generate}>{busy ? "hazırlanıyor…" : "bu dizeyi paylaş ↗"}</button>
+    {selection && <div hidden={open} className="quote-toolbar" aria-label="Seçili dizeyi paylaş">
+      <button ref={trigger} type="button" disabled={busy || selection.length > 400} onPointerDown={(event) => event.preventDefault()} onClick={() => generate()}>{busy ? "hazırlanıyor…" : "bu dizeyi paylaş ↗"}</button>
       <button type="button" aria-label="Dize paylaşımını kapat" onClick={() => { window.getSelection()?.removeAllRanges(); setSelection(""); }}>×</button>
       {selection.length > 400 && <span role="status">Kart için en fazla 400 karakter seçebilirsin.</span>}
       {error && <span role="status">{error}</span>}
     </div>}
-    <dialog ref={dialog} className="quote-dialog" aria-label="Dize kartı önizlemesi" onCancel={(event) => { event.preventDefault(); setPreview(""); }} onClose={(event) => { if (!event.currentTarget.open) setPreview(""); }}>
-      <header><span>kolpo. / seçtiğin dize</span><button type="button" onClick={() => setPreview("")} autoFocus>kapat ×</button></header>
+    <dialog ref={dialog} className="quote-dialog" aria-label="Dize kartı önizlemesi" onCancel={(event) => { event.preventDefault(); close(); }} onClose={(event) => { if (!event.currentTarget.open) close(); }}>
+      <header><span>kolpo. / seçtiğin dize</span><button type="button" onClick={close} autoFocus>kapat ×</button></header>
+      <div className="quote-themes" role="group" aria-label="Kart rengi">
+        <button type="button" aria-pressed={theme === "paper"} disabled={busy} onClick={() => { if (theme !== "paper") void generate("paper"); }}>kâğıt</button>
+        <button type="button" aria-pressed={theme === "night"} disabled={busy} onClick={() => { if (theme !== "night") void generate("night"); }}>gece</button>
+        <span role="status">{busy ? "hazırlanıyor…" : error}</span>
+      </div>
       {preview && <>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={preview} alt={`${selection} — ${title}, ${author}`} />
-        <a className="quote-download" href={preview} download={`kolpo-${slug}.png`}>kartı indir ↓</a>
+        <img src={preview} alt={`${cardQuote} — ${title}, ${author}`} />
+        <a className="quote-download" href={preview} download={`kolpo-${slug}-${theme === "night" ? "gece" : "kagit"}.png`}>kartı indir ↓</a>
       </>}
     </dialog>
   </>;

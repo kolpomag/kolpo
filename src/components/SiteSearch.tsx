@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import SaveForLater from "./SaveForLater";
+import { searchVerses } from "@/data/search-verses";
 import { createPortal } from "react-dom";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import {
@@ -9,16 +11,13 @@ import {
 } from "@/data/content-index";
 
 type Verse = { text: string; title: string; author: string; href: string };
-const verses: Verse[] = getOrderedContentEntries()
-  .filter(([, content]) => !content.label || content.label === "şiir")
-  .flatMap(([slug, content]) => content.body.flatMap((block) => {
-    if (block.kind !== "stanza") return [];
-    return block.text.split("\n").map((line) => line.trim())
-      .filter((line) => line.length >= 24 && line.length <= 110)
-      .map((text) => ({ text, title: content.title,
-        author: content.authors.map((author) => author.name).join(" & "),
-        href: getContentHref(slug, content) }));
-  }));
+const contentEntries = new Map(getOrderedContentEntries());
+const verses: Verse[] = searchVerses.flatMap(({ slug, text }) => {
+  const content = contentEntries.get(slug);
+  // Deleted or edited excerpts disappear instead of showing stale quotations.
+  if (!content || !content.body.some((block) => block.kind === "stanza" && block.text.includes(text))) return [];
+  return [{ text, title: content.title, author: content.authors.map((author) => author.name).join(" & "), href: getContentHref(slug, content) }];
+});
 
 function normalize(value: string) {
   return value
@@ -415,10 +414,12 @@ export default function SiteSearch({
 
         .kolpo-search-verse { display:block; color:inherit; text-decoration:none; }
         .kolpo-search-verse-label { display:block; margin-bottom:14px; color:var(--search-red); font:11px/1.5 "Courier New",monospace; }
-        .kolpo-search-verse-text { display:block; font:italic 27px/1.3 Georgia,serif; }
+        .kolpo-search-verse-text { white-space:pre-line; display:block; font:italic 27px/1.3 Georgia,serif; }
         .kolpo-search-verse-credit { display:block; margin-top:16px; font:12px/1.6 "Courier New",monospace; }
         .kolpo-search-verse:hover .kolpo-search-verse-text { color:var(--search-red); }
         .kolpo-search-verse:focus-visible { outline:2px solid var(--search-red); outline-offset:6px; }
+        .kolpo-search-results .kolpo-save { margin:0 0 22px 44px; }
+        .kolpo-search-results .kolpo-save button { padding:7px 0; }
         .kolpo-search-results {
           list-style: none;
           margin: 0;
@@ -552,6 +553,7 @@ export default function SiteSearch({
           .kolpo-search-empty { margin: 0 20px; gap: 14px; }
           .kolpo-search-empty-copy { font-size: 21px; }
           .kolpo-search-results { padding: 0 20px 8px; }
+          .kolpo-search-results .kolpo-save { margin-left:32px; }
 
           .kolpo-search-result {
             grid-template-columns: 22px minmax(0, 1fr) 20px;
@@ -584,7 +586,9 @@ export default function SiteSearch({
         style={{ color: `var(--authors-muted, ${color})` }}
         onClick={() => {
           setQuery("");
-          setVerse(verses.length ? verses[Math.floor(Math.random() * verses.length)] : null);
+          const choices = verses.filter((item) => item.text !== verse?.text);
+          const pool = choices.length ? choices : verses;
+          setVerse(pool.length ? pool[Math.floor(Math.random() * pool.length)] : null);
           setOpen(true);
         }}
       >
@@ -758,6 +762,7 @@ export default function SiteSearch({
                         ↗
                       </span>
                     </Link>
+                    <SaveForLater href={entry.href} title={entry.title} />
                   </li>
                 ))}
               </ul>

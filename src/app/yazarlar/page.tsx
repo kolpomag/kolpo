@@ -69,7 +69,7 @@ export default function YazarlarPage() {
         .kolpo-authors-title {
           margin: 0;
           color: var(--authors-red);
-          font-size: clamp(76px, 9vw, 128px);
+          font-size: clamp(52px, 6vw, 80px);
           font-weight: 400;
           line-height: 0.95;
           letter-spacing: -0.07em;
@@ -176,7 +176,7 @@ export default function YazarlarPage() {
 
           .kolpo-authors-title {
             margin: 0 !important;
-            font-size: clamp(64px, 14vw, 96px) !important;
+            font-size: clamp(44px, 10vw, 60px) !important;
             line-height: 0.95 !important;
           }
 
