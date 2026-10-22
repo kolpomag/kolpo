@@ -12,6 +12,15 @@ export type HomeEntry = {
 
 export const homeEntries: HomeEntry[] = [
   {
+    title: "I Died Twice In My Dream",
+    href: "/siir/i-died-twice-in-my-dream",
+    author: "ilayda hatipoğlu",
+    authorHref: "/yazar/ilayda-hatipoglu",
+    type: "görsel",
+    className: "entry entry-b",
+    multiline: true,
+  },
+  {
   title: "beni bağladıkları gün",
   href: "/siir/beni-bagladiklari-gun",
   author: "ekim idil kargı",

@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
 
 export default function IletisimPage() {
@@ -43,7 +45,7 @@ export default function IletisimPage() {
         .kolpo-contact-content {
           display: grid;
           grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-          align-items: end;
+          align-items: stretch;
           gap: 64px;
           padding-top: 44px;
         }
@@ -75,6 +77,36 @@ export default function IletisimPage() {
           line-height: 1.45;
           letter-spacing: -0.025em;
           text-wrap: pretty;
+        }
+
+        .kolpo-contact-aside {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 36px;
+          min-width: 0;
+        }
+
+        .kolpo-contact-artwork {
+          width: 100%;
+          max-width: 100%;
+          margin: 0;
+        }
+
+        .kolpo-contact-artwork a { display: block; }
+        .kolpo-contact-artwork a:focus-visible {
+          outline: 2px solid var(--contact-red);
+          outline-offset: 6px;
+        }
+        .kolpo-contact-artwork img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+        .kolpo-contact-artwork figcaption {
+          margin-top: 10px;
+          color: var(--contact-muted);
+          font: 11px/1.6 "Courier New", Courier, monospace;
         }
 
         .kolpo-contact-mail-block {
@@ -219,6 +251,8 @@ export default function IletisimPage() {
             </p>
           </div>
 
+          <div className="kolpo-contact-aside">
+
           <div className="kolpo-contact-mail-block">
             <span className="kolpo-contact-mail-label">
               yazışma adresi
@@ -235,6 +269,22 @@ export default function IletisimPage() {
                 ↗
               </span>
             </a>
+          </div>
+            <figure className="kolpo-contact-artwork">
+              <Link href="/siir/i-died-twice-in-my-dream">
+                <Image
+                  src="/images/i-died-twice-in-my-dream.jpg"
+                  alt="İlayda Hatipoğlu — I Died Twice In My Dream"
+                  width={1280}
+                  height={983}
+                  sizes="(max-width: 768px) calc(100vw - 40px), (max-width: 1000px) calc(100vw - 72px), (max-width: 1440px) 40vw, 555px"
+                />
+              </Link>
+              <figcaption>
+                ilayda hatipoğlu / <em>I Died Twice In My Dream</em><br />
+                2026, mixed media
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>

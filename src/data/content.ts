@@ -39,6 +39,27 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "i-died-twice-in-my-dream": {
+    title: "I Died Twice In My Dream",
+    label: "görsel",
+    authors: [{ name: "ilayda hatipoğlu", href: "/yazar/ilayda-hatipoglu" }],
+    body: [
+      {
+        kind: "visual-poem",
+        src: "/images/i-died-twice-in-my-dream.jpg",
+        alt: "İlayda Hatipoğlu — I Died Twice In My Dream, 2026, mixed media",
+        width: 1280,
+        height: 983,
+        maxWidth: 900,
+      },
+      {
+        kind: "stanza-html",
+        htmlLines: [
+          '<span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #6f6b63;">ilayda hatipoğlu, <em>I Died Twice In My Dream</em>, 2026, mixed media</span>',
+        ],
+      },
+    ],
+  },
   "beni-bagladiklari-gun": {
   title: "Beni bağladıkları gün",
   label: "çeviri - sharon olds",
@@ -252,7 +273,7 @@ export const poems: Record<string, Poem> = {
   label: "şiir",
   authors: [
     {
-      name: "göksü köse",
+      name: "göksu köse",
       href: "/yazar/goksu-kose",
     },
   ],
