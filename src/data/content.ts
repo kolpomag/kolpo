@@ -39,6 +39,69 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "beni-bagladiklari-gun": {
+  title: "Beni bağladıkları gün",
+  label: "çeviri - sharon olds",
+  titleHref:
+    "https://www.poetryfoundation.org/poetrymagazine/browse?volume=151&issue=1&page=122",
+  authors: [
+    {
+      name: "ekim idil kargı",
+      href: "/yazar/ekim-idil-kargi",
+    },
+  ],
+  body: [
+    {
+      kind: "stanza-html",
+      htmlLines: [
+        "Hiçbir keskin acı hissetmedim. Pamuklu kuşak yumuşaktı,",
+        "sanki beni iyileştirmek için bileğimi sandalyenin arkalığına",
+        "bir sargı gibi tutturuyordu. Sandalyenin",
+        "cilalı iplerden sert örgüsü tenimde koyu pembe",
+        "izler bıraktı ama buna alışkındım, maddenin bizde",
+        "iz bırakmasını ve sonra o izin kaybolmasını",
+        "severdim. O gün hiç kimse bana dokunmadı,",
+        "resmi bir gündü, sinirler gevşek ve keyifler",
+        "yerindeydi. Açlık büyüyordu",
+        "ama sessizce, köşesiz, midemde emzikli bir bebek",
+        "iki katına çıkıyordu. Sakin bir gündü,",
+        "kendince açılıyordu. Yalnızca haz keskindi,",
+        "siyah şişenin yataklarının üzerine eğilişi,",
+        "mürekkebin kendini örtüye bırakışı,",
+        "kara bir cin suretinde göğsümden",
+        "çıkıp döküldüğünü hissediyordum,",
+        "üstelik çini mürekkebiydi bu, hani şu çıkmayanlardan.",
+        "Sandalyeye bağlıydım, ağacın içinden",
+        "yarı yarıya çıkmış Daphne gibi ve o lekeyi okuyordum.",
+        "Bütün gün okudum, sanki",
+        "bir Nancy Drew romanıydı—demişlerdi ki",
+        "<i>özür dilemeden yemek yok sana.</i>",
+        "Tuhaf bir mutluluk içindeydim, asla",
+        "özür dilemeyecektim, o hayatı geride bırakmıştım.",
+        "Bu yüzden şaşırmadım yavaşça içeri girdiğinde,",
+        "elindeki kâsede çalkalanıp tüten çorbayla.",
+        "Oturdu ve kaşık kaşık içirdi bana, sessizce,",
+        "sıcak harf çorbasını. Kanat uçları gibi",
+        "arkamda gevşekçe sarkan ellerimin",
+        "keskin hazzı, ben yerken, dilimdeki",
+        "tat tomurcuklarının üzerinden akan",
+        "yenilebilir harf sürüsünün keskin hazzı, B,",
+        "O, F, K, G,",
+        "C’nin hilalini ezdim,",
+        "E’yi okşadım, dilimle okuyarak o",
+        "yumuşamış Braille’i—neredeyse önümde diz çöküyordu",
+        "ve pişman değildim. Pişman olmayanı",
+        "besliyordu, bir tasvirin",
+        "dibine yiyecek bırakır gibi. Orada oturuyordum, bağlı,",
+        "sunduğu adağı kabul ediyor",
+        "ve yerken deli gibi okuyordum, S S F",
+        "T, L W B B P Q",
+        "B, ağzıma o yumuşak,",
+        "uyumsuz yakıtı akıtıyordu—serpilmemi istiyordu, bir de şifreyi çözmemi.",
+      ],
+    },
+  ],
+},
   "speed-ile-yapilacaklar": {
   title: "speed ile yapılacaklar",
   label: "çeviri - ted berrigan",
@@ -138,7 +201,7 @@ export const poems: Record<string, Poem> = {
     },
   ],
 },
-  "keats-oldu-oyleyse-beni-gotumden-sik": {
+"keats-oldu-oyleyse-beni-gotumden-sik": {
   title: "Keats öldü öyleyse beni götümden sik",
   label: "çeviri - hera lindsay bird",
   titleHref:
@@ -155,29 +218,29 @@ export const poems: Record<string, Poem> = {
       text:
         "Keats öldü öyleyse beni götümden sik\n" +
         "Yavaş ve şehvetli\n" +
-        "Kara bir kış ikindisinde\n" +
+        "Kışın ortasında kara bir ikindi vakti\n" +
         "Çocuklar okuldan eve yürürken\n" +
         "Çoraplarımı dişlerinle sıyır\n" +
         "Coleridge ölü, Auden da\n" +
         "Kabanıyla gülerken\n" +
         "Öldü denizde Shelley ve kalbi yanmandı\n" +
         "& Wordsworth……………………………………………..\n" +
-        "Cesedini asla bulamadılar\n" +
-        "Karısı yastan delirmiş, boş çayıra çiviler çakıyor\n" +
-        "Byron, Whitman ve köpeğimiz garaj kapısında ezildi\n" +
+        "Cesedini hiç bulamadılar\n" +
+        "Karısı yastan delirmiş, boş bir çayıra çiviler çakıyor\n" +
+        "Byron, Whitman ve garaj kapısının ezdiği köpeğimiz\n" +
         "Yavaşça parmakla beni\n" +
         "Çocukluğunun karlı ufuklarında\n" +
         "Ölülerimiz toprağın hemen altında\n" +
         "Beni nöbetçi öğretmen gibi domalt\n" +
-        "& titrek oklarla pompala\n" +
-        "Ah duygusal hassasiyet\n" +
+        "& içimi titreyen oklarla doldur\n" +
+        "Ah duygusal savunmasızlık\n" +
         "Bosna türküsü, bacalardaki kuşlar\n" +
-        "Söyle bana sevdiklerini dinlemediğimi düşünürken\n" +
+        "Söyle neleri sevdiğini tam da dinlemediğimi düşünürken\n" +
         "Annesi yemeğe çağırıyor Wallace Stevens’ı\n" +
         "Ama gelmiyormuş, o da ölü, altmış sene önce öldü\n" +
         "Kimse cenazesini sallamadı\n" +
         "Hayat gerçek\n" +
-        "Ve günler leopar desenleri gibi ateş\n" +
+        "Ve günler leopar deseni gibi yanıp gidiyor\n" +
         "Hiç kimse, ölüler bile bana ne yapacağımı söyleyemez\n" +
         "Amımı arkadan ye\n" +
         "Zaten Bill Manhire’ın gençleştiği de yok",
