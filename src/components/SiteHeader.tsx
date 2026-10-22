@@ -21,6 +21,7 @@ const contentPaths = getOrderedContentEntries().map(([slug, content]) =>
 const navigation = [
   { href: "/arsiv", label: "arşiv" },
   { href: "/yazarlar", label: "yazarlar" },
+  { href: "/ayirdiklarim", label: "ayırdıklarım" },
   { href: "/nedir", label: "nedir" },
   { href: "/iletisim", label: "iletişim" },
 ];

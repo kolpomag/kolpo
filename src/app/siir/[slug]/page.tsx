@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import ArtworkViewer from "@/components/ArtworkViewer";
+import ShareablePoem from "@/components/ShareablePoem";
+import SaveForLater from "@/components/SaveForLater";
 import SiteHeader from "@/components/SiteHeader";
 import TrackedAuthorLink from "@/components/TrackedAuthorLink";
 import TrackedRecommendationLink from "@/components/TrackedRecommendationLink";
@@ -31,7 +34,9 @@ export async function generateMetadata({
   const seoDesc = "kolpo. şiir, deneme ve türler arası metinlerin bir araya geldiği heterojen bir çağdaş yazın alanı.";
   const canonical = getContentHref(slug, poem);
   const visualImage = poem.body.find((block) => block.kind === "visual-poem");
-  const socialImage = poem.image?.src ?? visualImage?.src ?? "/og-image.jpg";
+  const socialImage = poem.label === "görsel"
+    ? visualImage?.src ?? poem.image?.src ?? "/og-image.jpg"
+    : `/og/${slug}`;
 
   return {
     title: poem.title,
@@ -75,6 +80,7 @@ export default async function SiirPage({
 
   return (
     <main
+      className={poem.label === "görsel" ? "visual-work-page" : undefined}
       style={{
         background: "#f3f0e8",
         minHeight: "100vh",
@@ -608,6 +614,16 @@ export default async function SiirPage({
             line-height: 1.6;
           }
         }
+        .visual-work-page .poem-shell { margin:0 auto; }
+        .visual-work-page .poem-title { max-width:900px; font-size:clamp(32px,4vw,54px); line-height:1.08; font-weight:400; letter-spacing:-.045em; }
+        .visual-work-page .poem-meta { font:13px/1.6 "Courier New",monospace; }
+        .visual-work-page .poem-grid { grid-template-columns:minmax(0,1fr); gap:60px; }
+        .visual-work-page .poem-body { width:100%; max-width:1000px; margin:0 auto; overflow:visible; }
+        .visual-work-page .poem-more { position:static; }
+        .visual-work-page .poem-more-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:24px; }
+        @media(max-width:768px) {
+          .visual-work-page .poem-title { margin:0!important; font-size:32px!important; line-height:1.12!important; }
+        }
       `}</style>
 
       <SiteHeader />
@@ -655,10 +671,11 @@ export default async function SiirPage({
               </span>
             ))}
           </p>
+          <SaveForLater href={currentPath} />
         </div>
 
         <div className="poem-grid">
-          <div className="poem-body">
+          <ShareablePoem title={poem.title} author={poem.authors.map((author) => author.name).join(" & ")} slug={slug}>
             {poem.body.map((block, index) => {
               if (block.kind === "special-yes") {
                 return (
@@ -828,6 +845,9 @@ export default async function SiirPage({
               }
 
              if (block.kind === "visual-poem") {
+  if (poem.label === "görsel") {
+    return <ArtworkViewer key={index} src={block.src} alt={block.alt} width={block.width} height={block.height} />;
+  }
   return (
     <div
       key={index}
@@ -896,7 +916,7 @@ export default async function SiirPage({
                 </div>
               );
             })}
-          </div>
+          </ShareablePoem>
 
           <aside className="poem-more">
             <div className="poem-more-inner">

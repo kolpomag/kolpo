@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import SaveForLater from "@/components/SaveForLater";
 import SiteHeader from "@/components/SiteHeader";
 import TrackedAuthorLink from "@/components/TrackedAuthorLink";
 import TrackedRecommendationLink from "@/components/TrackedRecommendationLink";
@@ -31,11 +32,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: text.title,
     description: seoDescription,
     alternates: { canonical },
+    twitter: {
+      card: "summary_large_image",
+      title: `${text.title} — kolpo.`,
+      description: seoDescription,
+      images: [`/og/${slug}`],
+    },
     openGraph: {
       title: `${text.title} — kolpo.`,
       description: seoDescription,
       url: new URL(canonical, SITE_URL),
-      images: ["/og-image.jpg"],
+      images: [`/og/${slug}`],
     },
   };
 }
@@ -136,6 +143,7 @@ export default async function YaziPage({
               </span>
             ))}
           </p>
+          <SaveForLater href={currentPath} />
         </div>
 
         <div className="yazi-content-wrapper">

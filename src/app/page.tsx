@@ -16,7 +16,7 @@ type HomeEntry = {
 
 const entries: HomeEntry[] = [
   {
-  title: "Beni bağladıkları gün",
+  title: "beni bağladıkları gün",
   href: "/siir/beni-bagladiklari-gun",
   author: "ekim idil kargı",
   authorHref: "/yazar/ekim-idil-kargi",
@@ -36,7 +36,7 @@ const entries: HomeEntry[] = [
   multiline: false,
 },
   {
-  title: "Keats öldü öyleyse beni götümden sik",
+  title: "keats öldü öyleyse beni götümden sik",
   href: "/siir/keats-oldu-oyleyse-beni-gotumden-sik",
   author: "ekim idil kargı",
   authorHref: "/yazar/ekim-idil-kargi",
@@ -48,7 +48,7 @@ const entries: HomeEntry[] = [
   {
   title: "reykjavik",
   href: "/siir/reykjavik",
-  author: "göksü köse",
+  author: "göksu köse",
   authorHref: "/yazar/goksu-kose",
   type: "şiir",
   className: "entry entry-b",

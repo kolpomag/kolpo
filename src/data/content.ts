@@ -624,7 +624,7 @@ export const poems: Record<string, Poem> = {
     {
       kind: "stanza-html",
       htmlLines: [
-        '<span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #6f6b63;">by Ulaş Tomaç, 2026</span>',
+        '<span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #6f6b63;">ulaş tomaç, 2026</span>',
       ],
     },
   ],

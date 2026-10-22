@@ -8,6 +8,18 @@ import {
   getOrderedContentEntries,
 } from "@/data/content-index";
 
+type Verse = { text: string; title: string; author: string; href: string };
+const verses: Verse[] = getOrderedContentEntries()
+  .filter(([, content]) => !content.label || content.label === "şiir")
+  .flatMap(([slug, content]) => content.body.flatMap((block) => {
+    if (block.kind !== "stanza") return [];
+    return block.text.split("\n").map((line) => line.trim())
+      .filter((line) => line.length >= 24 && line.length <= 110)
+      .map((text) => ({ text, title: content.title,
+        author: content.authors.map((author) => author.name).join(" & "),
+        href: getContentHref(slug, content) }));
+  }));
+
 function normalize(value: string) {
   return value
     .toLocaleLowerCase("tr-TR")
@@ -18,6 +30,82 @@ function normalize(value: string) {
     .trim();
 }
 
+function matchesWord(word: string, terms: string[]) {
+  const normalized = normalize(word);
+  return normalized.length > 0 &&
+    terms.some((term) => normalized.includes(term));
+}
+
+function Highlight({
+  text,
+  terms,
+}: {
+  text: string;
+  terms: string[];
+}) {
+  return (
+    <>
+      {text.split(/([\p{L}\p{M}\p{N}]+)/gu).map((part, index) =>
+        matchesWord(part, terms) ? (
+          <mark key={index}>{part}</mark>
+        ) : (
+          <span key={index}>{part}</span>
+        )
+      )}
+    </>
+  );
+}
+
+function getExcerpt(body: string, terms: string[]) {
+  const lines = body
+    .split(/\n+/)
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  const lineIndex = lines.findIndex((line) =>
+    terms.some((term) => normalize(line).includes(term))
+  );
+
+  if (lineIndex < 0) return "";
+
+  let text = lines[lineIndex];
+
+  // Kısa dizenin yanına takip eden dizeyi de al.
+  if (
+    lines[lineIndex + 1] &&
+    text.length + lines[lineIndex + 1].length < 190
+  ) {
+    text += "\n" + lines[lineIndex + 1];
+  }
+
+  if (text.length <= 220) return text;
+
+  const firstMatch = Array.from(
+    text.matchAll(/[\p{L}\p{M}\p{N}]+/gu)
+  ).find((match) => matchesWord(match[0], terms));
+
+  const hit = firstMatch?.index ?? 0;
+  let start = Math.max(0, hit - 60);
+
+  // Alıntının başını kelime sınırına yaklaştır.
+  while (start > 0 && !/\s/.test(text[start - 1])) {
+    start--;
+  }
+
+  let end = Math.min(text.length, start + 220);
+
+  // Son kelimeyi ortadan bölme.
+  while (end < text.length && !/\s/.test(text[end])) {
+    end++;
+  }
+
+  return (
+    (start > 0 ? "… " : "") +
+    text.slice(start, end).trim() +
+    (end < text.length ? " …" : "")
+  );
+}
+
 export default function SiteSearch({
   color = "#111111",
 }: {
@@ -25,6 +113,7 @@ export default function SiteSearch({
 }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const [verse, setVerse] = useState<Verse | null>(null);
 
   const dialogRef = useRef<HTMLDialogElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -47,10 +136,7 @@ export default function SiteSearch({
     return () => {
       dialog.close();
       document.body.style.overflow = previousOverflow;
-
-      if (trigger?.isConnected) {
-        trigger.focus();
-      }
+      if (trigger?.isConnected) trigger.focus();
     };
   }, [open]);
 
@@ -60,19 +146,15 @@ export default function SiteSearch({
     const parser = new DOMParser();
 
     return getOrderedContentEntries().map(([slug, content]) => {
-      const author = content.authors
-        .map((item) => item.name)
-        .join(" & ");
+      const author = content.authors.map((item) => item.name).join(" & ");
 
       const body = content.body
         .map((block) => {
           switch (block.kind) {
             case "stanza":
               return block.text;
-
             case "stanza-last-line-italic":
               return `${block.text}\n${block.lastLine}`;
-
             case "stanza-html":
               return block.htmlLines
                 .map(
@@ -81,44 +163,49 @@ export default function SiteSearch({
                       .textContent || ""
                 )
                 .join("\n");
-
-            case "visual-poem":
-              return block.alt;
-
             default:
               return "";
           }
         })
         .join("\n");
 
+      const imageDescriptions = content.body
+        .flatMap((block) =>
+          block.kind === "visual-poem" ? [block.alt] : []
+        )
+        .join(" ");
+
       return {
         slug,
         title: content.title,
         author,
+        body,
         category: content.label || "şiir",
         href: getContentHref(slug, content),
         titleSearch: normalize(content.title),
         authorSearch: normalize(author),
         searchable: normalize(
-          `${content.title} ${author} ${content.label || "şiir"} ${body}`
+          `${content.title} ${author} ${content.label || "şiir"} ${body} ${imageDescriptions}`
         ),
       };
     });
   }, [open]);
 
   const normalizedQuery = normalize(query);
+  const terms = normalizedQuery ? normalizedQuery.split(/\s+/) : [];
 
   const results = useMemo(() => {
     if (!normalizedQuery) return [];
 
-    const terms = normalizedQuery.split(/\s+/);
+    const searchTerms = normalizedQuery.split(/\s+/);
 
     return entries
       .filter((entry) =>
-        terms.every((term) => entry.searchable.includes(term))
+        searchTerms.every((term) => entry.searchable.includes(term))
       )
       .map((entry) => ({
         ...entry,
+        excerpt: getExcerpt(entry.body, searchTerms),
         score:
           entry.titleSearch === normalizedQuery
             ? 4
@@ -137,15 +224,13 @@ export default function SiteSearch({
         .kolpo-search-trigger {
           appearance: none;
           background: transparent;
-          border: none;
-          border-radius: 0;
+          border: 0;
           padding: 0;
           margin: 0;
           font: inherit;
           letter-spacing: inherit;
           line-height: inherit;
           cursor: pointer;
-          transition: color 0.18s ease;
         }
 
         .kolpo-search-trigger:hover {
@@ -156,8 +241,8 @@ export default function SiteSearch({
           --search-paper: #eeeade;
           --search-ink: #24231f;
           --search-red: #bc3027;
-          --search-muted: #716c61;
-          --search-line: rgba(36, 35, 31, 0.2);
+          --search-muted: #676257;
+          --search-line: rgba(36,35,31,.2);
 
           box-sizing: border-box;
           position: fixed;
@@ -168,15 +253,14 @@ export default function SiteSearch({
           padding: 0;
           overflow: auto;
           overscroll-behavior: contain;
-          border: none;
+          border: 0;
           border-top: 7px solid var(--search-red);
           border-radius: 0;
           background: var(--search-paper);
           color: var(--search-ink);
-          font-family: Arial, Helvetica, sans-serif;
-          box-shadow:
-            12px 12px 0 rgba(0, 0, 0, 0.18),
-            0 30px 100px rgba(0, 0, 0, 0.3);
+          font-family: Arial, sans-serif;
+          box-shadow: 12px 12px 0 rgba(0,0,0,.18),
+                      0 30px 100px rgba(0,0,0,.3);
           scrollbar-width: thin;
           scrollbar-color: #9a9385 var(--search-paper);
         }
@@ -186,7 +270,7 @@ export default function SiteSearch({
         }
 
         .kolpo-search-dialog::backdrop {
-          background: rgba(20, 22, 19, 0.76);
+          background: rgba(20,22,19,.76);
           backdrop-filter: blur(7px);
         }
 
@@ -214,16 +298,13 @@ export default function SiteSearch({
 
         .kolpo-search-edition {
           color: var(--search-muted);
-          font-family: "Courier New", Courier, monospace;
-          font-size: 12px;
-          line-height: 1.4;
-          letter-spacing: 0.08em;
+          font: 12px/1.4 "Courier New", monospace;
+          letter-spacing: .06em;
         }
 
         .kolpo-search-close {
           display: inline-flex;
           align-items: center;
-          justify-content: center;
           gap: 12px;
           min-height: 40px;
           padding: 8px 12px;
@@ -231,13 +312,8 @@ export default function SiteSearch({
           border-radius: 0;
           background: var(--search-ink);
           color: var(--search-paper);
-          font-family: "Courier New", Courier, monospace;
-          font-size: 12px;
-          line-height: 1;
+          font: 12px/1 "Courier New", monospace;
           cursor: pointer;
-          transition:
-            background 0.18s ease,
-            border-color 0.18s ease;
         }
 
         .kolpo-search-close:hover {
@@ -246,9 +322,7 @@ export default function SiteSearch({
         }
 
         .kolpo-search-close-symbol {
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 21px;
-          line-height: 1;
+          font: 21px/1 Arial, sans-serif;
         }
 
         .kolpo-search-label {
@@ -256,11 +330,8 @@ export default function SiteSearch({
           width: fit-content;
           margin: 24px 0 30px;
           color: var(--search-red);
-          font-family: Georgia, "Times New Roman", serif;
-          font-size: clamp(48px, 7vw, 78px);
-          font-weight: 400;
-          line-height: 0.98;
-          letter-spacing: -0.065em;
+          font: 400 clamp(48px, 7vw, 78px)/.98 Georgia, serif;
+          letter-spacing: -.065em;
         }
 
         .kolpo-search-input-wrap {
@@ -268,7 +339,6 @@ export default function SiteSearch({
           align-items: center;
           gap: 16px;
           border-bottom: 2px solid var(--search-ink);
-          transition: border-color 0.18s ease;
         }
 
         .kolpo-search-input-wrap:focus-within {
@@ -278,28 +348,22 @@ export default function SiteSearch({
         .kolpo-search-prompt {
           flex-shrink: 0;
           color: var(--search-red);
-          font-family: "Courier New", Courier, monospace;
-          font-size: 24px;
-          line-height: 1;
+          font: 24px/1 "Courier New", monospace;
         }
 
         .kolpo-search-input {
           box-sizing: border-box;
-          display: block;
           width: 100%;
           min-width: 0;
           padding: 14px 0 18px;
-          border: none;
+          border: 0;
           border-radius: 0;
           outline: none;
           background: transparent;
           color: var(--search-ink);
           caret-color: var(--search-red);
-          font-family: Georgia, "Times New Roman", serif;
-          font-size: 28px;
-          font-weight: 400;
-          line-height: 1.2;
-          letter-spacing: -0.025em;
+          font: 400 28px/1.2 Georgia, serif;
+          letter-spacing: -.025em;
         }
 
         .kolpo-search-input::placeholder {
@@ -311,11 +375,10 @@ export default function SiteSearch({
           flex-shrink: 0;
           min-height: 40px;
           padding: 8px 0 8px 8px;
-          border: none;
+          border: 0;
           background: transparent;
           color: var(--search-muted);
-          font-family: "Courier New", Courier, monospace;
-          font-size: 12px;
+          font: 12px "Courier New", monospace;
           cursor: pointer;
         }
 
@@ -326,13 +389,10 @@ export default function SiteSearch({
         .kolpo-search-status {
           padding: 15px 0 18px;
           color: var(--search-muted);
-          font-family: "Courier New", Courier, monospace;
-          font-size: 12px;
-          line-height: 1.6;
+          font: 12px/1.6 "Courier New", monospace;
         }
 
         .kolpo-search-empty {
-          position: relative;
           display: flex;
           align-items: center;
           gap: 20px;
@@ -342,23 +402,23 @@ export default function SiteSearch({
         }
 
         .kolpo-search-asterisk {
-          flex-shrink: 0;
           color: var(--search-red);
-          font-family: Georgia, "Times New Roman", serif;
-          font-size: 72px;
-          line-height: 0.7;
+          font: 72px/.7 Georgia, serif;
         }
 
         .kolpo-search-empty-copy {
-          max-width: 340px;
+          max-width: 640px;
           color: #59554c;
-          font-family: Georgia, "Times New Roman", serif;
-          font-size: 23px;
-          font-style: italic;
-          line-height: 1.25;
-          letter-spacing: -0.02em;
+          font: italic 23px/1.25 Georgia, serif;
+          letter-spacing: -.02em;
         }
 
+        .kolpo-search-verse { display:block; color:inherit; text-decoration:none; }
+        .kolpo-search-verse-label { display:block; margin-bottom:14px; color:var(--search-red); font:11px/1.5 "Courier New",monospace; }
+        .kolpo-search-verse-text { display:block; font:italic 27px/1.3 Georgia,serif; }
+        .kolpo-search-verse-credit { display:block; margin-top:16px; font:12px/1.6 "Courier New",monospace; }
+        .kolpo-search-verse:hover .kolpo-search-verse-text { color:var(--search-red); }
+        .kolpo-search-verse:focus-visible { outline:2px solid var(--search-red); outline-offset:6px; }
         .kolpo-search-results {
           list-style: none;
           margin: 0;
@@ -384,21 +444,15 @@ export default function SiteSearch({
         .kolpo-search-result-number {
           padding-top: 6px;
           color: var(--search-muted);
-          font-family: "Courier New", Courier, monospace;
-          font-size: 11px;
-          line-height: 1.4;
+          font: 11px/1.4 "Courier New", monospace;
         }
 
         .kolpo-search-result-title {
           display: block;
           color: var(--search-ink);
-          font-family: Georgia, "Times New Roman", serif;
-          font-size: 34px;
-          font-weight: 400;
-          line-height: 1.04;
-          letter-spacing: -0.04em;
+          font: 400 34px/1.04 Georgia, serif;
+          letter-spacing: -.04em;
           overflow-wrap: anywhere;
-          transition: color 0.18s ease;
         }
 
         .kolpo-search-result-meta {
@@ -413,9 +467,27 @@ export default function SiteSearch({
           display: block;
           margin-top: 4px;
           color: var(--search-red);
-          font-family: "Courier New", Courier, monospace;
-          font-size: 11px;
-          line-height: 1.5;
+          font: 11px/1.5 "Courier New", monospace;
+        }
+
+        .kolpo-search-excerpt {
+          display: block;
+          margin-top: 17px;
+          padding-left: 14px;
+          border-left: 2px solid rgba(188,48,39,.3);
+          color: #59554c;
+          font: 18px/1.5 Georgia, serif;
+          white-space: pre-line;
+          overflow-wrap: anywhere;
+        }
+
+        .kolpo-search-result mark {
+          background: transparent;
+          color: var(--search-red);
+          font: inherit;
+          text-decoration: underline;
+          text-decoration-color: rgba(188,48,39,.35);
+          text-underline-offset: 3px;
         }
 
         .kolpo-search-result-arrow {
@@ -423,7 +495,7 @@ export default function SiteSearch({
           color: var(--search-red);
           font-size: 27px;
           line-height: 1;
-          transition: transform 0.18s ease;
+          transition: transform .18s ease;
         }
 
         .kolpo-search-result:hover .kolpo-search-result-title,
@@ -438,13 +510,12 @@ export default function SiteSearch({
         .kolpo-search-bottom {
           display: flex;
           justify-content: space-between;
+          flex-wrap: wrap;
           gap: 16px;
           padding: 15px 36px;
           border-top: 1px solid var(--search-line);
           color: var(--search-muted);
-          font-family: "Courier New", Courier, monospace;
-          font-size: 11px;
-          line-height: 1.5;
+          font: 11px/1.5 "Courier New", monospace;
         }
 
         .kolpo-search-trigger:focus-visible {
@@ -460,14 +531,8 @@ export default function SiteSearch({
         }
 
         @keyframes kolpo-search-enter {
-          from {
-            opacity: 0;
-            transform: translateY(12px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          from { opacity: 0; transform: translateY(12px); }
+          to { opacity: 1; transform: translateY(0); }
         }
 
         @media (max-width: 560px) {
@@ -475,47 +540,18 @@ export default function SiteSearch({
             width: calc(100vw - 24px);
             max-height: calc(100dvh - 24px);
             border-top-width: 5px;
-            box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.18);
+            box-shadow: 6px 6px 0 rgba(0,0,0,.18);
           }
 
-          .kolpo-search-top {
-            padding: 18px 20px 0;
-          }
-
-          .kolpo-search-label {
-            margin: 24px 0;
-            font-size: 52px;
-          }
-
-          .kolpo-search-edition {
-            font-size: 10px;
-            letter-spacing: 0.04em;
-          }
-
-          .kolpo-search-input-wrap {
-            gap: 10px;
-          }
-
-          .kolpo-search-input {
-            font-size: 20px;
-          }
-
-          .kolpo-search-clear {
-            font-size: 10px;
-          }
-
-          .kolpo-search-empty {
-            margin: 0 20px;
-            gap: 14px;
-          }
-
-          .kolpo-search-empty-copy {
-            font-size: 21px;
-          }
-
-          .kolpo-search-results {
-            padding: 0 20px 8px;
-          }
+          .kolpo-search-top { padding: 18px 20px 0; }
+          .kolpo-search-label { margin: 24px 0; font-size: 52px; }
+          .kolpo-search-edition { font-size: 11px; letter-spacing: 0; }
+          .kolpo-search-input-wrap { gap: 10px; }
+          .kolpo-search-input { font-size: 20px; }
+          .kolpo-search-clear { font-size: 11px; }
+          .kolpo-search-empty { margin: 0 20px; gap: 14px; }
+          .kolpo-search-empty-copy { font-size: 21px; }
+          .kolpo-search-results { padding: 0 20px 8px; }
 
           .kolpo-search-result {
             grid-template-columns: 22px minmax(0, 1fr) 20px;
@@ -523,35 +559,16 @@ export default function SiteSearch({
             padding: 22px 0;
           }
 
-          .kolpo-search-result-title {
-            font-size: 28px;
-          }
-
-          .kolpo-search-result-meta {
-            font-size: 13px;
-          }
-
-          .kolpo-search-result-arrow {
-            font-size: 22px;
-          }
-
-          .kolpo-search-bottom {
-            padding: 14px 20px;
-            flex-wrap: wrap;
-          }
+          .kolpo-search-result-title { font-size: 28px; }
+          .kolpo-search-result-meta { font-size: 13px; }
+          .kolpo-search-result-arrow { font-size: 22px; }
+          .kolpo-search-excerpt { font-size: 17px; padding-left: 10px; }
+          .kolpo-search-bottom { padding: 14px 20px; }
         }
 
         @media (prefers-reduced-motion: reduce) {
-          .kolpo-search-dialog[open] {
-            animation: none;
-          }
-
-          .kolpo-search-result-arrow,
-          .kolpo-search-result-title,
-          .kolpo-search-close {
-            transition: none;
-          }
-
+          .kolpo-search-dialog[open] { animation: none; }
+          .kolpo-search-result-arrow { transition: none; }
           .kolpo-search-result:hover .kolpo-search-result-arrow {
             transform: none;
           }
@@ -564,11 +581,10 @@ export default function SiteSearch({
         className="kolpo-search-trigger"
         aria-haspopup="dialog"
         aria-expanded={open}
-        style={{
-          color: `var(--authors-muted, ${color})`,
-        }}
+        style={{ color: `var(--authors-muted, ${color})` }}
         onClick={() => {
           setQuery("");
+          setVerse(verses.length ? verses[Math.floor(Math.random() * verses.length)] : null);
           setOpen(true);
         }}
       >
@@ -586,22 +602,21 @@ export default function SiteSearch({
               setOpen(false);
             }}
             onClose={(event) => {
-              if (!event.currentTarget.open) {
-                setOpen(false);
-              }
+              if (!event.currentTarget.open) setOpen(false);
             }}
             onClick={(event) => {
               if (event.target !== event.currentTarget) return;
 
               const rect = event.currentTarget.getBoundingClientRect();
 
-              const outside =
+              if (
                 event.clientX < rect.left ||
                 event.clientX > rect.right ||
                 event.clientY < rect.top ||
-                event.clientY > rect.bottom;
-
-              if (outside) setOpen(false);
+                event.clientY > rect.bottom
+              ) {
+                setOpen(false);
+              }
             }}
           >
             <div className="kolpo-search-top">
@@ -609,7 +624,6 @@ export default function SiteSearch({
                 <span className="kolpo-search-edition">
                   kolpo. / arşivin içinden
                 </span>
-
                 <button
                   type="button"
                   className="kolpo-search-close"
@@ -635,10 +649,7 @@ export default function SiteSearch({
               </label>
 
               <div className="kolpo-search-input-wrap">
-                <span
-                  className="kolpo-search-prompt"
-                  aria-hidden="true"
-                >
+                <span className="kolpo-search-prompt" aria-hidden="true">
                   →
                 </span>
 
@@ -685,34 +696,23 @@ export default function SiteSearch({
               </div>
             </div>
 
-            {!normalizedQuery ? (
+            {!normalizedQuery || results.length === 0 ? (
               <div className="kolpo-search-empty">
-                <span
-                  className="kolpo-search-asterisk"
-                  aria-hidden="true"
-                >
+                <span className="kolpo-search-asterisk" aria-hidden="true">
                   *
                 </span>
-
                 <div className="kolpo-search-empty-copy">
-                  aklında kalanın
-                  <br />
-                  bir yerinden başla
-                </div>
-              </div>
-            ) : results.length === 0 ? (
-              <div className="kolpo-search-empty">
-                <span
-                  className="kolpo-search-asterisk"
-                  aria-hidden="true"
-                >
-                  *
-                </span>
-
-                <div className="kolpo-search-empty-copy">
-                  belki başka bir kelimenin
-                  <br />
-                  içindedir.
+                  {!normalizedQuery ? (
+                    verse ? (
+                      <Link href={verse.href} className="kolpo-search-verse" onClick={() => setOpen(false)}>
+                        <span className="kolpo-search-verse-label">arşivden bir dize</span>
+                        <span className="kolpo-search-verse-text">{verse.text}</span>
+                        <span className="kolpo-search-verse-credit">{verse.title} / {verse.author} ↗</span>
+                      </Link>
+                    ) : <>aklında kalanın<br />bir yerinden başla</>
+                  ) : (
+                    <>belki başka bir kelimenin<br />içindedir.</>
+                  )}
                 </div>
               </div>
             ) : (
@@ -733,16 +733,22 @@ export default function SiteSearch({
 
                       <span>
                         <span className="kolpo-search-result-title">
-                          {entry.title}
+                          <Highlight text={entry.title} terms={terms} />
                         </span>
 
                         <span className="kolpo-search-result-meta">
-                          {entry.author}
+                          <Highlight text={entry.author} terms={terms} />
                         </span>
 
                         <span className="kolpo-search-result-category">
                           {entry.category}
                         </span>
+
+                        {entry.excerpt && (
+                          <span className="kolpo-search-excerpt">
+                            <Highlight text={entry.excerpt} terms={terms} />
+                          </span>
+                        )}
                       </span>
 
                       <span

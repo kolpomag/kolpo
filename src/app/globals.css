@@ -40,3 +40,55 @@ body {
     margin-top: 1.5rem !important;
   }
 }
+
+/* Kolpo: dizin ve iletişim girişleri */
+.kolpo-index .kolpo-index-topline {
+  display:flex; justify-content:space-between; align-items:baseline;
+  flex-wrap:wrap; gap:12px 24px; padding:18px 0;
+  border-top:1px solid rgba(36,35,31,.18); color:#676257;
+  font:12px/1.5 "Courier New",Courier,monospace; letter-spacing:.03em;
+}
+.kolpo-index .kolpo-index-heading,
+.kolpo-authors .kolpo-authors-heading { padding:36px 0 58px; border-top:0; }
+.kolpo-index .kolpo-index-heading h1,
+.kolpo-authors .kolpo-authors-title {
+  margin:0; color:#bc3027;
+  font:400 clamp(76px,9vw,128px)/.95 Georgia,"Times New Roman",serif;
+  letter-spacing:-.07em;
+}
+.kolpo-contact .kolpo-contact-content { padding-top:36px; }
+.kolpo-contact .kolpo-contact-topline { align-items:baseline; }
+.kolpo-authors .kolpo-authors-link:focus-visible .kolpo-authors-name,
+.kolpo-index .kolpo-index-title:focus-visible { color:#bc3027; }
+.kolpo-authors .kolpo-authors-arrow,
+.kolpo-index .kolpo-index-arrow { transition:opacity 180ms ease,transform 180ms ease; }
+@media (hover:hover) and (pointer:fine) {
+  .kolpo-authors .kolpo-authors-arrow,
+  .kolpo-index .kolpo-index-arrow { opacity:0; transform:translate(-3px,3px); }
+  .kolpo-authors .kolpo-authors-link:hover .kolpo-authors-arrow,
+  .kolpo-authors .kolpo-authors-link:focus-visible .kolpo-authors-arrow,
+  .kolpo-index .kolpo-index-title:hover .kolpo-index-arrow,
+  .kolpo-index .kolpo-index-title:focus-visible .kolpo-index-arrow { opacity:1; transform:none; }
+}
+@media (max-width:768px) {
+  .kolpo-index .kolpo-index-section { padding-bottom:72px; }
+  .kolpo-index .kolpo-index-topline { font-size:11px; }
+  .kolpo-index .kolpo-index-heading,
+  .kolpo-authors .kolpo-authors-heading { padding:28px 0 38px; }
+  .kolpo-index .kolpo-index-heading h1,
+  .kolpo-authors .kolpo-authors-title {
+    margin:0!important; font-size:clamp(64px,14vw,96px)!important; line-height:.95!important;
+  }
+  .kolpo-contact .kolpo-contact-content { padding-top:28px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .kolpo-authors .kolpo-authors-arrow,
+  .kolpo-index .kolpo-index-arrow { transition:none; transform:none; }
+}
+
+/* Kişisel okuma listesi */
+.kolpo-save { margin-top:18px; }
+.kolpo-save button { border:0; border-bottom:1px solid transparent; padding:8px 0; background:transparent; color:#676257; font:12px/1.5 "Courier New",monospace; cursor:pointer; }
+.kolpo-save button:hover,.kolpo-save button[aria-pressed="true"] { color:#bc3027; border-bottom-color:currentColor; }
+.kolpo-save button:focus-visible { outline:2px solid #bc3027; outline-offset:5px; }
+.kolpo-save [role="status"] { display:block; color:#bc3027; font:12px/1.5 "Courier New",monospace; }
