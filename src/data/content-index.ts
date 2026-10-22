@@ -1,70 +1,11 @@
 import { poems, type Poem } from "@/data/content";
+import { homeEntries } from "@/data/home-entries";
 
 export const SITE_URL = "https://kolpomag.com";
 
-// Ana sayfadaki editoryal sirayi sitenin diger listelerinde de korur.
-// Yeni ve henuz bu listeye eklenmemis icerikler otomatik olarak basa gelir.
-export const CONTENT_ORDER = [
-  "kulaklar-ve-kutsal",
-  "dus",
-  "luks-bir-ihtiyactir-kropotkin",
-  "diyagram",
-  "unstable-signs-lot-49",
-  "landscape-ii-zehra-erkoc",
-  "landscape-zehra-erkoc",
-  "icinden-cikilamaz-umut-boroloyko",
-  "kavramsal-anlami-yaratan-gibi-oku",
-  "ankara-bir-memur-sehridir",
-  "setaneios",
-  "inscription",
-  "super-bal-satan-cicekler",
-  "izdirap-muhendisligi",
-  "24-mayis",
-  "cambaz",
-  "rats",
-  "hammer-amour",
-  "daha-yeni",
-  "baharlari-da-dahil-eden-yaz-donemi-boyunca",
-  "gunceme",
-  "denizden-karaya",
-  "celik",
-  "yerine-koymak-istemez-misiniz",
-  "wisteria-magnolia",
-  "dog-days",
-  "kizil-ruzgar",
-  "suru",
-  "yasasin-deniz-kenari-ahalisi",
-  "gigantic",
-  "beton-ormanda-tarla-faresi",
-  "prehistoric-bir-guzelligin-var",
-  "mahseri-doku",
-  "yes",
-  "masal",
-  "sadness-prevails-all-again",
-  "nerede-kaldin-gec-oldu",
-  "maverick",
-  "gumruk",
-  "mujde-sey",
-  "goteborg",
-  "haziranin-kesfi",
-  "sivri-catlaklar",
-  "ezbere-saman",
-  "ya-siyah-ya-beyaz",
-  "gocmus-kediler-bahcesi",
-  "piiz-ver-piiz-ver-mayday",
-  "oyunlarimiz-var",
-  "24101990",
-  "belli-belirsiz",
-  "kendimin-ic-ve-disbukey-sinirlari",
-  "paesino-sborramerda",
-  "turmstrasse",
-  "feierabendbier",
-  "what-remains",
-  "uyku-duzeni-duzenleyici",
-  "buffalo-bill",
-  "belki-bir-sabah",
-  "afili-haytalar",
-] as const;
+// Tek editoryal sıra: ana sayfanın kullandığı liste.
+// Listeye henüz yerleştirilmemiş içerikler, içerik dosyasındaki sırayla başa gelir.
+export const CONTENT_ORDER = [...new Set(homeEntries.map((entry) => entry.href.split("/").pop()!))];
 
 export function getContentHref(slug: string, content: Poem = poems[slug]) {
   return `/${content.label === "yazı" ? "yazi" : "siir"}/${slug}`;
@@ -73,8 +14,7 @@ export function getContentHref(slug: string, content: Poem = poems[slug]) {
 export function getOrderedContentEntries(): [string, Poem][] {
   const knownSlugs = new Set<string>(CONTENT_ORDER);
   const unlistedEntries = Object.entries(poems)
-    .filter(([slug]) => !knownSlugs.has(slug))
-    .reverse();
+    .filter(([slug]) => !knownSlugs.has(slug));
   const orderedEntries = CONTENT_ORDER.flatMap((slug) => {
     const content = poems[slug];
     return content ? ([[slug, content]] as [string, Poem][]) : [];
