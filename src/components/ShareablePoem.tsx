@@ -47,8 +47,6 @@ async function makeCard(quote: string, title: string, author: string, theme: Car
   logoContext.fillStyle = palette.accent;
   logoContext.fillRect(0, 0, logoCanvas.width, logoCanvas.height);
   ctx.drawImage(logoCanvas, 56, 36, 240, 240 * 1500 / 2100);
-  ctx.fillStyle = palette.muted; ctx.font = "22px monospace";
-  ctx.textAlign = "right"; ctx.fillText("bir dize / kolpo.", 1000, 128); ctx.textAlign = "left";
   let size = 64;
   let lines: string[] = [];
   for (; size >= 28; size -= 2) {
