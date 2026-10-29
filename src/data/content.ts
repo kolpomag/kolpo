@@ -39,6 +39,67 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "venus-in-furs": {
+  "title": "Venus in Furs",
+  "label": "şiir",
+  "authors": [
+    {
+      "name": "uygar",
+      "href": "/yazar/uygar"
+    }
+  ],
+  "body": [
+    {
+      "kind": "stanza-html",
+      "htmlLines": [
+        "Sigarasız yerimde duramıyorum",
+        "Zaten insanlar genellikle dibini içmiyor",
+        "<strong>I AM</strong>",
+        "Lütfen hattan ayrılmayınız"
+      ]
+    },
+    {
+      "kind": "stanza",
+      "text": "Pek yerimde duramıyorum\nAynayla öpüşmek\nKesinlikle eğlenceli, ama herzaman iyi bir fikir olmayabilir\nLütfen ölme. Obey!\nBen de öyle yapıcaktım zaten.\nNo argument.\nSahiple tartışmam. Sahiple tartışma hakları\nsaklıdır. Patronluk büyük oranda porno ve 31’den\noluşur.\nÖzel mülke saygı duyduğumdan değil de beni pis döverler gibi hissediyorum\nHem patronlarla konuşmak için en az bir şeye sahip olmam lazım.\nAma her şey kendinin\nNo crisis!\nBu kafalar biraz yorucu ama\nİçine girince çok güzel oluyor"
+    },
+    {
+      "kind": "stanza",
+      "text": "Biraz sıkıcı bir durum ve senden\nkorkuyorum. Kölelik biraz\nI am away at the present\nŞu anda pek de istemiyorum\nSinyal sesinden sonra mesajınızı\nbırakabilirsiniz."
+    },
+    {
+      "kind": "stanza",
+      "text": "Bi şey olduğu yok, ölmesen olur\nŞu anda pek de istemiyorum"
+    }
+  ]
+},
+  "rapor": {
+  "title": "RAPOR",
+  "label": "şiir",
+  "authors": [
+    {
+      "name": "süleyman berç hacil",
+      "href": "/yazar/suleyman-berc-hacil"
+    }
+  ],
+  "body": [
+    {
+      "kind": "stanza",
+      "text": "Ben,\nKendimi bildiğimden beri insan;\nİnsan,\nEvinde ölü bulunan bir hayvan."
+    },
+    {
+      "kind": "stanza",
+      "text": "Bakma,\nBi bakıma her yanım rahmetli\nOndan böyle ütülüyüm,\nKumaşım sağlam."
+    },
+    {
+      "kind": "stanza",
+      "text": "Belki,\nBabam yaşına yakın;\noyalanıyorumdur sütten."
+    },
+    {
+      "kind": "stanza",
+      "text": "SÜLEYMAN BERÇ HACİL / İSTANBUL – SÜREYAPLAJI 2026 / EKİM BAŞI"
+    }
+  ]
+},
   "i-died-twice-in-my-dream": {
     title: "I Died Twice In My Dream",
     label: "görsel",

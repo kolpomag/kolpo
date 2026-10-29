@@ -11,6 +11,24 @@ export type HomeEntry = {
 };
 
 export const homeEntries: HomeEntry[] = [
+{
+  "title": "venus in furs",
+  "href": "/siir/venus-in-furs",
+  "author": "uygar",
+  "authorHref": "/yazar/uygar",
+  "type": "şiir",
+  "className": "entry entry-b",
+  "multiline": false
+},
+{
+  "title": "rapor",
+  "href": "/siir/rapor",
+  "author": "süleyman berç hacil",
+  "authorHref": "/yazar/suleyman-berc-hacil",
+  "type": "şiir",
+  "className": "entry entry-a",
+  "multiline": false
+},
   {
     title: "I Died Twice In My Dream",
     href: "/siir/i-died-twice-in-my-dream",
