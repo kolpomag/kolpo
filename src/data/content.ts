@@ -54,21 +54,86 @@ export const poems: Record<string, Poem> = {
       "htmlLines": [
         "Sigarasız yerimde duramıyorum",
         "Zaten insanlar genellikle dibini içmiyor",
-        "<strong>I AM</strong>",
-        "Lütfen hattan ayrılmayınız"
+        "Pek yerimde duramıyorum"
       ]
     },
     {
-      "kind": "stanza",
-      "text": "Pek yerimde duramıyorum\nAynayla öpüşmek\nKesinlikle eğlenceli, ama herzaman iyi bir fikir olmayabilir\nLütfen ölme. Obey!\nBen de öyle yapıcaktım zaten.\nNo argument.\nSahiple tartışmam. Sahiple tartışma hakları\nsaklıdır. Patronluk büyük oranda porno ve 31’den\noluşur.\nÖzel mülke saygı duyduğumdan değil de beni pis döverler gibi hissediyorum\nHem patronlarla konuşmak için en az bir şeye sahip olmam lazım.\nAma her şey kendinin\nNo crisis!\nBu kafalar biraz yorucu ama\nİçine girince çok güzel oluyor"
+      "kind": "stanza-html",
+      "htmlLines": [
+        "<span style=\"display: inline-block; padding-left: min(15em, 35vw);\"><span style=\"font-size: 2.083em; line-height: 1.2;\"><strong>I AM</strong></span></span>",
+        "<span style=\"display: inline-block; padding-left: min(3em, 9vw);\"><em>lütfen</em><em> hattan ayrılmayınız</em></span>"
+      ]
     },
     {
-      "kind": "stanza",
-      "text": "Biraz sıkıcı bir durum ve senden\nkorkuyorum. Kölelik biraz\nI am away at the present\nŞu anda pek de istemiyorum\nSinyal sesinden sonra mesajınızı\nbırakabilirsiniz."
+      "kind": "stanza-html",
+      "htmlLines": [
+        "Pek yerimde duramıyorum",
+        "Aynayla öpüşmek kesinlikle eğlenceli",
+        "<span style=\"display: inline-block; padding-left: min(6em, 18vw);\">ama her zaman pek iyi bi’ fikir olmayabilir</span>"
+      ]
     },
     {
-      "kind": "stanza",
-      "text": "Bi şey olduğu yok, ölmesen olur\nŞu anda pek de istemiyorum"
+      "kind": "stanza-html",
+      "htmlLines": [
+        "Lütfen ölme. <strong>OBEY!</strong>",
+        "Ben de öyle yapıcaktım zaten. No argument."
+      ]
+    },
+    {
+      "kind": "stanza-html",
+      "htmlLines": [
+        "Sahiple tartışmam. Sahiple tartışma hakları saklıdır.",
+        "Ya da patronla. Zaten patronla tartışmak için en az bir şeye Sahip olmam lazım.",
+        "Ama her şey kendinin",
+        "Özel mülke saygı duyduğumdan değil de beni pis döverler gibi hissediyorum"
+      ]
+    },
+    {
+      "kind": "stanza-html",
+      "htmlLines": [
+        "Ölme. <strong>No </strong><strong>crisis</strong><strong>! </strong>Lütfen ölme."
+      ]
+    },
+    {
+      "kind": "stanza-html",
+      "htmlLines": [
+        "Patronluk büyük oranda porno ve 31’den oluşur",
+        "Porno ve 31 de delüzyonel bi’ patronluktan ama Her şey kendinin",
+        "Her şey kendinin therefore no crisis. no argument."
+      ]
+    },
+    {
+      "kind": "stanza-html",
+      "htmlLines": [
+        "Bu kafalar biraz yorucu ama",
+        "İçine girince çok güzel oluyor",
+        "Biraz sıkıcı bi durum",
+        "ve senden korkuyorum. Kölelik biraz",
+        "Self obsessed bi durum, sıkıcı bi durum. Kölelik biraz.",
+        "Self-obsessed bi durum ve senden korkuyorum."
+      ]
+    },
+    {
+      "kind": "stanza-html",
+      "htmlLines": [
+        "<span style=\"display: inline-block; padding-left: min(9em, 21vw);\"><span style=\"font-size: 2.083em; line-height: 1.2;\"><strong>I AM</strong></span></span>",
+        "I am away at the present. Şu anda pek de istemiyorum."
+      ]
+    },
+    {
+      "kind": "stanza-html",
+      "htmlLines": [
+        "<span style=\"display: inline-block; padding-left: min(6em, 18vw);\"><em>sinyal</em><em> sesinden sonra mesajınızı bırakabilirsiniz.</em></span>"
+      ]
+    },
+    {
+      "kind": "stanza-html",
+      "htmlLines": [
+        "Bi’ şey olduğu yok. Ölmesem olur.",
+        "Şu anda pek de istemiyorum.",
+        "Bi’ şey olduğu yok.",
+        "Ölmesem olur."
+      ]
     }
   ]
 },
