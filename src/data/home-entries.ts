@@ -12,6 +12,15 @@ export type HomeEntry = {
 
 export const homeEntries: HomeEntry[] = [
 {
+  "title": "un cancro che non ci appartiene",
+  "href": "/siir/un-cancro-che-non-ci-appartiene",
+  "author": "rachi demarchi",
+  "authorHref": "/yazar/rachi-demarchi",
+  "type": "şiir",
+  "className": "entry entry-a",
+  "multiline": true
+},
+{
   "title": "venus in furs",
   "href": "/siir/venus-in-furs",
   "author": "uygar",

@@ -39,6 +39,22 @@ export type Poem = {
 };
 
 export const poems: Record<string, Poem> = {
+  "un-cancro-che-non-ci-appartiene": {
+  "title": "un cancro che non ci appartiene",
+  "label": "şiir",
+  "authors": [
+    {
+      "name": "rachi demarchi",
+      "href": "/yazar/rachi-demarchi"
+    }
+  ],
+  "body": [
+    {
+      "kind": "stanza",
+      "text": "siete solo un branco di micropeni sborrati senza spermatozoii.\ntalmente bruciati che l'unico scopo non consensiente vi viene meno. è mancato.\nzanzare in libertà che vogliamo imprigionare.\nil vostro veleno non lo abbiamo voluto.\nma ribolle dentro il nostro sangue\ncome facciamo a liberarcene?\ntutte noi sporche inflitte da un cancro che non ci appartiene.\nperché ho dolore ai testicoli senza che io li veda\n\"sei una donna con le palle\"\ncosì mi ha detto lui\ncome faccio a liberarmene?"
+    }
+  ]
+},
   "venus-in-furs": {
   "title": "Venus in Furs",
   "label": "şiir",
